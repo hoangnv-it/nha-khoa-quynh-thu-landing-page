@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#0A72B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-  <!-- Icon tạm: Niềng răng -->
-  <path fill="#D3E8F6" d="M21 9C13 9 9 15 9 22.5c0 6.5 2.3 10.5 4.2 16.5 1.8 6.5 2.8 16 8.3 16s5-11 10.5-11 5 11 10.5 11 6.5-9.5 8.3-16c1.9-6 4.2-10 4.2-16.5C55 15 51 9 43 9c-4.2 0-7 2.3-11 2.3S25.2 9 21 9z"/>
-  <path d="M6 28h52"/>
-  <rect x="26" y="23" width="12" height="10" rx="2" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#1A8BCB" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <!-- Icon dịch vụ: Niềng răng -->
+  <path d="M21 9C13 9 9 15 9 22.5c0 6.5 2.3 10.5 4.2 16.5 1.8 6.5 2.8 16 8.3 16s5-11 10.5-11 5 11 10.5 11 6.5-9.5 8.3-16c1.9-6 4.2-10 4.2-16.5C55 15 51 9 43 9c-4.2 0-7 2.3-11 2.3S25.2 9 21 9z"/>
+  <path d="M5 25h54"/>
+  <rect x="12" y="21" width="8" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="28" y="21" width="8" height="8" rx="2" fill="#FFFFFF"/>
+  <rect x="44" y="21" width="8" height="8" rx="2" fill="#FFFFFF"/>
 </svg>

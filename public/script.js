@@ -1,12 +1,13 @@
 /* ==========================================================================
    Nha khoa Quỳnh Thư - script.js (JavaScript thuần, không thư viện)
    0. Cấu hình HOURS 2 cơ sở + tính "Đang mở / Đã đóng" (giờ Việt Nam)
-   1. Header thu nhỏ khi cuộn
+   1. Header thu nhỏ khi cuộn + menu tự đổi mục đang xem
    2. Menu điện thoại
-   3. Thanh nút cố định + bảng chọn cơ sở khi bấm "Chỉ đường"
+   3. Thanh nút cố định + bảng chọn cơ sở khi bấm "Tìm đường" / "Chỉ đường"
    4. Bản đồ chỉ tải khi bấm
    5. Đếm sự kiện Clarity: bam_goi, bam_zalo, bam_chi_duong, xem_bang_gia
    6. Hiện dần khi cuộn
+   7. Chat Zalo (nút nổi, chỉ máy tính) + Clarity: mo_chat_zalo
    ========================================================================== */
 (function () {
   "use strict";
@@ -24,28 +25,20 @@
 
   /* ------------------------------------------------------------------------
      0. GIỜ LÀM VIỆC + TRẠNG THÁI MỞ CỬA
-     - Múi giờ: Asia/Ho_Chi_Minh (đúng giờ Việt Nam dù khách ở đâu).
+     - Múi giờ: Asia/Ho_Chi_Minh.
      - Ngày: 0 = Chủ nhật, 1 = Thứ 2, ... 6 = Thứ 7. Ngày nghỉ: để null.
-     - [CẦN XÁC NHẬN] giờ mở cửa và ngày làm việc. Hiện chỉ chắc chắn đóng lúc 19:00.
-       Giá trị "08:00" bên dưới là TẠM để thử, phải sửa theo phòng khám.
-     - Thử: thêm ?gio=08:00 vào địa chỉ (có thể thêm &thu=0 để thử Chủ nhật).
+     - Giờ lấy từ Google Maps ngày 2026-11-03 (cả 2 cơ sở giống nhau).
+     - Thử: thêm ?gio=20:30 vào địa chỉ (thêm &thu=0 để thử Chủ nhật).
      ------------------------------------------------------------------------ */
   var TIME_ZONE = "Asia/Ho_Chi_Minh";
+  var WEEK = {
+    0: ["08:00", "18:00"],
+    1: ["08:00", "19:00"], 2: ["08:00", "19:00"], 3: ["08:00", "19:00"],
+    4: ["08:00", "19:00"], 5: ["08:00", "19:00"], 6: ["08:00", "19:00"]
+  };
   var HOURS = {
-    cs1: {
-      name: "Cơ sở 1",
-      days: {
-        0: ["08:00", "19:00"], 1: ["08:00", "19:00"], 2: ["08:00", "19:00"], 3: ["08:00", "19:00"],
-        4: ["08:00", "19:00"], 5: ["08:00", "19:00"], 6: ["08:00", "19:00"]
-      }
-    },
-    cs2: {
-      name: "Cơ sở 2",
-      days: {
-        0: ["08:00", "19:00"], 1: ["08:00", "19:00"], 2: ["08:00", "19:00"], 3: ["08:00", "19:00"],
-        4: ["08:00", "19:00"], 5: ["08:00", "19:00"], 6: ["08:00", "19:00"]
-      }
-    }
+    cs1: { name: "Cơ sở 1", days: WEEK },
+    cs2: { name: "Cơ sở 2", days: WEEK }
   };
   var DAY_NAMES = ["Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
 
@@ -54,7 +47,7 @@
     return parseInt(p[0], 10) * 60 + parseInt(p[1] || "0", 10);
   }
 
-  /* Lấy thứ + phút hiện tại theo giờ Việt Nam. Có thể ghi đè bằng ?gio=HH:MM&thu=0..6 */
+  /* Thứ + phút hiện tại theo giờ Việt Nam. Ghi đè bằng ?gio=HH:MM&thu=0..6 */
   function nowInVietnam() {
     var parts = new Intl.DateTimeFormat("en-US", {
       timeZone: TIME_ZONE, weekday: "short", hour: "2-digit", minute: "2-digit", hour12: false
@@ -72,7 +65,7 @@
     return { day: day, minutes: minutes };
   }
 
-  /* Trả về { open: true/false, closes: "19:00", next: "mở lại 08:00 ngày mai" } */
+  /* { open, closes: "19:00", next: "mở lại 08:00 ngày mai" } */
   function branchStatus(branch, now) {
     var today = branch.days[now.day];
     if (today && now.minutes >= toMinutes(today[0]) && now.minutes < toMinutes(today[1])) {
@@ -89,46 +82,66 @@
     return { open: false, next: "" };
   }
 
-  function statusText(key, now) {
+  /* "all" = cả 2 cơ sở (cùng giờ), "cs1" / "cs2" = từng cơ sở */
+  function statusOf(key, now) {
     if (key === "all") {
-      var s1 = branchStatus(HOURS.cs1, now);
-      var s2 = branchStatus(HOURS.cs2, now);
-      if (s1.open && s2.open) {
-        return { open: true, text: "Cơ sở 1 và Cơ sở 2 đang mở · đóng lúc " + s1.closes };
-      }
-      if (!s1.open && !s2.open) {
-        return { open: false, text: "Đã đóng cửa" + (s1.next ? " · " + s1.next : "") };
-      }
-      return {
-        open: true,
-        text: (s1.open ? "Cơ sở 1 đang mở · Cơ sở 2 đã đóng" : "Cơ sở 2 đang mở · Cơ sở 1 đã đóng")
-      };
+      var a = branchStatus(HOURS.cs1, now);
+      var b = branchStatus(HOURS.cs2, now);
+      if (a.open && b.open) return { open: true, main: "Đang mở cửa", sub: "Đóng cửa lúc " + a.closes };
+      if (!a.open && !b.open) return { open: false, main: "Đã đóng cửa", sub: a.next ? a.next.charAt(0).toUpperCase() + a.next.slice(1) : "" };
+      return { open: true, main: a.open ? "Cơ sở 1 đang mở" : "Cơ sở 2 đang mở", sub: (a.open ? "Cơ sở 2" : "Cơ sở 1") + " đã đóng" };
     }
-    var b = HOURS[key];
-    if (!b) return null;
-    var s = branchStatus(b, now);
+    var br = HOURS[key];
+    if (!br) return null;
+    var s = branchStatus(br, now);
     return s.open
-      ? { open: true, text: "Đang mở · đóng lúc " + s.closes }
-      : { open: false, text: "Đã đóng" + (s.next ? " · " + s.next : "") };
+      ? { open: true, main: "Đang mở cửa", sub: "Đóng cửa lúc " + s.closes }
+      : { open: false, main: "Đã đóng cửa", sub: s.next ? s.next.charAt(0).toUpperCase() + s.next.slice(1) : "" };
   }
 
   function renderStatus() {
     var now = nowInVietnam();
     $$("[data-status]").forEach(function (el) {
-      var r = statusText(el.getAttribute("data-status"), now);
+      var r = statusOf(el.getAttribute("data-status"), now);
       if (!r) return;
-      el.textContent = r.text;
+      el.textContent = r.main.replace(" cửa", "") + (r.sub ? " · " + r.sub.charAt(0).toLowerCase() + r.sub.slice(1).replace(" cửa", "") : "");
       el.classList.toggle("is-open", r.open);
       el.classList.toggle("is-closed", !r.open);
+    });
+    /* Footer: 2 dòng "Đang mở cửa" + "(Đóng cửa lúc 19:00)" như thiết kế */
+    $$("[data-status-main]").forEach(function (el) {
+      var r = statusOf(el.getAttribute("data-status-main"), now);
+      if (r) el.textContent = r.main;
+    });
+    $$("[data-status-sub]").forEach(function (el) {
+      var r = statusOf(el.getAttribute("data-status-sub"), now);
+      if (r) el.textContent = r.sub ? "(" + r.sub + ")" : "";
     });
   }
   renderStatus();
   setInterval(renderStatus, 60 * 1000);
 
   /* ------------------------------------------------------------------------
-     1. HEADER THU NHỎ KHI CUỘN (sau 8px)
+     1. HEADER THU NHỎ KHI CUỘN + MENU TỰ ĐỔI MỤC ĐANG XEM
      ------------------------------------------------------------------------ */
   var header = $(".site-header");
+  var navLinks = $$("[data-nav]");
+  /* Mục nào thuộc menu nào (các mục không có trong menu gắn vào mục gần nhất) */
+  var NAV_OF = {
+    "dich-vu": "dich-vu", "gioi-thieu": "dich-vu", "tre-em": "dich-vu",
+    "bang-gia": "bang-gia", "truoc-sau": "bang-gia",
+    "phong-kham": "danh-gia", "danh-gia": "danh-gia",
+    "dia-chi": "dia-chi", "hoi-dap": "dia-chi"
+  };
+  var sections = Object.keys(NAV_OF).map(function (id) { return doc.getElementById(id); }).filter(Boolean);
+
+  function setActive(key) {
+    navLinks.forEach(function (a) {
+      if (a.getAttribute("data-nav") === key) a.setAttribute("aria-current", "true");
+      else a.removeAttribute("aria-current");
+    });
+  }
+
   if (header) {
     var ticking = false;
     var onScroll = function () {
@@ -136,6 +149,11 @@
       ticking = true;
       requestAnimationFrame(function () {
         header.classList.toggle("is-scrolled", window.scrollY > 8);
+        var line = window.scrollY + 220;
+        var current = "dau-trang";
+        sections.forEach(function (s) { if (s.offsetTop <= line) current = NAV_OF[s.id]; });
+        if (window.innerHeight + window.scrollY >= doc.documentElement.scrollHeight - 4) current = "dia-chi";
+        setActive(current);
         ticking = false;
       });
     };
@@ -173,8 +191,8 @@
 
   /* ------------------------------------------------------------------------
      3. THANH NÚT CỐ ĐỊNH + BẢNG CHỌN CƠ SỞ
-     - Ẩn thanh khi nút CTA của hero đang hiện trên màn hình.
-     - "Chỉ đường" mở <dialog>: có sẵn bẫy focus, Esc để đóng.
+     - Ẩn thanh khi nút của hero đang hiện trên màn hình.
+     - "Tìm đường" / "Chỉ đường" mở <dialog>: có sẵn bẫy focus, Esc để đóng.
      ------------------------------------------------------------------------ */
   var bar = $("[data-action-bar]");
   var heroCta = $("#hero-cta");
@@ -199,9 +217,7 @@
     };
     $$("[data-sheet-open]").forEach(function (btn) { btn.addEventListener("click", openSheet); });
     $$("[data-sheet-close]", sheet).forEach(function (btn) { btn.addEventListener("click", closeSheet); });
-    /* Bấm ra vùng tối bên ngoài thì đóng */
     sheet.addEventListener("click", function (e) { if (e.target === sheet) closeSheet(); });
-    /* Chọn cơ sở xong thì đóng bảng */
     $$("a", sheet).forEach(function (a) { a.addEventListener("click", closeSheet); });
   }
 
@@ -216,9 +232,10 @@
   if (mapBox) {
     var current = "cs1";
     var frame = $("[data-map-frame]", mapBox);
+    var tabs = $("[data-map-tabs]", mapBox);
     var mapSrc = function (key) {
       var b = BRANCH_GEO[key];
-      return "https://maps.google.com/maps?q=" + b.lat + "," + b.lng + "&z=17&hl=vi&output=embed";
+      return "https://maps.google.com/maps?q=" + b.lat + "," + b.lng + "&z=16&hl=vi&output=embed";
     };
     var loadMap = function () {
       var iframe = $("iframe", frame);
@@ -229,6 +246,7 @@
         iframe.allowFullscreen = true;
         frame.innerHTML = "";
         frame.appendChild(iframe);
+        if (tabs) tabs.hidden = false;
       }
       iframe.title = "Bản đồ Google Maps " + BRANCH_GEO[current].name;
       iframe.src = mapSrc(current);
@@ -242,7 +260,7 @@
         $$("[data-map-branch]", mapBox).forEach(function (b) {
           b.setAttribute("aria-pressed", String(b === btn));
         });
-        if ($("iframe", frame)) loadMap();
+        loadMap();
       });
     });
   }
@@ -252,12 +270,7 @@
      Gắn data-track="call | zalo | directions | price" vào nút/link.
      window.clarity được tạo sẵn trong <head> (hàng đợi), nên gọi lúc nào cũng an toàn.
      ------------------------------------------------------------------------ */
-  var TRACK_EVENTS = {
-    call: "bam_goi",
-    zalo: "bam_zalo",
-    directions: "bam_chi_duong",
-    price: "xem_bang_gia"
-  };
+  var TRACK_EVENTS = { call: "bam_goi", zalo: "bam_zalo", directions: "bam_chi_duong", price: "xem_bang_gia" };
   var priceViewed = false;
   function track(name) {
     if (name === "xem_bang_gia") {
@@ -272,7 +285,6 @@
     var name = TRACK_EVENTS[el.getAttribute("data-track")];
     if (name) track(name);
   });
-  /* Xem bảng giá: tính 1 lần khi mục Bảng giá hiện ít nhất 40% */
   var priceSection = doc.getElementById("bang-gia");
   if (priceSection && "IntersectionObserver" in window) {
     var priceObs = new IntersectionObserver(function (entries) {
@@ -286,7 +298,6 @@
 
   /* ------------------------------------------------------------------------
      6. HIỆN DẦN KHI CUỘN (.reveal). Hero không dùng hiệu ứng này.
-     Tắt khi người dùng chọn giảm chuyển động (CSS xử lý).
      ------------------------------------------------------------------------ */
   var reveals = $$(".reveal");
   if (!("IntersectionObserver" in window)) {
@@ -299,7 +310,42 @@
           revealObs.unobserve(entry.target);
         }
       });
-    }, { rootMargin: "0px 0px -10% 0px" });
+    }, { rootMargin: "0px 0px -8% 0px" });
     reveals.forEach(function (el) { revealObs.observe(el); });
+  }
+
+  /* ------------------------------------------------------------------------
+     7. CHAT ZALO (nút nổi góc phải dưới, CHỈ hiện trên máy tính ≥ 1024px)
+     - Bấm nút: mở/đóng bảng nhỏ có nút "Mở Zalo để chat".
+     - Đóng bằng nút ×, phím Esc, hoặc bấm ra ngoài bảng.
+     - Clarity: mo_chat_zalo khi mở bảng; bam_zalo khi bấm "Mở Zalo" (qua data-track).
+     ------------------------------------------------------------------------ */
+  var zalo = $("[data-zalo-chat]");
+  if (zalo) {
+    var zToggle = $("[data-zalo-toggle]", zalo);
+    var zPanel = $("#zalo-chat-panel");
+    var setZalo = function (open, returnFocus) {
+      zPanel.hidden = !open;
+      zToggle.setAttribute("aria-expanded", String(open));
+      zToggle.setAttribute("aria-label", open ? "Chat Zalo, đóng khung chat" : "Chat Zalo, mở khung chat");
+      if (open) {
+        renderStatus();
+        zPanel.focus();
+        track("mo_chat_zalo");
+      } else if (returnFocus) {
+        zToggle.focus();
+      }
+    };
+    zToggle.setAttribute("aria-label", "Chat Zalo, mở khung chat");
+    zToggle.addEventListener("click", function () { setZalo(zPanel.hidden, false); });
+    $$("[data-zalo-close]", zalo).forEach(function (b) {
+      b.addEventListener("click", function () { setZalo(false, true); });
+    });
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !zPanel.hidden) setZalo(false, true);
+    });
+    doc.addEventListener("click", function (e) {
+      if (!zPanel.hidden && !zalo.contains(e.target)) setZalo(false, false);
+    });
   }
 })();

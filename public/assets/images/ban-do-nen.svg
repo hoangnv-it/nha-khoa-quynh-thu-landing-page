@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" preserveAspectRatio="xMidYMid slice">
+  <!-- Nền trang trí cho thẻ bản đồ (không phải bản đồ thật). Bấm sẽ tải Google Maps thật. -->
+  <rect width="480" height="300" fill="#F3EBDD"/>
+  <path d="M430 0h50v300h-80c10-60 30-120 30-300z" fill="#BFDDF2"/>
+  <g stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M60 0l40 300"/><path d="M180 0l30 300"/><path d="M300 0l40 300"/>
+    <path d="M0 70l420-20"/><path d="M0 170l420-15"/><path d="M0 250l420-10"/>
+  </g>
+  <g stroke="#E6D9C3" stroke-width="2" fill="none">
+    <path d="M120 0l20 300M240 0l20 300M360 0l30 300M20 0l25 300"/>
+    <path d="M0 30l420-15M0 115l420-15M0 210l420-12M0 285l420-10"/>
+  </g>
+  <path d="M380 0c-8 80-6 160 6 300" stroke="#CFE3D2" stroke-width="10" fill="none"/>
+</svg>

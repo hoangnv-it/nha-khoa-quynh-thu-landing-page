@@ -3,4 +3,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 *.log
-# Lưu ý: KHÔNG bỏ qua anh-goc/ (repo private, cần lưu ảnh gốc).
+# Ảnh gốc (có mặt bệnh nhân, chưa được phòng khám đồng ý) KHÔNG đưa lên GitHub khi repo còn public.
+# Khi repo chuyển sang private và đã được đồng ý: xóa dòng dưới để lưu ảnh gốc.
+anh-goc/*
+!anh-goc/.gitkeep
