@@ -1,0 +1,462 @@
+/* ==========================================================================
+   Nha khoa Quỳnh Thư - style.css
+   Mục lục:
+   0. Font (Be Vietnam Pro tự host, 400 / 500 / 700)
+   1. Biến thiết kế (:root) - màu ĐÃ DUYỆT, không tự đổi (spec v2 mục 4)
+   2. Reset nhẹ + nền tảng
+   3. Bố cục chung: .container, .section
+   4. Chữ: tiêu đề, eyebrow
+   5. Nút: .btn, .btn--cta, .btn--outline
+   6. Header
+   7. Hero (nền tối)
+   8. Bản đồ
+   9. Footer (nền tối)
+   10. Thanh nút cố định + bảng chọn cơ sở (điện thoại)
+   11. Hiện dần khi cuộn + giảm chuyển động
+   ========================================================================== */
+
+/* ---------- 0. Font ---------- */
+/* Lấy từ Google Fonts (giấy phép OFL, xem fonts/OFL.txt). Chỉ gồm vietnamese, latin-ext, latin. */
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-400-vietnamese.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-400-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-400-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-500-vietnamese.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-500-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-500-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-700-vietnamese.woff2") format("woff2");
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-700-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Be Vietnam Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/be-vietnam-pro-700-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- 1. Biến thiết kế ---------- */
+:root {
+  /* Màu: ĐÃ DUYỆT (spec v2 mục 4.1), không tự đổi */
+  /* Brand */
+  --brand:        #0A72B8;  /* xanh logo: link, icon, điểm nhấn tiêu đề */
+  --brand-600:    #085C95;  /* hover, active */
+  --brand-50:     #EAF4FB;  /* nền xanh nhạt (Bảng giá) */
+  --brand-100:    #D3E8F6;  /* chip, viền trên nền xanh */
+
+  /* Tối: CHỈ dùng cho hero và footer */
+  --navy:         #0B2E4A;
+  --navy-deep:    #071F33;
+  --on-navy:      #FFFFFF;
+  --on-navy-2:    #B8CCDD;
+
+  /* Sáng */
+  --bg:           #FFFFFF;
+  --bg-soft:      #F5F8FA;
+  --ink:          #14212B;
+  --ink-2:        #52616D;
+  --line:         #E1E8EE;
+
+  /* Hành động + trạng thái. --cta CHỈ dùng cho nút chính (Zalo / Gọi) */
+  --cta:          #F2A73B;
+  --cta-600:      #D98E1E;
+  --on-cta:       #2B1A00;
+  --star:         #F5B400;
+  --open:         #1F9D61;
+  --closed:       #C0443A;
+
+  /* Font (spec 4.2). Ghi chú: chỉ tự host 400/500/700, độ đậm 600 sẽ hiển thị bằng file 700. */
+  --font: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --fs-h1: 34px;   --lh-h1: 1.15;
+  --fs-h2: 26px;   --lh-h2: 1.25;
+  --fs-h3: 18px;   --lh-h3: 1.35;
+  --fs-body: 16px; --lh-body: 1.6;
+  --fs-small: 14px; --lh-small: 1.5;
+  --fs-eyebrow: 13px;
+
+  /* Hình khối + khoảng cách (spec 4.3) */
+  --radius-btn: 10px;
+  --radius-card: 16px;
+  --radius-photo: 16px;
+  --radius-chip: 999px;
+  --section-pad: 64px;
+  --gap: 24px;
+  --container: 1160px;
+  --gutter: 20px;
+  --shadow: 0 4px 20px rgba(11, 46, 74, .06);
+
+  /* Header */
+  --header-h: 64px;
+  --header-h-small: 56px;
+  --action-bar-h: 64px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 52px;   --lh-h1: 1.1;
+    --fs-h2: 36px;   --lh-h2: 1.2;
+    --fs-h3: 20px;
+    --fs-body: 17px; --lh-body: 1.65;
+    --section-pad: 96px;
+    --gutter: 32px;
+    --header-h: 80px;
+    --header-h-small: 64px;
+  }
+}
+
+/* ---------- 2. Reset nhẹ + nền tảng ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, p, ul, ol, figure, blockquote { margin: 0; }
+ul[class], ol[class] { padding: 0; list-style: none; }
+img, svg, video, iframe { display: block; max-width: 100%; }
+img { height: auto; }
+a { color: var(--brand); text-underline-offset: 3px; }
+a:hover { color: var(--brand-600); }
+button { font: inherit; color: inherit; cursor: pointer; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+.hero :focus-visible,
+.site-footer :focus-visible { outline-color: var(--on-navy); }
+
+.skip-link {
+  position: absolute; left: 12px; top: -100px; z-index: 100;
+  padding: 10px 16px; border-radius: var(--radius-btn);
+  background: var(--brand); color: #fff; font-weight: 700; text-decoration: none;
+}
+.skip-link:focus { top: 12px; color: #fff; }
+main:focus { outline: none; }
+
+.tabular, .status { font-variant-numeric: tabular-nums; }
+
+/* ---------- 3. Bố cục chung ---------- */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section { padding-block: var(--section-pad); background: var(--bg); }
+.section--soft { background: var(--bg-soft); }
+.section--brand { background: var(--brand-50); }
+
+/* Chữ/khối tạm trong giai đoạn dựng khung. Xóa khi làm chi tiết. */
+.placeholder {
+  margin-top: 16px; padding: 16px; border: 1px dashed var(--line);
+  border-radius: var(--radius-card); color: var(--ink-2); font-size: var(--fs-small);
+}
+.note { margin-top: 16px; color: var(--ink-2); font-size: var(--fs-small); }
+
+/* ---------- 4. Chữ ---------- */
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: 700; }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 700; }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-h3); font-weight: 600; }
+small, .small { font-size: var(--fs-small); line-height: var(--lh-small); }
+.eyebrow {
+  margin-bottom: 8px;
+  font-size: var(--fs-eyebrow); font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--brand);
+}
+.eyebrow--on-navy { color: var(--on-navy-2); }
+
+/* ---------- 5. Nút ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 12px 20px;
+  border: 2px solid transparent; border-radius: var(--radius-btn);
+  font-weight: 700; font-size: 16px; line-height: 1.2;
+  text-decoration: none; white-space: nowrap;
+  transition: background-color .2s, color .2s, border-color .2s;
+}
+/* Nút chính (vàng hổ phách): CHỈ cho Zalo / Gọi */
+.btn--cta { background: var(--cta); color: var(--on-cta); border-color: var(--cta); }
+.btn--cta:hover { background: var(--cta-600); border-color: var(--cta-600); color: var(--on-cta); }
+/* Nút viền xanh (trên nền sáng) */
+.btn--outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn--outline:hover { background: var(--brand-50); color: var(--brand-600); border-color: var(--brand-600); }
+/* Nút viền trắng (trên nền tối) */
+.btn--outline-light { background: transparent; color: var(--on-navy); border-color: rgba(255, 255, 255, .6); }
+.btn--outline-light:hover { background: rgba(255, 255, 255, .1); color: var(--on-navy); border-color: var(--on-navy); }
+
+.icon {
+  width: 20px; height: 20px; flex: none;
+  fill: none; stroke: currentColor; stroke-width: 1.75;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+
+.chip {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 8px 16px;
+  border: 1px solid var(--brand-100); border-radius: var(--radius-chip);
+  background: var(--bg); color: var(--brand); font-weight: 500; font-size: 15px;
+}
+.chip[aria-pressed="true"] { background: var(--brand); border-color: var(--brand); color: #fff; }
+
+/* Trạng thái mở/đóng: có chữ, không chỉ dựa vào màu */
+.status { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-small); }
+.status::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%; flex: none;
+  background: var(--ink-2);
+}
+.status.is-open::before { background: var(--open); }
+.status.is-closed::before { background: #8A97A3; }
+.status:empty { display: none; }
+
+/* ---------- 6. Header ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s, box-shadow .2s;
+}
+.site-header__inner {
+  display: flex; align-items: center; gap: 16px;
+  height: var(--header-h);
+  transition: height .25s ease;
+}
+.site-header.is-scrolled { border-bottom-color: var(--line); box-shadow: var(--shadow); }
+.site-header.is-scrolled .site-header__inner { height: var(--header-h-small); }
+
+.logo { display: block; flex: none; margin-right: auto; }
+.logo img { height: 40px; width: auto; transition: height .25s ease; }
+.site-header.is-scrolled .logo img { height: 36px; }
+
+.site-nav__list a {
+  display: block; padding: 12px 4px;
+  color: var(--ink); font-weight: 500; text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.site-nav__list a:hover,
+.site-nav__list a[aria-current="true"] { color: var(--brand); border-bottom-color: var(--brand); }
+
+.header-call { display: none; min-height: 44px; padding: 8px 16px; }
+
+.menu-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0;
+  border: 0; border-radius: var(--radius-btn); background: transparent;
+}
+.menu-toggle__bar,
+.menu-toggle__bar::before,
+.menu-toggle__bar::after {
+  display: block; width: 22px; height: 2px; border-radius: 2px;
+  background: var(--ink); position: relative; transition: transform .2s, background-color .2s;
+}
+.menu-toggle__bar::before, .menu-toggle__bar::after { content: ""; position: absolute; left: 0; }
+.menu-toggle__bar::before { top: -7px; }
+.menu-toggle__bar::after { top: 7px; }
+.menu-toggle[aria-expanded="true"] .menu-toggle__bar { background: transparent; }
+.menu-toggle[aria-expanded="true"] .menu-toggle__bar::before { transform: translateY(7px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .menu-toggle__bar::after { transform: translateY(-7px) rotate(-45deg); }
+
+/* Menu điện thoại: bảng trắng toàn chiều ngang */
+@media (max-width: 1023px) {
+  .site-nav {
+    position: absolute; left: 0; right: 0; top: 100%;
+    background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
+    padding: 8px var(--gutter) 16px;
+    display: none;
+  }
+  .site-nav.is-open { display: block; }
+  .site-nav__list a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+}
+
+@media (min-width: 600px) {
+  .header-call { display: inline-flex; }
+}
+@media (min-width: 1024px) {
+  .logo { margin-right: 0; }
+  .logo img { height: 48px; }
+  .site-header.is-scrolled .logo img { height: 40px; }
+  .site-nav { margin-inline: auto; }
+  .site-nav__list { display: flex; gap: 28px; }
+  .menu-toggle { display: none; }
+}
+
+/* ---------- 7. Hero (nền tối) ---------- */
+/* Hero KHÔNG mờ dần từ opacity 0: hiện ngay để không làm chậm LCP. */
+.hero {
+  background: var(--navy);
+  color: var(--on-navy);
+}
+.hero__inner {
+  display: grid; gap: 32px;
+  padding-block: 40px 56px;
+}
+.hero__media { order: -1; }
+.hero h1 { color: var(--on-navy); }
+.hero__sub { margin-top: 16px; color: var(--on-navy-2); max-width: 36em; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.hero .status { margin-top: 20px; color: var(--on-navy-2); }
+
+.photo-placeholder {
+  display: grid; place-items: center; text-align: center;
+  aspect-ratio: 4 / 5; max-height: 60vh; width: 100%; padding: 16px;
+  border: 1px dashed rgba(255, 255, 255, .3); border-radius: var(--radius-photo);
+  background: var(--navy-deep); color: var(--on-navy-2); font-size: var(--fs-small);
+}
+
+@media (min-width: 1024px) {
+  .hero__inner { grid-template-columns: 1fr 1fr; align-items: center; gap: 48px; padding-block: 72px; }
+  .hero__media { order: 0; }
+  .photo-placeholder { aspect-ratio: 16 / 10; max-height: none; }
+}
+
+/* ---------- 8. Bản đồ ---------- */
+.map { margin-top: 32px; }
+.map__tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.map__frame {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--bg-soft);
+}
+.map__frame iframe { width: 100%; height: 100%; border: 0; }
+.map__load {
+  position: absolute; inset: 0; width: 100%;
+  border: 0; background: var(--bg-soft); color: var(--brand); font-weight: 700;
+}
+.map__load:hover { background: var(--brand-50); }
+@media (min-width: 1024px) { .map__frame { aspect-ratio: 21 / 9; } }
+
+/* ---------- 9. Footer (nền tối) ---------- */
+.site-footer { background: var(--navy); color: var(--on-navy-2); font-size: var(--fs-small); }
+.site-footer > .container { padding-block: 56px 32px; }
+.site-footer a { color: var(--on-navy); }
+.site-footer a:hover { color: var(--brand-100); }
+.site-footer__logo { height: 48px; width: auto; }
+.site-footer__grid { display: grid; gap: 28px; margin-top: 32px; }
+.site-footer__grid p + p { margin-top: 6px; }
+.site-footer__title { font-size: 16px; color: var(--on-navy); margin-bottom: 8px; }
+.site-footer .status { color: var(--on-navy-2); }
+.site-footer__line { margin-top: 36px; color: var(--on-navy); font-weight: 500; font-size: 16px; }
+.site-footer__bottom { background: var(--navy-deep); padding-block: 16px; }
+.site-footer__bottom .container { display: grid; gap: 4px; }
+@media (min-width: 600px) { .site-footer__grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1024px) {
+  .site-footer__grid { grid-template-columns: repeat(4, 1fr); }
+  .site-footer__bottom .container { display: flex; justify-content: space-between; gap: 24px; }
+}
+
+/* ---------- 10. Thanh nút cố định + bảng chọn cơ sở (điện thoại) ---------- */
+.action-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+  background: var(--bg); border-top: 1px solid var(--line);
+  transition: transform .25s ease;
+}
+.action-bar.is-hidden { transform: translateY(110%); }
+.action-bar__item {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 48px; border: 2px solid var(--brand); border-radius: var(--radius-btn);
+  background: var(--bg); color: var(--brand); font-weight: 700; text-decoration: none;
+}
+.action-bar__item--cta { background: var(--cta); border-color: var(--cta); color: var(--on-cta); }
+.action-bar__item--cta:hover { background: var(--cta-600); color: var(--on-cta); }
+body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); }
+@media (min-width: 1024px) {
+  .action-bar { display: none; }
+  body { padding-bottom: 0; }
+}
+
+.sheet {
+  width: 100%; max-width: 560px; margin: auto auto 0; padding: 20px var(--gutter) calc(24px + env(safe-area-inset-bottom));
+  border: 0; border-radius: var(--radius-card) var(--radius-card) 0 0;
+  background: var(--bg); color: var(--ink);
+}
+.sheet::backdrop { background: rgba(7, 31, 51, .5); }
+.sheet__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.sheet__title { font-size: 20px; }
+.sheet__close {
+  width: 44px; height: 44px; border: 0; border-radius: var(--radius-btn);
+  background: var(--bg-soft); font-size: 26px; line-height: 1;
+}
+.sheet__list { display: grid; gap: 12px; }
+.sheet__branch {
+  display: grid; gap: 4px; padding: 16px;
+  border: 1px solid var(--line); border-radius: var(--radius-card);
+  color: var(--ink); text-decoration: none;
+}
+.sheet__branch:hover { border-color: var(--brand); color: var(--ink); }
+.sheet__branch strong { color: var(--brand); }
+.sheet__branch span { font-size: var(--fs-small); color: var(--ink-2); }
+
+/* ---------- 11. Hiện dần khi cuộn + giảm chuyển động ---------- */
+/* Chỉ ẩn khi JS đã chạy (class .js trên <html>), để trang vẫn đọc được nếu JS lỗi. */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}

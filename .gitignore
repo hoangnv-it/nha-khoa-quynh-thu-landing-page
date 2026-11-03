@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.DS_Store
+Thumbs.db
+*.log
+# Lưu ý: KHÔNG bỏ qua anh-goc/ (repo private, cần lưu ảnh gốc).

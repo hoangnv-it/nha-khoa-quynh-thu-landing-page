@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nha khoa Quỳnh Thư - Nha khoa gia đình tại Hòa Xuân, Đà Nẵng</title>
+  <meta name="description" content="2 cơ sở tại Hòa Xuân, mở cửa đến 19:00. Nha khoa trẻ em, niềng răng, răng sứ, điều trị tủy. Báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
+  <meta name="theme-color" content="#0B2E4A">
+
+  <!-- ĐỊA CHỈ WEBSITE: đổi bằng tools/doi-ten-mien.ps1, không sửa tay từng chỗ -->
+  <link rel="canonical" href="https://quynh-thu-landing-page.tai-khoan.workers.dev/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:site_name" content="Nha khoa Quỳnh Thư">
+  <meta property="og:title" content="Nha khoa Quỳnh Thư - Nha khoa gia đình tại Hòa Xuân, Đà Nẵng">
+  <meta property="og:description" content="2 cơ sở tại Hòa Xuân, mở cửa đến 19:00. Báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
+  <meta property="og:url" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/">
+  <!-- og-home.jpg là ảnh TẠM (chưa có ảnh thật). Thay bằng ảnh hero thật + logo trắng khi có. -->
+  <meta property="og:image" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=5bd8cb32">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nha khoa Quỳnh Thư, mở cửa đến 19:00, 2 cơ sở tại Hòa Xuân, Đà Nẵng">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png?v=d04e1b2c">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/logo/favicon-192.png?v=4ddd0ed6">
+  <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=0dc649e6">
+
+  <link rel="stylesheet" href="style.css?v=de638b47">
+  <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
+  <script>document.documentElement.classList.add("js");</script>
+
+  <!--
+    JSON-LD: Organization + 2 Dentist. KHÔNG thêm aggregateRating / review.
+    [CẦN XÁC NHẬN] số nhà 2 cơ sở (CS1: 217, nguồn khác ghi 114 hoặc 132; CS2: 303, ảnh bìa ghi 273).
+    [CẦN XÁC NHẬN] giờ mở cửa: thêm openingHoursSpecification sau khi phòng khám xác nhận.
+    Thông tin ở đây phải giống nội dung trang, llms.txt và Google Maps.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization",
+        "name": "Nha khoa Quỳnh Thư",
+        "legalName": "Công ty TNHH MTV Nha khoa Quỳnh Thư",
+        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+        "logo": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/logo/favicon-192.png?v=4ddd0ed6",
+        "email": "lequynhthu@gmail.com",
+        "telephone": "+84944479405",
+        "sameAs": [
+          "https://www.facebook.com/nhakhoaquynhthu",
+          "https://www.facebook.com/nhakhoaquynhthu2"
+        ],
+        "subOrganization": [
+          { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1" },
+          { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2" }
+        ]
+      },
+      {
+        "@type": "Dentist",
+        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1",
+        "name": "Nha khoa Quỳnh Thư - Cơ sở 1",
+        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+        "image": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=5bd8cb32",
+        "telephone": "+84944479405",
+        "email": "lequynhthu@gmail.com",
+        "parentOrganization": { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "217 Văn Tiến Dũng",
+          "addressLocality": "Hòa Xuân",
+          "addressRegion": "Đà Nẵng",
+          "addressCountry": "VN"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 15.9955452, "longitude": 108.2134546 },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=15.9955452,108.2134546",
+        "sameAs": ["https://www.facebook.com/nhakhoaquynhthu"]
+      },
+      {
+        "@type": "Dentist",
+        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2",
+        "name": "Nha khoa Quỳnh Thư - Cơ sở 2",
+        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+        "image": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=5bd8cb32",
+        "telephone": "+84944479405",
+        "email": "lequynhthu@gmail.com",
+        "parentOrganization": { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization" },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "303 Lê Quảng Chí",
+          "addressLocality": "Hòa Xuân",
+          "addressRegion": "Đà Nẵng",
+          "addressCountry": "VN"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": 16.0125987, "longitude": 108.2196122 },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=16.0125987,108.2196122",
+        "sameAs": ["https://www.facebook.com/nhakhoaquynhthu2"]
+      }
+    ]
+  }
+  </script>
+
+  <!--
+    Microsoft Clarity. Project ID: [CLARITY_ID - chờ tạo].
+    Chỉ chạy trên http(s), tải sau khi trang tải xong 1,5 giây.
+    Khi có ID: thay "CLARITY_ID" bên dưới bằng ID thật.
+  -->
+  <script>
+    (function (w, d) {
+      var CLARITY_ID = "CLARITY_ID";
+      w.clarity = w.clarity || function () { (w.clarity.q = w.clarity.q || []).push(arguments); };
+      if (!/^https?:$/.test(location.protocol) || CLARITY_ID === "CLARITY_ID") return;
+      w.addEventListener("load", function () {
+        setTimeout(function () {
+          var s = d.createElement("script");
+          s.async = true;
+          s.src = "https://www.clarity.ms/tag/" + CLARITY_ID;
+          d.head.appendChild(s);
+        }, 1500);
+      });
+    })(window, document);
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Bỏ qua, đến nội dung chính</a>
+
+  <!-- ===== HEADER (nền sáng, dính trên cùng) ===== -->
+  <header class="site-header" id="dau-trang">
+    <div class="container site-header__inner">
+      <a class="logo" href="#dau-trang" aria-label="Nha Khoa Quỳnh Thư, về đầu trang">
+        <img src="assets/logo/logo-blue.svg?v=f48a008a" alt="Nha Khoa Quỳnh Thư" width="236" height="64">
+      </a>
+
+      <nav class="site-nav" id="menu-chinh" aria-label="Menu chính">
+        <ul class="site-nav__list">
+          <li><a href="#dich-vu">Dịch vụ</a></li>
+          <li><a href="#bang-gia">Bảng giá</a></li>
+          <li><a href="#phong-kham">Phòng khám</a></li>
+          <li><a href="#danh-gia">Đánh giá</a></li>
+          <li><a href="#dia-chi">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--outline header-call" href="tel:+84944479405" data-track="call">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        <span>0944 479 405</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-chinh" aria-label="Mở menu">
+        <span class="menu-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="noi-dung" tabindex="-1">
+
+    <!-- ===== HERO (nền tối --navy) ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow eyebrow--on-navy">Nha khoa gia đình · Hòa Xuân, Đà Nẵng</p>
+          <h1 id="hero-title">Chăm sóc răng cho cả nhà, mở cửa đến 19:00</h1>
+          <p class="hero__sub">Hai cơ sở gần nhà ở Hòa Xuân. Bác sĩ tư vấn và báo giá rõ ràng trước khi điều trị.</p>
+          <div class="hero__actions" id="hero-cta">
+            <!-- [CẦN XÁC NHẬN] link Zalo -->
+            <a class="btn btn--cta" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo">Nhắn Zalo đặt lịch</a>
+            <a class="btn btn--outline-light" href="tel:+84944479405" data-track="call">Gọi 0944 479 405</a>
+          </div>
+          <p class="status" data-status="all" aria-live="polite">Đóng cửa lúc 19:00</p>
+        </div>
+        <div class="hero__media">
+          <!-- Chờ ảnh thật hero.webp (spec mục 3.2). Không dùng ảnh AI/ảnh minh họa. -->
+          <div class="photo-placeholder">Ảnh hero: chờ ảnh thật của phòng khám</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 1. DỊCH VỤ (nền --bg) ===== -->
+    <section class="section reveal" id="dich-vu" aria-labelledby="dich-vu-title">
+      <div class="container">
+        <p class="eyebrow">Dịch vụ</p>
+        <h2 id="dich-vu-title">Dịch vụ nha khoa cho cả gia đình</h2>
+        <p class="placeholder">Khung tạm: 6 thẻ dịch vụ làm ở bước sau.</p>
+      </div>
+    </section>
+
+    <!-- ===== 2. NHA KHOA TRẺ EM (nền --bg-soft) ===== -->
+    <section class="section section--soft reveal" id="tre-em" aria-labelledby="tre-em-title">
+      <div class="container">
+        <p class="eyebrow">Nha khoa trẻ em</p>
+        <h2 id="tre-em-title">Bé đi khám răng không còn là chuyện khó</h2>
+        <p class="placeholder">Khung tạm: ảnh kids.webp + 4 bước [CẦN XÁC NHẬN quy trình].</p>
+      </div>
+    </section>
+
+    <!-- ===== 3. BẢNG GIÁ (nền --brand-50) ===== -->
+    <section class="section section--brand reveal" id="bang-gia" aria-labelledby="bang-gia-title">
+      <div class="container">
+        <p class="eyebrow">Bảng giá</p>
+        <h2 id="bang-gia-title">Giá tham khảo, báo trước khi điều trị</h2>
+        <p class="placeholder">Khung tạm: bảng giá viết thẳng trong HTML [CẦN XÁC NHẬN tất cả giá].</p>
+        <p class="note">Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.</p>
+      </div>
+    </section>
+
+    <!-- ===== 4. TRƯỚC & SAU (nền --bg) ===== -->
+    <section class="section reveal" id="truoc-sau" aria-labelledby="truoc-sau-title">
+      <div class="container">
+        <p class="eyebrow">Trước &amp; sau</p>
+        <h2 id="truoc-sau-title">Một số ca điều trị tại phòng khám</h2>
+        <p class="placeholder">Khung tạm: ảnh trước/sau thật của phòng khám.</p>
+      </div>
+    </section>
+
+    <!-- ===== 5. PHÒNG KHÁM (nền --bg-soft) ===== -->
+    <section class="section section--soft reveal" id="phong-kham" aria-labelledby="phong-kham-title">
+      <div class="container">
+        <p class="eyebrow">Phòng khám</p>
+        <h2 id="phong-kham-title">Không gian và trang thiết bị</h2>
+        <p class="placeholder">Khung tạm: lưới ảnh clinic-01…06 + danh sách trang thiết bị.</p>
+      </div>
+    </section>
+
+    <!-- ===== 6. ĐỘI NGŨ (nền --bg). ẨN cho tới khi có ảnh + thông tin bác sĩ. Xem biến SHOW_TEAM trong file JS ===== -->
+    <section class="section reveal" id="doi-ngu" aria-labelledby="doi-ngu-title" hidden>
+      <div class="container">
+        <h2 id="doi-ngu-title">Bác sĩ của Nha khoa Quỳnh Thư</h2>
+        <p class="placeholder">[CẦN XÁC NHẬN] tên, chức danh, ảnh của từng bác sĩ.</p>
+      </div>
+    </section>
+
+    <!-- ===== 7. ĐÁNH GIÁ (nền --bg-soft) ===== -->
+    <section class="section section--soft reveal" id="danh-gia" aria-labelledby="danh-gia-title">
+      <div class="container">
+        <p class="eyebrow">Đánh giá</p>
+        <h2 id="danh-gia-title">Khách hàng nói gì trên Google</h2>
+        <p class="placeholder">Khung tạm: rating riêng từng cơ sở + 6 đánh giá thật, giữ nguyên văn.</p>
+      </div>
+    </section>
+
+    <!-- ===== 8. HAI CƠ SỞ (nền --bg) ===== -->
+    <section class="section reveal" id="dia-chi" aria-labelledby="dia-chi-title">
+      <div class="container">
+        <p class="eyebrow">Địa chỉ</p>
+        <h2 id="dia-chi-title">Hai cơ sở tại Hòa Xuân</h2>
+        <p class="placeholder">Khung tạm: 2 thẻ cơ sở (ảnh, địa chỉ, giờ, trạng thái, Gọi · Zalo · Chỉ đường).</p>
+
+        <!-- Bản đồ: chỉ tải iframe Google Maps khi bấm -->
+        <div class="map" data-map>
+          <div class="map__tabs" role="group" aria-label="Chọn cơ sở trên bản đồ">
+            <button type="button" class="chip" data-map-branch="cs1" aria-pressed="true">Cơ sở 1</button>
+            <button type="button" class="chip" data-map-branch="cs2" aria-pressed="false">Cơ sở 2</button>
+          </div>
+          <div class="map__frame" data-map-frame>
+            <button type="button" class="map__load" data-map-load>Bấm để xem bản đồ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 9. HỎI ĐÁP (nền --bg-soft) ===== -->
+    <section class="section section--soft reveal" id="hoi-dap" aria-labelledby="hoi-dap-title">
+      <div class="container">
+        <p class="eyebrow">Hỏi đáp</p>
+        <h2 id="hoi-dap-title">Câu hỏi thường gặp</h2>
+        <p class="placeholder">Khung tạm: 4 câu hỏi, câu trả lời [CẦN XÁC NHẬN].</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (nền tối --navy) ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <img class="site-footer__logo" src="assets/logo/logo-white.svg?v=bb4675b9" alt="Nha Khoa Quỳnh Thư" width="236" height="64" loading="lazy">
+      <div class="site-footer__grid">
+        <div>
+          <h2 class="site-footer__title">Cơ sở 1</h2>
+          <!-- [CẦN XÁC NHẬN] số nhà: 217 (nguồn khác ghi 114 hoặc 132) -->
+          <p>217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng</p>
+          <p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=15.9955452,108.2134546" target="_blank" rel="noopener" data-track="directions">Chỉ đường</a></p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Cơ sở 2</h2>
+          <!-- [CẦN XÁC NHẬN] số nhà: 303 (ảnh bìa ghi 273) -->
+          <p>303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</p>
+          <p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=16.0125987,108.2196122" target="_blank" rel="noopener" data-track="directions">Chỉ đường</a></p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Liên hệ</h2>
+          <p><a href="tel:+84944479405" data-track="call">0944 479 405</a></p>
+          <p><a href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo">Zalo</a></p>
+          <p><a href="mailto:lequynhthu@gmail.com">lequynhthu@gmail.com</a></p>
+          <p>
+            <a href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener">Facebook CS1</a> ·
+            <a href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener">Facebook CS2</a>
+          </p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Giờ làm việc</h2>
+          <!-- [CẦN XÁC NHẬN] giờ mở cửa và ngày làm việc -->
+          <p class="tabular">Mở cửa: [CẦN XÁC NHẬN] · Đóng cửa: 19:00</p>
+          <p class="status" data-status="all">Đóng cửa lúc 19:00</p>
+        </div>
+      </div>
+      <p class="site-footer__line">Tan làm vẫn kịp ghé, Nha khoa Quỳnh Thư mở cửa đến 19:00.</p>
+    </div>
+    <div class="site-footer__bottom">
+      <div class="container">
+        <p>© 2026 Công ty TNHH MTV Nha khoa Quỳnh Thư</p>
+        <p>Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== THANH NÚT CỐ ĐỊNH (chỉ điện thoại) ===== -->
+  <nav class="action-bar" aria-label="Liên hệ nhanh" data-action-bar>
+    <a class="action-bar__item" href="tel:+84944479405" data-track="call">Gọi</a>
+    <a class="action-bar__item action-bar__item--cta" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo">Zalo</a>
+    <button class="action-bar__item" type="button" data-sheet-open aria-haspopup="dialog" aria-controls="chon-co-so">Chỉ đường</button>
+  </nav>
+
+  <!-- Bảng chọn cơ sở khi bấm "Chỉ đường" (dialog: có sẵn bẫy focus + Esc để đóng) -->
+  <dialog class="sheet" id="chon-co-so" aria-labelledby="chon-co-so-title">
+    <div class="sheet__head">
+      <h2 id="chon-co-so-title" class="sheet__title">Bạn muốn đến cơ sở nào?</h2>
+      <button type="button" class="sheet__close" data-sheet-close aria-label="Đóng">×</button>
+    </div>
+    <ul class="sheet__list">
+      <li>
+        <a class="sheet__branch" href="https://www.google.com/maps/dir/?api=1&amp;destination=15.9955452,108.2134546" target="_blank" rel="noopener" data-track="directions">
+          <strong>Cơ sở 1</strong>
+          <span>217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng</span>
+          <span class="status" data-status="cs1"></span>
+        </a>
+      </li>
+      <li>
+        <a class="sheet__branch" href="https://www.google.com/maps/dir/?api=1&amp;destination=16.0125987,108.2196122" target="_blank" rel="noopener" data-track="directions">
+          <strong>Cơ sở 2</strong>
+          <span>303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</span>
+          <span class="status" data-status="cs2"></span>
+        </a>
+      </li>
+    </ul>
+  </dialog>
+
+  <script src="script.js?v=425a631c" defer></script>
+</body>
+</html>
