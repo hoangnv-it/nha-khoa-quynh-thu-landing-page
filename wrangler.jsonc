@@ -3,8 +3,10 @@
 // - Đường dẫn không tồn tại sẽ trả về public/404.html.
 // - Khi có tên miền riêng: thêm src/index.js (chuyển hướng 301 *.workers.dev -> tên miền)
 //   giống dự án Diệu Hiền, rồi thêm "main" và "routes" vào file này.
+// - "name" PHẢI giống hệt tên Worker trên Cloudflare (Workers & Pages > tên Worker).
+//   Lệch tên thì Cloudflare không deploy vào Worker đang nối với GitHub và báo cảnh báo.
 {
-  "name": "quynh-thu-landing-page",
+  "name": "nha-khoa-quynh-thu-landing-page",
   "compatibility_date": "2025-09-01",
   "assets": {
     "directory": "./public",
