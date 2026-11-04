@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g1" x1="12" y1="4" x2="52" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE9A3"/>
+      <stop offset=".45" stop-color="#F5B50F"/>
+      <stop offset="1" stop-color="#D98F00"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="20" y1="14" x2="44" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFD047"/>
+      <stop offset="1" stop-color="#E9A200"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="32" y1="20" x2="32" y2="44" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF3CF"/>
+    </linearGradient>
+  </defs>
+  <!-- bóng nhẹ dưới huy hiệu -->
+  <ellipse cx="32" cy="60.4" rx="17" ry="2.2" fill="#064F6A" opacity=".18"/>
+  <!-- viền huy hiệu 12 cánh -->
+  <polygon points="32,2.5 38.52,7.66 46.75,6.45 49.82,14.18 57.55,17.25 56.34,25.48 61.5,32 56.34,38.52 57.55,46.75 49.82,49.82 46.75,57.55 38.52,56.34 32,61.5 25.48,56.34 17.25,57.55 14.18,49.82 6.45,46.75 7.66,38.52 2.5,32 7.66,25.48 6.45,17.25 14.18,14.18 17.25,6.45 25.48,7.66" fill="url(#g1)" stroke="url(#g1)" stroke-width="3.4" stroke-linejoin="round"/>
+  <!-- vòng sáng bên trong -->
+  <circle cx="32" cy="32" r="21.2" fill="none" stroke="#FFFFFF" stroke-opacity=".75" stroke-width="1.6"/>
+  <circle cx="32" cy="32" r="19" fill="url(#g2)"/>
+  <!-- ngôi sao -->
+  <polygon points="32,21 34.88,28.64 43.03,29.02 36.66,34.11 38.82,41.98 32,37.5 25.18,41.98 27.34,34.11 20.97,29.02 29.12,28.64" fill="#B87800" opacity=".28" transform="translate(0 1.2)" stroke="#B87800" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="32,21 34.88,28.64 43.03,29.02 36.66,34.11 38.82,41.98 32,37.5 25.18,41.98 27.34,34.11 20.97,29.02 29.12,28.64" fill="url(#g3)" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>
+  <!-- vệt sáng góc trên trái -->
+  <path d="M15.5 21.5C18.5 13.5 26 9 34 8.6" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

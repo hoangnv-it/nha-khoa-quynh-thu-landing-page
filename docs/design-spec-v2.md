@@ -151,7 +151,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 
 ### 5.2 Hero (nền teal tối)
 - Desktop: chữ bên trái (~50%), ảnh bên phải (~55%) tràn mép phải. Mép trái ảnh cắt theo **vòng cung lớn**, kèm một vòng cung trong suốt sáng hơn. Đáy hero là **đường lượn sóng** chuyển sang nền sáng.
-- Nhãn bo tròn (nền trắng mờ, chữ teal nhạt): "Nha khoa uy tín" *(ảnh gốc: "Nha khoa Quỳnh Thư", đổi ngày 2026-11-03 theo yêu cầu)*
+- Nhãn bo tròn (nền trắng mờ, chữ teal nhạt): "Nha khoa uy tín" *(ảnh gốc: "Nha khoa Quỳnh Thư", đổi ngày 2026-11-03 theo yêu cầu)*. Thêm 2026-11-04: icon ảnh huy hiệu vàng 12 cánh có ngôi sao trắng (`assets/icons/uy-tin.svg`, 30px máy tính / 24px điện thoại) đứng trước chữ, bật nhẹ 1 lần khi trang tải (không mờ dần từ opacity 0). Icon trang trí, `alt=""`.
 - H1 trắng: **"Cả nhà an tâm"** *(ảnh gốc: "Phố lên đèn", đổi ngày 2026-11-03 theo yêu cầu)*
 - Sub: "Nha khoa gần nhà, mở cửa đến 19:00, chăm sóc nụ cười gia đình bạn" *(ảnh gốc ghi "mở cửa cả buổi tối", đổi cho đúng giờ thật)*
 - 3 điểm nổi bật, icon nét trắng ở trên, chữ 2 dòng, ngăn bởi vạch dọc mờ:
@@ -160,6 +160,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
   - nhóm người: "Trả góp / 0%" *(ảnh gốc: "Chi phí hợp lý")*
 - Nút: vàng "📞 Gọi ngay: 0944 479 405" + viền trắng "📍 Tìm đường" (mở bảng chọn cơ sở).
 - Dòng trạng thái nhỏ dưới nút (JS): "Đang mở cửa · đóng lúc 19:00" / "Đã đóng cửa · mở lại 08:00 ngày mai".
+- Dòng giờ làm việc (thêm 2026-11-04, viết cố định trong HTML, không do JS): icon đồng hồ + "Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00" (giờ in đậm). Máy tính 1 dòng, điện thoại 2 dòng. Giờ đổi thì sửa cả `HOURS` trong script, dòng này, mục 2 cơ sở, footer và JSON-LD.
 - Mobile: ảnh trên (bo cong đáy), chữ dưới.
 
 ### 5.3 Dịch vụ nổi bật (nền sáng)
@@ -220,9 +221,8 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - `<details>`: Giờ làm việc? (trả lời theo Google Maps) · Có cần đặt lịch trước không? · Bé mấy tuổi nên khám răng lần đầu? · Trả góp 0% áp dụng thế nào? · Có hỗ trợ hồ sơ bảo hiểm không? Câu trả lời chưa có: **[CẦN XÁC NHẬN]**.
 
 ### 5.12 Footer (nền teal tối, mép trên lượn sóng)
-- Một hàng (desktop): logo trắng | 🕒 "Đang mở cửa" + "(Đóng cửa lúc 19:00)" | chữ viết tay 2 dòng, xoay nhẹ, có nét gạch dưới: "Nụ cười khỏe đẹp / Cho cuộc sống thêm vui!"
-- Đường kẻ mảnh, rồi dòng giữa: "© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư | 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng".
-- Dưới cùng: 1 hàng liên hệ (giữa trang, điện thoại tự xuống dòng): 📞 0944 479 405 · Zalo · ✉ lequynhthu@gmail.com · Facebook cơ sở 1 · Facebook cơ sở 2 (thay đổi 2026-11-04; đã bỏ dòng "Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ").
+- Một hàng (desktop), 4 cột: logo trắng | cột liên hệ xếp dọc 5 dòng: 📞 0944 479 405, Zalo, ✉ lequynhthu@gmail.com, Facebook cơ sở 1, Facebook cơ sở 2 | 🕒 "Đang mở cửa" + "(Đóng cửa lúc 19:00)" | chữ viết tay 2 dòng, xoay nhẹ, có nét gạch dưới: "Nụ cười khỏe đẹp / Cho cuộc sống thêm vui!". Đường kẻ dọc ngắn cạnh logo và cạnh giờ mở cửa (đổi 2026-11-04 theo ý tưởng của chủ dự án). Điện thoại: các khối xếp dọc, liên hệ nằm ngay sau logo.
+- Đường kẻ mảnh, rồi 1 dòng giữa: "© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư | 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng". Không còn dòng "Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ" và không còn hàng liên hệ ở dưới cùng.
 
 ### 5.13 Thanh nút cố định (điện thoại)
 - Đáy màn hình, nền trắng: **Gọi** · **Zalo** (vàng) · **Chỉ đường** (mở bảng chọn cơ sở). Ẩn khi nút của hero đang hiện.
