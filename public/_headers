@@ -23,6 +23,9 @@
 /404.html
   Cache-Control: no-cache
 
+/dich-vu/*
+  Cache-Control: no-cache
+
 # Bảo mật cơ bản cho mọi trang
 /*
   X-Content-Type-Options: nosniff

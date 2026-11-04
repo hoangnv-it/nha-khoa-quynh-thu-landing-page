@@ -16,7 +16,7 @@
   <meta property="og:title" content="Nha khoa Quỳnh Thư - Nha khoa gia đình tại Hòa Xuân, Đà Nẵng">
   <meta property="og:description" content="2 cơ sở tại Hòa Xuân, mở cửa đến 19:00. Báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
   <meta property="og:url" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/">
-  <meta property="og:image" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=140ab77e">
+  <meta property="og:image" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=f2449028">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân">
@@ -26,8 +26,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/logo/favicon-192.png?v=10c97e70">
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=81e072f5">
 
-  <link rel="preload" as="image" href="assets/images/hero.webp?v=ef4afce4" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=3144143c">
+  <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
+  <link rel="stylesheet" href="style.css?v=d3f15fee">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -145,6 +145,7 @@
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M13.5 21v-8h2.7l.5-3.2h-3.2V7.9c0-.9.4-1.7 1.8-1.7h1.5V3.4S15.2 3.2 14 3.2c-2.6 0-4.3 1.6-4.3 4.4v2.2H7v3.2h2.7v8z"/></symbol>
     <symbol id="i-zalo" viewBox="0 0 24 24"><rect x="1.5" y="3" width="21" height="16" rx="6" fill="#FFFFFF" stroke="none"/><path d="M5 21l2.5-3" stroke="#FFFFFF" stroke-width="2.5"/><text x="12" y="13.6" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.2" font-weight="700" fill="#0A68FF" stroke="none">Zalo</text></symbol>
   </svg>
 
@@ -160,7 +161,18 @@
       <nav class="site-nav" id="menu-chinh" aria-label="Menu chính">
         <ul class="site-nav__list">
           <li><a href="#dau-trang" data-nav="dau-trang" aria-current="true">Trang chủ</a></li>
-          <li><a href="#dich-vu" data-nav="dich-vu">Dịch vụ</a></li>
+          <li class="has-sub">
+            <a href="#dich-vu" data-nav="dich-vu">Dịch vụ</a>
+            <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="menu-dich-vu" aria-label="Mở danh sách dịch vụ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+            <ul class="sub-menu" id="menu-dich-vu" aria-label="Các dịch vụ">
+              <li><a href="dich-vu/kham-tre-em.html"><img src="assets/icons/kham-tre-em.webp?v=e3b17992" width="256" height="256" alt="" loading="lazy"><span>Khám răng trẻ em</span></a></li>
+              <li><a href="dich-vu/rang-su.html"><img src="assets/icons/rang-su.webp?v=58eed3e3" width="256" height="256" alt="" loading="lazy"><span>Răng sứ thẩm mỹ</span></a></li>
+              <li><a href="dich-vu/dieu-tri-tuy.html"><img src="assets/icons/dieu-tri-tuy.webp?v=66b7f76f" width="256" height="256" alt="" loading="lazy"><span>Điều trị tủy</span></a></li>
+              <li><a href="dich-vu/nieng-rang.html"><img src="assets/icons/nieng-rang.webp?v=bd85f4bf" width="256" height="256" alt="" loading="lazy"><span>Niềng răng</span></a></li>
+              <li><a href="dich-vu/tay-trang.html"><img src="assets/icons/tay-trang.webp?v=1d7bce7d" width="256" height="256" alt="" loading="lazy"><span>Tẩy trắng răng</span></a></li>
+              <li><a href="dich-vu/nho-rang.html"><img src="assets/icons/nho-rang.webp?v=46b675e1" width="256" height="256" alt="" loading="lazy"><span>Nhổ răng</span></a></li>
+            </ul>
+          </li>
           <li><a href="#bang-gia" data-nav="bang-gia">Bảng giá</a></li>
           <li><a href="#danh-gia" data-nav="danh-gia">Đánh giá</a></li>
           <li><a href="#dia-chi" data-nav="dia-chi">Liên hệ</a></li>
@@ -183,7 +195,7 @@
     <!-- ===== HERO (nền teal tối) ===== -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__media">
-        <img src="assets/images/hero.webp?v=ef4afce4" width="1280" height="896" fetchpriority="high" alt="Hai bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân tại phòng khám">
+        <img src="assets/images/hero.webp?v=2e1fb349" width="1276" height="956" fetchpriority="high" alt="Hai bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân tại phòng khám">
       </div>
       <div class="container hero__inner">
         <div class="hero__text">
@@ -219,12 +231,12 @@
           <h2 id="dich-vu-title">Chăm sóc toàn diện cho cả gia đình</h2>
         </div>
         <ul class="services">
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/kham-tre-em.svg?v=f0230d2c" width="64" height="64" alt=""><span>Khám răng<br>trẻ em</span></a></li>
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/tram-rang.svg?v=f67eef4c" width="64" height="64" alt=""><span>Trám răng<br>thẩm mỹ</span></a></li>
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/dieu-tri-tuy.svg?v=5df2d884" width="64" height="64" alt=""><span>Điều trị tủy</span></a></li>
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/nieng-rang.svg?v=cd0a656b" width="64" height="64" alt=""><span>Niềng răng</span></a></li>
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/rang-su.svg?v=4edd7a0a" width="64" height="64" alt=""><span>Răng sứ<br>thẩm mỹ</span></a></li>
-          <li><a class="service" href="#bang-gia" data-track="price"><img src="assets/icons/tay-trang.svg?v=32e6f8ea" width="64" height="64" alt=""><span>Tẩy trắng răng</span></a></li>
+          <li><a class="service service--wiggle" href="dich-vu/kham-tre-em.html" data-track="service"><span class="service__icon"><img src="assets/icons/kham-tre-em.webp?v=e3b17992" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Khám răng<br>trẻ em</span></a></li>
+          <li><a class="service service--shine" href="dich-vu/rang-su.html" data-track="service"><span class="service__icon"><img src="assets/icons/rang-su.webp?v=58eed3e3" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Răng sứ<br>thẩm mỹ</span></a></li>
+          <li><a class="service service--search" href="dich-vu/dieu-tri-tuy.html" data-track="service"><span class="service__icon"><img src="assets/icons/dieu-tri-tuy.webp?v=66b7f76f" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Điều trị tủy</span></a></li>
+          <li><a class="service service--squeeze" href="dich-vu/nieng-rang.html" data-track="service"><span class="service__icon"><img src="assets/icons/nieng-rang.webp?v=bd85f4bf" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Niềng răng</span></a></li>
+          <li><a class="service service--glow" href="dich-vu/tay-trang.html" data-track="service"><span class="service__icon"><img src="assets/icons/tay-trang.webp?v=1d7bce7d" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Tẩy trắng răng</span></a></li>
+          <li><a class="service service--pull" href="dich-vu/nho-rang.html" data-track="service"><span class="service__icon"><img src="assets/icons/nho-rang.webp?v=46b675e1" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Nhổ răng</span></a></li>
         </ul>
       </div>
     </section>
@@ -317,6 +329,50 @@
       </div>
     </section>
 
+    <!-- ===== ĐỘI NGŨ (thêm 2026-11-04). Chỉ BS Quỳnh Thư có ảnh; 3 thẻ còn lại là chỗ giữ chỗ ===== -->
+    <section class="section reveal" id="doi-ngu" aria-labelledby="doi-ngu-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--lines">Đội ngũ</p>
+          <h2 id="doi-ngu-title">Bác sĩ của Nha khoa Quỳnh Thư</h2>
+        </div>
+        <ul class="doctors">
+          <!-- [CẦN XÁC NHẬN] họ tên đầy đủ, học hàm, chuyên môn của BS Quỳnh Thư. Hiện chỉ ghi "chủ phòng khám" theo thông tin đã có. KHÔNG thêm số năm kinh nghiệm khi chưa xác nhận. -->
+          <li class="doctor">
+            <div class="doctor__photo"><img src="assets/images/bs-quynh-thu.webp?v=7aea0f31" width="640" height="800" loading="lazy" alt="Bác sĩ Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám"></div>
+            <div class="doctor__body">
+              <h3>Bác sĩ Quỳnh Thư</h3>
+              <p>Chủ phòng khám</p>
+            </div>
+          </li>
+          <!-- [CẦN XÁC NHẬN] bác sĩ 2: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
+          <li class="doctor doctor--placeholder">
+            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
+            <div class="doctor__body">
+              <h3>Họ tên bác sĩ</h3>
+              <p>Chức danh, đang cập nhật</p>
+            </div>
+          </li>
+          <!-- [CẦN XÁC NHẬN] bác sĩ 3: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
+          <li class="doctor doctor--placeholder">
+            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
+            <div class="doctor__body">
+              <h3>Họ tên bác sĩ</h3>
+              <p>Chức danh, đang cập nhật</p>
+            </div>
+          </li>
+          <!-- [CẦN XÁC NHẬN] bác sĩ 4: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
+          <li class="doctor doctor--placeholder">
+            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
+            <div class="doctor__body">
+              <h3>Họ tên bác sĩ</h3>
+              <p>Chức danh, đang cập nhật</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- ===== HÌNH ẢNH HOẠT ĐỘNG + ĐÁNH GIÁ ===== -->
     <section class="section reveal" id="phong-kham" aria-labelledby="phong-kham-title">
       <div class="container">
@@ -379,7 +435,7 @@
           <h2 id="dia-chi-title" class="h2-sm">Thuận tiện cho mọi nhà</h2>
         </div>
         <div class="branches">
-          <article class="branch">
+          <article class="branch" data-branch="cs1">
             <img class="branch__photo" src="assets/images/co-so-1.webp?v=5237866c" width="480" height="384" loading="lazy" alt="Phòng điều trị Nha khoa Quỳnh Thư cơ sở 1">
             <div class="branch__body">
               <h3><svg class="icon" aria-hidden="true"><use href="#i-pin-solid"/></svg>Cơ sở 1</h3>
@@ -390,10 +446,11 @@
               <p class="branch__actions">
                 <a href="tel:+84944479405" data-track="call">Gọi</a>
                 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=15.9955452,108.2134546" target="_blank" rel="noopener" data-track="directions">Chỉ đường</a>
+                <button type="button" data-show-map="cs1">Xem trên bản đồ</button>
               </p>
             </div>
           </article>
-          <article class="branch">
+          <article class="branch is-active" data-branch="cs2">
             <img class="branch__photo" src="assets/images/co-so-2.webp?v=c782a371" width="480" height="384" loading="lazy" alt="Phòng điều trị Nha khoa Quỳnh Thư cơ sở 2">
             <div class="branch__body">
               <h3><svg class="icon" aria-hidden="true"><use href="#i-pin-solid"/></svg>Cơ sở 2</h3>
@@ -403,6 +460,7 @@
               <p class="branch__actions">
                 <a href="tel:+84944479405" data-track="call">Gọi</a>
                 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=16.0125987,108.2196122" target="_blank" rel="noopener" data-track="directions">Chỉ đường</a>
+                <button type="button" data-show-map="cs2">Xem trên bản đồ</button>
               </p>
             </div>
           </article>
@@ -414,8 +472,8 @@
               <button type="button" class="btn btn--teal" data-map-load>Xem bản đồ <svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></button>
             </div>
             <div class="map-card__tabs" role="group" aria-label="Chọn cơ sở trên bản đồ" hidden data-map-tabs>
-              <button type="button" class="chip" data-map-branch="cs1" aria-pressed="true">Cơ sở 1</button>
-              <button type="button" class="chip" data-map-branch="cs2" aria-pressed="false">Cơ sở 2</button>
+              <button type="button" class="chip" data-map-branch="cs1" aria-pressed="false">Cơ sở 1</button>
+              <button type="button" class="chip" data-map-branch="cs2" aria-pressed="true">Cơ sở 2</button>
             </div>
           </div>
         </div>
@@ -455,13 +513,6 @@
       </div>
     </section>
 
-    <!-- ===== ĐỘI NGŨ: ẨN cho tới khi có ảnh + thông tin bác sĩ. Xem biến SHOW_TEAM trong file JS ===== -->
-    <section class="section reveal" id="doi-ngu" aria-labelledby="doi-ngu-title" hidden>
-      <div class="container">
-        <h2 id="doi-ngu-title">Bác sĩ của Nha khoa Quỳnh Thư</h2>
-        <p>[CẦN XÁC NHẬN] tên, chức danh, ảnh của từng bác sĩ.</p>
-      </div>
-    </section>
   </main>
 
   <!-- ===== FOOTER (nền teal tối, mép trên lượn sóng) ===== -->
@@ -470,11 +521,6 @@
     <div class="site-footer__main">
       <div class="container site-footer__row">
         <img class="site-footer__logo" src="assets/logo/logo-white.svg?v=07605d43" alt="Nha Khoa Quỳnh Thư" width="236" height="64" loading="lazy">
-        <ul class="site-footer__contact">
-          <li><a href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0944 479 405</a></li>
-          <li><a href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Zalo</a></li>
-          <li><a href="mailto:lequynhthu@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>lequynhthu@gmail.com</a></li>
-        </ul>
         <div class="site-footer__hours">
           <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
           <p><span data-status-main="all">Giờ làm việc</span><small data-status-sub="all">(Đóng cửa lúc 19:00)</small></p>
@@ -482,12 +528,14 @@
         <p class="site-footer__script" lang="vi">Nụ cười khỏe đẹp<br>Cho cuộc sống thêm vui!</p>
       </div>
       <div class="container site-footer__bottom">
-        <p>Công ty TNHH MTV Nha khoa Quỳnh Thư <span aria-hidden="true">|</span> 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</p>
-        <p class="site-footer__legal">
-          © 2026 · Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ ·
-          <a href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener">Facebook CS1</a> ·
-          <a href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener">Facebook CS2</a>
-        </p>
+        <p>© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư <span aria-hidden="true">|</span> 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</p>
+        <ul class="site-footer__contact">
+          <li><a href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0944 479 405</a></li>
+          <li><a href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Zalo</a></li>
+          <li><a href="mailto:lequynhthu@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>lequynhthu@gmail.com</a></li>
+          <li><a href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook cơ sở 1</a></li>
+          <li><a href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook cơ sở 2</a></li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -550,6 +598,6 @@
     </ul>
   </dialog>
 
-  <script src="script.js?v=db55254c" defer></script>
+  <script src="script.js?v=485632f6" defer></script>
 </body>
 </html>

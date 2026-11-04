@@ -29,6 +29,15 @@ Email: lequynhthu@gmail.com
 - Tẩy trắng răng, đính đá răng
 - Nhổ răng, nhổ răng khôn, lấy vôi răng
 
+## Trang dịch vụ
+
+- Khám răng trẻ em: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em
+- Răng sứ thẩm mỹ: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su
+- Điều trị tủy, sâu răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/dieu-tri-tuy
+- Niềng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang
+- Tẩy trắng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang
+- Nhổ răng, nhổ răng khôn: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang
+
 ## Tiện ích
 
 - Chụp phim CBCT, scan miệng

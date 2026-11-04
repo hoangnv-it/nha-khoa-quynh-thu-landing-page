@@ -2,10 +2,11 @@
    Nha khoa Quỳnh Thư - script.js (JavaScript thuần, không thư viện)
    0. Cấu hình HOURS 2 cơ sở + tính "Đang mở / Đã đóng" (giờ Việt Nam)
    1. Header thu nhỏ khi cuộn + menu tự đổi mục đang xem
-   2. Menu điện thoại
+   2. Menu con "Dịch vụ" + menu điện thoại
    3. Thanh nút cố định + bảng chọn cơ sở khi bấm "Tìm đường" / "Chỉ đường"
    4. Bản đồ chỉ tải khi bấm
-   5. Đếm sự kiện Clarity: bam_goi, bam_zalo, bam_chi_duong, xem_bang_gia
+   5. Đếm sự kiện Clarity: bam_goi, bam_zalo, bam_chi_duong, xem_bang_gia, bam_dich_vu
+   Dùng chung cho trang chủ và 6 trang dịch vụ (dich-vu/*.html): phần nào không có trên trang thì tự bỏ qua.
    6. Hiện dần khi cuộn
    7. Chat Zalo (nút nổi, chỉ máy tính) + Clarity: mo_chat_zalo
    ========================================================================== */
@@ -15,13 +16,6 @@
   var doc = document;
   var $ = function (sel, root) { return (root || doc).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || doc).querySelectorAll(sel)); };
-
-  /* Hiện mục "Đội ngũ" khi đã có ảnh + thông tin bác sĩ [CẦN XÁC NHẬN] */
-  var SHOW_TEAM = false;
-  if (SHOW_TEAM) {
-    var team = doc.getElementById("doi-ngu");
-    if (team) team.hidden = false;
-  }
 
   /* ------------------------------------------------------------------------
      0. GIỜ LÀM VIỆC + TRẠNG THÁI MỞ CỬA
@@ -129,7 +123,7 @@
   /* Mục nào thuộc menu nào (các mục không có trong menu gắn vào mục gần nhất) */
   var NAV_OF = {
     "dich-vu": "dich-vu", "gioi-thieu": "dich-vu", "tre-em": "dich-vu",
-    "bang-gia": "bang-gia", "truoc-sau": "bang-gia",
+    "bang-gia": "bang-gia", "truoc-sau": "bang-gia", "doi-ngu": "bang-gia",
     "phong-kham": "danh-gia", "danh-gia": "danh-gia",
     "dia-chi": "dia-chi", "hoi-dap": "dia-chi"
   };
@@ -148,7 +142,10 @@
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(function () {
-        header.classList.toggle("is-scrolled", window.scrollY > 8);
+        /* 2 ngưỡng khác nhau để không bật/tắt qua lại quanh 1 điểm */
+        var y = window.scrollY;
+        if (y > 24) header.classList.add("is-scrolled");
+        else if (y < 4) header.classList.remove("is-scrolled");
         var line = window.scrollY + 220;
         var current = "dau-trang";
         sections.forEach(function (s) { if (s.offsetTop <= line) current = NAV_OF[s.id]; });
@@ -162,8 +159,37 @@
   }
 
   /* ------------------------------------------------------------------------
-     2. MENU ĐIỆN THOẠI
+     2. MENU CON "DỊCH VỤ" (máy tính: rê chuột là mở bằng CSS; nút mũi tên dùng cho
+        điện thoại, bàn phím và màn hình cảm ứng) + MENU ĐIỆN THOẠI
      ------------------------------------------------------------------------ */
+  var sub = $(".has-sub");
+  var subBtn = sub && $(".sub-toggle", sub);
+  function setSub(open) {
+    if (!sub || !subBtn) return;
+    sub.classList.toggle("is-open", open);
+    subBtn.setAttribute("aria-expanded", String(open));
+    subBtn.setAttribute("aria-label", open ? "Đóng danh sách dịch vụ" : "Mở danh sách dịch vụ");
+  }
+  if (sub && subBtn) {
+    subBtn.addEventListener("click", function () { setSub(!sub.classList.contains("is-open")); });
+    doc.addEventListener("click", function (e) {
+      if (sub.classList.contains("is-open") && !sub.contains(e.target)) setSub(false);
+    });
+    /* Esc: đóng hẳn (kể cả khi đang mở bằng rê chuột / focus). Cờ is-esc chặn CSS mở lại
+       cho tới khi chuột hoặc focus rời khỏi menu. */
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && (sub.classList.contains("is-open") || sub.matches(":hover, :focus-within"))) {
+        setSub(false);
+        sub.classList.add("is-esc");
+        subBtn.focus();
+      }
+    });
+    sub.addEventListener("mouseleave", function () { sub.classList.remove("is-esc"); });
+    sub.addEventListener("focusout", function (e) {
+      if (!sub.contains(e.relatedTarget)) sub.classList.remove("is-esc");
+    });
+  }
+
   var toggle = $(".menu-toggle");
   var nav = $("#menu-chinh");
   if (toggle && nav) {
@@ -171,6 +197,7 @@
       toggle.setAttribute("aria-expanded", String(open));
       toggle.setAttribute("aria-label", open ? "Đóng menu" : "Mở menu");
       nav.classList.toggle("is-open", open);
+      if (!open) setSub(false); /* đóng hamburger thì thu luôn danh sách dịch vụ */
     };
     toggle.addEventListener("click", function () {
       setMenu(toggle.getAttribute("aria-expanded") !== "true");
@@ -222,20 +249,24 @@
   }
 
   /* ------------------------------------------------------------------------
-     4. BẢN ĐỒ CHỈ TẢI KHI BẤM (không tải iframe Google Maps lúc mở trang)
+     4. BẢN ĐỒ TỰ HIỆN CƠ SỞ 2 KHI CUỘN GẦN TỚI MỤC (không tải iframe Google Maps lúc mở trang,
+        nên không làm chậm phần đầu trang). Nút "Xem bản đồ" chỉ là dự phòng khi trình duyệt cũ.
      ------------------------------------------------------------------------ */
+  /* query: tên địa điểm trên Google Maps, để bản đồ hiện thẻ phòng khám (tên, địa chỉ, rating, "Mở trong Maps")
+     thay vì chỉ ghim theo tọa độ. lat/lng giữ vị trí bản đồ đúng cơ sở. */
   var BRANCH_GEO = {
-    cs1: { name: "Cơ sở 1", lat: 15.9955452, lng: 108.2134546 },
-    cs2: { name: "Cơ sở 2", lat: 16.0125987, lng: 108.2196122 }
+    cs1: { name: "Cơ sở 1", query: "NHA KHOA QUỲNH THƯ, 217 Văn Tiến Dũng", lat: 15.9955452, lng: 108.2134546 },
+    cs2: { name: "Cơ sở 2", query: "NHA KHOA QUỲNH THƯ _ cơ sở 2", lat: 16.0125987, lng: 108.2196122 }
   };
   var mapBox = $("[data-map]");
   if (mapBox) {
-    var current = "cs1";
+    var current = "cs2"; /* Bản đồ mở Cơ sở 2 trước (theo yêu cầu 2026-11-03) */
     var frame = $("[data-map-frame]", mapBox);
     var tabs = $("[data-map-tabs]", mapBox);
     var mapSrc = function (key) {
       var b = BRANCH_GEO[key];
-      return "https://maps.google.com/maps?q=" + b.lat + "," + b.lng + "&z=16&hl=vi&output=embed";
+      return "https://maps.google.com/maps?q=" + encodeURIComponent(b.query) +
+        "&ll=" + b.lat + "," + b.lng + "&z=17&hl=vi&output=embed";
     };
     var loadMap = function () {
       var iframe = $("iframe", frame);
@@ -249,28 +280,57 @@
         if (tabs) tabs.hidden = false;
       }
       iframe.title = "Bản đồ Google Maps " + BRANCH_GEO[current].name;
-      iframe.src = mapSrc(current);
+      var url = mapSrc(current);
+      if (iframe.getAttribute("src") !== url) iframe.src = url; /* cùng địa chỉ thì không tải lại */
     };
     var loadBtn = $("[data-map-load]", mapBox);
     if (loadBtn) loadBtn.addEventListener("click", loadMap);
+    /* Tự tải bản đồ (Cơ sở 2, zoom 17) khi mục "2 cơ sở" sắp vào màn hình, cách 600px */
+    if ("IntersectionObserver" in window) {
+      var mapObs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          loadMap();
+          mapObs.disconnect();
+        }
+      }, { rootMargin: "600px 0px" });
+      mapObs.observe(mapBox);
+    } else {
+      loadMap();
+    }
 
+    /* Chọn cơ sở: đổi bản đồ, nút tab trên bản đồ và viền sáng của thẻ cơ sở tương ứng */
+    var selectBranch = function (key) {
+      current = key;
+      $$("[data-map-branch]", mapBox).forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b.getAttribute("data-map-branch") === key));
+      });
+      $$("[data-branch]").forEach(function (card) {
+        card.classList.toggle("is-active", card.getAttribute("data-branch") === key);
+      });
+      loadMap();
+    };
     $$("[data-map-branch]", mapBox).forEach(function (btn) {
+      btn.addEventListener("click", function () { selectBranch(btn.getAttribute("data-map-branch")); });
+    });
+    /* Nút "Xem trên bản đồ" trong thẻ cơ sở. Điện thoại / máy tính bảng: bản đồ nằm dưới thẻ nên cuộn tới bản đồ. */
+    $$("[data-show-map]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        current = btn.getAttribute("data-map-branch");
-        $$("[data-map-branch]", mapBox).forEach(function (b) {
-          b.setAttribute("aria-pressed", String(b === btn));
-        });
-        loadMap();
+        selectBranch(btn.getAttribute("data-show-map"));
+        if (window.innerWidth < 1024) {
+          var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          mapBox.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
+        }
       });
     });
   }
 
   /* ------------------------------------------------------------------------
      5. ĐẾM SỰ KIỆN CLARITY
-     Gắn data-track="call | zalo | directions | price" vào nút/link.
+     Gắn data-track="call | zalo | directions | price | service" vào nút/link
+     (service = bấm thẻ dịch vụ để mở trang riêng trong dich-vu/).
      window.clarity được tạo sẵn trong <head> (hàng đợi), nên gọi lúc nào cũng an toàn.
      ------------------------------------------------------------------------ */
-  var TRACK_EVENTS = { call: "bam_goi", zalo: "bam_zalo", directions: "bam_chi_duong", price: "xem_bang_gia" };
+  var TRACK_EVENTS = { call: "bam_goi", zalo: "bam_zalo", directions: "bam_chi_duong", price: "xem_bang_gia", service: "bam_dich_vu" };
   var priceViewed = false;
   function track(name) {
     if (name === "xem_bang_gia") {

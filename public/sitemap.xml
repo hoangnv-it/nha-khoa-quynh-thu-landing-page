@@ -2,6 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/dieu-tri-tuy</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang</loc>
+    <lastmod>2026-11-04</lastmod>
+  </url>
+  <url>
+    <loc>https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang</loc>
+    <lastmod>2026-11-04</lastmod>
   </url>
 </urlset>

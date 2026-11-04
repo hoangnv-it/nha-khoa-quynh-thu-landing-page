@@ -12,6 +12,7 @@
    8. Nha khoa trẻ em
    9. Bảng giá
    10. Trước & sau
+   10b. Đội ngũ bác sĩ
    11. Hình ảnh hoạt động + thẻ đánh giá
    12. Khách hàng nói gì
    13. 2 cơ sở + bản đồ
@@ -185,7 +186,10 @@ h3 { font-size: 18px; line-height: 1.35; }
 .status:empty { display: none; }
 
 /* ---------- 4. Header ---------- */
-.site-header { position: sticky; top: 0; z-index: 50; background: rgba(250, 252, 253, .97); backdrop-filter: saturate(1.4) blur(8px); transition: box-shadow .2s; }
+/* Header nổi cố định (fixed) + chừa sẵn chỗ cho trang. Không dùng sticky: khi header thu nhỏ,
+   sticky làm trang co lại 12px, vị trí cuộn bị đẩy qua lại ngưỡng và header nháy liên tục. */
+body { padding-top: var(--header-h); }
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(250, 252, 253, .97); backdrop-filter: saturate(1.4) blur(8px); transition: box-shadow .2s; }
 .site-header.is-scrolled { box-shadow: 0 2px 16px rgba(10, 60, 90, .08); }
 .site-header__inner { display: flex; align-items: center; gap: 16px; height: var(--header-h); transition: height .25s ease; }
 .site-header.is-scrolled .site-header__inner { height: calc(var(--header-h) - 12px); }
@@ -204,9 +208,22 @@ h3 { font-size: 18px; line-height: 1.35; }
 .menu-toggle[aria-expanded="true"] .menu-toggle__bar::before { transform: translateY(7px) rotate(45deg); }
 .menu-toggle[aria-expanded="true"] .menu-toggle__bar::after { transform: translateY(-7px) rotate(-45deg); }
 @media (max-width: 1023px) {
-  .site-nav { position: absolute; left: 0; right: 0; top: 100%; display: none; padding: 8px var(--gutter) 16px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
-  .site-nav.is-open { display: block; }
+  /* Menu điện thoại: trượt xuống + mờ dần khi mở, ngược lại khi đóng.
+     Luôn có trong trang nhưng visibility:hidden khi đóng (không bấm/Tab vào được). */
+  .site-nav {
+    position: absolute; left: 0; right: 0; top: 100%; padding: 8px var(--gutter) 16px; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow);
+    visibility: hidden; opacity: 0; transform: translateY(-10px); clip-path: inset(0 0 100% 0);
+    transition: opacity .22s ease, transform .22s ease, clip-path .26s ease, visibility 0s linear .26s;
+  }
+  .site-nav.is-open { visibility: visible; opacity: 1; transform: none; clip-path: inset(0 0 -40px 0); transition-delay: 0s; }
   .site-nav__list a { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .site-nav__list > li { opacity: 0; transform: translateY(-6px); transition: opacity .2s ease, transform .2s ease; }
+  .site-nav.is-open .site-nav__list > li { opacity: 1; transform: none; }
+  .site-nav.is-open .site-nav__list > li:nth-child(1) { transition-delay: .05s; }
+  .site-nav.is-open .site-nav__list > li:nth-child(2) { transition-delay: .09s; }
+  .site-nav.is-open .site-nav__list > li:nth-child(3) { transition-delay: .13s; }
+  .site-nav.is-open .site-nav__list > li:nth-child(4) { transition-delay: .17s; }
+  .site-nav.is-open .site-nav__list > li:nth-child(5) { transition-delay: .21s; }
   .site-nav__list a[aria-current="true"] { border-bottom-color: var(--line); }
 }
 @media (min-width: 600px) { .header-call { display: inline-flex; } }
@@ -269,19 +286,68 @@ h3 { font-size: 18px; line-height: 1.35; }
 /* ---------- 6. Dịch vụ nổi bật ---------- */
 .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .service {
+  position: relative;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 10px;
-  height: 100%; padding: 22px 10px 18px; border: 1px solid var(--line); border-radius: var(--radius);
+  height: 100%; padding: 18px 10px 18px; border: 1px solid var(--line); border-radius: var(--radius);
   background: var(--card); box-shadow: var(--shadow); text-align: center;
   color: var(--ink); font-weight: 500; font-size: 15px; line-height: 1.3; text-decoration: none;
-  transition: transform .2s, box-shadow .2s;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
 }
-.service:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(10, 60, 90, .12); color: var(--ink); }
-.service img { width: 56px; height: 56px; }
+/* Hiệu ứng nâng thẻ (giữ như cũ) */
+.service:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(10, 60, 90, .12); border-color: #BFE3F0; color: var(--ink); }
+.service__label { display: block; }
+
+/* Icon: ô bo tròn, ảnh do phòng khám cung cấp (assets/icons/*.webp) */
+.service__icon { position: relative; display: block; width: 76px; height: 76px; overflow: hidden; border-radius: 22%; transform-origin: 50% 60%; }
+.service__icon img { display: block; width: 100%; height: 100%; }
+.service__icon::after { /* lớp sáng dùng cho hiệu ứng "shine" và "glow" */
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; border-radius: inherit;
+}
+
+/* Viền sáng chạy quanh thẻ 1 vòng khi hover / focus bàn phím */
+@property --service-spin { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.service::before {
+  content: ""; position: absolute; inset: -1px; z-index: 1; padding: 2px; border-radius: inherit; pointer-events: none; opacity: 0;
+  background: conic-gradient(from var(--service-spin), rgba(26, 139, 203, 0) 0deg, rgba(26, 139, 203, 0) 220deg, rgba(143, 221, 245, .85) 300deg, #1A8BCB 356deg, rgba(26, 139, 203, 0) 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+.service:is(:hover, :focus-visible)::before { animation: service-spin 1.2s cubic-bezier(.45, .1, .3, 1) 1 both; }
+@keyframes service-spin {
+  0%   { --service-spin: 0deg;   opacity: 0; }
+  10%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { --service-spin: 360deg; opacity: 0; }
+}
+
+/* Chuyển động riêng của từng icon (khi hover / focus bàn phím) */
+.service--wiggle:is(:hover, :focus-visible) .service__icon  { animation: icon-wiggle .8s ease-in-out 1; }          /* bé: lắc lư vui */
+.service--shine:is(:hover, :focus-visible) .service__icon   { animation: icon-float .9s ease-in-out 1; }           /* răng sứ: nhấc nhẹ + vệt sáng */
+.service--shine:is(:hover, :focus-visible) .service__icon::after { background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .85) 50%, transparent 65%); animation: icon-shine .9s ease-in-out 1; }
+.service--search:is(:hover, :focus-visible) .service__icon  { animation: icon-search 2s ease-in-out infinite; }     /* kính lúp: lướt tìm */
+.service--squeeze:is(:hover, :focus-visible) .service__icon { animation: icon-squeeze .6s ease-in-out 2; }         /* niềng: siết */
+.service--glow:is(:hover, :focus-visible) .service__icon    { animation: icon-glow 1.6s ease-in-out infinite; }    /* tẩy trắng: sáng lên */
+.service--glow:is(:hover, :focus-visible) .service__icon::after { background: radial-gradient(circle at 70% 25%, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0) 60%); animation: icon-glow-light 1.6s ease-in-out infinite; }
+.service--pull:is(:hover, :focus-visible) .service__icon    { animation: icon-pull .85s cubic-bezier(.3, 1.4, .5, 1) 1; } /* nhổ: giật lên */
+
+@keyframes icon-wiggle  { 0%, 100% { transform: rotate(0) scale(1); } 20% { transform: rotate(-8deg) scale(1.08); } 45% { transform: rotate(7deg) scale(1.08); } 70% { transform: rotate(-4deg) scale(1.05); } 88% { transform: rotate(2deg) scale(1.02); } }
+@keyframes icon-float   { 0%, 100% { transform: translateY(0) scale(1); } 40% { transform: translateY(-5px) scale(1.07); } }
+@keyframes icon-shine   { 0% { opacity: 1; transform: translateX(-100%); } 100% { opacity: 1; transform: translateX(100%); } }
+@keyframes icon-search  { 0%, 100% { transform: translate(0, 0) rotate(0); } 25% { transform: translate(5px, -4px) rotate(4deg); } 50% { transform: translate(0, -6px) rotate(0); } 75% { transform: translate(-5px, -4px) rotate(-4deg); } }
+@keyframes icon-squeeze { 0%, 100% { transform: scale(1, 1); } 35% { transform: scale(1.1, .92); } 70% { transform: scale(.95, 1.07); } }
+@keyframes icon-glow    { 0%, 100% { transform: scale(1); filter: brightness(1) saturate(1); } 50% { transform: scale(1.07); filter: brightness(1.07) saturate(1.25); } }
+@keyframes icon-glow-light { 0%, 100% { opacity: 0; } 50% { opacity: .75; } }
+@keyframes icon-pull    { 0% { transform: translateY(0) rotate(0); } 30% { transform: translateY(-9px) rotate(-5deg); } 55% { transform: translateY(2px) rotate(3deg); } 78% { transform: translateY(-3px) rotate(-1deg); } 100% { transform: translateY(0) rotate(0); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .service::before, .service__icon, .service__icon::after { animation: none !important; }
+}
 @media (min-width: 600px) { .services { grid-template-columns: repeat(3, 1fr); } }
 @media (min-width: 1024px) {
   .services { grid-template-columns: repeat(6, 1fr); gap: 16px; }
-  .service { padding: 20px 10px 18px; gap: 8px; font-size: 17px; }
-  .service img { width: 58px; height: 58px; }
+  .service { padding: 18px 10px 18px; gap: 10px; font-size: 17px; }
+  .service__icon { width: 88px; height: 88px; }
 }
 
 /* ---------- 7. Về Nha khoa Quỳnh Thư ---------- */
@@ -330,6 +396,27 @@ h3 { font-size: 18px; line-height: 1.35; }
 .ba-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 .ba-grid figcaption { padding: 12px 16px; color: var(--ink); font-weight: 600; }
 
+/* ---------- 10b. Đội ngũ bác sĩ ---------- */
+.doctors { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.doctor { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.doctor__photo { aspect-ratio: 4 / 5; background: var(--brand-50); }
+.doctor__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+.doctor__body { padding: 14px 8px 16px; text-align: center; }
+.doctor__body h3 { font-size: 16px; text-wrap: balance; }
+.doctor__body p { margin-top: 2px; color: var(--ink-3); font-size: 14px; }
+/* Thẻ giữ chỗ cho bác sĩ chưa có thông tin */
+.doctor--placeholder { border-style: dashed; border-color: #BFD9E3; box-shadow: none; background: rgba(255, 255, 255, .6); }
+.doctor--placeholder .doctor__photo { display: grid; place-items: center; background: linear-gradient(160deg, var(--teal-100), var(--brand-50)); }
+.doctor__silhouette { width: 46%; fill: none; stroke: var(--teal-600); stroke-width: 2.2; stroke-linecap: round; opacity: .38; }
+.doctor--placeholder h3, .doctor--placeholder p { color: var(--ink-3); }
+.doctor--placeholder h3 { font-weight: 500; }
+@media (min-width: 600px) { .doctors { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
+@media (min-width: 1024px) {
+  .doctors { gap: 20px; }
+  .doctor__body { padding: 18px 16px 20px; }
+  .doctor__body h3 { font-size: 20px; }
+}
+
 /* ---------- 11. Hình ảnh hoạt động + thẻ đánh giá ---------- */
 .gallery { display: grid; gap: 16px; }
 .gallery__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
@@ -362,7 +449,9 @@ h3 { font-size: 18px; line-height: 1.35; }
 
 /* ---------- 13. 2 cơ sở + bản đồ ---------- */
 .branches { display: grid; gap: 16px; }
-.branch { display: grid; grid-template-columns: 42% 1fr; gap: 16px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.branch { display: grid; grid-template-columns: 42% 1fr; gap: 16px; align-items: center; padding: 12px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); transition: border-color .2s, box-shadow .2s; }
+/* Cơ sở đang hiện trên bản đồ */
+.branch.is-active { border-color: var(--teal-600); box-shadow: 0 0 0 1px var(--teal-600), var(--shadow); }
 .branch__photo { width: 100%; height: 100%; min-height: 140px; aspect-ratio: 5 / 4; object-fit: cover; border-radius: var(--radius-sm); }
 .branch h3 { display: flex; align-items: center; gap: 8px; font-size: 19px; }
 .branch h3 .icon { width: 24px; height: 24px; color: var(--teal-600); }
@@ -373,18 +462,24 @@ h3 { font-size: 18px; line-height: 1.35; }
 .rating a { color: var(--ink-2); text-decoration: none; }
 .rating a:hover { text-decoration: underline; }
 .branch__status { margin-top: 6px; font-size: 13px; color: var(--ink-3); }
-.branch__actions { display: flex; gap: 14px; margin-top: 8px; font-size: 14px; font-weight: 700; }
-.map-card { position: relative; min-height: 220px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #F3EBDD url("assets/images/ban-do-nen.svg") center / cover no-repeat; }
+.branch__actions { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 14px; font-weight: 700; }
+.branch__actions button { padding: 0; border: 0; background: none; color: var(--teal-600); font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.branch__actions button:hover { color: var(--teal-800); }
+.map-card { position: relative; min-height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #F3EBDD url("assets/images/ban-do-nen.svg") center / cover no-repeat; }
 .map-card__frame { position: absolute; inset: 0; display: grid; place-items: center; }
 .map-card__frame iframe { width: 100%; height: 100%; border: 0; }
 .map-card__pin { position: absolute; left: 50%; top: 22%; width: 40px; height: 40px; transform: translateX(-50%); color: var(--pin-red); filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .2)); }
 .map-card .btn--teal { margin-top: 40px; }
-.map-card__tabs { position: absolute; left: 10px; top: 10px; display: flex; gap: 6px; z-index: 1; }
+/* Nút chọn cơ sở nằm giữa mép dưới bản đồ, không đè lên thẻ thông tin của Google ở góc trên bên trái */
+.map-card__tabs { position: absolute; left: 50%; bottom: 44px; transform: translateX(-50%); display: flex; gap: 6px; z-index: 1; }
+@media (min-width: 600px) { .map-card { min-height: 440px; } }
 @media (min-width: 1024px) {
-  .branches { grid-template-columns: 1fr 1fr .9fr; gap: 20px; }
-  .branch { padding: 14px; gap: 18px; }
-  .branch__photo { min-height: 150px; }
-  .map-card { min-height: 0; }
+  /* Cột trái: 2 thẻ cơ sở xếp dọc. Cột phải: bản đồ to, cao bằng cả 2 thẻ. */
+  .branches { grid-template-columns: minmax(340px, 400px) 1fr; grid-template-rows: 1fr 1fr; gap: 20px; }
+  .branches > .branch { grid-column: 1; align-items: stretch; padding: 14px; gap: 18px; }
+  .branch__body { align-self: center; }
+  .branch__photo { min-height: 0; aspect-ratio: auto; }
+  .map-card { grid-column: 2; grid-row: 1 / span 2; min-height: 580px; }
 }
 
 /* ---------- 14. Hỏi đáp ---------- */
@@ -404,7 +499,8 @@ h3 { font-size: 18px; line-height: 1.35; }
 .site-footer a:hover { text-decoration: underline; }
 .site-footer__row { display: grid; gap: 22px; justify-items: start; padding-block: 16px 24px; }
 .site-footer__logo { height: 56px; width: auto; }
-.site-footer__contact { display: grid; gap: 12px; }
+/* Hàng liên hệ nằm dưới đường kẻ: điện thoại, Zalo, email, Facebook CS1, Facebook CS2 (điện thoại tự xuống dòng) */
+.site-footer__contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; margin-top: 6px; }
 .site-footer__contact a { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; }
 .site-footer__hours { display: flex; align-items: center; gap: 12px; }
 .site-footer__hours .icon { width: 26px; height: 26px; }
@@ -415,20 +511,20 @@ h3 { font-size: 18px; line-height: 1.35; }
   font-size: 24px; line-height: 1.25; white-space: nowrap; transform: rotate(-7deg); transform-origin: left center;
 }
 .site-footer__script::after { content: ""; position: absolute; left: 30%; right: 0; bottom: 0; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, .7); transform: rotate(-3deg); }
-.site-footer__bottom { display: grid; gap: 6px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .22); text-align: center; font-size: 13px; color: rgba(255, 255, 255, .82); }
-.site-footer__legal { font-size: 12px; color: rgba(255, 255, 255, .65); }
-.site-footer__legal a { color: rgba(255, 255, 255, .8); }
+.site-footer__bottom { display: grid; gap: 10px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .22); text-align: center; font-size: 13px; color: rgba(255, 255, 255, .82); }
 @media (min-width: 1024px) {
   .site-footer__wave { height: 70px; }
-  .site-footer__row { grid-template-columns: auto auto auto 1fr; align-items: center; gap: 0; padding-block: 18px 28px; }
+  .site-footer__row { grid-template-columns: auto auto 1fr; align-items: center; gap: 0; padding-block: 18px 28px; }
   .site-footer__row > * + * { padding-left: 28px; }
   .site-footer__logo { height: 64px; padding-right: 28px; border-right: 1px solid rgba(255, 255, 255, .25); box-sizing: content-box; }
-  .site-footer__contact { display: flex; gap: 24px; padding-right: 28px; border-right: 1px solid rgba(255, 255, 255, .25); }
+  .site-footer__contact { gap: 12px 32px; margin-top: 8px; }
   .site-footer__contact a { font-size: 16px; }
   .site-footer__hours p { font-size: 16px; }
-  .site-footer__script { justify-self: end; font-size: 28px; transform: rotate(-8deg); transform-origin: right center; }
+  .site-footer__script { justify-self: end; font-size: 28px; transform: translateY(-20px) rotate(-8deg); transform-origin: right center; } /* nâng lên để gạch chân không chạm đường kẻ footer */
   .site-footer__bottom { font-size: 15px; }
 }
+/* Laptop: chừa chỗ dưới cùng để nút Chat Zalo nổi không che hàng liên hệ khi cuộn hết trang */
+@media (min-width: 1024px) and (max-width: 1499px) { .site-footer__main { padding-bottom: 76px; } }
 
 /* ---------- 16. Thanh nút cố định + bảng chọn cơ sở ---------- */
 .action-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; padding: 8px 12px calc(8px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -4px 16px rgba(10, 60, 90, .08); transition: transform .25s ease; }
@@ -489,12 +585,114 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
   .zalo-chat__bubble::before, .zalo-chat__panel { animation: none !important; }
 }
 
+/* ---------- 16c. Trang dịch vụ (public/dich-vu/*.html) ---------- */
+.site-nav__list a[aria-current="page"] { color: var(--teal-600); font-weight: 700; border-bottom-color: var(--teal-600); }
+@media (max-width: 1023px) { .site-nav__list a[aria-current="page"] { border-bottom-color: var(--line); } }
+.breadcrumb ol { display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 0; list-style: none; font-size: 14px; color: var(--ink-3); }
+.breadcrumb li + li::before { content: "›"; margin-right: 8px; color: var(--ink-3); }
+.breadcrumb a { color: var(--teal-600); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb [aria-current] { color: var(--ink-2); }
+.svc-hero { padding-block: 16px 8px; }
+.svc-hero__grid {
+  display: grid; gap: 24px; align-items: center; margin-top: 16px; padding: 24px 22px; border-radius: 22px;
+  background: linear-gradient(120deg, #E2F1F6 0%, #E9F5F8 60%, #DDEFF5 100%);
+}
+.svc-hero h1 { font-size: 32px; line-height: 1.15; letter-spacing: -.01em; }
+.svc-hero__lead { margin-top: 12px; max-width: 36em; }
+.svc-hero .chips { margin-top: 18px; }
+.svc-hero .chips li { background: #fff; }
+.svc-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.svc-hero .status { margin-top: 14px; color: var(--ink-3); }
+.svc-hero__media { order: -1; display: grid; place-items: center; }
+.svc-hero__icon { width: 128px; height: 128px; border-radius: 22%; background: #fff; box-shadow: 0 12px 32px rgba(10, 60, 90, .14); }
+.svc-signs { display: grid; gap: 12px; }
+.svc-signs li { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); color: var(--ink); font-weight: 500; }
+.svc-signs .icon { width: 24px; height: 24px; color: var(--teal-600); }
+.svc-split { display: grid; gap: 40px; }
+.svc-split .steps { margin-bottom: 0; }
+.svc-split .price-card { margin-inline: 0; }
+.svc-more { margin-top: 16px; }
+.svc-more a { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; text-decoration: none; }
+.svc-more a:hover { text-decoration: underline; }
+.ba-grid--svc { grid-template-columns: repeat(auto-fill, minmax(200px, 300px)); }
+.svc-cta { display: grid; gap: 20px; padding: 24px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.svc-cta p { margin-top: 8px; }
+.svc-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+@media (min-width: 600px) {
+  .svc-signs { grid-template-columns: repeat(2, 1fr); }
+  .services--others { grid-template-columns: repeat(5, 1fr); }
+}
+@media (min-width: 1024px) {
+  .svc-hero { padding-top: 24px; }
+  .svc-hero__grid { grid-template-columns: 1fr auto; gap: 48px; padding: 40px 48px; }
+  .svc-hero h1 { font-size: 48px; }
+  .svc-hero__lead { font-size: 17px; }
+  .svc-hero__media { order: 0; padding-right: 24px; }
+  .svc-hero__icon { width: 220px; height: 220px; }
+  .svc-signs { grid-template-columns: repeat(3, 1fr); }
+  .svc-split { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .svc-cta { grid-template-columns: 1fr auto; align-items: center; gap: 32px; padding: 28px 36px; }
+}
+
+/* ---------- 16d. Menu con "Dịch vụ" ở header (thêm 2026-11-04) ---------- */
+/* Máy tính: rê chuột / Tab vào là mở (hiện xuống + mờ dần, các mục hiện lần lượt).
+   Điện thoại: nằm trong menu hamburger, bấm mũi tên để xổ xuống (accordion). */
+.has-sub { position: relative; }
+.sub-toggle { display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 50%; background: none; color: var(--ink); }
+.sub-toggle svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform .25s ease; }
+.has-sub.is-open .sub-toggle svg, .has-sub:is(:hover, :focus-within):not(.is-esc) .sub-toggle svg { transform: rotate(180deg); }
+.has-sub.is-open .sub-toggle { color: var(--teal-600); }
+.sub-menu { margin: 0; padding: 0; list-style: none; }
+.site-nav .sub-menu a { display: flex; align-items: center; gap: 12px; padding: 8px 10px; border: 0; border-radius: 12px; color: var(--ink); font-size: 15px; font-weight: 500; line-height: 1.3; white-space: nowrap; transition: background-color .2s, color .2s, transform .2s; }
+.site-nav .sub-menu a:hover { background: var(--brand-50); color: var(--teal-600); }
+.site-nav .sub-menu a[aria-current="page"] { background: var(--teal-100); border: 0; color: var(--teal-600); font-weight: 700; }
+.sub-menu img { display: block; flex: none; width: 40px; height: 40px; border-radius: 22%; transition: transform .25s ease; }
+.sub-menu a:hover img { transform: scale(1.1) rotate(-4deg); }
+.sub-menu > li { opacity: 0; transform: translateY(6px); transition: opacity .2s ease, transform .2s ease; }
+.has-sub.is-open .sub-menu > li, .has-sub:is(:hover, :focus-within):not(.is-esc) .sub-menu > li { opacity: 1; transform: none; }
+.sub-menu > li:nth-child(1) { transition-delay: .04s; }
+.sub-menu > li:nth-child(2) { transition-delay: .08s; }
+.sub-menu > li:nth-child(3) { transition-delay: .12s; }
+.sub-menu > li:nth-child(4) { transition-delay: .16s; }
+.sub-menu > li:nth-child(5) { transition-delay: .20s; }
+.sub-menu > li:nth-child(6) { transition-delay: .24s; }
+
+@media (max-width: 1023px) {
+  .has-sub { display: grid; grid-template-columns: 1fr 48px; align-items: center; border-bottom: 1px solid var(--line); }
+  .has-sub > a { border-bottom: 0 !important; }
+  .sub-toggle { width: 44px; height: 44px; justify-self: end; }
+  .sub-toggle svg { width: 20px; height: 20px; }
+  .has-sub:is(:hover, :focus-within):not(.is-esc):not(.is-open) .sub-toggle svg { transform: none; }
+  .has-sub:is(:hover, :focus-within):not(.is-esc):not(.is-open) .sub-menu > li { opacity: 0; transform: translateY(6px); }
+  .sub-menu {
+    grid-column: 1 / -1; overflow: hidden; max-height: 0; visibility: hidden; opacity: 0;
+    transition: max-height .3s ease, opacity .22s ease, visibility 0s linear .3s;
+  }
+  .has-sub.is-open .sub-menu { max-height: 480px; visibility: visible; opacity: 1; transition-delay: 0s; padding-bottom: 8px; }
+  .site-nav .sub-menu a { padding: 10px 4px 10px 8px; font-size: 15px; }
+}
+@media (min-width: 1024px) {
+  .has-sub { display: flex; align-items: center; }
+  .has-sub > a { padding-right: 0; }
+  .has-sub::after { content: ""; position: absolute; left: -16px; right: -16px; top: 100%; height: 26px; } /* cầu nối để rê chuột xuống menu không bị tắt */
+  .sub-menu {
+    position: absolute; left: 50%; top: calc(100% + 22px); z-index: 5; width: 290px; padding: 8px;
+    border: 1px solid var(--line); border-radius: var(--radius); background: #fff; box-shadow: 0 18px 44px rgba(10, 60, 90, .18);
+    visibility: hidden; opacity: 0; transform: translate(-50%, 10px) scale(.97); transform-origin: top center;
+    transition: opacity .2s ease, transform .24s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .24s;
+  }
+  .sub-menu::before { content: ""; position: absolute; left: 50%; top: -7px; width: 12px; height: 12px; margin-left: -6px; transform: rotate(45deg); border-left: 1px solid var(--line); border-top: 1px solid var(--line); border-radius: 3px 0 0 0; background: #fff; }
+  .has-sub.is-open .sub-menu, .has-sub:is(:hover, :focus-within):not(.is-esc) .sub-menu { visibility: visible; opacity: 1; transform: translate(-50%, 0) scale(1); transition-delay: 0s; }
+  .has-sub:is(:hover, :focus-within):not(.is-esc) > a { color: var(--teal-600); }
+}
+
 /* ---------- 17. Hiện dần khi cuộn + giảm chuyển động ---------- */
 .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .js .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  *, *::before, *::after { transition-duration: .01ms !important; transition-delay: 0s !important; animation-duration: .01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
 .br-lg { display: none; }

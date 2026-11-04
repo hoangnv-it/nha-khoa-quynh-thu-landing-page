@@ -19,7 +19,7 @@
 ### Quy tắc hình ảnh
 - Chỉ dùng **ảnh thật** do phòng khám đăng (Facebook 2 cơ sở, ảnh "Của chủ sở hữu" trên Google Maps). Không dùng ảnh AI, ảnh hoạt hình người hoặc tòa nhà.
 - Ảnh tòa nhà trong ảnh thiết kế (thẻ 2 cơ sở) là ảnh minh họa: thay bằng ảnh thật của từng cơ sở.
-- Minh họa được phép: 6 icon dịch vụ (nét xanh, có ngôi sao vàng như thiết kế), icon nét UI, nền bản đồ trang trí.
+- Minh họa được phép: 6 icon dịch vụ (bộ icon do phòng khám/chủ dự án cung cấp ngày 2026-11-03, phong cách minh họa mềm, có hình bé cười ở icon Khám răng trẻ em), icon nét UI, nền bản đồ trang trí. Đây là ngoại lệ do chủ dự án chọn cho quy tắc "không hoạt hình".
 - Nền tối (xanh teal) **chỉ ở Hero và Footer**. Các phần khác nền sáng.
 
 ---
@@ -30,7 +30,7 @@
 - Mobile-first. Breakpoint: < 600px, 600-1023px, ≥ 1024px. Nội dung rộng tối đa 1200px.
 - Ảnh WebP, có `width`/`height`, `loading="lazy"` trừ logo và ảnh hero (`fetchpriority="high"`).
 - Bảng giá, đánh giá viết thẳng trong HTML (không fetch JSON).
-- Bản đồ Google chỉ tải khi bấm.
+- Bản đồ Google tự tải khi cuộn gần tới mục "2 cơ sở" (cách 600px), không tải lúc mở trang.
 - Font tự host: **Be Vietnam Pro** 400/500/700 (toàn trang) + **Dancing Script** 600 (CHỈ dòng chữ viết tay ở footer).
 
 ---
@@ -63,7 +63,7 @@ Rating luôn ghi **riêng từng cơ sở**, kèm ngày cập nhật. Không g�
 
 | Vị trí | File web | Nguồn gốc |
 |---|---|---|
-| Hero | `hero.webp` 1280×896 | Google Maps CS2 (chủ sở hữu): 2 bác sĩ đội mũ xanh đang điều trị |
+| Hero | `hero.webp` 1276×956 | Ảnh do chủ dự án cung cấp ngày 2026-11-03: 2 bác sĩ khám cho bé trên ghế nha khoa (ảnh gốc `anh-goc/hero-goc.png`). Thay ảnh 2 bác sĩ lấy từ Google Maps CS2 trước đó. [CẦN XÁC NHẬN] phụ huynh/phòng khám đồng ý cho dùng ảnh bé |
 | Về phòng khám (ảnh trái) | `ve-phong-kham-1.webp` | Google Maps CS2: logo "Nha Khoa QUỲNH THƯ" trên tường phòng điều trị |
 | Về phòng khám (ảnh phải) | `ve-phong-kham-2.webp` | Facebook CS2: phòng điều trị ghế xanh |
 | Hình ảnh hoạt động (12 ảnh) | `hoat-dong-01…12.webp` 360×276 | Facebook CS1 |
@@ -147,6 +147,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Giữa: menu **Trang chủ · Dịch vụ · Bảng giá · Đánh giá · Liên hệ**. Mục đang xem: chữ teal đậm, gạch chân teal 2px.
 - Phải: nút vàng bo tròn có icon điện thoại "0944 479 405".
 - Mobile: logo + nút menu (bảng trắng toàn chiều ngang).
+- Menu con "Dịch vụ" (thêm 2026-11-04): có mũi tên nhỏ cạnh chữ. Máy tính: rê chuột hoặc Tab vào thì hộp trắng bo 16px (rộng 290px, có mũi nhọn lên) trượt xuống + mờ dần, 6 dịch vụ hiện lần lượt, mỗi dòng có icon 40px + tên; trang đang xem được tô `--teal-100`; hover icon nghiêng nhẹ. Bấm tên dịch vụ để sang trang riêng. Esc hoặc bấm ra ngoài để đóng. Điện thoại: bấm mũi tên (bên phải chữ "Dịch vụ") để xổ danh sách ngay trong hamburger (accordion trượt xuống); bấm chữ "Dịch vụ" vẫn cuộn tới mục Dịch vụ nổi bật. Có đủ ở trang chủ, 404 và 6 trang dịch vụ. Tắt chuyển động khi bật giảm chuyển động.
 
 ### 5.2 Hero (nền teal tối)
 - Desktop: chữ bên trái (~50%), ảnh bên phải (~55%) tràn mép phải. Mép trái ảnh cắt theo **vòng cung lớn**, kèm một vòng cung trong suốt sáng hơn. Đáy hero là **đường lượn sóng** chuyển sang nền sáng.
@@ -163,8 +164,9 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 
 ### 5.3 Dịch vụ nổi bật (nền sáng)
 - Eyebrow giữa có 2 đường kẻ hai bên: "DỊCH VỤ NỔI BẬT"; h2 giữa: "Chăm sóc toàn diện cho cả gia đình".
-- 6 thẻ trắng một hàng (desktop), icon 56px trên, nhãn dưới: Khám răng trẻ em · Trám răng thẩm mỹ · Điều trị tủy · Niềng răng · Răng sứ thẩm mỹ · Tẩy trắng răng. Mobile 2 cột, tablet 3 cột.
-- Bấm thẻ: cuộn tới Bảng giá.
+- 6 thẻ trắng một hàng (desktop), icon dạng ô bo tròn 88px (76px trên điện thoại) ở trên, nhãn dưới, theo thứ tự: Khám răng trẻ em · Răng sứ thẩm mỹ · Điều trị tủy · Niềng răng · Tẩy trắng răng · Nhổ răng (đổi ngày 2026-11-03 cho khớp bộ icon mới: bỏ "Trám răng thẩm mỹ", thêm "Nhổ răng"; giá trám răng vẫn có trong Bảng giá). Mobile 2 cột, tablet 3 cột.
+- Bấm thẻ: mở trang riêng của dịch vụ đó trong `dich-vu/` (từ 2026-11-04, xem 5.15). Clarity `bam_dich_vu`.
+- Hover (và focus bàn phím): giữ hiệu ứng nâng thẻ cũ; thêm viền sáng màu xanh chạy quanh thẻ 1 vòng (1,2 giây) và chuyển động riêng của từng icon: bé lắc lư, răng sứ nhấc nhẹ + vệt sáng quét, kính lúp lướt tìm, niềng răng siết, tẩy trắng sáng lên nhấp nháy, nhổ răng giật lên. Tắt hết khi người dùng bật giảm chuyển động.
 
 ### 5.4 Về Nha khoa Quỳnh Thư (khối nền `--brand-50`, bo 20px)
 - Trái: eyebrow "VỀ NHA KHOA QUỲNH THƯ", h2 "Uy tín từ chất lượng đến sự tận tâm", đoạn văn, nút vàng "Tìm hiểu thêm →".
@@ -182,6 +184,13 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 
 ### 5.7 Trước & sau (thêm)
 - 3 thẻ ảnh trước/sau của phòng khám, chú thích tên điều trị. Ghi chú: "Kết quả khác nhau tùy tình trạng của từng người."
+
+### 5.7b Đội ngũ (thêm 2026-11-04, không có trong ảnh thiết kế)
+- Nằm ngay dưới "Trước & sau". Eyebrow giữa có 2 đường kẻ: "ĐỘI NGŨ"; h2 giữa: "Bác sĩ của Nha khoa Quỳnh Thư".
+- 4 thẻ (2 cột điện thoại, 4 cột từ 600px): ảnh dọc 4:5, tên, chức danh. Thẻ trắng bo 16px, viền `--line`.
+- Thẻ 1: Bác sĩ Quỳnh Thư, "Chủ phòng khám" (ảnh do chủ dự án cung cấp, cắt bỏ cốc nước, `bs-quynh-thu.webp` 640×800). **[CẦN XÁC NHẬN]** họ tên đầy đủ, học hàm, chuyên môn. Không ghi số năm kinh nghiệm khi chưa xác nhận.
+- Thẻ 2 đến 4: chỗ giữ chỗ (viền nét đứt, hình người mờ, "Họ tên bác sĩ" / "Chức danh, đang cập nhật"). **[CẦN XÁC NHẬN]** họ tên, chức danh, ảnh (tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn). Có ảnh thì thay khung bằng thẻ như thẻ 1.
+- Bỏ biến `SHOW_TEAM` (trước đây ẩn mục này).
 
 ### 5.8 Hình ảnh hoạt động + đánh giá (theo ảnh)
 - Eyebrow trái "HÌNH ẢNH HOẠT ĐỘNG"; h2 "Nha khoa Quỳnh Thư - Luôn đồng hành cùng bạn".
@@ -202,16 +211,18 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 ### 5.10 2 cơ sở (theo ảnh)
 - Eyebrow "2 CƠ SỞ TẠI HÒA XUÂN, ĐÀ NẴNG"; h2 "Thuận tiện cho mọi nhà".
 - 2 thẻ trắng: ảnh bên trái, bên phải: icon ghim teal + "Cơ sở 1/2", địa chỉ 2 dòng, rating "4,9 ★ (42 đánh giá)" (số và sao màu vàng). Thêm dòng giờ + trạng thái và nút Gọi · Chỉ đường.
-- Thẻ thứ 3: nền bản đồ trang trí + ghim đỏ + nút teal bo tròn "Xem bản đồ →". Bấm: tải Google Maps (có nút chọn Cơ sở 1 / Cơ sở 2).
+- Bố cục (đổi 2026-11-04 để bản đồ to, dễ theo dõi vị trí): máy tính = cột trái 2 thẻ cơ sở xếp dọc (rộng 340-400px), cột phải bản đồ cao bằng cả 2 thẻ (tối thiểu 580px). Máy tính bảng và điện thoại = 2 thẻ xếp dọc, bản đồ nằm dưới (cao tối thiểu 440px / 340px). Mỗi thẻ có thêm nút chữ "Xem trên bản đồ": đổi bản đồ sang cơ sở đó (điện thoại và máy tính bảng tự cuộn tới bản đồ). Thẻ cơ sở đang hiện trên bản đồ có viền teal (`.is-active`, mặc định Cơ sở 2).
+- Bản đồ tự hiện Cơ sở 2 (không cần bấm), zoom 17. Nút chọn Cơ sở 1 / Cơ sở 2 nằm giữa mép dưới bản đồ (đổi 2026-11-04, trước đây ở góc trên bên trái và đè lên tên phòng khám trong thẻ thông tin của Google). Nền bản đồ trang trí + ghim đỏ + nút "Xem bản đồ" chỉ là hình chờ trong lúc bản đồ đang tải.
+- (Mô tả cũ) Thẻ thứ 3: nền bản đồ trang trí + ghim đỏ + nút teal bo tròn "Xem bản đồ →". Bấm: tải Google Maps, mở **Cơ sở 2** trước (đổi 2026-11-03), có nút chọn Cơ sở 1 / Cơ sở 2. Bản đồ tìm theo tên địa điểm trên Google Maps (kèm tọa độ) để hiện thẻ phòng khám: tên, địa chỉ, rating, nút "Mở trong Maps".
 - Dưới thẻ: "Đánh giá trên Google Maps, cập nhật 03/11/2026."
 
 ### 5.11 Hỏi đáp (thêm)
 - `<details>`: Giờ làm việc? (trả lời theo Google Maps) · Có cần đặt lịch trước không? · Bé mấy tuổi nên khám răng lần đầu? · Trả góp 0% áp dụng thế nào? · Có hỗ trợ hồ sơ bảo hiểm không? Câu trả lời chưa có: **[CẦN XÁC NHẬN]**.
 
 ### 5.12 Footer (nền teal tối, mép trên lượn sóng)
-- Một hàng (desktop): logo trắng | 📞 0944 479 405 · Zalo · ✉ lequynhthu@gmail.com | 🕒 "Đang mở cửa" + "(Đóng cửa lúc 19:00)" | chữ viết tay 2 dòng, xoay nhẹ, có nét gạch dưới: "Nụ cười khỏe đẹp / Cho cuộc sống thêm vui!"
-- Đường kẻ mảnh, rồi dòng giữa: "Công ty TNHH MTV Nha khoa Quỳnh Thư | 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng".
-- Thêm dòng nhỏ: "© 2026 · Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ."
+- Một hàng (desktop): logo trắng | 🕒 "Đang mở cửa" + "(Đóng cửa lúc 19:00)" | chữ viết tay 2 dòng, xoay nhẹ, có nét gạch dưới: "Nụ cười khỏe đẹp / Cho cuộc sống thêm vui!"
+- Đường kẻ mảnh, rồi dòng giữa: "© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư | 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng".
+- Dưới cùng: 1 hàng liên hệ (giữa trang, điện thoại tự xuống dòng): 📞 0944 479 405 · Zalo · ✉ lequynhthu@gmail.com · Facebook cơ sở 1 · Facebook cơ sở 2 (thay đổi 2026-11-04; đã bỏ dòng "Thông tin chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ").
 
 ### 5.13 Thanh nút cố định (điện thoại)
 - Đáy màn hình, nền trắng: **Gọi** · **Zalo** (vàng) · **Chỉ đường** (mở bảng chọn cơ sở). Ẩn khi nút của hero đang hiện.
@@ -225,13 +236,21 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 
 ---
 
+### 5.15 Trang dịch vụ (thêm 2026-11-04, không có trong ảnh thiết kế)
+- 6 trang tĩnh: `public/dich-vu/kham-tre-em.html`, `rang-su.html`, `dieu-tri-tuy.html`, `nieng-rang.html`, `tay-trang.html`, `nho-rang.html`. Đường dẫn trên mạng: `/dich-vu/<tên>` (Cloudflare tự bỏ đuôi .html).
+- Dùng chung `style.css`, `script.js` (đường dẫn `../`). Header, footer, thanh nút dưới, Chat Zalo, bảng chọn cơ sở giống trang chủ. Menu "Dịch vụ" sáng (`aria-current="page"`).
+- Thứ tự: breadcrumb · khối đầu trang nền `--brand-50` (eyebrow "Dịch vụ", h1 tên dịch vụ, đoạn giới thiệu, chip các dịch vụ con, nút Gọi + Nhắn Zalo, trạng thái mở cửa, icon lớn 220px / 128px trên điện thoại) · Dấu hiệu thường gặp (thẻ có dấu tích) · Quy trình 4 bước + Giá tham khảo (2 cột trên máy tính) · Hình ảnh thực tế (chỉ trang có ảnh thật) · khối Đặt lịch (Gọi, Zalo, Chỉ đường) · Dịch vụ khác (5 thẻ còn lại, giữ hiệu ứng hover).
+- Nội dung chỉ dùng thông tin đã có: danh sách dịch vụ trên ảnh bìa Facebook, giá "chỉ từ", ảnh trước/sau, tiện ích (CBCT, scan miệng, trả góp 0%). Danh sách dấu hiệu và quy trình có [CẦN XÁC NHẬN], chờ bác sĩ duyệt.
+- Header, footer chép riêng trong từng trang: sửa ở trang chủ thì sửa cả 6 trang.
+- SEO: title, description, canonical riêng; JSON-LD `BreadcrumbList`. Có trong `sitemap.xml` và `llms.txt`.
+
 ## 6. JavaScript
 1. Trạng thái mở/đóng theo `HOURS` (giờ Việt Nam), cập nhật mỗi 60 giây. Thử bằng `?gio=08:00&thu=0`.
 2. Header thu nhỏ khi cuộn; menu đang xem tự đổi theo vị trí cuộn.
 3. Menu điện thoại.
 4. Thanh nút cố định + bảng chọn cơ sở (dialog).
-5. Bản đồ chỉ tải khi bấm.
-6. Clarity: `bam_goi`, `bam_zalo`, `bam_chi_duong`, `xem_bang_gia`, `mo_chat_zalo`.
+5. Bản đồ tự tải khi cuộn gần tới mục "2 cơ sở" (IntersectionObserver, cách 600px; trình duyệt cũ không có thì tải ngay). Mặc định Cơ sở 2, zoom 17 (`z=17`, giữ nguyên, chủ dự án đã duyệt theo ảnh 2026-11-04).
+6. Clarity: `bam_goi`, `bam_zalo`, `bam_chi_duong`, `xem_bang_gia`, `mo_chat_zalo`, `bam_dich_vu`.
 7. Hiện dần khi cuộn (trừ hero), tắt khi `prefers-reduced-motion`.
 8. Chat Zalo: mở/đóng khung, Clarity `mo_chat_zalo` khi mở.
 

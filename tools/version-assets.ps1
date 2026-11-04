@@ -1,7 +1,7 @@
 ﻿<#
   version-assets.ps1
   Gắn ?v=<mã MD5 8 ký tự> cho style.css, script.js và mọi file trong public/assets/
-  ở các link trong public/index.html và public/404.html
+  ở các link trong public/index.html, public/404.html và public/dich-vu/*.html
   (src, srcset, href, poster, og:image, JSON-LD...).
 
   - Chạy được nhiều lần: thay mã cũ, không gắn chồng mã mới.
@@ -16,6 +16,9 @@ $ErrorActionPreference = 'Stop'
 $root   = Split-Path -Parent $PSScriptRoot
 $public = Join-Path $root 'public'
 $pages  = @('index.html', '404.html') | ForEach-Object { Join-Path $public $_ }
+# Các trang dịch vụ (dùng đường dẫn ../assets/..., script vẫn khớp vì tìm theo phần "assets/...")
+$svcDir = Join-Path $public 'dich-vu'
+if (Test-Path $svcDir) { $pages += Get-ChildItem $svcDir -Filter '*.html' -File | ForEach-Object { $_.FullName } }
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
 # 1. Danh sách file cần gắn mã: đường dẫn tương đối so với public/ (dùng dấu /)
