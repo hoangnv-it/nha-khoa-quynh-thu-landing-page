@@ -375,6 +375,51 @@
   }
 
   /* ------------------------------------------------------------------------
+     6b. MỤC ĐÁNH GIÁ (#danh-gia)
+     - Thẻ đánh giá chạy ngang: nhân đôi danh sách (bản sao aria-hidden) để chạy vòng liền mạch.
+       Chỉ chạy khi mục nằm trong màn hình; dừng khi rê chuột / chạm (CSS).
+     - Điểm Google từng cơ sở đếm từ 0 lên khi cuộn tới.
+     - Giảm chuyển động: giữ lưới tĩnh, không đếm số.
+     ------------------------------------------------------------------------ */
+  var reviewsSection = doc.getElementById("danh-gia");
+  var calmMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reviewsSection && !calmMotion && "IntersectionObserver" in window) {
+    var marquee = $("[data-marquee]", reviewsSection);
+    var list = marquee && $(".reviews", marquee);
+    if (list) {
+      Array.prototype.slice.call(list.children).forEach(function (li) {
+        var copy = li.cloneNode(true);
+        copy.setAttribute("aria-hidden", "true");
+        list.appendChild(copy);
+      });
+      marquee.style.setProperty("--rv-dur", (list.children.length / 2) * 9 + "s");
+      marquee.classList.add("is-marquee", "is-paused");
+      new IntersectionObserver(function (entries) {
+        marquee.classList.toggle("is-paused", !entries[0].isIntersecting);
+      }).observe(marquee);
+    }
+
+    var counters = $$(".rv-summary [data-count]", reviewsSection);
+    counters.forEach(function (el) { el.textContent = el.getAttribute("data-count").indexOf(".") > -1 ? "0,0" : "0"; });
+    var countObs = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      countObs.disconnect();
+      var t0 = null, dur = 1400;
+      function step(ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+        counters.forEach(function (el) {
+          var raw = el.getAttribute("data-count"), dec = raw.indexOf(".") > -1, v = parseFloat(raw) * ease;
+          el.textContent = dec ? v.toFixed(1).replace(".", ",") : String(Math.round(v));
+        });
+        if (p < 1) window.requestAnimationFrame(step);
+      }
+      window.requestAnimationFrame(step);
+    }, { threshold: 0.3 });
+    countObs.observe($(".rv-summary", reviewsSection));
+  }
+
+  /* ------------------------------------------------------------------------
      7. CHAT ZALO (nút nổi góc phải dưới, CHỈ hiện trên máy tính ≥ 1024px)
      - Bấm nút: mở/đóng bảng nhỏ có nút "Mở Zalo để chat".
      - Đóng bằng nút ×, phím Esc, hoặc bấm ra ngoài bảng.

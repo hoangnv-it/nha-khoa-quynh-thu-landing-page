@@ -27,7 +27,7 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 | Rating Google | CS1: 4,9★ (42 đánh giá). CS2: 4,7★ (61 đánh giá). Cập nhật 03/11/2026. |
 | Giờ làm việc | Cả 2 cơ sở: Thứ 2 - Thứ 7: 08:00 - 19:00, Chủ nhật: 08:00 - 18:00 (Google Maps, 03/11/2026). Cấu hình ở `HOURS` trong `public/script.js`. |
 | Giá "chỉ từ" | Theo banner của phòng khám trên Facebook: cạo vôi 150.000đ, trám răng sâu 199.000đ, răng tháo lắp 300.000đ, tẩy trắng 900.000đ, răng sứ 1.200.000đ [CẦN XÁC NHẬN còn áp dụng] |
-| Đội ngũ | BS Quỳnh Thư (chủ phòng khám, đã có ảnh trên web). Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
+| Đội ngũ | ThS.BS Lê Quỳnh Thư (chủ phòng khám, bác sĩ chuyên môn, đã có ảnh trên web). Theo NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 07/11/2026): hơn 15 năm kinh nghiệm, chuyên môn niềng răng, răng sứ, implant [CẦN XÁC NHẬN học vị, số năm, implant, nơi đào tạo]. Trang NhaKhoaHub ghi SĐT khác (0869 554 535) và giờ 8:00-19:00 cả tuần, khác Google Maps: KHÔNG dùng. Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
 
 **Dịch vụ** (theo ảnh bìa Facebook):
 - Nha khoa trẻ em: dự phòng và điều trị bệnh răng miệng cho trẻ em (dịch vụ đặc biệt)
@@ -76,22 +76,23 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 
 ## 4. Màu sắc (đã duyệt, không tự đổi)
 
-Lấy từ ảnh thiết kế. Khai báo trong `:root` ở đầu `public/style.css`.
+Đổi 2026-11-07 theo yêu cầu bác sĩ: bỏ teal, dùng xanh dương giống logo. Mã màu đo từ banner Facebook của phòng khám (logo + chữ #10689E, hình tròn trang trí #035AC3). Khai báo trong `:root` ở đầu `public/style.css`. Mọi cặp chữ/nền đạt WCAG AA (≥ 4,5).
 
 | Biến | Mã | Dùng cho |
 |---|---|---|
-| `--teal-900` | #064F6A | Nền hero + footer (CHỈ 2 chỗ này) |
-| `--teal-800` | #0A5F7A | Gradient hero, hover nút teal |
-| `--teal-600` | #0E7590 | Eyebrow, link, menu đang chọn, nút "Xem bản đồ", icon ghim |
-| `--teal-100` | #DCEFF4 | Chip, nền nhạt |
-| `--brand` | #1A8BCB | Logo, icon dịch vụ |
-| `--brand-50` | #E2F1F6 | Nền khối "Về phòng khám", ghi chú bảng giá |
-| `--ink` | #12324A | Tiêu đề |
-| `--ink-2` | #3E5566 | Chữ thường |
-| `--ink-3` | #6B7F8C | Chữ phụ |
-| `--bg` | #F5F9FC | Nền trang |
+| `--blue-900` | #0B5C94 | Nền hero + footer (CHỈ 2 chỗ này), hover nút xanh. Hero gradient #0B5C94 → #0F68A0 → #1A78BA |
+| `--blue-800` | #0F68A0 | Gradient hero, chữ chip |
+| `--blue-600` | #0F68A0 | Eyebrow, link, menu đang chọn, nút "Xem bản đồ" (`.btn--blue`), icon ghim |
+| `--blue-100` | #DCEBF8 | Chip, nền nhạt |
+| `--brand` | #10689E | Logo (SVG + favicon + ảnh OG), icon, viền focus |
+| `--brand-50` | #E4EFFA | Nền khối "Về phòng khám", ghi chú bảng giá |
+| `--accent` | #035AC3 | Màu nhấn: viền sáng chạy quanh thẻ dịch vụ, dấu ngoặc kép ở thẻ đánh giá |
+| `--ink` | #0E2F4F | Tiêu đề |
+| `--ink-2` | #3B5168 | Chữ thường |
+| `--ink-3` | #5B7086 | Chữ phụ |
+| `--bg` | #F4F8FC | Nền trang |
 | `--card` | #FFFFFF | Nền thẻ |
-| `--line` | #E3EDF2 | Viền thẻ, đường kẻ |
+| `--line` | #E1EAF4 | Viền thẻ, đường kẻ |
 | `--cta` | #FFD047 | Nút chính màu vàng (Gọi, số điện thoại header, Tìm hiểu thêm, Zalo ở thanh dưới) |
 | `--cta-600` | #F5BF1F | Hover nút chính |
 | `--on-cta` | #1E2A33 | Chữ trên nút vàng |
@@ -115,18 +116,18 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 ## 6. Bố cục (theo thứ tự)
 
 1. Header (nền trắng, dính trên cùng)
-2. Hero (nền teal tối, ảnh cắt vòng cung, đáy lượn sóng)
+2. Hero (nền xanh dương logo, ảnh cắt vòng cung, đáy lượn sóng)
 3. Dịch vụ nổi bật `#dich-vu`
 4. Về Nha khoa Quỳnh Thư `#gioi-thieu`
 5. Nha khoa trẻ em `#tre-em` (không có trong ảnh, giữ lại)
 6. Bảng giá `#bang-gia` (không có trong ảnh, giữ lại)
 7. Trước & sau `#truoc-sau` (không có trong ảnh, giữ lại)
-8. Đội ngũ `#doi-ngu` (thêm 2026-11-04: BS Quỳnh Thư có ảnh, 3 thẻ giữ chỗ cho bác sĩ khác)
+8. Đội ngũ `#doi-ngu` (2 phần, đổi 2026-11-07: (1) hồ sơ riêng ThS.BS Lê Quỳnh Thư `.lead-doc`: ảnh, học vị, kinh nghiệm, nơi làm việc, thế mạnh, nút đặt lịch; (2) "Đội ngũ bác sĩ và trợ thủ" `.team`: 3 thẻ giữ chỗ)
 9. Hình ảnh hoạt động + thẻ đánh giá `#phong-kham`
-10. Khách hàng nói gì `#danh-gia` (không có trong ảnh, giữ lại)
+10. Khách hàng nói gì `#danh-gia` (không có trong ảnh, giữ lại). Làm lại 2026-11-07: 2 thẻ điểm Google riêng từng cơ sở (số đếm lên, sao tô dần, bấm mở Google Maps) + thẻ đánh giá chạy ngang liên tục (dừng khi rê chuột/chạm, chỉ chạy khi trong màn hình), avatar chữ cái đầu, sao bật lần lượt. Giảm chuyển động: lưới tĩnh.
 11. 2 cơ sở + bản đồ `#dia-chi`
 12. Hỏi đáp `#hoi-dap` (không có trong ảnh, giữ lại)
-13. Footer (nền teal tối, mép trên lượn sóng)
+13. Footer (nền xanh dương logo, mép trên lượn sóng)
 14. Thanh nút cố định trên điện thoại: Gọi / Zalo / Chỉ đường
 15. Nút Chat Zalo nổi góc phải dưới, CHỈ máy tính ≥ 1024px. Bấm mở khung nhỏ: trạng thái mở cửa, nút "Mở Zalo để chat", số điện thoại. Không có mã QR. Điện thoại không hiện nút này (đã có Zalo ở thanh dưới).
 16. Trang riêng cho 6 dịch vụ trong `public/dich-vu/` (thêm 2026-11-04). Bấm thẻ dịch vụ ở trang chủ để mở. Cấu trúc ở spec v2 mục 5.15.
@@ -146,7 +147,7 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 
 - KHÔNG bịa thông tin: tên bác sĩ, số năm kinh nghiệm, đánh giá, giá. Chỗ chưa có thì để [CẦN XÁC NHẬN].
 - KHÔNG viết "không đau", "an toàn tuyệt đối", "tốt nhất", "cam kết 100%", "miễn phí" (trừ khi phòng khám xác nhận). Các chữ này chỉ được xuất hiện trong đánh giá thật của khách, giữ nguyên văn.
-- Rating ghi riêng từng cơ sở, kèm ngày cập nhật. Không gộp 2 cơ sở thành 1 số. Không gắn review schema / `aggregateRating` vào JSON-LD.
+- Rating ghi riêng từng cơ sở. KHÔNG ghi ngày cập nhật trên trang (chủ dự án yêu cầu 2026-11-07; ngày lấy số liệu 03/11/2026 chỉ giữ trong mục 1 và comment code). Không gộp 2 cơ sở thành 1 số. Không gắn review schema / `aggregateRating` vào JSON-LD.
 - Chỉ dùng ảnh thật của phòng khám, có đồng ý. Không dùng ảnh hoạt hình, ảnh AI vẽ người hoặc tòa nhà (ngoại lệ do chủ dự án chọn: bộ 6 icon dịch vụ ở mục Dịch vụ nổi bật, trong đó icon Khám răng trẻ em có hình bé hoạt hình).
 - KHÔNG dùng dấu gạch ngang dài "–" hoặc "—" trong văn bản của website. Thay bằng "-" (giờ, khoảng giá, tiêu đề), ":" khi giải thích, hoặc dấu phẩy.
 - Có bảng giá (khác Diệu Hiền), kèm ghi chú "bác sĩ khám và báo giá trước khi điều trị".
@@ -213,3 +214,6 @@ Mỗi lần đổi quyết định quan trọng: ghi thêm 1 dòng có ngày th�
 - 2026-11-04: Thêm icon ảnh (SVG tự vẽ: huy hiệu vàng 12 cánh + ngôi sao trắng, màu theo `--gold`) trước chữ ở nhãn hero "Nha khoa uy tín". File `public/assets/icons/uy-tin.svg`, bật nhẹ 1 lần khi tải trang. Là hình minh họa trang trí, không phải ảnh người hay ảnh AI.
 - 2026-11-04: Thêm dòng giờ làm việc đầy đủ dưới dòng trạng thái ở hero (Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00, theo Google Maps 03/11/2026). Viết cố định trong HTML. Giờ đổi thì phải sửa ở: `HOURS` (script), hero, mục 2 cơ sở, footer, JSON-LD, llms.txt.
 - 2026-11-04: Sửa `name` trong `wrangler.jsonc` từ `quynh-thu-landing-page` thành `nha-khoa-quynh-thu-landing-page` cho khớp tên Worker trên Cloudflare (Cloudflare cảnh báo lệch tên và không tự deploy khi có commit mới). Địa chỉ `*.workers.dev` phụ thuộc tên Worker, nên `tools/site-url.txt` cần cập nhật theo địa chỉ thật (chờ chủ dự án gửi).
+- 2026-11-07: Đổi bảng màu từ teal sang xanh dương theo logo (bác sĩ yêu cầu). Màu đo từ banner Facebook. Biến `--teal-*` đổi tên thành `--blue-*`, class `.btn--teal` thành `.btn--blue`, thêm `--accent` #035AC3. Đổi luôn màu chữ (ink ngả xanh dương; `--ink-3` đậm hơn để đạt tương phản AA). Sửa màu logo SVG và favicon từ #1A8BCB thành #10689E (đúng logo thật). `theme-color` ở 8 trang thành #0B5C94. Ảnh OG đổi nền panel sang xanh dương (đổi màu từng điểm ảnh, giữ nguyên ảnh chụp). Nút vàng giữ nguyên.
+- 2026-11-07: Mục Đội ngũ chia 2 phần theo yêu cầu chủ dự án: hồ sơ riêng ThS.BS Lê Quỳnh Thư (thông tin lấy từ NhaKhoaHub, chờ bác sĩ xác nhận) + phần chung "Đội ngũ bác sĩ và trợ thủ" (3 thẻ giữ chỗ). Thêm mục "Bác sĩ" vào llms.txt. Thêm icon `i-check`, `i-cap`.
+- 2026-11-07: Làm lại mục "Khách hàng nói gì trên Google" cho sinh động (UI + animation, xem mục 6 số 10). Rating vẫn ghi riêng từng cơ sở kèm ngày, không gộp; nội dung đánh giá giữ nguyên văn; không thêm nhãn cơ sở trên từng thẻ. JS ở `script.js` mục 6b. Đổi số rating thì sửa `data-count`, chữ, `--fill` và `aria-label` trong HTML.

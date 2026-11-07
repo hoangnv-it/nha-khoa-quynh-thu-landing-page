@@ -81,25 +81,28 @@ Không dùng: ảnh chụp màn hình phần mềm lịch hẹn (có tên bệnh
 
 ```css
 :root {
-  /* Xanh teal: Hero + Footer (nền tối) */
-  --teal-900: #064F6A;   /* nền hero, footer */
-  --teal-800: #0A5F7A;   /* gradient hero */
-  --teal-600: #0E7590;   /* eyebrow, link, nav đang chọn, nút "Xem bản đồ" */
-  --teal-100: #DCEFF4;   /* viền, nền nhạt */
+  /* ĐỔI 2026-11-07: teal -> xanh dương theo logo (xem PROJECT_BRIEF mục 4).
+     Ở các mục dưới, chữ "teal" nghĩa là xanh dương --blue-*. */
+  /* Xanh dương: Hero + Footer (nền tối) */
+  --blue-900: #0B5C94;   /* nền hero, footer */
+  --blue-800: #0F68A0;   /* gradient hero */
+  --blue-600: #0F68A0;   /* eyebrow, link, nav đang chọn, nút "Xem bản đồ" */
+  --blue-100: #DCEBF8;   /* viền, nền nhạt */
 
-  /* Xanh logo */
-  --brand:    #1A8BCB;   /* logo, icon dịch vụ, icon ghim */
-  --brand-50: #E2F1F6;   /* nền khối "Về phòng khám" */
+  /* Xanh logo + nhấn */
+  --brand:    #10689E;   /* logo, icon */
+  --brand-50: #E4EFFA;   /* nền khối "Về phòng khám" */
+  --accent:   #035AC3;   /* viền sáng thẻ dịch vụ, dấu ngoặc kép đánh giá */
 
   /* Chữ */
-  --ink:      #12324A;   /* tiêu đề */
-  --ink-2:    #3E5566;   /* chữ thường */
-  --ink-3:    #6B7F8C;   /* chữ phụ */
+  --ink:      #0E2F4F;   /* tiêu đề */
+  --ink-2:    #3B5168;   /* chữ thường */
+  --ink-3:    #5B7086;   /* chữ phụ */
 
   /* Nền sáng */
-  --bg:       #F5F9FC;   /* nền trang */
+  --bg:       #F4F8FC;   /* nền trang */
   --card:     #FFFFFF;
-  --line:     #E3EDF2;
+  --line:     #E1EAF4;
 
   /* Nút chính (vàng) */
   --cta:      #FFD047;
@@ -215,7 +218,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Bố cục (đổi 2026-11-04 để bản đồ to, dễ theo dõi vị trí): máy tính = cột trái 2 thẻ cơ sở xếp dọc (rộng 340-400px), cột phải bản đồ cao bằng cả 2 thẻ (tối thiểu 580px). Máy tính bảng và điện thoại = 2 thẻ xếp dọc, bản đồ nằm dưới (cao tối thiểu 440px / 340px). Mỗi thẻ có thêm nút chữ "Xem trên bản đồ": đổi bản đồ sang cơ sở đó (điện thoại và máy tính bảng tự cuộn tới bản đồ). Thẻ cơ sở đang hiện trên bản đồ có viền teal (`.is-active`, mặc định Cơ sở 2).
 - Bản đồ tự hiện Cơ sở 2 (không cần bấm), zoom 17. Nút chọn Cơ sở 1 / Cơ sở 2 nằm giữa mép dưới bản đồ (đổi 2026-11-04, trước đây ở góc trên bên trái và đè lên tên phòng khám trong thẻ thông tin của Google). Nền bản đồ trang trí + ghim đỏ + nút "Xem bản đồ" chỉ là hình chờ trong lúc bản đồ đang tải.
 - (Mô tả cũ) Thẻ thứ 3: nền bản đồ trang trí + ghim đỏ + nút teal bo tròn "Xem bản đồ →". Bấm: tải Google Maps, mở **Cơ sở 2** trước (đổi 2026-11-03), có nút chọn Cơ sở 1 / Cơ sở 2. Bản đồ tìm theo tên địa điểm trên Google Maps (kèm tọa độ) để hiện thẻ phòng khám: tên, địa chỉ, rating, nút "Mở trong Maps".
-- Dưới thẻ: "Đánh giá trên Google Maps, cập nhật 03/11/2026."
+- Dưới thẻ: "Đánh giá trên Google Maps." (bỏ ngày cập nhật 2026-11-07 theo yêu cầu chủ dự án)
 
 ### 5.11 Hỏi đáp (thêm)
 - `<details>`: Giờ làm việc? (trả lời theo Google Maps) · Có cần đặt lịch trước không? · Bé mấy tuổi nên khám răng lần đầu? · Trả góp 0% áp dụng thế nào? · Có hỗ trợ hồ sơ bảo hiểm không? Câu trả lời chưa có: **[CẦN XÁC NHẬN]**.
