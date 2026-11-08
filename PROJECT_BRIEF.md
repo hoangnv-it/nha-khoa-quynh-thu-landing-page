@@ -16,18 +16,18 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 | Cơ sở 1 | 217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng [CẦN XÁC NHẬN: Facebook + Google Maps ghi 217, biển hiệu ghi 114] |
 | Cơ sở 2 | 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng (Google Maps, Facebook, biển hiệu đều ghi 303) |
 | Điện thoại (cả 2 cơ sở) | 0944 479 405, link `tel:+84944479405` |
-| Zalo | `https://zalo.me/0944479405` [CẦN XÁC NHẬN] |
+| Zalo | `https://zalo.me/0944479405` (chủ dự án xác nhận 2026-11-08: cùng số 0944 479 405 cho điện thoại và Zalo) |
 | Email | lequynhthu@gmail.com |
 | Facebook CS1 | https://www.facebook.com/nhakhoaquynhthu |
 | Facebook CS2 | https://www.facebook.com/nhakhoaquynhthu2 |
 | Tọa độ CS1 | 15.9955452, 108.2134546 |
 | Tọa độ CS2 | 16.0125987, 108.2196122 |
-| Google Maps CS1 | Xem: `https://www.google.com/maps/search/?api=1&query=15.9955452,108.2134546` · Chỉ đường: `https://www.google.com/maps/dir/?api=1&destination=15.9955452,108.2134546` [CẦN XÁC NHẬN link trang Google Maps chính thức] |
+| Google Maps CS1 | Trang chính thức: `https://maps.app.goo.gl/ZVBm4upFeHtJEqwk7` (chủ dự án gửi 2026-11-08, dẫn tới `https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt`, dùng cho mọi link "Xem" của CS1) · Chỉ đường: `https://www.google.com/maps/dir/?api=1&destination=15.9955452,108.2134546` |
 | Google Maps CS2 | Xem: `https://www.google.com/maps/search/?api=1&query=16.0125987,108.2196122` · Chỉ đường: `https://www.google.com/maps/dir/?api=1&destination=16.0125987,108.2196122` · Trang chính thức: `https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF+_+c%C6%A1+s%E1%BB%9F+2/@16.0126038,108.2170373,17z/data=!3m1!4b1!4m6!3m5!1s0x31421bd244253a81:0x9f17698b08b4b538!8m2!3d16.0125987!4d108.2196122!16s%2Fg%2F11q4k5nl4q` (chủ dự án gửi 2026-11-03) |
 | Rating Google | CS1: 4,9★ (42 đánh giá). CS2: 4,7★ (61 đánh giá). Cập nhật 03/11/2026. |
 | Giờ làm việc | Cả 2 cơ sở: Thứ 2 - Thứ 7: 08:00 - 19:00, Chủ nhật: 08:00 - 18:00 (Google Maps, 03/11/2026). Cấu hình ở `HOURS` trong `public/script.js`. |
 | Giá "chỉ từ" | Theo banner của phòng khám trên Facebook: cạo vôi 150.000đ, trám răng sâu 199.000đ, răng tháo lắp 300.000đ, tẩy trắng 900.000đ, răng sứ 1.200.000đ [CẦN XÁC NHẬN còn áp dụng] |
-| Đội ngũ | ThS.BS Lê Quỳnh Thư (chủ phòng khám, bác sĩ chuyên môn, đã có ảnh trên web). Theo NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 07/11/2026): hơn 15 năm kinh nghiệm, chuyên môn niềng răng, răng sứ, implant [CẦN XÁC NHẬN học vị, số năm, implant, nơi đào tạo]. Trang NhaKhoaHub ghi SĐT khác (0869 554 535) và giờ 8:00-19:00 cả tuần, khác Google Maps: KHÔNG dùng. Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
+| Đội ngũ | ThS.BS Lê Quỳnh Thư (chủ phòng khám, bác sĩ chuyên môn, đã có ảnh trên web). Theo NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 07/11/2026): chuyên môn niềng răng, răng sứ, implant. Chủ dự án xác nhận 2026-11-08: tên đúng là **Lê Quỳnh Thư**, **hơn 15 năm kinh nghiệm** đúng. [CẦN XÁC NHẬN học vị Thạc sĩ (chuyên ngành, nơi đào tạo), implant, chứng chỉ, quá trình công tác]. Trang NhaKhoaHub ghi SĐT khác (0869 554 535) và giờ 8:00-19:00 cả tuần, khác thông tin chính thức: KHÔNG dùng. Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
 
 **Dịch vụ** (theo ảnh bìa Facebook):
 - Nha khoa trẻ em: dự phòng và điều trị bệnh răng miệng cho trẻ em (dịch vụ đặc biệt)

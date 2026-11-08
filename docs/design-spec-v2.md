@@ -44,7 +44,7 @@
 | Cơ sở 1 | 217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng **[CẦN XÁC NHẬN: trang Facebook và Google Maps ghi 217, biển hiệu ghi 114]** |
 | Cơ sở 2 | 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng (Google Maps, Facebook, biển hiệu đều ghi 303) |
 | Điện thoại (cả 2) | 0944 479 405, `tel:+84944479405` |
-| Zalo | `https://zalo.me/0944479405` **[CẦN XÁC NHẬN]** |
+| Zalo | `https://zalo.me/0944479405` (đã xác nhận 2026-11-08) |
 | Email | lequynhthu@gmail.com |
 | Facebook | CS1 https://www.facebook.com/nhakhoaquynhthu · CS2 https://www.facebook.com/nhakhoaquynhthu2 |
 | Google Maps CS1 | 15.9955452, 108.2134546 · 4,9★ (42 đánh giá) |
@@ -233,7 +233,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 ### 5.14 Chat Zalo (thêm 2026-11-03, không có trong ảnh thiết kế)
 - CHỈ máy tính ≥ 1024px. Điện thoại không hiện (đã có nút Zalo ở thanh dưới).
 - Nút nổi góc phải dưới (cách mép 24px): nhãn trắng "Chat Zalo" + nút tròn 60px màu xanh Zalo `#0068FF`, logo Zalo trắng, vòng sáng nhấp nháy nhẹ (tắt khi giảm chuyển động).
-- Bấm: mở khung 320px bo 16px. Đầu khung nền xanh Zalo: logo phòng khám, "Nha khoa Quỳnh Thư", "Chat qua Zalo", nút ×. Thân khung: trạng thái mở cửa (dùng `HOURS`), "Nhắn Zalo để hỏi giá, đặt lịch khám.", nút xanh "Mở Zalo để chat" (`https://zalo.me/0944479405` **[CẦN XÁC NHẬN]**), "Hoặc gọi: 0944 479 405".
+- Bấm: mở khung 320px bo 16px. Đầu khung nền xanh Zalo: logo phòng khám, "Nha khoa Quỳnh Thư", "Chat qua Zalo", nút ×. Thân khung: trạng thái mở cửa (dùng `HOURS`), "Nhắn Zalo để hỏi giá, đặt lịch khám.", nút xanh "Mở Zalo để chat" (`https://zalo.me/0944479405`), "Hoặc gọi: 0944 479 405".
 - Đóng: nút ×, phím Esc, bấm ra ngoài. Không dùng widget Zalo OA, không mã QR.
 - Không hứa thời gian trả lời.
 

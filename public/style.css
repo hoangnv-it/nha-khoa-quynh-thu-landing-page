@@ -613,6 +613,9 @@ body { padding-top: var(--header-h); }
 .faq summary::after { content: "+"; flex: none; color: var(--blue-600); font-size: 24px; line-height: 1; transition: transform .2s; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p { padding: 0 20px 18px; }
+ul.faq__list { display: grid; gap: 8px; margin: 0; padding: 0 20px 12px 40px; list-style: disc; color: var(--ink-2); }
+.faq__list li::marker { color: var(--blue-600); }
+.faq__list strong { color: var(--ink); }
 
 /* ---------- 15. Footer ---------- */
 .site-footer { position: relative; margin-top: var(--section-pad); color: rgba(255, 255, 255, .9); }
@@ -759,6 +762,11 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
 }
 .svc-cta { display: grid; gap: 20px; padding: 24px 22px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
 .svc-cta p { margin-top: 8px; }
+/* Địa chỉ và giờ làm việc: mỗi dòng 1 icon + thông tin */
+.svc-cta__info { display: grid; gap: 10px; margin-top: 12px; }
+ul.svc-cta__info li { display: flex; align-items: flex-start; gap: 12px; color: var(--ink-2); line-height: 1.5; }
+.svc-cta__info span { text-wrap: balance; }
+.svc-cta__info .icon { width: 22px; height: 22px; margin-top: 1px; color: var(--blue-600); }
 .svc-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
 @media (min-width: 600px) {
   .svc-signs { grid-template-columns: repeat(2, 1fr); }
