@@ -1,6 +1,8 @@
 # Cloudflare Workers static assets: header cho từng đường dẫn.
-# CSS, JS, font, ảnh: cache 1 năm (immutable). Đổi file thì chạy tools/version-assets.ps1 để đổi ?v=.
-# HTML: luôn kiểm tra bản mới.
+# CSS, JS, font, ảnh: cache 1 năm (immutable). Đổi file thì đường dẫn đổi ?v= (tools/version-assets.ps1,
+# tự chạy khi commit qua .githooks/pre-commit), nên trình duyệt tải bản mới ngay sau deploy.
+# HTML: luôn kiểm tra bản mới (no-cache) để khách luôn nhận link ?v= mới nhất.
+# Các file khác không có luật ở đây (llms.txt, robots.txt, sitemap.xml) dùng mặc định của Cloudflare: luôn hỏi lại bản mới.
 
 /style.css
   Cache-Control: public, max-age=31536000, immutable

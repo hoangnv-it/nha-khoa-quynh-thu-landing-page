@@ -1,0 +1,28 @@
+#!/bin/sh
+# Tự gắn lại mã ?v= cho CSS, JS, ảnh trước mỗi lần commit (tools/version-assets.ps1),
+# để sau khi deploy khách không bị dính bản CSS/JS/ảnh cũ trong cache trình duyệt.
+# Bật hook (chạy 1 lần sau khi clone repo):  git config core.hooksPath .githooks
+# Bỏ qua tạm thời (không khuyến khích):      git commit --no-verify
+
+# Chỉ chạy khi commit có đụng tới thư mục public/
+if ! git diff --cached --name-only | grep -q '^public/'; then
+  exit 0
+fi
+
+ROOT="$(git rev-parse --show-toplevel)"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ROOT/tools/version-assets.ps1" > /dev/null
+if [ $? -ne 0 ]; then
+  echo "pre-commit: chạy tools/version-assets.ps1 bị lỗi, dừng commit." >&2
+  exit 1
+fi
+
+# Đưa các file vừa được gắn lại mã vào commit
+git add -- "$ROOT/public/style.css" "$ROOT/public/index.html" "$ROOT/public/404.html" "$ROOT/public/dich-vu"
+
+# Kiểm tra lại cho chắc
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ROOT/tools/version-assets.ps1" -Check > /dev/null
+if [ $? -ne 0 ]; then
+  echo "pre-commit: vẫn còn link chưa đúng mã ?v=, dừng commit." >&2
+  exit 1
+fi
+exit 0

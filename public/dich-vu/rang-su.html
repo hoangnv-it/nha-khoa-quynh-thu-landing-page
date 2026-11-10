@@ -26,7 +26,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/logo/favicon-192.png?v=c433b880">
   <link rel="apple-touch-icon" href="../assets/logo/logo-180.png?v=400a44be">
 
-  <link rel="stylesheet" href="../style.css?v=57370a95">
+  <link rel="stylesheet" href="../style.css?v=d8900824">
   <script>document.documentElement.classList.add("js");</script>
 
   <script type="application/ld+json">
@@ -54,6 +54,78 @@
       }
     ]
   }
+  </script>
+  <!-- JSON-LD SEO dịch vụ (thêm 2026-11-10): Service + FAQPage. FAQPage tạo tự động từ phần hỏi đáp trên trang: sửa câu hỏi thì chạy lại script. -->
+  <script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "Service",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su#dich-vu",
+                       "name":  "Răng sứ thẩm mỹ tại Hòa Xuân, Đà Nẵng",
+                       "serviceType":  "Răng sứ thẩm mỹ",
+                       "description":  "Mão răng sứ, cầu răng sứ, veneer, dán sứ và răng nhựa tháo lắp.",
+                       "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su",
+                       "provider":  [
+                                        {
+                                            "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1"
+                                        },
+                                        {
+                                            "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2"
+                                        }
+                                    ],
+                       "areaServed":  [
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Xuân, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Quý, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Cẩm Lệ, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Ngũ Hành Sơn, Đà Nẵng"
+                                          }
+                                      ]
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su#hoi-dap",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Làm răng sứ mất bao lâu?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Tùy từng ca. Một răng sứ đơn giản có thể xong sau khoảng 1-2 ngày, cầu răng sứ thông thường khoảng 2-3 ngày, kỹ thuật Oval Pontic khoảng 2 tuần. Ca có chân răng viêm nhiễm cần điều trị trước có thể kéo dài vài tháng."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Răng sứ có bảo hành không?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Có. Phôi sứ có thẻ xuất xứ chính hãng và thẻ bảo hành. Răng sứ cao cấp được bảo hành 10 năm, có loại bảo hành 12 năm."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Răng sứ cũ bị hở, hay chảy máu nướu thì làm sao?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Bác sĩ khám, lấy vôi, có thể cắt bỏ sứ cũ và điều trị cho nướu hết viêm, sau đó mới làm răng sứ mới khít sát với viền nướu."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
   </script>
 
   <!-- Microsoft Clarity: giống trang chủ. Khi có ID: thay "CLARITY_ID" ở MỌI trang. -->
@@ -142,7 +214,7 @@
         <div class="svc-hero__grid">
           <div class="svc-hero__text">
             <p class="eyebrow">Dịch vụ</p>
-            <h1 id="svc-title">Răng sứ thẩm mỹ</h1>
+            <h1 id="svc-title">Răng sứ thẩm mỹ <span class="svc-hero__area">tại Hòa Xuân, Đà Nẵng</span></h1>
             <p class="svc-hero__lead">Phục hình răng sứ thẩm mỹ, cầu răng sứ, veneer, dán sứ và răng nhựa tháo lắp. Phôi sứ có thẻ xuất xứ chính hãng và hóa đơn đỏ. Phòng khám ưu tiên giữ lại răng thật, bác sĩ khám và báo giá trước khi làm.</p>
             <ul class="chips"><li>Toàn sứ, Zirconia</li><li>Cầu răng sứ</li><li>Veneer, dán sứ</li><li>Răng nhựa tháo lắp</li></ul>
             <div class="svc-hero__actions" id="hero-cta">
@@ -255,7 +327,16 @@
               <tr><td>Răng tháo lắp</td><td>từ 300.000</td></tr>
               </tbody>
             </table>
-            <p class="price-note">Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.</p>
+            <div class="price-note" role="note" aria-label="Lưu ý về giá">
+              <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
+              <div class="price-note__body">
+                <p class="price-note__title">Lưu ý về giá</p>
+                <ul class="price-note__list">
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.</span></li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.</span></li>
+                </ul>
+              </div>
+            </div>
             <ul class="chips">
               <li>Thẻ ATM/Visa/Master</li>
               <li>Hóa đơn đỏ thanh toán bảo hiểm</li>
@@ -297,7 +378,7 @@
           <p class="eyebrow">Hình ảnh thực tế</p>
           <h2 id="hinh-anh-title" class="h2-sm">Tại Nha khoa Quỳnh Thư</h2>
         </div>
-        <!-- Ảnh lấy từ 2 trang Facebook của phòng khám (03/11/2026), ảnh gốc trong anh-goc/facebook-cs1, facebook-cs2. [CẦN XÁC NHẬN] phòng khám đồng ý dùng ảnh có bệnh nhân và chú thích ảnh đúng ca điều trị. -->
+        <!-- Ảnh lấy từ 2 trang Facebook của phòng khám (03/11/2026), ảnh gốc trong anh-goc/facebook-cs1, facebook-cs2. Phòng khám đã đồng ý dùng ảnh (chủ dự án xác nhận 2026-11-10). [CẦN XÁC NHẬN] chú thích ảnh đúng ca điều trị. -->
         <ul class="ba-grid ba-grid--svc">
           <li><figure><img src="../assets/images/truoc-sau-01.webp?v=c67d6551" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ hàm trên"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>
           <li><figure><img src="../assets/images/truoc-sau-02.webp?v=2f6a9991" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ, nhìn từ mặt nhai"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>

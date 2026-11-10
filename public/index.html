@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Nha khoa Quỳnh Thư - Nha khoa gia đình tại Hòa Xuân, Đà Nẵng</title>
-  <meta name="description" content="2 cơ sở tại Hòa Xuân, mở cửa đến 19:00. Nha khoa trẻ em, niềng răng, răng sứ, điều trị tủy. Báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
+  <title>Nha khoa Quỳnh Thư - Nha khoa Hòa Xuân, Hòa Quý, Đà Nẵng | 2 cơ sở</title>
+  <meta name="description" content="Nha khoa gia đình với 2 cơ sở tại Hòa Xuân, gần Hòa Quý, Cẩm Lệ, Đà Nẵng. Niềng răng, nhổ răng khôn, răng sứ, điều trị tủy, nha khoa trẻ em. Mở cửa đến 19:00. Gọi 0944 479 405.">
   <meta name="theme-color" content="#0B5C94">
 
   <!-- ĐỊA CHỈ WEBSITE: đổi bằng tools/doi-ten-mien.ps1, không sửa tay từng chỗ -->
@@ -13,8 +13,8 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="vi_VN">
   <meta property="og:site_name" content="Nha khoa Quỳnh Thư">
-  <meta property="og:title" content="Nha khoa Quỳnh Thư - Nha khoa gia đình tại Hòa Xuân, Đà Nẵng">
-  <meta property="og:description" content="2 cơ sở tại Hòa Xuân, mở cửa đến 19:00. Báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
+  <meta property="og:title" content="Nha khoa Quỳnh Thư - Nha khoa Hòa Xuân, Hòa Quý, Đà Nẵng">
+  <meta property="og:description" content="Nha khoa gia đình với 2 cơ sở tại Hòa Xuân, Đà Nẵng. Mở cửa đến 19:00, báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.">
   <meta property="og:url" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/">
   <meta property="og:image" content="https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/og/og-home.jpg?v=1bece3f8">
   <meta property="og:image:width" content="1200">
@@ -27,88 +27,320 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=57370a95">
+  <link rel="stylesheet" href="style.css?v=d8900824">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
   <!--
-    JSON-LD: Organization + 2 Dentist. KHÔNG thêm aggregateRating / review.
+    JSON-LD: Organization + 2 Dentist + FAQPage (mở rộng 2026-11-10: areaServed, dịch vụ, priceRange, người sáng lập). KHÔNG thêm aggregateRating / review.
     [CẦN XÁC NHẬN] số nhà CS1: Facebook + Google Maps ghi 217, biển hiệu ghi 114.
     Giờ làm việc lấy từ Google Maps ngày 2026-11-03.
     Thông tin ở đây phải giống nội dung trang, llms.txt và Google Maps.
   -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization",
-        "name": "Nha khoa Quỳnh Thư",
-        "legalName": "Công ty TNHH MTV Nha khoa Quỳnh Thư",
-        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
-        "logo": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/logo/favicon-192.png?v=c433b880",
-        "email": "lequynhthu@gmail.com",
-        "telephone": "+84944479405",
-        "sameAs": [
-          "https://www.facebook.com/nhakhoaquynhthu",
-          "https://www.facebook.com/nhakhoaquynhthu2"
-        ],
-        "subOrganization": [
-          { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1" },
-          { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2" }
-        ]
-      },
-      {
-        "@type": "Dentist",
-        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1",
-        "name": "Nha khoa Quỳnh Thư - Cơ sở 1",
-        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
-        "image": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/images/co-so-1.webp?v=5237866c",
-        "telephone": "+84944479405",
-        "email": "lequynhthu@gmail.com",
-        "parentOrganization": { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "217 Văn Tiến Dũng",
-          "addressLocality": "Hòa Xuân",
-          "addressRegion": "Đà Nẵng",
-          "addressCountry": "VN"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 15.9955452, "longitude": 108.2134546 },
-        "hasMap": "https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt",
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "19:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "18:00" }
-        ],
-        "sameAs": ["https://www.facebook.com/nhakhoaquynhthu"]
-      },
-      {
-        "@type": "Dentist",
-        "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2",
-        "name": "Nha khoa Quỳnh Thư - Cơ sở 2",
-        "url": "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
-        "image": "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/images/co-so-2.webp?v=c782a371",
-        "telephone": "+84944479405",
-        "email": "lequynhthu@gmail.com",
-        "parentOrganization": { "@id": "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization" },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "303 Lê Quảng Chí",
-          "addressLocality": "Hòa Xuân",
-          "addressRegion": "Đà Nẵng",
-          "addressCountry": "VN"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 16.0125987, "longitude": 108.2196122 },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=16.0125987,108.2196122",
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "08:00", "closes": "19:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "08:00", "closes": "18:00" }
-        ],
-        "sameAs": ["https://www.facebook.com/nhakhoaquynhthu2"]
-      }
-    ]
-  }
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "Organization",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization",
+                       "name":  "Nha khoa Quỳnh Thư",
+                       "legalName":  "Công ty TNHH MTV Nha khoa Quỳnh Thư",
+                       "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+                       "logo":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/logo/favicon-192.png?v=c433b880",
+                       "email":  "lequynhthu@gmail.com",
+                       "telephone":  "+84944479405",
+                       "sameAs":  [
+                                      "https://www.facebook.com/nhakhoaquynhthu",
+                                      "https://www.facebook.com/nhakhoaquynhthu2"
+                                  ],
+                       "subOrganization":  [
+                                               {
+                                                   "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1"
+                                               },
+                                               {
+                                                   "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2"
+                                               }
+                                           ],
+                       "founder":  {
+                                       "@type":  "Person",
+                                       "name":  "Lê Quỳnh Thư",
+                                       "jobTitle":  "Bác sĩ",
+                                       "description":  "Chủ phòng khám, bác sĩ chuyên môn, hơn 15 năm kinh nghiệm."
+                                   },
+                       "areaServed":  [
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Xuân, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Quý, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Cẩm Lệ, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Ngũ Hành Sơn, Đà Nẵng"
+                                          }
+                                      ]
+                   },
+                   {
+                       "@type":  "Dentist",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-1",
+                       "name":  "Nha khoa Quỳnh Thư - Cơ sở 1",
+                       "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+                       "image":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/images/co-so-1.webp?v=5237866c",
+                       "telephone":  "+84944479405",
+                       "email":  "lequynhthu@gmail.com",
+                       "parentOrganization":  {
+                                                  "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization"
+                                              },
+                       "address":  {
+                                       "@type":  "PostalAddress",
+                                       "streetAddress":  "217 Văn Tiến Dũng",
+                                       "addressLocality":  "Hòa Xuân",
+                                       "addressRegion":  "Đà Nẵng",
+                                       "addressCountry":  "VN"
+                                   },
+                       "geo":  {
+                                   "@type":  "GeoCoordinates",
+                                   "latitude":  15.9955452,
+                                   "longitude":  108.2134546
+                               },
+                       "hasMap":  "https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt",
+                       "openingHoursSpecification":  [
+                                                         {
+                                                             "@type":  "OpeningHoursSpecification",
+                                                             "dayOfWeek":  [
+                                                                               "Monday",
+                                                                               "Tuesday",
+                                                                               "Wednesday",
+                                                                               "Thursday",
+                                                                               "Friday",
+                                                                               "Saturday"
+                                                                           ],
+                                                             "opens":  "08:00",
+                                                             "closes":  "19:00"
+                                                         },
+                                                         {
+                                                             "@type":  "OpeningHoursSpecification",
+                                                             "dayOfWeek":  "Sunday",
+                                                             "opens":  "08:00",
+                                                             "closes":  "18:00"
+                                                         }
+                                                     ],
+                       "sameAs":  [
+                                      "https://www.facebook.com/nhakhoaquynhthu"
+                                  ],
+                       "priceRange":  "Từ 150.000đ",
+                       "currenciesAccepted":  "VND",
+                       "paymentAccepted":  "Tiền mặt, thẻ ATM, Visa, Mastercard",
+                       "medicalSpecialty":  "Dentistry",
+                       "areaServed":  [
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Xuân, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Quý, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Cẩm Lệ, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Ngũ Hành Sơn, Đà Nẵng"
+                                          }
+                                      ],
+                       "availableService":  [
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Niềng răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Nhổ răng, nhổ răng khôn",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Răng sứ thẩm mỹ",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Điều trị tủy, sâu răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/dieu-tri-tuy"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Tẩy trắng răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Khám răng trẻ em",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em"
+                                                }
+                                            ]
+                   },
+                   {
+                       "@type":  "Dentist",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#co-so-2",
+                       "name":  "Nha khoa Quỳnh Thư - Cơ sở 2",
+                       "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
+                       "image":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/images/co-so-2.webp?v=c782a371",
+                       "telephone":  "+84944479405",
+                       "email":  "lequynhthu@gmail.com",
+                       "parentOrganization":  {
+                                                  "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization"
+                                              },
+                       "address":  {
+                                       "@type":  "PostalAddress",
+                                       "streetAddress":  "303 Lê Quảng Chí",
+                                       "addressLocality":  "Hòa Xuân",
+                                       "addressRegion":  "Đà Nẵng",
+                                       "addressCountry":  "VN"
+                                   },
+                       "geo":  {
+                                   "@type":  "GeoCoordinates",
+                                   "latitude":  16.0125987,
+                                   "longitude":  108.2196122
+                               },
+                       "hasMap":  "https://www.google.com/maps/search/?api=1&query=16.0125987,108.2196122",
+                       "openingHoursSpecification":  [
+                                                         {
+                                                             "@type":  "OpeningHoursSpecification",
+                                                             "dayOfWeek":  [
+                                                                               "Monday",
+                                                                               "Tuesday",
+                                                                               "Wednesday",
+                                                                               "Thursday",
+                                                                               "Friday",
+                                                                               "Saturday"
+                                                                           ],
+                                                             "opens":  "08:00",
+                                                             "closes":  "19:00"
+                                                         },
+                                                         {
+                                                             "@type":  "OpeningHoursSpecification",
+                                                             "dayOfWeek":  "Sunday",
+                                                             "opens":  "08:00",
+                                                             "closes":  "18:00"
+                                                         }
+                                                     ],
+                       "sameAs":  [
+                                      "https://www.facebook.com/nhakhoaquynhthu2"
+                                  ],
+                       "priceRange":  "Từ 150.000đ",
+                       "currenciesAccepted":  "VND",
+                       "paymentAccepted":  "Tiền mặt, thẻ ATM, Visa, Mastercard",
+                       "medicalSpecialty":  "Dentistry",
+                       "areaServed":  [
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Xuân, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Hòa Quý, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Cẩm Lệ, Đà Nẵng"
+                                          },
+                                          {
+                                              "@type":  "Place",
+                                              "name":  "Ngũ Hành Sơn, Đà Nẵng"
+                                          }
+                                      ],
+                       "availableService":  [
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Niềng răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Nhổ răng, nhổ răng khôn",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Răng sứ thẩm mỹ",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Điều trị tủy, sâu răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/dieu-tri-tuy"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Tẩy trắng răng",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Khám răng trẻ em",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em"
+                                                }
+                                            ]
+                   },
+                   {
+                       "@type":  "FAQPage",
+                       "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#hoi-dap",
+                       "mainEntity":  [
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Phòng khám làm việc giờ nào?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Cả 2 cơ sở: Thứ 2 - Thứ 7 từ 08:00 đến 19:00, Chủ nhật từ 08:00 đến 18:00."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Có cần đặt lịch trước không?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Nên đặt lịch trước để khỏi phải chờ. Tuy nhiên đặt lịch là không bắt buộc, bạn cũng có thể tới thẳng phòng khám để được tư vấn."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Bé mấy tuổi nên khám răng lần đầu?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Thời điểm vàng: trong vòng 6 tháng sau khi chiếc răng đầu tiên mọc, hoặc chậm nhất là 12 tháng. Không thể bỏ qua: giai đoạn 6 - 12 tuổi, đây là thời điểm răng sữa nhường chỗ cho răng vĩnh viễn. Ba mẹ nên cho bé khám răng định kỳ 6 tháng/lần. Chăm sóc răng miệng từ sớm chính là đầu tư cho nụ cười khỏe mạnh của con sau này."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Niềng răng có trả góp 0% không?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Có. Phòng khám hỗ trợ niềng răng trả góp lãi suất 0%. Gọi hoặc nhắn Zalo để được tư vấn chi tiết."
+                                                                 }
+                                          },
+                                          {
+                                              "@type":  "Question",
+                                              "name":  "Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?",
+                                              "acceptedAnswer":  {
+                                                                     "@type":  "Answer",
+                                                                     "text":  "Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm."
+                                                                 }
+                                          }
+                                      ]
+                   }
+               ]
+}
   </script>
 
   <!--
@@ -197,14 +429,16 @@
   <main id="noi-dung" tabindex="-1">
 
     <!-- ===== HERO (nền xanh dương logo) ===== -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-h1">
       <div class="hero__media">
         <img src="assets/images/hero.webp?v=2e1fb349" width="1276" height="956" fetchpriority="high" alt="Hai bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân tại phòng khám">
       </div>
       <div class="container hero__inner">
         <div class="hero__text">
           <p class="hero__pill"><img class="hero__pill-icon" src="assets/icons/uy-tin.svg?v=6a45268f" width="64" height="64" alt="">Nha khoa uy tín</p>
-          <h1 id="hero-title">Cả nhà an tâm</h1>
+          <!-- H1 cho SEO (thêm 2026-11-10, chủ dự án duyệt). Dòng lớn "Cả nhà an tâm" giữ nguyên giao diện, đổi thành p. -->
+          <h1 id="hero-h1" class="hero__seo">Nha khoa Quỳnh Thư · Nha khoa gia đình tại Hòa Xuân, Đà Nẵng</h1>
+          <p class="hero__title">Cả nhà an tâm</p>
           <p class="hero__sub">Nha khoa gần nhà, mở cửa đến 19:00,<br class="br-lg"> chăm sóc nụ cười gia đình bạn</p>
           <ul class="hero__facts">
             <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Thiết bị<br>hiện đại</span></li>
@@ -308,7 +542,16 @@
               <tr><td>Khám răng trẻ em, điều trị tủy, niềng răng, nhổ răng</td><td class="price-table__ask">Bác sĩ khám và báo giá</td></tr>
             </tbody>
           </table>
-          <p class="price-note">Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.</p>
+          <div class="price-note" role="note" aria-label="Lưu ý về giá">
+            <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
+            <div class="price-note__body">
+              <p class="price-note__title">Lưu ý về giá</p>
+              <ul class="price-note__list">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.</span></li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.</span></li>
+              </ul>
+            </div>
+          </div>
           <ul class="chips">
             <li>Niềng răng trả góp 0%</li>
             <li>Thẻ ATM/Visa/Master</li>
@@ -524,6 +767,8 @@
         <div class="section-head">
           <p class="eyebrow">2 cơ sở tại Hòa Xuân, Đà Nẵng</p>
           <h2 id="dia-chi-title" class="h2-sm">Thuận tiện cho mọi nhà</h2>
+          <!-- Khu vực phục vụ (SEO địa phương, thêm 2026-11-10). [CẦN XÁC NHẬN] tên phường mới sau sắp xếp hành chính 2025: khi có thì ghi thêm cả tên mới. -->
+          <p class="section-lead">Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.</p>
         </div>
         <div class="branches">
           <article class="branch" data-branch="cs1">

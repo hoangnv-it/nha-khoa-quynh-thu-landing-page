@@ -147,6 +147,8 @@ h3 { font-size: 18px; line-height: 1.35; }
 }
 
 .section-head { margin-bottom: 24px; }
+.section-lead { margin-top: 10px; max-width: 52em; color: var(--ink-2); line-height: 1.65; }
+.section-lead a { font-weight: 600; }
 .section-head--center { text-align: center; }
 .eyebrow { margin-bottom: 6px; color: var(--blue-600); font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 @media (min-width: 1024px) { .eyebrow { font-size: 15px; } }
@@ -256,7 +258,9 @@ body { padding-top: var(--header-h); }
 /* Icon huy hiệu vàng (ảnh SVG) trước chữ "Nha khoa uy tín": bật nhẹ 1 lần khi trang tải. Không mờ dần từ opacity 0 nên không ảnh hưởng LCP. */
 .hero__pill-icon { flex: none; width: 24px; height: 24px; transform-origin: 50% 55%; animation: pill-pop .8s cubic-bezier(.3, 1.5, .5, 1) .2s both; }
 @keyframes pill-pop { from { transform: scale(.55) rotate(-40deg); } to { transform: none; } }
-.hero h1 { margin-top: 14px; color: #fff; font-size: 48px; line-height: 1.05; letter-spacing: -.02em; }
+/* H1 SEO (dòng nhỏ) + dòng lớn "Cả nhà an tâm" (p.hero__title, giữ kiểu cũ của h1) */
+.hero__seo { margin-top: 14px; color: rgba(255, 255, 255, .92); font-size: 15px; font-weight: 600; line-height: 1.4; letter-spacing: .01em; text-wrap: balance; }
+.hero__title { margin-top: 6px; color: #fff; font-size: 48px; font-weight: 700; line-height: 1.05; letter-spacing: -.02em; }
 .hero__sub { margin-top: 12px; color: rgba(255, 255, 255, .92); font-size: 17px; line-height: 1.5; max-width: 30em; }
 .hero__facts { display: flex; margin-top: 24px; }
 .hero__facts li { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 1; max-width: 140px; text-align: center; font-weight: 500; font-size: 15px; line-height: 1.35; }
@@ -284,7 +288,8 @@ body { padding-top: var(--header-h); }
   .hero__text { max-width: 46%; }
   .hero__pill { padding: 8px 24px 8px 10px; gap: 10px; font-size: 17px; }
   .hero__pill-icon { width: 30px; height: 30px; }
-  .hero h1 { margin-top: 14px; font-size: 76px; }
+  .hero__seo { margin-top: 16px; font-size: 18px; }
+  .hero__title { margin-top: 6px; font-size: 76px; }
   .hero__sub { margin-top: 10px; font-size: 22px; max-width: 24em; }
   .hero__facts { margin-top: 22px; }
   .hero__facts li { max-width: 168px; font-size: 18px; }
@@ -400,7 +405,17 @@ body { padding-top: var(--header-h); }
 .price-table th:last-child, .price-table td:last-child { text-align: right; padding-left: 16px; white-space: nowrap; }
 .price-table td:last-child { color: var(--blue-600); font-weight: 700; }
 .price-table td.price-table__ask { white-space: normal; color: var(--ink-3); font-weight: 500; font-size: 14px; }
-.price-note { margin-top: 16px; padding: 12px 14px; border-radius: var(--radius-sm); background: var(--brand-50); color: var(--ink-2); font-size: 14px; }
+/* Lưu ý về giá: khung vàng nhạt + icon để khách chú ý (đổi 2026-11-10) */
+.price-note { display: flex; gap: 12px; margin-top: 18px; padding: 14px 16px; border: 1px solid #F6DFA0; border-left: 4px solid var(--gold); border-radius: var(--radius-sm); background: #FFF8E6; color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+.price-note__icon { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: #fff; }
+.price-note__icon svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.price-note__body { min-width: 0; }
+.price-note__title { margin: 4px 0 8px; color: #8A5A00; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+ul.price-note__list { display: grid; gap: 8px; }
+.price-note__list li { display: flex; align-items: flex-start; gap: 8px; }
+.price-note__list svg { flex: none; width: 18px; height: 18px; margin-top: 1px; fill: none; stroke: #B07A00; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.price-note__list strong { color: var(--ink); }
+@media (min-width: 1024px) { .price-note { padding: 16px 20px; font-size: 15px; } }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
 .chips li { padding: 6px 14px; border-radius: 999px; background: var(--blue-100); color: var(--blue-800); font-size: 14px; font-weight: 600; }
 @media (min-width: 1024px) { .price-card { padding: 8px 36px 32px; } }
@@ -580,7 +595,7 @@ ul.values { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .branch__actions { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 14px; font-weight: 700; }
 .branch__actions button { padding: 0; border: 0; background: none; color: var(--blue-600); font: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .branch__actions button:hover { color: var(--blue-900); }
-.map-card { position: relative; min-height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #F3EBDD url("assets/images/ban-do-nen.svg") center / cover no-repeat; }
+.map-card { position: relative; min-height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #F3EBDD url("assets/images/ban-do-nen.svg?v=ea6e0659") center / cover no-repeat; }
 .map-card__frame { position: absolute; inset: 0; display: grid; place-items: center; }
 .map-card__frame iframe { width: 100%; height: 100%; border: 0; }
 .map-card__pin { position: absolute; left: 50%; top: 22%; width: 40px; height: 40px; transform: translateX(-50%); color: var(--pin-red); filter: drop-shadow(0 4px 4px rgba(0, 0, 0, .2)); }
@@ -727,6 +742,8 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
   background: linear-gradient(120deg, #E4EFFA 0%, #EDF4FC 60%, #DCEAF8 100%);
 }
 .svc-hero h1 { font-size: 32px; line-height: 1.15; letter-spacing: -.01em; }
+/* Phần khu vực trong H1 (SEO địa phương, thêm 2026-11-10): dòng nhỏ dưới tên dịch vụ */
+.svc-hero__area { display: block; margin-top: 6px; color: var(--blue-600); font-size: .5em; font-weight: 600; letter-spacing: 0; }
 .svc-hero__lead { margin-top: 12px; max-width: 36em; }
 .svc-hero .chips { margin-top: 18px; }
 .svc-hero .chips li { background: #fff; }

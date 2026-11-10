@@ -42,7 +42,7 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 
 **Logo:** logo tạm, chờ file gốc. SVG dựng lại theo logo trên tường phòng khám (ảnh `anh-goc/google-maps-cs2/gm2-01.jpg`). Chữ trong SVG dùng font hệ thống. Có file gốc thì bỏ vào `anh-goc/`, xuất lại `public/assets/logo/`.
 
-**Ảnh:** ảnh thật do phòng khám đăng, lấy ngày 03/11/2026 từ 2 trang Facebook và mục "Của chủ sở hữu" trên Google Maps. Ảnh gốc ở `anh-goc/facebook-cs1`, `facebook-cs2`, `google-maps-cs1`, `google-maps-cs2`. Ảnh web (WebP) ở `public/assets/images/`. [CẦN XÁC NHẬN] phòng khám đồng ý cho dùng ảnh có mặt bệnh nhân.
+**Ảnh:** ảnh thật do phòng khám đăng, lấy ngày 03/11/2026 từ 2 trang Facebook và mục "Của chủ sở hữu" trên Google Maps. Ảnh gốc ở `anh-goc/facebook-cs1`, `facebook-cs2`, `google-maps-cs1`, `google-maps-cs2`. Ảnh web (WebP) ở `public/assets/images/`. Phòng khám đã đồng ý cho dùng ảnh có mặt bệnh nhân và ca điều trị trên Facebook (chủ dự án xác nhận 2026-11-10).
 
 **Ảnh OG** (`assets/og/og-home.jpg`): ảnh hero thật + logo trắng + "Cả nhà an tâm".
 
@@ -157,7 +157,9 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 
 ## 9. SEO
 
-- Có: title, description, canonical, Open Graph, JSON-LD `Organization` + 2 `Dentist`.
+- Có: title, description, canonical, Open Graph, JSON-LD `Organization` + 2 `Dentist` + `FAQPage` (trang chủ); `BreadcrumbList` + `Service` + `FAQPage` (trang dịch vụ). Kế hoạch SEO đầy đủ: `docs/seo-plan.md`.
+- Từ khóa địa phương: Hòa Xuân, Hòa Quý, Cẩm Lệ, Ngũ Hành Sơn, Đà Nẵng (`areaServed` trong JSON-LD). Không tạo trang riêng cho từng phường. Không viết "tốt nhất" (mục 8): nhắm "nha khoa tốt nhất" bằng đánh giá Google Maps.
+- H1 trang chủ là dòng nhỏ `.hero__seo` ("Nha khoa Quỳnh Thư · Nha khoa gia đình tại Hòa Xuân, Đà Nẵng"); "Cả nhà an tâm" là `p.hero__title`. H1 trang dịch vụ có `<span class="svc-hero__area">tại Hòa Xuân, Đà Nẵng</span>`.
 - Một thẻ `<h1>` duy nhất. Có `sitemap.xml`, `robots.txt`, `llms.txt`, favicon.
 - Thông tin phòng khám phải giống nhau ở: nội dung trang, JSON-LD, `llms.txt`, Google Maps.
 - JSON-LD có `openingHoursSpecification` theo giờ trên Google Maps.
@@ -167,9 +169,10 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 ## 10. Hiệu năng & cache
 
 - `public/_headers`: cache 1 năm (immutable) cho CSS, JS, font, ảnh. HTML luôn lấy bản mới.
-- Sau khi sửa CSS, JS hoặc thay ảnh: chạy `tools/version-assets.ps1` trước khi đẩy lên.
+- Sau khi sửa CSS, JS hoặc thay ảnh: chạy `tools/version-assets.ps1` trước khi đẩy lên. Từ 2026-11-10 có git hook `.githooks/pre-commit` tự chạy script này mỗi lần commit có đụng `public/` (bật 1 lần sau khi clone: `git config core.hooksPath .githooks`). Kiểm tra không sửa: thêm `-Check` (thoát mã 1 nếu còn link sai mã).
   `powershell -ExecutionPolicy Bypass -File tools\version-assets.ps1`
-- Script gắn `?v=<MD5 8 ký tự>` cho `style.css`, `script.js`, mọi file trong `public/assets/` ở `index.html`, `404.html` và `dich-vu/*.html`. Chạy nhiều lần không bị gắn chồng.
+- Script gắn `?v=<MD5 8 ký tự>` cho `style.css`, `script.js`, mọi file trong `public/assets/` ở `index.html`, `404.html` và `dich-vu/*.html`, và cho ảnh gọi trong `style.css` (`url("assets/...")`, làm trước khi tính mã `style.css`). Chạy nhiều lần không bị gắn chồng.
+- Cách chống cache cũ sau deploy: HTML luôn `no-cache` (trình duyệt hỏi lại bản mới mỗi lần), CSS/JS/ảnh cache 1 năm nhưng đổi nội dung thì đổi `?v=` nên tải bản mới. Cloudflare Workers static assets thay toàn bộ file ngay khi deploy, không cần purge cache. Khi gắn tên miền riêng: KHÔNG bật Cache Rule "Cache Everything" cho HTML; nếu có thì phải purge cache sau mỗi deploy.
 - Lưu ý: script tìm theo đường dẫn file, nên đừng viết tên file (ví dụ "script.js") trong chú thích HTML.
 - Font không gắn mã (tên file cố định, ít khi đổi). Nếu thay font thì đổi tên file.
 - Mục tiêu: HTML + CSS + JS dưới 100 KB gzip. Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95, SEO ≥ 95.
@@ -222,3 +225,6 @@ Mỗi lần đổi quyết định quan trọng: ghi thêm 1 dòng có ngày th�
 - 2026-11-10: FAQ theo xác nhận của chủ dự án: trả góp 0% CHỈ áp dụng cho niềng răng ("Niềng răng có trả góp 0% không?"); bảo hiểm đổi thành xuất hóa đơn đỏ ("Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?"). Chip ở bảng giá đổi cho khớp: "Niềng răng trả góp 0%" (trang chủ + trang niềng răng), bỏ chip trả góp ở 5 trang dịch vụ khác; "Hóa đơn đỏ thanh toán bảo hiểm" ở mọi trang. Cập nhật llms.txt. Ô "Trả góp 0%" ở hero giữ nguyên.
 - 2026-11-10: Trang tẩy trắng (public/dich-vu/tay-trang.html) bổ sung từ 5 bài Facebook của 2 cơ sở: hero + mô tả meta mới; dấu hiệu thêm 2 ý; khối "Công nghệ tẩy trắng" (đèn LED và Plasma, máy Beyond II Whitening Accelerator của Beyond (Mỹ), thuốc nhập khẩu châu Âu, khoảng 60 phút) + đoạn "Tẩy trắng răng hoạt động thế nào?"; quy trình riêng 4 bước; 3 câu hỏi thường gặp. KHÔNG dùng các câu trong bài: "không đau nhức", "không ê buốt", "không hư tổn men", "khỏe mạnh lâu dài", "số 1 thế giới", "15 năm đạt giải Dental Advisor". Ghi chú nguồn trong HTML. [CẦN XÁC NHẬN] bác sĩ duyệt. Lưu ý: 1 bài cũ trên Facebook CS1 ghi địa chỉ "114 Văn Tiến Dũng" (liên quan câu hỏi số nhà 217/114).
 - 2026-11-10: Bổ sung nội dung cho 5 trang dịch vụ còn lại (răng sứ, niềng răng, điều trị tủy, nhổ răng, khám trẻ em) theo cùng khung trang tẩy trắng: hero + mô tả meta, dấu hiệu, khối "Tại phòng khám" 4 khung + đoạn giải thích, quy trình, 3 câu hỏi đáp. Nội dung CHỈ lấy từ 205 bài đăng trên Facebook CS1 (đọc 2026-11-10); nguồn từng trang ghi trong comment HTML. Bỏ các câu vi phạm mục 8 ("không đau", "không sưng", "an toàn", "miễn phí", "tốt nhất"...). Trang điều trị tủy: thay "tủy răng 1 lần" bằng câu của phòng khám "kết thúc từ 1-2 lần hẹn". Thêm icon theo trang. [CẦN XÁC NHẬN] bác sĩ duyệt. Facebook CS1 đăng "THĂM KHÁM MIỄN PHÍ cho bé 1-11 tuổi": chưa đưa lên web, chờ phòng khám xác nhận.
+- 2026-11-10: Chống cache cũ sau deploy: ersion-assets.ps1 gắn mã cả cho ảnh trong style.css (trước đây ảnh nền bản đồ không có mã, đổi ảnh khách vẫn thấy ảnh cũ 1 năm), thêm chế độ -Check; thêm git hook .githooks/pre-commit tự chạy script trước mỗi commit để không quên. Cần bật hook 1 lần trên mỗi máy: git config core.hooksPath .githooks.
+- 2026-11-10: Bảng giá (trang chủ + 6 trang dịch vụ): thay dòng ghi chú nhỏ bằng khung "Lưu ý về giá" (nền vàng nhạt #FFF8E6, viền trái --gold, icon chữ i) gồm 2 ý có icon: "Đây là giá tham khảo. Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm." và "Giá có thể thay đổi theo tình trạng răng của từng người." Class .price-note (HTML chép trong từng trang: sửa thì sửa cả 7).
+- 2026-11-10: SEO giai đoạn C (xem docs/seo-plan.md): title/description trang chủ thêm Hòa Quý, Cẩm Lệ; thêm H1 dòng nhỏ ở hero (chủ dự án duyệt), "Cả nhà an tâm" đổi sang p; đoạn khu vực phục vụ + link 6 dịch vụ ở mục 2 cơ sở; H1 trang dịch vụ thêm "tại Hòa Xuân, Đà Nẵng"; JSON-LD mở rộng (areaServed, availableService, priceRange, founder, FAQPage, Service); sitemap lastmod 2026-11-10. Phòng khám đồng ý dùng ảnh, gỡ dấu chờ xác nhận về ảnh. Chủ dự án sẽ mua tên miền riêng; chủ phòng khám quản lý 2 hồ sơ Google Maps.
