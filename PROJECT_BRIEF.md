@@ -131,7 +131,7 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 13. Footer (nền xanh dương logo, mép trên lượn sóng)
 14. Thanh nút cố định trên điện thoại: Gọi / Zalo / Chỉ đường
 15. Nút Chat Zalo nổi góc phải dưới, CHỈ máy tính ≥ 1024px. Bấm mở khung nhỏ: trạng thái mở cửa, nút "Mở Zalo để chat", số điện thoại. Không có mã QR. Điện thoại không hiện nút này (đã có Zalo ở thanh dưới).
-16. Trang riêng cho 7 dịch vụ (thêm Implant `dich-vu/implant.html` 2026-11-10; icon `assets/icons/implant.svg` là icon tạm tự vẽ, [CẦN XÁC NHẬN] chủ dự án gửi icon cùng bộ) trong `public/dich-vu/` (thêm 2026-11-04). Bấm thẻ dịch vụ ở trang chủ để mở. Cấu trúc ở spec v2 mục 5.15.
+16. Trang riêng cho 7 dịch vụ (thêm Implant `dich-vu/implant.html` 2026-11-10; icon `assets/icons/implant.webp` do chủ dự án cung cấp 2026-11-10, ảnh gốc `anh-goc/icon-implant-goc.png`) trong `public/dich-vu/` (thêm 2026-11-04). Bấm thẻ dịch vụ ở trang chủ để mở. Cấu trúc ở spec v2 mục 5.15.
 
 ---
 
@@ -236,3 +236,4 @@ Mỗi lần đổi quyết định quan trọng: ghi thêm 1 dòng có ngày th�
 - 2026-11-10: Thêm dịch vụ Trồng răng Implant (chủ dự án yêu cầu): trang `dich-vu/implant.html` + `en/services/dental-implants.html`, nội dung CHỈ từ bài Facebook CS1 (All-on-6, cắm 6 trụ toàn hàm có răng tạm, chờ 4-6 tháng rồi cắm trụ, Oval Pontic, CBCT) và bảng giá; 4 ảnh `dv-implant-1..4.webp` từ Facebook CS1. Thêm vào menu 8 trang, lưới dịch vụ (máy tính 7 cột, máy tính bảng 4 cột, điện thoại 2 cột thẻ lẻ canh giữa), "Dịch vụ khác", JSON-LD availableService, sitemap, llms.txt. [CẦN XÁC NHẬN] bác sĩ duyệt nội dung và chú thích ảnh.
 - 2026-11-10: build-en.ps1 dùng bảng tra phân biệt chữ hoa/thường (trước đây "Trồng răng" và "trồng răng" bị coi là một).
 - 2026-11-10: Cập nhật theo thông tin chung của phòng khám (chủ dự án gửi): số nhà CS1 là 217 (gỡ dấu chờ xác nhận); thêm MST 0402209530 và Giấy phép hoạt động số 01252/ĐNA-GPHĐ vào chân trang mọi trang (`.site-footer__license`), JSON-LD, llms.txt; bảo hiểm đổi thành "Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm" (nhãn 8 trang + FAQ); CBCT, scan miệng, Implant đã xác nhận. Khung "Dụng cụ được tiệt trùng" ở mục Đội ngũ thay bằng "Cho trẻ em và người lớn" (chủ dự án để AI tự quyết, theo câu giới thiệu chính thức). Trả góp 0% giữ chỉ cho niềng răng (chủ dự án chốt).
+- 2026-11-10: Thay icon Implant tạm (SVG tự vẽ) bằng icon chủ dự án cung cấp: cắt vuông quanh vòng tròn, WebP 256x256 `assets/icons/implant.webp` (8 KB), ảnh gốc `anh-goc/icon-implant-goc.png`. Xóa `implant.svg`.
