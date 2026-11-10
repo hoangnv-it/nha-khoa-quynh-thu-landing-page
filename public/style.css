@@ -783,8 +783,13 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
 .svc-signs { display: grid; gap: 12px; }
 .svc-signs li { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); color: var(--ink); font-weight: 500; }
 .svc-signs .icon { width: 24px; height: 24px; color: var(--blue-600); }
+/* Quy trình + Giá + Hỏi đáp chung 1 lưới (bố trí lại 2026-11-10).
+   Điện thoại: Quy trình, Giá, Hỏi đáp (theo thứ tự HTML). Máy tính: cột trái Quy trình + Hỏi đáp, cột phải Giá. */
 .svc-split { display: grid; gap: 40px; }
-.svc-split .steps { margin-bottom: 0; }
+.svc-split .section-head { margin-bottom: 16px; }
+.svc-split .steps { gap: 0; margin: 0; padding: 4px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.svc-split .steps li { padding: 14px 0; border-bottom: 1px solid var(--line); line-height: 1.5; }
+.svc-split .steps li:last-child { border-bottom: 0; }
 .svc-split .price-card { margin-inline: 0; }
 .svc-more { margin-top: 16px; }
 .svc-more a { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; text-decoration: none; }
@@ -825,7 +830,11 @@ ul.svc-cta__info li { display: flex; align-items: flex-start; gap: 12px; color: 
   .svc-hero__media { order: 0; padding-right: 24px; }
   .svc-hero__icon { width: 220px; height: 220px; }
   .svc-signs { grid-template-columns: repeat(3, 1fr); }
-  .svc-split { grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .svc-split { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); grid-template-areas: "steps price" "faq price"; grid-template-rows: auto 1fr; gap: 48px; align-items: start; }
+  .svc-split__steps { grid-area: steps; }
+  .svc-split__price { grid-area: price; }
+  .svc-split__faq { grid-area: faq; }
+  .svc-split .steps { padding: 4px 24px; }
   .svc-cta { grid-template-columns: 1fr auto; align-items: center; gap: 32px; padding: 28px 36px; }
 }
 
