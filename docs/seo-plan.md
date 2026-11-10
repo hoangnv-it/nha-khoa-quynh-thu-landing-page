@@ -31,7 +31,7 @@ Lập ngày 2026-11-10. Chủ dự án đã duyệt: mua tên miền riêng, th�
 - [x] C4. H1 trang dịch vụ có "tại Hòa Xuân, Đà Nẵng".
 - [x] C5. JSON-LD: `areaServed`, `availableService`, `priceRange`, `founder`, `FAQPage` (trang chủ + 6 trang dịch vụ), `Service` cho từng trang dịch vụ. Không có `aggregateRating`.
 - [x] C7. Liên kết nội bộ có từ khóa (đoạn khu vực phục vụ).
-- [ ] C6. Tách trang cho từ khóa lớn, nội dung lấy từ Facebook: "Nhổ răng khôn", "Trám răng, cạo vôi", "Chỉnh nha trẻ em", "Implant" (chỉ khi phòng khám xác nhận có dịch vụ).
+- [ ] C6. (Implant đã làm 2026-11-10: dich-vu/implant.html.) Tách trang cho từ khóa lớn, nội dung lấy từ Facebook: "Nhổ răng khôn", "Trám răng, cạo vôi", "Chỉnh nha trẻ em", "Implant" (chỉ khi phòng khám xác nhận có dịch vụ).
 
 ## Giai đoạn D: Nội dung dài hạn
 

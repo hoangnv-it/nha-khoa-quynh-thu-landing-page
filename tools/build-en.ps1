@@ -29,6 +29,7 @@ $SLUG = [ordered]@{
   'nieng-rang'   = 'braces'
   'tay-trang'    = 'teeth-whitening'
   'nho-rang'     = 'tooth-extraction'
+  'implant'      = 'dental-implants'
 }
 # Tên + mô tả dịch vụ cho JSON-LD tiếng Anh
 $SVC_EN = @{
@@ -37,14 +38,16 @@ $SVC_EN = @{
   'root-canal'       = @('Root canal treatment', 'Root canals, pulp preservation, cavity treatment and tooth-colored fillings.')
   'braces'           = @('Braces', 'Metal and ceramic braces, clear aligners and early orthodontics for kids.')
   'teeth-whitening'  = @('Teeth whitening', 'In-office whitening with blue light (LED, Plasma) and the Beyond II system.')
+  'dental-implants'  = @('Dental implants', 'Korean, American and Swiss implants, all-ceramic crowns on implants and All-on-6 full-arch restoration.')
   'tooth-extraction' = @('Tooth extraction and wisdom teeth', 'Tooth extractions and surgical removal of angled, impacted or sideways wisdom teeth, with a CBCT scan first.')
 }
 # Tên riêng được phép còn dấu tiếng Việt trong bản tiếng Anh
 $KEEP = @('Công ty TNHH MTV Nha khoa Quỳnh Thư', 'Nha Khoa Quỳnh Thư', 'Lê Quỳnh Thư', 'Dr. Thư', 'Tiếng Việt',
-          'Láng H.', 'Hương T.', 'Kim Thoa Q.', 'Phương Anh N.', 'Thủy Tiên T.')
+          '01252/ĐNA-GPHĐ', 'Láng H.', 'Hương T.', 'Kim Thoa Q.', 'Phương Anh N.', 'Thủy Tiên T.')
 
 # ---------- Bảng dịch ----------
-$pairs = @{}
+# Phân biệt chữ hoa/thường (hashtable @{} của PowerShell thì không): "Trồng răng" và "trồng răng" là 2 mục khác nhau
+$pairs = New-Object 'System.Collections.Generic.Dictionary[string,string]' ([System.StringComparer]::Ordinal)
 $vi = $null
 $n = 0
 foreach ($line in [System.IO.File]::ReadAllLines((Join-Path $PSScriptRoot 'i18n\en.txt'), $utf8)) {
@@ -68,7 +71,9 @@ function Translate([string]$t) {
     if ($parts[$i].StartsWith('<!--') -or $parts[$i].StartsWith('<script')) { continue }
     $parts[$i] = $rx.Replace($parts[$i], $eval)
   }
-  return ($parts -join '')
+  $t = ($parts -join '')
+  # Số tiền trong bảng giá: 200.000 -> 200,000 (kiểu Mỹ)
+  return [regex]::Replace($t, '(<span class="price-table__num">)([^<]*)', [System.Text.RegularExpressions.MatchEvaluator] { param($m) $m.Groups[1].Value + $m.Groups[2].Value.Replace('.', ',') })
 }
 
 function Clean([string]$h) {

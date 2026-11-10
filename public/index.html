@@ -42,13 +42,13 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=e3d18abc">
+  <link rel="stylesheet" href="style.css?v=93fcafdd">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
   <!--
     JSON-LD: Organization + 2 Dentist + FAQPage (mở rộng 2026-11-10: areaServed, dịch vụ, priceRange, người sáng lập). KHÔNG thêm aggregateRating / review.
-    [CẦN XÁC NHẬN] số nhà CS1: Facebook + Google Maps ghi 217, biển hiệu ghi 114.
+    Số nhà CS1: 217 Văn Tiến Dũng (phòng khám xác nhận 2026-11-10; biển hiệu cũ ghi 114).
     Giờ làm việc lấy từ Google Maps ngày 2026-11-03.
     Thông tin ở đây phải giống nội dung trang, llms.txt và Google Maps.
   -->
@@ -61,6 +61,12 @@
                        "@id":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/#organization",
                        "name":  "Nha khoa Quỳnh Thư",
                        "legalName":  "Công ty TNHH MTV Nha khoa Quỳnh Thư",
+                       "taxID":  "0402209530",
+                       "identifier":  {
+                                          "@type":  "PropertyValue",
+                                          "name":  "Giấy phép hoạt động khám bệnh, chữa bệnh",
+                                          "value":  "01252/ĐNA-GPHĐ"
+                                      },
                        "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
                        "logo":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/logo/favicon-192.png?v=c433b880",
                        "email":  "lequynhthu@gmail.com",
@@ -150,7 +156,7 @@
                        "sameAs":  [
                                       "https://www.facebook.com/nhakhoaquynhthu"
                                   ],
-                       "priceRange":  "Từ 150.000đ",
+                       "priceRange":  "50.000đ - 80.000.000đ",
                        "currenciesAccepted":  "VND",
                        "paymentAccepted":  "Tiền mặt, thẻ ATM, Visa, Mastercard",
                        "medicalSpecialty":  "Dentistry",
@@ -202,6 +208,11 @@
                                                     "@type":  "MedicalProcedure",
                                                     "name":  "Khám răng trẻ em",
                                                     "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Trồng răng Implant",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/implant"
                                                 }
                                             ]
                    },
@@ -253,7 +264,7 @@
                        "sameAs":  [
                                       "https://www.facebook.com/nhakhoaquynhthu2"
                                   ],
-                       "priceRange":  "Từ 150.000đ",
+                       "priceRange":  "50.000đ - 80.000.000đ",
                        "currenciesAccepted":  "VND",
                        "paymentAccepted":  "Tiền mặt, thẻ ATM, Visa, Mastercard",
                        "medicalSpecialty":  "Dentistry",
@@ -305,6 +316,11 @@
                                                     "@type":  "MedicalProcedure",
                                                     "name":  "Khám răng trẻ em",
                                                     "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em"
+                                                },
+                                                {
+                                                    "@type":  "MedicalProcedure",
+                                                    "name":  "Trồng răng Implant",
+                                                    "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/implant"
                                                 }
                                             ]
                    },
@@ -346,10 +362,10 @@
                                           },
                                           {
                                               "@type":  "Question",
-                                              "name":  "Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?",
+                                              "name":  "Có hỗ trợ hồ sơ bệnh án, hóa đơn đỏ để thanh toán bảo hiểm không?",
                                               "acceptedAnswer":  {
                                                                      "@type":  "Answer",
-                                                                     "text":  "Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm."
+                                                                     "text":  "Có. Phòng khám hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm."
                                                                  }
                                           }
                                       ]
@@ -424,6 +440,7 @@
               <li><a href="dich-vu/nieng-rang.html"><img src="assets/icons/nieng-rang.webp?v=bd85f4bf" width="256" height="256" alt="" loading="lazy"><span>Niềng răng</span></a></li>
               <li><a href="dich-vu/tay-trang.html"><img src="assets/icons/tay-trang.webp?v=1d7bce7d" width="256" height="256" alt="" loading="lazy"><span>Tẩy trắng răng</span></a></li>
               <li><a href="dich-vu/nho-rang.html"><img src="assets/icons/nho-rang.webp?v=46b675e1" width="256" height="256" alt="" loading="lazy"><span>Nhổ răng</span></a></li>
+              <li><a href="dich-vu/implant.html"><img src="assets/icons/implant.svg?v=36e0b54e" width="256" height="256" alt="" loading="lazy"><span>Trồng răng Implant</span></a></li>
             </ul>
           </li>
           <li><a href="#bang-gia" data-nav="bang-gia">Bảng giá</a></li>
@@ -496,6 +513,7 @@
           <li><a class="service service--squeeze" href="dich-vu/nieng-rang.html" data-track="service"><span class="service__icon"><img src="assets/icons/nieng-rang.webp?v=bd85f4bf" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Niềng răng</span></a></li>
           <li><a class="service service--glow" href="dich-vu/tay-trang.html" data-track="service"><span class="service__icon"><img src="assets/icons/tay-trang.webp?v=1d7bce7d" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Tẩy trắng răng</span></a></li>
           <li><a class="service service--pull" href="dich-vu/nho-rang.html" data-track="service"><span class="service__icon"><img src="assets/icons/nho-rang.webp?v=46b675e1" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Nhổ răng</span></a></li>
+          <li><a class="service service--screw" href="dich-vu/implant.html" data-track="service"><span class="service__icon"><img src="assets/icons/implant.svg?v=36e0b54e" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Trồng răng<br>Implant</span></a></li>
         </ul>
       </div>
     </section>
@@ -546,21 +564,82 @@
           <p class="eyebrow eyebrow--lines">Bảng giá</p>
           <h2 id="bang-gia-title">Giá tham khảo, báo trước khi điều trị</h2>
         </div>
-        <!-- [CẦN XÁC NHẬN] giá lấy từ banner "chỉ từ" của phòng khám trên Facebook (03/11/2026). Hỏi lại giá còn áp dụng. -->
+        <!-- Bảng giá (thay 2026-11-10): theo 3 bảng giá của phòng khám (ảnh chủ dự án gửi), chia 3 tab giống 3 bảng.
+             Chữ viết tắt trên bảng gốc đã viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án: VSRM -> Vệ sinh răng miệng,
+             BHR -> bít hố rãnh, KT -> kết thúc, SIC -> SSC (mão thép không gỉ), Flouride -> Fluoride, Thụy Sỹ -> Thụy Sĩ.
+             Không có JS: 3 bảng hiện lần lượt (thanh tab ẩn). Có JS: script mục "tab bảng giá" bật tab. Sửa giá thì sửa cả trang dịch vụ tương ứng. -->
         <div class="price-card">
-          <table class="price-table">
-            <thead>
-              <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Cạo vôi, đánh bóng răng</td><td>từ 150.000</td></tr>
-              <tr><td>Trám răng sâu</td><td>từ 199.000</td></tr>
-              <tr><td>Răng tháo lắp</td><td>từ 300.000</td></tr>
-              <tr><td>Tẩy trắng răng</td><td>từ 900.000</td></tr>
-              <tr><td>Răng sứ thẩm mỹ</td><td>từ 1.200.000</td></tr>
-              <tr><td>Khám răng trẻ em, điều trị tủy, niềng răng, nhổ răng</td><td class="price-table__ask">Bác sĩ khám và báo giá</td></tr>
-            </tbody>
-          </table>
+          <div class="price-tabs" data-price-tabs>
+            <div class="price-tabs__list" aria-label="Nhóm bảng giá" hidden>
+              <button type="button" class="price-tabs__tab" id="tab-tong-quat" aria-controls="gia-tong-quat">Tổng quát</button>
+              <button type="button" class="price-tabs__tab" id="tab-tre-em" aria-controls="gia-tre-em">Trẻ em</button>
+              <button type="button" class="price-tabs__tab" id="tab-ky-thuat-cao" aria-controls="gia-ky-thuat-cao">Kỹ thuật cao</button>
+            </div>
+            <div class="price-panel" id="gia-tong-quat">
+              <h3 class="price-panel__title">Nha khoa tổng quát</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Lấy vôi răng</td><td><span class="price-table__num">200.000 - 400.000</span><small>/lần (1-2 lần hẹn)</small></td></tr>
+                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
+                  <tr><td>Chữa tủy răng</td><td><span class="price-table__num">800.000 - 1.100.000</span><small>có MTA</small></td></tr>
+                  <tr><td>Chữa tủy lại</td><td><span class="price-table__num">1.200.000 - 1.650.000</span><small>có MTA</small></td></tr>
+                  <tr><td>Nhổ răng thường</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
+                  <tr><td>Nhổ răng khôn, răng khó</td><td><span class="price-table__num">800.000 - 2.000.000</span></td></tr>
+                  <tr><td>Bọc mão sứ kim loại</td><td><span class="price-table__num">1.800.000</span></td></tr>
+                  <tr><td>Bọc mão toàn sứ</td><td><span class="price-table__num">3.000.000 - 6.000.000</span><small>/răng</small></td></tr>
+                  <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3.000.000 - 7.000.000</span><small>/răng</small></td></tr>
+                  <tr><td>Răng nhựa tháo lắp (răng nhựa Mỹ)</td><td><span class="price-table__num">500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Hàm Biosoft</td><td><span class="price-table__num">500.000 - 1.500.000</span><small>/nền hàm</small></td></tr>
+                  <tr><td>Tẩy trắng răng</td><td><span class="price-table__num">1.500.000 - 2.000.000</span></td></tr>
+                  <tr><td>Đính kim cương</td><td><span class="price-table__num">500.000</span><small>/viên</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-tre-em">
+              <h3 class="price-panel__title">Nha khoa trẻ em</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Vệ sinh răng miệng đơn giản (răng sữa)</td><td><span class="price-table__num">100.000 - 200.000</span><small>/lần</small></td></tr>
+                  <tr><td>Lấy vôi và đánh bóng (răng hỗn hợp, răng vĩnh viễn)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/lần</small></td></tr>
+                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">200.000 - 400.000</span><small>/răng</small></td></tr>
+                  <tr><td>Trám răng theo dõi (GIC)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
+                  <tr><td>Trám bít hố rãnh</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
+                  <tr><td>Chữa tủy răng sữa + trám kết thúc</td><td><span class="price-table__num">600.000 - 800.000</span><small>/răng</small></td></tr>
+                  <tr><td>Bọc mão thép không gỉ (SSC)</td><td><span class="price-table__num">500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng bôi tê</td><td><span class="price-table__num">50.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng chích tê</td><td><span class="price-table__num">100.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng khó, nhổ răng can thiệp</td><td><span class="price-table__num">200.000 - 500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Bôi Fluoride</td><td><span class="price-table__num">200.000</span><small>/lần</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-ky-thuat-cao">
+              <h3 class="price-panel__title">Nha khoa kỹ thuật cao</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Chỉnh nha phân đoạn</td><td><span class="price-table__num">3.000.000 - 12.000.000</span></td></tr>
+                  <tr><td>Chỉnh nha toàn diện</td><td><span class="price-table__num">35.000.000 - 50.000.000</span></td></tr>
+                  <tr><td>Chỉnh nha bằng khay trong suốt</td><td><span class="price-table__num">40.000.000 - 80.000.000</span></td></tr>
+                  <tr><td>Cắm trụ Implant Hàn Quốc</td><td><span class="price-table__num">10.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Cắm trụ Implant Mỹ</td><td><span class="price-table__num">12.000.000 - 15.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Cắm trụ Implant Thụy Sĩ</td><td><span class="price-table__num">20.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Răng toàn sứ trên Implant</td><td><span class="price-table__num">5.000.000 - 8.000.000</span><small>/đơn vị</small></td></tr>
+                  <tr><td>Chụp phim Panorama</td><td><span class="price-table__num">250.000</span><small>/lần</small></td></tr>
+                  <tr><td>Chụp phim Cephalometric</td><td><span class="price-table__num">250.000</span><small>/lần</small></td></tr>
+                  <tr><td>Chụp phim CBCT</td><td><span class="price-table__num">400.000</span><small>/lần</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
           <div class="price-note" role="note" aria-label="Lưu ý về giá">
             <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
             <div class="price-note__body">
@@ -574,7 +653,7 @@
           <ul class="chips">
             <li>Niềng răng trả góp 0%</li>
             <li>Thẻ ATM/Visa/Master</li>
-            <li>Hóa đơn đỏ thanh toán bảo hiểm</li>
+            <li>Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm</li>
           </ul>
         </div>
       </div>
@@ -608,7 +687,7 @@
              Nguồn: hồ sơ phòng khám trên NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 2026-11-07):
              "ThS.BS Lê Quỳnh Thư" (NhaKhoaHub), "Bác sĩ chuyên môn", chuyên môn niềng răng, implant, răng sứ, "trên 15 năm kinh nghiệm".
              Đã xác nhận 2026-11-08: tên "Lê Quỳnh Thư", hơn 15 năm kinh nghiệm.
-             Đã xác nhận 2026-11-08: bác sĩ ĐANG THEO HỌC Thạc sĩ, chưa tốt nghiệp: chỉ ghi "Bác sĩ", KHÔNG ghi ThS/Thạc sĩ cho tới khi tốt nghiệp. (chưa có trong danh sách dịch vụ ở brief).
+             Đã xác nhận 2026-11-08: bác sĩ ĐANG THEO HỌC Thạc sĩ, chưa tốt nghiệp: chỉ ghi "Bác sĩ", KHÔNG ghi ThS/Thạc sĩ cho tới khi tốt nghiệp.. Implant: phòng khám có làm (bảng giá phòng khám, chủ dự án gửi 2026-11-10), có trang dịch vụ dich-vu/implant.html.
              [CẦN XÁC NHẬN] nơi đào tạo, chứng chỉ, quá trình công tác: khi có thì thêm dòng vào .lead-doc__facts. KHÔNG tự viết. -->
         <article class="lead-doc" aria-labelledby="lead-doc-name">
           <div class="lead-doc__photo">
@@ -643,7 +722,8 @@
 
         <!-- Phần 2 (đổi 2026-11-10 theo yêu cầu chủ dự án): KHÔNG dùng ảnh từng người hay ảnh tập thể.
              Thay bằng 4 khung giá trị (icon + tiêu đề + mô tả). Nội dung chỉ dùng thông tin đã có trong brief.
-             [CẦN XÁC NHẬN] khung 2: phòng khám có chụp CBCT + scan miệng tại chỗ; khung 3: dụng cụ được tiệt trùng. -->
+             Khung 2 (CBCT + scan miệng) và khung 3 (trẻ em và người lớn): theo thông tin chung của phòng khám, chủ dự án gửi 2026-11-10.
+             Khung 3 trước đây là "Dụng cụ được tiệt trùng" (chưa có nguồn xác nhận), đã thay. -->
         <div class="team">
           <div class="team__head">
             <h3>Đội ngũ bác sĩ &amp; nhân viên tận tâm</h3>
@@ -661,9 +741,9 @@
               <p>Chụp phim CT Cone Beam 3D và scan miệng ngay tại phòng khám, giúp bác sĩ lên kế hoạch điều trị rõ ràng.</p>
             </li>
             <li class="value">
-              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-              <h4>Dụng cụ được tiệt trùng</h4>
-              <p>Dụng cụ được tiệt trùng trước mỗi lần điều trị, để bạn và gia đình yên tâm khi đến khám.</p>
+              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+              <h4>Cho trẻ em và người lớn</h4>
+              <p>Khám và điều trị bệnh lý răng hàm mặt cho trẻ em và người lớn, cả nhà có thể khám tại cùng một nơi.</p>
             </li>
             <li class="value">
               <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
@@ -787,14 +867,14 @@
           <p class="eyebrow">2 cơ sở tại Hòa Xuân, Đà Nẵng</p>
           <h2 id="dia-chi-title" class="h2-sm">Thuận tiện cho mọi nhà</h2>
           <!-- Khu vực phục vụ (SEO địa phương, thêm 2026-11-10). [CẦN XÁC NHẬN] tên phường mới sau sắp xếp hành chính 2025: khi có thì ghi thêm cả tên mới. -->
-          <p class="section-lead">Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.</p>
+          <p class="section-lead">Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a>, <a href="dich-vu/implant.html">trồng răng Implant</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.</p>
         </div>
         <div class="branches">
           <article class="branch" data-branch="cs1">
             <img class="branch__photo" src="assets/images/co-so-1.webp?v=5237866c" width="480" height="384" loading="lazy" alt="Phòng điều trị Nha khoa Quỳnh Thư cơ sở 1">
             <div class="branch__body">
               <h3><svg class="icon" aria-hidden="true"><use href="#i-pin-solid"/></svg>Cơ sở 1</h3>
-              <!-- [CẦN XÁC NHẬN] số nhà: Facebook + Google Maps ghi 217, biển hiệu ghi 114 -->
+              <!-- Số nhà 217: phòng khám xác nhận 2026-11-10 (biển hiệu cũ ghi 114) -->
               <p class="branch__addr">217 Văn Tiến Dũng,<br>Hòa Xuân, Đà Nẵng</p>
               <p class="rating"><span class="rating__num">4,9</span><svg aria-hidden="true"><use href="#i-star"/></svg><a href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt" target="_blank" rel="noopener">(42 đánh giá)</a></p>
               <p class="status branch__status" data-status="cs1"></p>
@@ -865,8 +945,8 @@
             <p>Có. Phòng khám hỗ trợ niềng răng trả góp lãi suất 0%. Gọi hoặc nhắn Zalo để được tư vấn chi tiết.</p>
           </details>
           <details>
-            <summary>Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?</summary>
-            <p>Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.</p>
+            <summary>Có hỗ trợ hồ sơ bệnh án, hóa đơn đỏ để thanh toán bảo hiểm không?</summary>
+            <p>Có. Phòng khám hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.</p>
           </details>
         </div>
       </div>
@@ -895,6 +975,7 @@
       </div>
       <div class="container site-footer__bottom">
         <p>© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư <span aria-hidden="true">|</span> 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</p>
+        <p class="site-footer__license">MST: 0402209530 <span aria-hidden="true">·</span> Giấy phép hoạt động số 01252/ĐNA-GPHĐ</p>
       </div>
     </div>
   </footer>
@@ -956,6 +1037,6 @@
     </ul>
   </dialog>
 
-  <script src="script.js?v=913d8321" defer></script>
+  <script src="script.js?v=a3fed86d" defer></script>
 </body>
 </html>

@@ -149,41 +149,21 @@ EN: Tooth extraction
 VI: Giá tham khảo, báo trước khi điều trị
 EN: Price guide, quoted before treatment
 VI: Giá tham khảo (VNĐ)
-EN: Starting price (VND)
+EN: Price guide (VND)
 VI: Giá tham khảo
 EN: Pricing
-VI: Cạo vôi, đánh bóng răng
-EN: Cleaning and polishing
-VI: Trám răng sâu
-EN: Cavity fillings
-VI: Răng tháo lắp
-EN: Removable dentures
-VI: từ 150.000
-EN: from 150,000
-VI: từ 199.000
-EN: from 199,000
-VI: từ 300.000
-EN: from 300,000
-VI: từ 900.000
-EN: from 900,000
-VI: từ 1.200.000
-EN: from 1,200,000
-VI: Khám răng trẻ em, điều trị tủy, niềng răng, nhổ răng
-EN: Kids' dentistry, root canals, braces, extractions
-VI: Bác sĩ khám và báo giá
-EN: Quoted after your exam
 VI: Lưu ý về giá
 EN: About our prices
 VI: <strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.
-EN: <strong>These are starting prices.</strong> Your dentist will examine you in person and walk you through the treatment plan and cost before anything is done.
+EN: <strong>These are guide prices.</strong> Your dentist will examine you in person and walk you through the treatment plan and cost before anything is done.
 VI: <strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.
 EN: <strong>Prices may vary</strong> depending on each person's teeth.
 VI: Niềng răng trả góp 0%
 EN: 0% financing for braces
 VI: Thẻ ATM/Visa/Master
 EN: ATM cards, Visa, Mastercard
-VI: Hóa đơn đỏ thanh toán bảo hiểm
-EN: VAT invoices for insurance claims
+VI: Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm
+EN: Medical records and VAT invoices for insurance claims
 VI: Báo giá trước khi điều trị
 EN: Quoted before treatment
 VI: Xem bảng giá đầy đủ
@@ -320,10 +300,10 @@ VI: Chụp phim CBCT tại chỗ
 EN: On-site CBCT scans
 VI: Chụp phim CT Cone Beam 3D và scan miệng ngay tại phòng khám, giúp bác sĩ lên kế hoạch điều trị rõ ràng.
 EN: 3D cone beam CT and intraoral scans right here at the clinic, so your dentist can plan treatment clearly.
-VI: Dụng cụ được tiệt trùng trước mỗi lần điều trị, để bạn và gia đình yên tâm khi đến khám.
-EN: Instruments are sterilized before every treatment, so you and your family can feel at ease.
-VI: Dụng cụ được tiệt trùng
-EN: Sterilized instruments
+VI: Khám và điều trị bệnh lý răng hàm mặt cho trẻ em và người lớn, cả nhà có thể khám tại cùng một nơi.
+EN: Dental and oral care for both kids and adults, so the whole family can be seen in one place.
+VI: Cho trẻ em và người lớn
+EN: For kids and adults
 VI: Chăm sóc chu đáo
 EN: Attentive care
 VI: Nhân viên hỗ trợ bạn từ lúc đặt lịch, trong suốt quá trình điều trị đến khi tái khám.
@@ -408,8 +388,8 @@ VI: 2 cơ sở tại Hòa Xuân, Đà Nẵng
 EN: 2 locations in Hoa Xuan, Da Nang
 VI: Thuận tiện cho mọi nhà
 EN: Convenient for every family
-VI: Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.
-EN: Quynh Thu Dental has 2 locations in Hoa Xuan, Da Nang, convenient for families in Hoa Xuan, Hoa Quy and nearby areas of Cam Le and Ngu Hanh Son. Both locations offer <a href="dich-vu/nieng-rang.html">braces</a>, <a href="dich-vu/nho-rang.html">wisdom tooth removal</a>, <a href="dich-vu/rang-su.html">porcelain crowns</a>, <a href="dich-vu/dieu-tri-tuy.html">root canal treatment</a>, <a href="dich-vu/tay-trang.html">teeth whitening</a> and <a href="dich-vu/kham-tre-em.html">kids' dentistry</a>.
+VI: Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a>, <a href="dich-vu/implant.html">trồng răng Implant</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.
+EN: Quynh Thu Dental has 2 locations in Hoa Xuan, Da Nang, convenient for families in Hoa Xuan, Hoa Quy and nearby areas of Cam Le and Ngu Hanh Son. Both locations offer <a href="dich-vu/nieng-rang.html">braces</a>, <a href="dich-vu/nho-rang.html">wisdom tooth removal</a>, <a href="dich-vu/rang-su.html">porcelain crowns</a>, <a href="dich-vu/dieu-tri-tuy.html">root canal treatment</a>, <a href="dich-vu/tay-trang.html">teeth whitening</a>, <a href="dich-vu/implant.html">dental implants</a> and <a href="dich-vu/kham-tre-em.html">kids' dentistry</a>.
 VI: Phòng điều trị Nha khoa Quỳnh Thư cơ sở 1
 EN: Treatment room at Quynh Thu Dental Location 1
 VI: Phòng điều trị Nha khoa Quỳnh Thư cơ sở 2
@@ -446,10 +426,10 @@ VI: Niềng răng có trả góp 0% không?
 EN: Do you offer 0% financing for braces?
 VI: Có. Phòng khám hỗ trợ niềng răng trả góp lãi suất 0%. Gọi hoặc nhắn Zalo để được tư vấn chi tiết.
 EN: Yes. We offer 0% interest installment plans for braces. Call or message us on Zalo for details.
-VI: Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?
-EN: Can I get a VAT invoice for an insurance claim?
-VI: Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.
-EN: Yes. We can issue an official VAT invoice for your insurance claim.
+VI: Có hỗ trợ hồ sơ bệnh án, hóa đơn đỏ để thanh toán bảo hiểm không?
+EN: Can you help with medical records and a VAT invoice for an insurance claim?
+VI: Có. Phòng khám hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.
+EN: Yes. We can provide your medical records and issue an official VAT invoice for your insurance claim.
 
 # ===== Trang dịch vụ: phần chung =====
 VI: Dấu hiệu thường gặp
@@ -477,7 +457,7 @@ EN: Dentist at work in the chair
 VI: Lấy dấu bằng máy scan
 EN: Digital scans, no molds
 VI: Chụp phim CBCT
-EN: CBCT imaging
+EN: CBCT scan
 
 # ===== Trang Niềng răng =====
 VI: Niềng răng tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
@@ -559,7 +539,7 @@ EN: Root Canals and Cavity Treatment in Hoa Xuan, Da Nang - Quynh Thu Dental
 VI: Điều trị tủy, chữa sâu răng, trám răng thẩm mỹ tại 2 cơ sở Hòa Xuân. Máy nội nha tích hợp, vật liệu MTA, có chụp phim CBCT. Nhiều ca xong trong 1-2 lần hẹn. Gọi 0944 479 405.
 EN: Root canals, cavity treatment and tooth-colored fillings at 2 locations in Hoa Xuan, Da Nang. Integrated endo motor, MTA material and CBCT imaging. Many cases are done in 1-2 visits. Call +84 944 479 405.
 VI: Điều trị tủy, chữa sâu răng và trám răng thẩm mỹ cho người lớn và trẻ em. Phòng khám ưu tiên giữ lại răng thật: chữa được là chữa, giữ được là cố gắng giữ. Nhiều ca điều trị tủy kết thúc trong 1-2 lần hẹn.
-EN: Root canals, cavity treatment and tooth-colored fillings for adults and kids. We focus on saving your natural teeth: if it can be treated, we treat it, and if it can be saved, we do our best to save it. Many root canals are finished in 1-2 visits.
+EN: Root canals, cavity treatment and tooth-colored fillings for adults and kids. We focus on saving your natural teeth: if it can be treated, we treat it, and if it can be saved, we work hard to keep it. Many root canals are finished in 1-2 visits.
 VI: Bảo tồn tủy
 EN: Pulp preservation
 VI: Trám răng thẩm mỹ
@@ -776,8 +756,6 @@ VI: Bác sĩ giải thích cách nhổ và báo giá trước khi làm
 EN: The dentist explains the procedure and gives you a quote first
 VI: Nhổ răng, khâu và cầm máu, theo dõi tại chỗ khoảng 30 phút rồi về
 EN: Extraction, stitches and bleeding control, then about 30 minutes of monitoring before you go home
-VI: Nhổ răng, nhổ răng khôn
-EN: Extractions, wisdom teeth
 VI: Câu hỏi về nhổ răng khôn
 EN: Questions about wisdom teeth
 VI: Nhổ răng khôn mất bao lâu?
@@ -894,8 +872,8 @@ EN: Book a crown consultation
 # ===== Trang Tẩy trắng răng =====
 VI: Tẩy trắng răng tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
 EN: Teeth Whitening in Hoa Xuan, Da Nang - Quynh Thu Dental
-VI: Tẩy trắng răng bằng đèn ánh sáng xanh (LED, Plasma) và máy Beyond II tại 2 cơ sở Hòa Xuân, khoảng 60 phút tại phòng khám. Giá tham khảo từ 900.000đ. Gọi 0944 479 405.
-EN: In-office teeth whitening with blue light (LED, Plasma) and the Beyond II system at 2 locations in Hoa Xuan, Da Nang. About 60 minutes. Starting at 900,000 VND. Call +84 944 479 405.
+VI: Tẩy trắng răng bằng đèn ánh sáng xanh (LED, Plasma) và máy Beyond II tại 2 cơ sở Hòa Xuân, khoảng 60 phút tại phòng khám. Giá tham khảo từ 1.500.000đ. Gọi 0944 479 405.
+EN: In-office teeth whitening with blue light (LED, Plasma) and the Beyond II system at 2 locations in Hoa Xuan, Da Nang. About 60 minutes. Starting at 1,500,000 VND. Call +84 944 479 405.
 VI: Tẩy trắng răng tại phòng khám bằng đèn ánh sáng xanh và máy Beyond II, thuốc tẩy trắng nhập khẩu từ châu Âu. Răng sáng màu hơn sau khoảng 60 phút. Bác sĩ khám trước để xem răng của bạn có phù hợp hay không.
 EN: In-office whitening with blue light and the Beyond II system, using whitening gel imported from Europe. Your teeth look brighter in about 60 minutes. The dentist checks first to make sure whitening is right for you.
 VI: Đèn LED và Plasma
@@ -978,3 +956,181 @@ VI: Máy tẩy trắng răng
 EN: Whitening machine
 VI: Đặt lịch khám tẩy trắng răng
 EN: Book a whitening consultation
+
+# ===== Bảng giá 3 tab (thêm 2026-11-10). Số tiền trong <span class="price-table__num"> do build-en.ps1 tự đổi dấu chấm thành dấu phẩy. =====
+VI: Nhóm bảng giá
+EN: Price categories
+VI: Tổng quát
+EN: General
+VI: Trẻ em
+EN: Kids
+VI: Kỹ thuật cao
+EN: Advanced
+VI: Nha khoa tổng quát
+EN: General dentistry
+VI: Nha khoa kỹ thuật cao
+EN: Advanced dentistry
+VI: <small>/lần (1-2 lần hẹn)</small>
+EN: <small>per session (1-2 visits)</small>
+VI: <small>/lần</small>
+EN: <small>per session</small>
+VI: <small>/răng</small>
+EN: <small>per tooth</small>
+VI: <small>/nền hàm</small>
+EN: <small>per denture base</small>
+VI: <small>/viên</small>
+EN: <small>per gem</small>
+VI: <small>/trụ</small>
+EN: <small>per implant</small>
+VI: <small>/đơn vị</small>
+EN: <small>per unit</small>
+VI: <small>có MTA</small>
+EN: <small>with MTA</small>
+VI: Trám răng Composite
+EN: Composite fillings
+VI: Chữa tủy răng sữa + trám kết thúc
+EN: Baby tooth root canal + final filling
+VI: Chữa tủy răng
+EN: Root canal
+VI: Chữa tủy lại
+EN: Root canal retreatment
+VI: Nhổ răng thường
+EN: Simple extraction
+VI: Nhổ răng khôn, răng khó
+EN: Wisdom tooth or difficult extraction
+VI: Bọc mão sứ kim loại
+EN: Porcelain-fused-to-metal crown
+VI: Bọc mão toàn sứ
+EN: All-ceramic crown
+VI: Răng nhựa tháo lắp (răng nhựa Mỹ)
+EN: Removable denture (American acrylic teeth)
+VI: Hàm Biosoft
+EN: Biosoft denture
+VI: Đính kim cương
+EN: Diamond tooth gem
+VI: Vệ sinh răng miệng đơn giản (răng sữa)
+EN: Basic cleaning (baby teeth)
+VI: Lấy vôi và đánh bóng (răng hỗn hợp, răng vĩnh viễn)
+EN: Cleaning and polishing (mixed and permanent teeth)
+VI: Trám răng theo dõi (GIC)
+EN: Temporary glass ionomer filling (GIC)
+VI: Trám bít hố rãnh
+EN: Pit and fissure sealant
+VI: Bọc mão thép không gỉ (SSC)
+EN: Stainless steel crown (SSC)
+VI: Nhổ răng bôi tê
+EN: Extraction with numbing gel
+VI: Nhổ răng chích tê
+EN: Extraction with a numbing injection
+VI: Nhổ răng khó, nhổ răng can thiệp
+EN: Difficult or surgical extraction
+VI: Bôi Fluoride
+EN: Fluoride treatment
+VI: Chỉnh nha phân đoạn
+EN: Partial orthodontics
+VI: Chỉnh nha toàn diện
+EN: Comprehensive orthodontics
+VI: Chỉnh nha bằng khay trong suốt
+EN: Clear aligner treatment
+VI: Cắm trụ Implant Hàn Quốc
+EN: Korean implant
+VI: Cắm trụ Implant Mỹ
+EN: American implant
+VI: Cắm trụ Implant Thụy Sĩ
+EN: Swiss implant
+VI: Răng toàn sứ trên Implant
+EN: All-ceramic crown on an implant
+VI: Chụp phim Panorama
+EN: Panoramic X-ray
+VI: Chụp phim Cephalometric
+EN: Cephalometric X-ray
+
+# ===== Trang Trồng răng Implant (thêm 2026-11-10) =====
+VI: Trồng răng<br>Implant
+EN: Dental<br>implants
+VI: trồng răng Implant
+EN: dental implants
+VI: Trồng răng Implant tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Dental Implants in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Cắm trụ Implant Hàn Quốc, Mỹ, Thụy Sĩ, răng toàn sứ trên Implant và phục hình toàn hàm All-on-6 tại 2 cơ sở Hòa Xuân. Có chụp phim CBCT tại phòng khám. Gọi 0944 479 405.
+EN: Korean, American and Swiss implants, all-ceramic crowns on implants and All-on-6 full-arch restoration at 2 locations in Hoa Xuan, Da Nang. On-site CBCT scans. Call +84 944 479 405.
+VI: Trồng lại răng đã mất bằng trụ Implant: cắm trụ Implant Hàn Quốc, Mỹ hoặc Thụy Sĩ, làm răng toàn sứ trên Implant và phục hình toàn hàm All-on-6. Bác sĩ khám, tư vấn loại trụ phù hợp và báo giá trước khi làm.
+EN: Replace missing teeth with dental implants: Korean, American or Swiss implants, all-ceramic crowns on implants and All-on-6 full-arch restoration. The dentist examines you, recommends the right implant and gives you a quote before starting.
+VI: Trụ Hàn Quốc, Mỹ, Thụy Sĩ
+EN: Korean, American, Swiss implants
+VI: Khi nào nên hỏi bác sĩ về Implant?
+EN: When should you ask about implants?
+VI: Mất một hoặc vài răng, muốn trồng lại răng cố định
+EN: One or a few missing teeth you'd like to replace with fixed teeth
+VI: Mất răng toàn hàm, muốn có cầu răng sứ cố định cho cả hàm
+EN: A full arch of missing teeth, and you want a fixed bridge for the whole arch
+VI: Răng gãy dọc xuống chân răng, không giữ lại được
+EN: A tooth cracked down into the root that can't be saved
+VI: Chân răng viêm nhiễm, hư hỏng, mất chức năng ăn nhai
+EN: An infected, damaged root that no longer works for chewing
+VI: Trồng răng Implant tại Nha khoa Quỳnh Thư
+EN: Dental implants at Quynh Thu Dental
+VI: Nhiều loại trụ
+EN: A choice of implants
+VI: Trụ Implant Hàn Quốc, Mỹ và Thụy Sĩ. Bác sĩ tư vấn loại trụ phù hợp với bạn.
+EN: Korean, American and Swiss implants. The dentist will help you choose the right one for you.
+VI: Phục hình toàn hàm All-on-6
+EN: All-on-6 full-arch restoration
+VI: Cấy 6 trụ Implant vào xương hàm để nâng đỡ một cầu răng sứ cố định cho cả hàm, không cần cấy từng răng riêng lẻ.
+EN: Six implants placed in the jawbone support a fixed porcelain bridge for the whole arch, with no need to replace each tooth individually.
+VI: Răng tạm ngay sau cắm trụ
+EN: Temporary teeth right away
+VI: Sau khi cắm 6 trụ toàn hàm, có thể lắp răng nhựa tạm ngay, để bạn có nụ cười đầy đủ răng trong lúc chờ trụ tích hợp vào xương.
+EN: After placing 6 implants for a full arch, temporary acrylic teeth can go in right away, so you have a full smile while the implants bond with the bone.
+VI: Phim CBCT giúp bác sĩ xem rõ xương hàm và khoảng cách tới ống thần kinh.
+EN: CBCT scans give the dentist a clear view of the jawbone and the distance to the nerve canal.
+VI: Trồng răng Implant diễn ra thế nào?
+EN: How do dental implants work?
+VI: Trụ Implant được cắm vào xương hàm thay cho chân răng đã mất. Sau khi cắm trụ, cần chờ vài tháng để trụ <strong>tích hợp cứng chắc vào xương</strong>, rồi mới phục hình răng sứ sau cùng.
+EN: An implant is placed in the jawbone to replace the missing root. After placement, it takes a few months for the implant to <strong>bond firmly with the bone</strong> before the final porcelain crown goes on.
+VI: Với chân răng viêm nhiễm, bác sĩ có thể nhổ, nạo sạch ổ viêm và hẹn 4-6 tháng sau mới cắm trụ để xương non lấp đầy ổ nhổ: cách này tiết kiệm chi phí hơn so với nhổ và cắm tức thì. Phục hình trên Implant có thể làm bằng kỹ thuật Oval Pontic, tạo lại đường viền nướu để răng trông như mọc lên từ nướu.
+EN: For an infected root, the dentist may remove it, clean out the infection and wait 4-6 months for new bone to fill the socket before placing the implant: this costs less than extracting and placing an implant on the same day. Crowns on implants can use the Oval Pontic technique, which reshapes the gumline so the tooth looks like it grows right out of the gum.
+VI: Bác sĩ khám, chụp phim, tư vấn loại trụ và báo giá trước khi làm
+EN: The dentist examines you, takes X-rays, recommends an implant and gives you a quote first
+VI: Cắm trụ Implant, lắp răng tạm khi phù hợp
+EN: Implant placement, with temporary teeth when suitable
+VI: Chờ trụ tích hợp vào xương vài tháng, rồi gắn răng sứ sau cùng
+EN: A few months for the implant to bond with the bone, then the final porcelain crown
+VI: Câu hỏi về trồng răng Implant
+EN: Questions about dental implants
+VI: Cắm trụ Implant giá bao nhiêu?
+EN: How much does a dental implant cost?
+VI: Giá tham khảo: trụ Hàn Quốc 10.000.000đ/trụ, trụ Mỹ 12.000.000 - 15.000.000đ/trụ, trụ Thụy Sĩ 20.000.000đ/trụ. Răng toàn sứ trên Implant 5.000.000 - 8.000.000đ/đơn vị. Bác sĩ khám và báo giá trước khi làm.
+EN: Price guide: Korean implants 10,000,000 VND each, American implants 12,000,000 - 15,000,000 VND each, Swiss implants 20,000,000 VND each. All-ceramic crowns on implants are 5,000,000 - 8,000,000 VND per unit. The dentist examines you and gives you a quote before starting.
+VI: Trồng răng Implant mất bao lâu?
+EN: How long do dental implants take?
+VI: Sau khi cắm trụ cần chờ vài tháng để trụ tích hợp cứng chắc vào xương, rồi mới gắn răng sứ sau cùng. Thời gian cụ thể tùy từng ca, bác sĩ sẽ cho bạn biết khi khám.
+EN: After the implant is placed, it takes a few months to bond firmly with the bone before the final porcelain crown goes on. The exact timeline depends on your case, and the dentist will let you know at your exam.
+VI: All-on-6 là gì?
+EN: What is All-on-6?
+VI: All-on-6 là phương pháp phục hình toàn hàm mất răng bằng cách cấy 6 trụ Implant vào xương hàm để nâng đỡ một cầu răng sứ cố định cho cả hàm. Cách này thay thế toàn bộ răng đã mất mà không cần cấy từng răng riêng lẻ, vẫn đảm bảo độ vững chắc khi ăn nhai.
+EN: All-on-6 restores a full arch of missing teeth by placing 6 implants in the jawbone to support a fixed porcelain bridge for the whole arch. It replaces all the missing teeth without an implant for every single tooth, while staying stable for chewing.
+VI: Răng hư cần nhổ, có nên cắm Implant ngay không?
+EN: If a damaged tooth needs to come out, should I get an implant right away?
+VI: Tùy tình trạng. Với chân răng viêm nhiễm, bác sĩ có thể nhổ, nạo sạch ổ viêm và hẹn 4-6 tháng sau mới cắm trụ để xương non lấp đầy ổ nhổ. Cách này tiết kiệm chi phí hơn so với nhổ và cắm tức thì.
+EN: It depends. For an infected root, the dentist may remove it, clean out the infection and place the implant 4-6 months later, once new bone fills the socket. This costs less than extracting and placing an implant on the same day.
+VI: Phim X-quang toàn cảnh sau khi cắm 6 trụ Implant hàm trên
+EN: Panoramic X-ray after placing 6 implants in the upper jaw
+VI: Phim sau cắm 6 trụ Implant
+EN: X-ray after 6 implants
+VI: Khách hàng nam cười tươi sau khi cắm Implant tại Nha khoa Quỳnh Thư
+EN: A male patient smiling after getting implants at Quynh Thu Dental
+VI: Khách hàng sau cắm Implant
+EN: Patient after implants
+VI: Phim CBCT xem trên máy tính, đánh dấu ống thần kinh hàm dưới
+EN: CBCT scan on a computer screen with the lower jaw nerve canal marked
+VI: Phim CBCT tại phòng khám
+EN: CBCT scan at the clinic
+VI: Nha sĩ tại phòng điều trị Nha khoa Quỳnh Thư
+EN: A dentist in a Quynh Thu Dental treatment room
+VI: Đặt lịch tư vấn trồng răng Implant
+EN: Book an implant consultation
+
+# ===== Chân trang: mã số thuế, giấy phép (thêm 2026-11-10). Số giấy phép giữ nguyên chữ Việt. =====
+VI: MST: 0402209530 <span aria-hidden="true">·</span> Giấy phép hoạt động số 01252/ĐNA-GPHĐ
+EN: Tax code: 0402209530 <span aria-hidden="true">·</span> Medical operating license No. 01252/ĐNA-GPHĐ

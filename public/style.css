@@ -356,6 +356,7 @@ body { padding-top: var(--header-h); }
 .service--glow:is(:hover, :focus-visible) .service__icon    { animation: icon-glow 1.6s ease-in-out infinite; }    /* tẩy trắng: sáng lên */
 .service--glow:is(:hover, :focus-visible) .service__icon::after { background: radial-gradient(circle at 70% 25%, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0) 60%); animation: icon-glow-light 1.6s ease-in-out infinite; }
 .service--pull:is(:hover, :focus-visible) .service__icon    { animation: icon-pull .85s cubic-bezier(.3, 1.4, .5, 1) 1; } /* nhổ: giật lên */
+.service--screw:is(:hover, :focus-visible) .service__icon   { animation: icon-screw .9s ease-in-out 1; }           /* implant: vặn xuống (thêm 2026-11-10) */
 
 @keyframes icon-wiggle  { 0%, 100% { transform: rotate(0) scale(1); } 20% { transform: rotate(-8deg) scale(1.08); } 45% { transform: rotate(7deg) scale(1.08); } 70% { transform: rotate(-4deg) scale(1.05); } 88% { transform: rotate(2deg) scale(1.02); } }
 @keyframes icon-float   { 0%, 100% { transform: translateY(0) scale(1); } 40% { transform: translateY(-5px) scale(1.07); } }
@@ -364,14 +365,17 @@ body { padding-top: var(--header-h); }
 @keyframes icon-squeeze { 0%, 100% { transform: scale(1, 1); } 35% { transform: scale(1.1, .92); } 70% { transform: scale(.95, 1.07); } }
 @keyframes icon-glow    { 0%, 100% { transform: scale(1); filter: brightness(1) saturate(1); } 50% { transform: scale(1.07); filter: brightness(1.07) saturate(1.25); } }
 @keyframes icon-glow-light { 0%, 100% { opacity: 0; } 50% { opacity: .75; } }
+@keyframes icon-screw   { 0% { transform: translateY(0) rotate(0); } 35% { transform: translateY(3px) rotate(-8deg); } 65% { transform: translateY(5px) rotate(6deg); } 100% { transform: translateY(0) rotate(0); } }
 @keyframes icon-pull    { 0% { transform: translateY(0) rotate(0); } 30% { transform: translateY(-9px) rotate(-5deg); } 55% { transform: translateY(2px) rotate(3deg); } 78% { transform: translateY(-3px) rotate(-1deg); } 100% { transform: translateY(0) rotate(0); } }
 
 @media (prefers-reduced-motion: reduce) {
   .service::before, .service__icon, .service__icon::after { animation: none !important; }
 }
-@media (min-width: 600px) { .services { grid-template-columns: repeat(3, 1fr); } }
+/* 7 dịch vụ (thêm Implant 2026-11-10): điện thoại 2 cột (thẻ lẻ cuối canh giữa), máy tính bảng 4 cột, máy tính 7 cột */
+@media (max-width: 599px) { .services > li:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); } }
+@media (min-width: 600px) { .services { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 1024px) {
-  .services { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .services { grid-template-columns: repeat(7, 1fr); gap: 14px; }
   .service { padding: 18px 10px 18px; gap: 10px; font-size: 17px; }
   .service__icon { width: 88px; height: 88px; }
 }
@@ -411,6 +415,22 @@ body { padding-top: var(--header-h); }
 .price-table th:last-child, .price-table td:last-child { text-align: right; padding-left: 16px; white-space: nowrap; }
 .price-table td:last-child { color: var(--blue-600); font-weight: 700; }
 .price-table td.price-table__ask { white-space: normal; color: var(--ink-3); font-weight: 500; font-size: 14px; }
+/* Ghi chú đơn vị dưới giá (/lần, /răng, có MTA...) */
+.price-table td:last-child small { display: block; margin-top: 2px; color: var(--ink-3); font-size: 12px; font-weight: 500; white-space: normal; }
+@media (max-width: 599px) {
+  .price-table td { font-size: 14px; }
+  .price-table td:first-child { padding-right: 4px; }
+  .price-table td:last-child { white-space: normal; } /* số dài xuống dòng ở dấu "-", không tràn ngang */
+}
+/* Bảng giá 3 tab ở trang chủ (thêm 2026-11-10). Không có JS: thanh tab ẩn, 3 bảng hiện lần lượt, mỗi bảng có tiêu đề. */
+.price-tabs__list { display: flex; gap: 4px; margin: 16px 0 4px; padding: 4px; border-radius: 999px; background: var(--blue-100); }
+.price-tabs__tab { flex: 1; min-height: 44px; padding: 8px 10px; border: 0; border-radius: 999px; background: transparent; color: var(--blue-800); font: inherit; font-size: 14px; font-weight: 700; line-height: 1.2; cursor: pointer; transition: background-color .2s, color .2s, box-shadow .2s; }
+.price-tabs__tab:hover { color: var(--blue-900); }
+.price-tabs__tab[aria-selected="true"] { background: #fff; color: var(--blue-600); box-shadow: 0 2px 8px rgba(10, 60, 90, .12); }
+.price-tabs__tab:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.price-panel__title { margin-top: 20px; color: var(--ink); font-size: 17px; }
+.price-tabs.is-tabs .price-panel__title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (min-width: 1024px) { .price-tabs__tab { min-height: 48px; font-size: 16px; } }
 /* Lưu ý về giá: khung vàng nhạt + icon để khách chú ý (đổi 2026-11-10) */
 .price-note { display: flex; gap: 12px; margin-top: 18px; padding: 14px 16px; border: 1px solid #F6DFA0; border-left: 4px solid var(--gold); border-radius: var(--radius-sm); background: #FFF8E6; color: var(--ink-2); font-size: 14px; line-height: 1.55; }
 .price-note__icon { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: #fff; }
@@ -794,9 +814,10 @@ ul.svc-cta__info li { display: flex; align-items: flex-start; gap: 12px; color: 
 .svc-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
 @media (min-width: 600px) {
   .svc-signs { grid-template-columns: repeat(2, 1fr); }
-  .services--others { grid-template-columns: repeat(5, 1fr); }
+  .services--others { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 1024px) {
+  .services--others { grid-template-columns: repeat(6, 1fr); }
   .svc-hero { padding-top: 24px; }
   .svc-hero__grid { grid-template-columns: 1fr auto; gap: 48px; padding: 40px 48px; }
   .svc-hero h1 { font-size: 48px; }

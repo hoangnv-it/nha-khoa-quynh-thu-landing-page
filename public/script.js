@@ -371,6 +371,48 @@
     if (name) track(name);
   });
 
+  /* Tab bảng giá (#bang-gia, thêm 2026-11-10): Tổng quát / Trẻ em / Kỹ thuật cao.
+     Không có JS thì 3 bảng hiện lần lượt. Phím mũi tên trái/phải, Home, End để đổi tab.
+     Mở trang với #gia-tre-em (hoặc #gia-ky-thuat-cao...) thì mở sẵn tab đó. Clarity: xem_bang_gia. */
+  $$("[data-price-tabs]").forEach(function (box) {
+    var list = $(".price-tabs__list", box);
+    var tabs = $$(".price-tabs__tab", box);
+    if (!list || !tabs.length) return;
+    var panelOf = function (t) { return doc.getElementById(t.getAttribute("aria-controls")); };
+    var select = function (i, focus) {
+      tabs.forEach(function (t, j) {
+        var on = i === j, p = panelOf(t);
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        if (p) p.hidden = !on;
+      });
+      if (focus) tabs[i].focus();
+    };
+    list.setAttribute("role", "tablist");
+    list.hidden = false;
+    box.classList.add("is-tabs");
+    var start = 0;
+    tabs.forEach(function (t, i) {
+      var p = panelOf(t);
+      t.setAttribute("role", "tab");
+      if (p) {
+        p.setAttribute("role", "tabpanel");
+        p.setAttribute("aria-labelledby", t.id);
+        if (location.hash === "#" + p.id) start = i;
+      }
+      t.addEventListener("click", function () { select(i, false); track("xem_bang_gia"); });
+      t.addEventListener("keydown", function (e) {
+        var n = tabs.length;
+        var j = e.key === "ArrowRight" ? (i + 1) % n : e.key === "ArrowLeft" ? (i - 1 + n) % n : e.key === "Home" ? 0 : e.key === "End" ? n - 1 : -1;
+        if (j < 0) return;
+        e.preventDefault();
+        select(j, true);
+      });
+    });
+    select(start, false);
+    if (start > 0) { var sec = box.closest("section"); if (sec) sec.scrollIntoView(); }
+  });
+
   /* Nút đổi ngôn ngữ VI/EN (thêm 2026-11-10): nhớ lựa chọn để lần sau không tự chuyển theo ngôn ngữ trình duyệt
      (đoạn script đầu <head> đọc localStorage "lang"); giữ mục đang xem (#...). Clarity: doi_ngon_ngu. */
   $$("a[data-lang]").forEach(function (a) {

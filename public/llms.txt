@@ -4,7 +4,7 @@
 
 Website: https://quynh-thu-landing-page.tai-khoan.workers.dev/
 English version: https://quynh-thu-landing-page.tai-khoan.workers.dev/en/
-Công ty: Công ty TNHH MTV Nha khoa Quỳnh Thư
+Công ty: Công ty TNHH MTV Nha khoa Quỳnh Thư (MST 0402209530; Giấy phép hoạt động số 01252/ĐNA-GPHĐ)
 Điện thoại (cả 2 cơ sở): 0944 479 405 (+84944479405)
 Zalo: https://zalo.me/0944479405
 Email: lequynhthu@gmail.com
@@ -33,6 +33,7 @@ Email: lequynhthu@gmail.com
 - Răng sứ thẩm mỹ, răng nhựa tháo lắp
 - Tẩy trắng răng, đính đá răng
 - Nhổ răng, nhổ răng khôn, lấy vôi răng
+- Trồng răng Implant (trụ Hàn Quốc, Mỹ, Thụy Sĩ), răng toàn sứ trên Implant, phục hình toàn hàm All-on-6
 
 ## Trang dịch vụ
 
@@ -42,6 +43,7 @@ Email: lequynhthu@gmail.com
 - Niềng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang
 - Tẩy trắng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang
 - Nhổ răng, nhổ răng khôn: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang
+- Trồng răng Implant: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/implant
 
 ## Tiện ích
 
@@ -49,9 +51,50 @@ Email: lequynhthu@gmail.com
 - Quản lý lịch hẹn và bệnh án bằng phần mềm
 - Niềng răng trả góp lãi suất 0%
 - Thanh toán thẻ ATM, Visa, Master
-- Hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để thanh toán bảo hiểm
+- Hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (hóa đơn VAT) để thanh toán bảo hiểm
 
 ## Bảng giá
 
-- Giá tham khảo "chỉ từ": cạo vôi, đánh bóng 150.000đ; trám răng sâu 199.000đ; răng tháo lắp 300.000đ; tẩy trắng răng 900.000đ; răng sứ 1.200.000đ.
+Giá tham khảo (VNĐ), theo bảng giá của phòng khám:
+
+### Nha khoa tổng quát
+- Lấy vôi răng: 200.000 - 400.000/lần (1-2 lần hẹn)
+- Trám răng Composite: 300.000 - 500.000
+- Chữa tủy răng: 800.000 - 1.100.000 (có MTA)
+- Chữa tủy lại: 1.200.000 - 1.650.000 (có MTA)
+- Nhổ răng thường: 300.000 - 500.000
+- Nhổ răng khôn, răng khó: 800.000 - 2.000.000
+- Bọc mão sứ kim loại: 1.800.000
+- Bọc mão toàn sứ: 3.000.000 - 6.000.000/răng
+- Inlay, Onlay, Veneer: 3.000.000 - 7.000.000/răng
+- Răng nhựa tháo lắp (răng nhựa Mỹ): 500.000/răng
+- Hàm Biosoft: 500.000 - 1.500.000/nền hàm
+- Tẩy trắng răng: 1.500.000 - 2.000.000
+- Đính kim cương: 500.000/viên
+
+### Nha khoa trẻ em
+- Vệ sinh răng miệng đơn giản (răng sữa): 100.000 - 200.000/lần
+- Lấy vôi và đánh bóng (răng hỗn hợp, răng vĩnh viễn): 200.000 - 300.000/lần
+- Trám răng Composite: 200.000 - 400.000/răng
+- Trám răng theo dõi (GIC): 200.000 - 300.000/răng
+- Trám bít hố rãnh: 200.000 - 300.000/răng
+- Chữa tủy răng sữa + trám kết thúc: 600.000 - 800.000/răng
+- Bọc mão thép không gỉ (SSC): 500.000/răng
+- Nhổ răng bôi tê: 50.000/răng
+- Nhổ răng chích tê: 100.000/răng
+- Nhổ răng khó, nhổ răng can thiệp: 200.000 - 500.000/răng
+- Bôi Fluoride: 200.000/lần
+
+### Nha khoa kỹ thuật cao
+- Chỉnh nha phân đoạn: 3.000.000 - 12.000.000
+- Chỉnh nha toàn diện: 35.000.000 - 50.000.000
+- Chỉnh nha bằng khay trong suốt: 40.000.000 - 80.000.000
+- Cắm trụ Implant Hàn Quốc: 10.000.000/trụ
+- Cắm trụ Implant Mỹ: 12.000.000 - 15.000.000/trụ
+- Cắm trụ Implant Thụy Sĩ: 20.000.000/trụ
+- Răng toàn sứ trên Implant: 5.000.000 - 8.000.000/đơn vị
+- Chụp phim Panorama: 250.000/lần
+- Chụp phim Cephalometric: 250.000/lần
+- Chụp phim CBCT: 400.000/lần
+
 - Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.

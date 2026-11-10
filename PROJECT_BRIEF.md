@@ -12,8 +12,8 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 | Mục | Giá trị |
 |---|---|
 | Tên hiển thị | Nha Khoa QUỲNH THƯ |
-| Công ty | Công ty TNHH MTV Nha khoa Quỳnh Thư |
-| Cơ sở 1 | 217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng [CẦN XÁC NHẬN: Facebook + Google Maps ghi 217, biển hiệu ghi 114] |
+| Công ty | Công ty TNHH MTV Nha khoa Quỳnh Thư. MST 0402209530. Giấy phép hoạt động số 01252/ĐNA-GPHĐ (ghi ở chân trang mọi trang, `taxID` + `identifier` trong JSON-LD, llms.txt; thêm 2026-11-10) |
+| Cơ sở 1 | 217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng (thông tin chung của phòng khám, chủ dự án gửi 2026-11-10; biển hiệu cũ ghi 114) |
 | Cơ sở 2 | 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng (Google Maps, Facebook, biển hiệu đều ghi 303) |
 | Điện thoại (cả 2 cơ sở) | 0944 479 405, link `tel:+84944479405` |
 | Zalo | `https://zalo.me/0944479405` (chủ dự án xác nhận 2026-11-08: cùng số 0944 479 405 cho điện thoại và Zalo) |
@@ -26,8 +26,8 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 | Google Maps CS2 | Xem: `https://www.google.com/maps/search/?api=1&query=16.0125987,108.2196122` · Chỉ đường: `https://www.google.com/maps/dir/?api=1&destination=16.0125987,108.2196122` · Trang chính thức: `https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF+_+c%C6%A1+s%E1%BB%9F+2/@16.0126038,108.2170373,17z/data=!3m1!4b1!4m6!3m5!1s0x31421bd244253a81:0x9f17698b08b4b538!8m2!3d16.0125987!4d108.2196122!16s%2Fg%2F11q4k5nl4q` (chủ dự án gửi 2026-11-03) |
 | Rating Google | CS1: 4,9★ (42 đánh giá). CS2: 4,7★ (61 đánh giá). Cập nhật 03/11/2026. |
 | Giờ làm việc | Cả 2 cơ sở: Thứ 2 - Thứ 7: 08:00 - 19:00, Chủ nhật: 08:00 - 18:00 (Google Maps, 03/11/2026). Cấu hình ở `HOURS` trong `public/script.js`. |
-| Giá "chỉ từ" | Theo banner của phòng khám trên Facebook: cạo vôi 150.000đ, trám răng sâu 199.000đ, răng tháo lắp 300.000đ, tẩy trắng 900.000đ, răng sứ 1.200.000đ [CẦN XÁC NHẬN còn áp dụng] |
-| Đội ngũ | Bác sĩ Lê Quỳnh Thư (chủ phòng khám, bác sĩ chuyên môn, đã có ảnh trên web). Theo NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 07/11/2026): chuyên môn niềng răng, răng sứ, implant. Chủ dự án xác nhận 2026-11-08: tên đúng là **Lê Quỳnh Thư**, **hơn 15 năm kinh nghiệm** đúng. Học vị: bác sĩ đang theo học Thạc sĩ, chưa tốt nghiệp (xác nhận 2026-11-08), chỉ ghi "Bác sĩ", không ghi ThS/Thạc sĩ cho tới khi tốt nghiệp. [CẦN XÁC NHẬN implant, nơi đào tạo, chứng chỉ, quá trình công tác]. Trang NhaKhoaHub ghi SĐT khác (0869 554 535) và giờ 8:00-19:00 cả tuần, khác thông tin chính thức: KHÔNG dùng. Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
+| Bảng giá | Theo 3 bảng giá của phòng khám (Tổng quát 13 dòng, Trẻ em 11 dòng, Kỹ thuật cao 10 dòng; ảnh chủ dự án gửi 2026-11-10, thay giá "chỉ từ" trên banner Facebook). Chữ viết tắt viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án (VSRM, BHR, KT, SIC thành SSC, Flouride thành Fluoride, Thụy Sỹ thành Thụy Sĩ). Không ghi ngày áp dụng. Danh sách đầy đủ ở `public/llms.txt` mục Bảng giá. `priceRange` JSON-LD: 50.000đ - 80.000.000đ. |
+| Đội ngũ | Bác sĩ Lê Quỳnh Thư (chủ phòng khám, bác sĩ chuyên môn, đã có ảnh trên web). Theo NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 07/11/2026): chuyên môn niềng răng, răng sứ, implant. Chủ dự án xác nhận 2026-11-08: tên đúng là **Lê Quỳnh Thư**, **hơn 15 năm kinh nghiệm** đúng. Học vị: bác sĩ đang theo học Thạc sĩ, chưa tốt nghiệp (xác nhận 2026-11-08), chỉ ghi "Bác sĩ", không ghi ThS/Thạc sĩ cho tới khi tốt nghiệp. Implant: phòng khám có làm (bảng giá 2026-11-10). [CẦN XÁC NHẬN nơi đào tạo, chứng chỉ, quá trình công tác]. Trang NhaKhoaHub ghi SĐT khác (0869 554 535) và giờ 8:00-19:00 cả tuần, khác thông tin chính thức: KHÔNG dùng. Tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn. [CẦN XÁC NHẬN họ tên đầy đủ, học hàm, chức danh, ảnh của từng người] |
 
 **Dịch vụ** (theo ảnh bìa Facebook):
 - Nha khoa trẻ em: dự phòng và điều trị bệnh răng miệng cho trẻ em (dịch vụ đặc biệt)
@@ -37,8 +37,9 @@ Nếu spec v2 khác file này về kỹ thuật, làm theo file này.
 - Răng sứ thẩm mỹ, răng nhựa tháo lắp
 - Tẩy trắng răng, đính đá
 - Nhổ răng, nhổ răng khôn, lấy vôi răng
+- Trồng răng Implant: trụ Hàn Quốc, Mỹ, Thụy Sĩ; răng toàn sứ trên Implant; All-on-6 (thêm 2026-11-10)
 
-**Tiện ích:** Chụp phim CBCT · Scan miệng · Phần mềm quản lý lịch hẹn và bệnh án · Niềng răng trả góp lãi suất 0% (chỉ niềng răng, xác nhận 2026-11-10) · Thẻ ATM/Visa/Master · Xuất hóa đơn đỏ (VAT) để thanh toán bảo hiểm (xác nhận 2026-11-10) · Dụng cụ được tiệt trùng [CẦN XÁC NHẬN].
+**Tiện ích:** Chụp phim CBCT · Scan miệng · Phần mềm quản lý lịch hẹn và bệnh án · Niềng răng trả góp lãi suất 0% (chỉ niềng răng, xác nhận 2026-11-10) · Thẻ ATM/Visa/Master · Hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (VAT) để thanh toán bảo hiểm (xác nhận 2026-11-10). Phòng khám tự giới thiệu: "Chuyên khám và điều trị bệnh lý răng hàm mặt trẻ em và người lớn". Không ghi "dụng cụ được tiệt trùng" (chưa có nguồn). Trả góp 0% CHỈ cho niềng răng (chủ dự án chốt lại 2026-11-10, dù thông tin chung ghi "TRẢ GÓP 0%").
 
 **Logo:** logo tạm, chờ file gốc. SVG dựng lại theo logo trên tường phòng khám (ảnh `anh-goc/google-maps-cs2/gm2-01.jpg`). Chữ trong SVG dùng font hệ thống. Có file gốc thì bỏ vào `anh-goc/`, xuất lại `public/assets/logo/`.
 
@@ -120,7 +121,7 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 3. Dịch vụ nổi bật `#dich-vu`
 4. Về Nha khoa Quỳnh Thư `#gioi-thieu`
 5. Nha khoa trẻ em `#tre-em` (không có trong ảnh, giữ lại)
-6. Bảng giá `#bang-gia` (không có trong ảnh, giữ lại)
+6. Bảng giá `#bang-gia` (không có trong ảnh, giữ lại). Từ 2026-11-10: 3 tab Tổng quát / Trẻ em / Kỹ thuật cao (`#gia-tong-quat`, `#gia-tre-em`, `#gia-ky-thuat-cao`; mở trang kèm # đó thì mở sẵn tab). Mỗi trang dịch vụ hiện các dòng giá liên quan; sửa giá thì sửa cả trang chủ, trang dịch vụ, llms.txt
 7. Trước & sau `#truoc-sau` (không có trong ảnh, giữ lại)
 8. Đội ngũ `#doi-ngu` (2 phần, đổi 2026-11-07: (1) hồ sơ riêng Bác sĩ Lê Quỳnh Thư `.lead-doc`: ảnh, học vị, kinh nghiệm, nơi làm việc, thế mạnh, nút đặt lịch; (2) "Đội ngũ bác sĩ & nhân viên tận tâm" `.team`: 4 khung giá trị có icon, KHÔNG dùng ảnh từng người hay ảnh tập thể (đổi 2026-11-10))
 9. Hình ảnh hoạt động + thẻ đánh giá `#phong-kham`
@@ -130,7 +131,7 @@ Nút bo tròn hoàn toàn. Thẻ bo 16px, viền `--line`, bóng `0 6px 24px rgb
 13. Footer (nền xanh dương logo, mép trên lượn sóng)
 14. Thanh nút cố định trên điện thoại: Gọi / Zalo / Chỉ đường
 15. Nút Chat Zalo nổi góc phải dưới, CHỈ máy tính ≥ 1024px. Bấm mở khung nhỏ: trạng thái mở cửa, nút "Mở Zalo để chat", số điện thoại. Không có mã QR. Điện thoại không hiện nút này (đã có Zalo ở thanh dưới).
-16. Trang riêng cho 6 dịch vụ trong `public/dich-vu/` (thêm 2026-11-04). Bấm thẻ dịch vụ ở trang chủ để mở. Cấu trúc ở spec v2 mục 5.15.
+16. Trang riêng cho 7 dịch vụ (thêm Implant `dich-vu/implant.html` 2026-11-10; icon `assets/icons/implant.svg` là icon tạm tự vẽ, [CẦN XÁC NHẬN] chủ dự án gửi icon cùng bộ) trong `public/dich-vu/` (thêm 2026-11-04). Bấm thẻ dịch vụ ở trang chủ để mở. Cấu trúc ở spec v2 mục 5.15.
 
 ---
 
@@ -231,3 +232,7 @@ Mỗi lần đổi quyết định quan trọng: ghi thêm 1 dòng có ngày th�
 - 2026-11-10: SEO giai đoạn C (xem docs/seo-plan.md): title/description trang chủ thêm Hòa Quý, Cẩm Lệ; thêm H1 dòng nhỏ ở hero (chủ dự án duyệt), "Cả nhà an tâm" đổi sang p; đoạn khu vực phục vụ + link 6 dịch vụ ở mục 2 cơ sở; H1 trang dịch vụ thêm "tại Hòa Xuân, Đà Nẵng"; JSON-LD mở rộng (areaServed, availableService, priceRange, founder, FAQPage, Service); sitemap lastmod 2026-11-10. Phòng khám đồng ý dùng ảnh, gỡ dấu chờ xác nhận về ảnh. Chủ dự án sẽ mua tên miền riêng; chủ phòng khám quản lý 2 hồ sơ Google Maps.
 - 2026-11-10: Thêm bản tiếng Anh (Anh Mỹ) theo yêu cầu chủ dự án, ngôn ngữ mặc định theo trình duyệt (tiếng Việt → bản Việt, khác → bản Anh), nút VI/EN ở header nhớ lựa chọn. Bản Anh tạo tự động: `tools/build-en.ps1` + bảng dịch `tools/i18n/en.txt`, ra `public/en/`. `script.js` có bộ chữ `T` theo `<html lang>` (trạng thái mở cửa, giờ dạng 7 PM, nhãn đọc màn hình, bản đồ hl=en). `version-assets.ps1`, `doi-ten-mien.ps1`, git hook xử lý cả `public/en/`. Header khổ 1024-1199px thu gọn (khoảng cách menu 16px, ẩn icon quả địa cầu) để vừa nút VI/EN. Tiêu đề hero bản Anh: "Peace of mind". [CẦN XÁC NHẬN] phòng khám duyệt bản tiếng Anh.
 - 2026-11-10: Nút đổi ngôn ngữ dùng lá cờ thay icon quả địa cầu (yêu cầu chủ dự án): cờ Anh cho tiếng Anh, cờ Việt Nam cho tiếng Việt. Khổ 1024-1199px chỉ hiện cờ, ẩn chữ EN/VI để header không tràn.
+- 2026-11-10: Thay bảng giá theo 3 bảng giá của phòng khám (chủ dự án gửi ảnh): trang chủ chia 3 tab (JS, không có JS thì hiện lần lượt), 7 trang dịch vụ hiện dòng liên quan, ghi chú đơn vị in nhỏ dưới giá, điện thoại cho số dài xuống dòng ở dấu "-". Mô tả trang tẩy trắng đổi "từ 1.500.000đ". `priceRange` 50.000đ - 80.000.000đ. Bản tiếng Anh: số tiền kiểu 200,000 (build-en.ps1 tự đổi).
+- 2026-11-10: Thêm dịch vụ Trồng răng Implant (chủ dự án yêu cầu): trang `dich-vu/implant.html` + `en/services/dental-implants.html`, nội dung CHỈ từ bài Facebook CS1 (All-on-6, cắm 6 trụ toàn hàm có răng tạm, chờ 4-6 tháng rồi cắm trụ, Oval Pontic, CBCT) và bảng giá; 4 ảnh `dv-implant-1..4.webp` từ Facebook CS1. Thêm vào menu 8 trang, lưới dịch vụ (máy tính 7 cột, máy tính bảng 4 cột, điện thoại 2 cột thẻ lẻ canh giữa), "Dịch vụ khác", JSON-LD availableService, sitemap, llms.txt. [CẦN XÁC NHẬN] bác sĩ duyệt nội dung và chú thích ảnh.
+- 2026-11-10: build-en.ps1 dùng bảng tra phân biệt chữ hoa/thường (trước đây "Trồng răng" và "trồng răng" bị coi là một).
+- 2026-11-10: Cập nhật theo thông tin chung của phòng khám (chủ dự án gửi): số nhà CS1 là 217 (gỡ dấu chờ xác nhận); thêm MST 0402209530 và Giấy phép hoạt động số 01252/ĐNA-GPHĐ vào chân trang mọi trang (`.site-footer__license`), JSON-LD, llms.txt; bảo hiểm đổi thành "Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm" (nhãn 8 trang + FAQ); CBCT, scan miệng, Implant đã xác nhận. Khung "Dụng cụ được tiệt trùng" ở mục Đội ngũ thay bằng "Cho trẻ em và người lớn" (chủ dự án để AI tự quyết, theo câu giới thiệu chính thức). Trả góp 0% giữ chỉ cho niềng răng (chủ dự án chốt).

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Icon Trồng răng Implant (tạm, vẽ 2026-11-10 theo phong cách bộ 6 icon dịch vụ). [CẦN XÁC NHẬN] chủ dự án thay bằng icon cùng bộ khi có. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2F7FC"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".46" r=".5"><stop offset="0" stop-color="#D6E8F8"/><stop offset=".75" stop-color="#E6F1FB"/><stop offset="1" stop-color="#EEF5FC" stop-opacity="0"/></radialGradient>
+    <linearGradient id="tooth" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4F0FB"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8F9BA9"/><stop offset=".45" stop-color="#E6EBF0"/><stop offset="1" stop-color="#7C8896"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="254" height="254" rx="46" fill="url(#bg)" stroke="#E3ECF5" stroke-width="2"/>
+  <circle cx="128" cy="126" r="96" fill="url(#glow)"/>
+  <g transform="translate(128 132) scale(1.2) translate(-128 -132)">
+  <path d="M110 112h36l-4 18h-28z" fill="url(#metal)"/>
+  <path d="M112 132h32l-3 68c0 11-6 19-13 19s-13-8-13-19z" fill="url(#metal)"/>
+  <g stroke="#6F7C8A" stroke-width="3.5" stroke-linecap="round">
+    <path d="M109 145l38-6M110 161l36-6M111 177l34-6M113 193l30-5M117 208l22-4"/>
+  </g>
+  <path d="M82 72c0-21 17-32 32-27 7 2 10 5 14 5s7-3 14-5c15-5 32 6 32 27 0 19-9 31-15 37H97c-6-6-15-18-15-37z" fill="url(#tooth)" stroke="#2F8BD6" stroke-width="4.5" stroke-linejoin="round"/>
+  <path d="M100 66c2-8 8-12 15-11" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="128" cy="228" rx="42" ry="5" fill="#BFDDF5" opacity=".7"/>
+  <g stroke="#3A9BE6" stroke-width="5" stroke-linecap="round">
+    <path d="M62 60l-10-8M58 80H46M70 41l-4-12"/>
+  </g>
+  </g>
+</svg>
