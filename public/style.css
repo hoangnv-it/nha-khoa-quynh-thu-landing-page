@@ -447,39 +447,31 @@ body { padding-top: var(--header-h); }
   .lead-doc__facts > div { grid-template-columns: 150px 1fr; }
 }
 
-/* Phần 2: các bác sĩ khác */
+/* Phần 2 (đổi 2026-11-10): "Đội ngũ bác sĩ & nhân viên tận tâm", 4 khung giá trị, không dùng ảnh người */
 .team { margin-top: 48px; }
-.team__head { margin-bottom: 20px; text-align: center; }
-.team__head h3 { font-size: 22px; }
-.team__head p { margin: 6px auto 0; max-width: 36em; color: var(--ink-3); }
-.doctor__body h4 { margin: 0; color: var(--ink); font-size: 16px; text-wrap: balance; }
-.team .doctor__photo { aspect-ratio: 1 / 1; }
-.team .doctors { max-width: 900px; margin-inline: auto; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.team__head { margin-bottom: 24px; text-align: center; }
+.team__head h3 { font-size: 22px; text-wrap: balance; }
+.team__head p { margin: 8px auto 0; max-width: 40em; color: var(--ink-2); line-height: 1.6; text-wrap: balance; }
+ul.values { display: grid; grid-template-columns: 1fr; gap: 14px; }
+.value { display: flex; flex-direction: column; gap: 10px; padding: 22px 22px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.value:hover { transform: translateY(-4px); border-color: #BCD6F2; box-shadow: 0 14px 32px rgba(10, 50, 100, .13); }
+.value__icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 4px; border-radius: 14px; background: var(--blue-100); color: var(--blue-600); transition: background-color .25s, color .25s; }
+.value__icon .icon { width: 24px; height: 24px; }
+.value:hover .value__icon { background: var(--blue-600); color: #fff; }
+.value :is(h3, h4) { margin: 0; color: var(--ink); font-size: 17px; line-height: 1.35; }
+.value p { color: var(--ink-2); font-size: 15px; line-height: 1.6; }
 @media (max-width: 599px) {
-  .team .doctor__body { padding: 10px 6px 12px; }
-  .team .doctor__body h4 { font-size: 14px; }
-  .team .doctor__body p { font-size: 12px; }
+  /* Điện thoại: icon bên trái, tiêu đề + mô tả bên phải cho gọn */
+  .value { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; row-gap: 4px; padding: 18px; }
+  .value__icon { grid-row: span 2; width: 44px; height: 44px; margin: 0; border-radius: 12px; }
+  .value :is(h3, h4) { align-self: center; font-size: 16px; }
+  .value p { font-size: 14px; }
 }
-
-.doctors { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-.doctor { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
-.doctor__photo { aspect-ratio: 4 / 5; background: var(--brand-50); }
-.doctor__photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
-.doctor__body { padding: 14px 8px 16px; text-align: center; }
-.doctor__body h3 { font-size: 16px; text-wrap: balance; }
-.doctor__body p { margin-top: 2px; color: var(--ink-3); font-size: 14px; }
-/* Thẻ giữ chỗ cho bác sĩ chưa có thông tin */
-.doctor--placeholder { border-style: dashed; border-color: #BCD3EA; box-shadow: none; background: rgba(255, 255, 255, .6); }
-.doctor--placeholder .doctor__photo { display: grid; place-items: center; background: linear-gradient(160deg, var(--blue-100), var(--brand-50)); }
-.doctor__silhouette { width: 46%; fill: none; stroke: var(--blue-600); stroke-width: 2.2; stroke-linecap: round; opacity: .38; }
-.doctor--placeholder :is(h3, h4), .doctor--placeholder p { color: var(--ink-3); }
-.doctor--placeholder :is(h3, h4) { font-weight: 500; }
-@media (min-width: 600px) { .doctors { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
+@media (min-width: 600px) { ul.values { grid-template-columns: repeat(2, 1fr); gap: 16px; } }
 @media (min-width: 1024px) {
   .team { margin-top: 64px; }
-  .doctors, .team .doctors { gap: 24px; }
-  .doctor__body { padding: 18px 16px 20px; }
-  .doctor__body :is(h3, h4) { font-size: 19px; }
+  ul.values { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .value { padding: 26px 24px 28px; }
 }
 
 /* ---------- 11. Hình ảnh hoạt động + thẻ đánh giá ---------- */
@@ -751,6 +743,12 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
 .svc-more { margin-top: 16px; }
 .svc-more a { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; text-decoration: none; }
 .svc-more a:hover { text-decoration: underline; }
+/* Trang tẩy trắng: đoạn giải thích dưới 4 khung công nghệ (thêm 2026-11-10) */
+.svc-explain { margin-top: 24px; padding: 22px 22px 24px; border-left: 4px solid var(--blue-600); border-radius: var(--radius-sm); background: var(--brand-50); }
+.svc-explain h3 { font-size: 18px; }
+.svc-explain p { margin-top: 10px; color: var(--ink-2); line-height: 1.65; }
+.svc-explain strong { color: var(--ink); }
+@media (min-width: 1024px) { .svc-explain { margin-top: 32px; padding: 28px 36px 30px; } }
 /* Ảnh thực tế ở trang dịch vụ: 4 ảnh/trang. Điện thoại 2 cột, máy tính 4 cột. */
 .ba-grid--svc { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .ba-grid--svc figure { height: 100%; transition: transform .25s, box-shadow .25s; }

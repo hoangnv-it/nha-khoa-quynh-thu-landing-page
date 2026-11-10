@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=50b3bb84">
+  <link rel="stylesheet" href="style.css?v=57370a95">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -144,6 +144,8 @@
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-stetho" viewBox="0 0 24 24"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 8V5a2 2 0 0 1 2-2h3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M8 21H5a2 2 0 0 1-2-2v-3"/><circle cx="12" cy="12" r="3.5"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
     <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5M22 9v6"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5-4.8-4.6 6.6-.9z"/></symbol>
@@ -308,9 +310,9 @@
           </table>
           <p class="price-note">Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.</p>
           <ul class="chips">
-            <li>Trả góp 0%</li>
+            <li>Niềng răng trả góp 0%</li>
             <li>Thẻ ATM/Visa/Master</li>
-            <li>Hỗ trợ hồ sơ bảo hiểm</li>
+            <li>Hóa đơn đỏ thanh toán bảo hiểm</li>
           </ul>
         </div>
       </div>
@@ -332,7 +334,7 @@
       </div>
     </section>
 
-    <!-- ===== ĐỘI NGŨ (thêm 2026-11-04, chia 2 phần 2026-11-07): (1) hồ sơ ThS.BS Lê Quỳnh Thư, (2) các bác sĩ khác ===== -->
+    <!-- ===== ĐỘI NGŨ (thêm 2026-11-04, chia 2 phần 2026-11-07): (1) hồ sơ Bác sĩ Lê Quỳnh Thư, (2) các bác sĩ khác ===== -->
     <section class="section reveal" id="doi-ngu" aria-labelledby="doi-ngu-title">
       <div class="container">
         <div class="section-head section-head--center">
@@ -342,23 +344,23 @@
 
         <!-- Phần 1: Bác sĩ phụ trách chuyên môn.
              Nguồn: hồ sơ phòng khám trên NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 2026-11-07):
-             "ThS.BS Lê Quỳnh Thư", "Bác sĩ chuyên môn", chuyên môn niềng răng, implant, răng sứ, "trên 15 năm kinh nghiệm".
+             "ThS.BS Lê Quỳnh Thư" (NhaKhoaHub), "Bác sĩ chuyên môn", chuyên môn niềng răng, implant, răng sứ, "trên 15 năm kinh nghiệm".
              Đã xác nhận 2026-11-08: tên "Lê Quỳnh Thư", hơn 15 năm kinh nghiệm.
-             [CẦN XÁC NHẬN] với bác sĩ: học vị Thạc sĩ (chuyên ngành?), chuyên môn Implant (chưa có trong danh sách dịch vụ ở brief).
+             Đã xác nhận 2026-11-08: bác sĩ ĐANG THEO HỌC Thạc sĩ, chưa tốt nghiệp: chỉ ghi "Bác sĩ", KHÔNG ghi ThS/Thạc sĩ cho tới khi tốt nghiệp. (chưa có trong danh sách dịch vụ ở brief).
              [CẦN XÁC NHẬN] nơi đào tạo, chứng chỉ, quá trình công tác: khi có thì thêm dòng vào .lead-doc__facts. KHÔNG tự viết. -->
         <article class="lead-doc" aria-labelledby="lead-doc-name">
           <div class="lead-doc__photo">
-            <img src="assets/images/bs-quynh-thu.webp?v=7aea0f31" width="640" height="800" loading="lazy" alt="ThS.BS Lê Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám">
+            <img src="assets/images/bs-quynh-thu.webp?v=7aea0f31" width="640" height="800" loading="lazy" alt="Bác sĩ Lê Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám">
             <p class="lead-doc__badge"><strong>15+</strong><span>năm kinh nghiệm</span></p>
           </div>
           <div class="lead-doc__body">
             <p class="eyebrow">Bác sĩ phụ trách chuyên môn</p>
-            <h3 id="lead-doc-name" class="lead-doc__name"><span class="lead-doc__title">ThS.BS</span> Lê Quỳnh Thư</h3>
+            <h3 id="lead-doc-name" class="lead-doc__name"><span class="lead-doc__title">Bác sĩ</span> Lê Quỳnh Thư</h3>
             <p class="lead-doc__role">Chủ phòng khám · Bác sĩ chuyên môn</p>
-            <p class="lead-doc__intro">Thạc sĩ, Bác sĩ Lê Quỳnh Thư là chủ Nha khoa Quỳnh Thư tại Hòa Xuân, Đà Nẵng. Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị, để bệnh nhân và gia đình hiểu rõ từng bước.</p>
+            <p class="lead-doc__intro">Bác sĩ Lê Quỳnh Thư là chủ Nha khoa Quỳnh Thư tại Hòa Xuân, Đà Nẵng. Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị, để bệnh nhân và gia đình hiểu rõ từng bước.</p>
 
             <dl class="lead-doc__facts">
-              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Học vị</dt><dd>Thạc sĩ, Bác sĩ</dd></div>
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Học vị</dt><dd>Bác sĩ</dd></div>
               <div><dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Kinh nghiệm</dt><dd>Hơn 15 năm trong nghề nha khoa</dd></div>
               <div><dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Địa chỉ</dt><dd><span class="lead-doc__label">Cơ sở 1:</span> 217 Văn Tiến Dũng<br><span class="lead-doc__label">Cơ sở 2:</span> 303 Lê Quảng Chí</dd></div>
             </dl>
@@ -377,38 +379,36 @@
           </div>
         </article>
 
-        <!-- Phần 2: Các bác sĩ khác. [CẦN XÁC NHẬN] họ tên, chức danh, ảnh từng người (đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn, chưa rõ họ tên đầy đủ). -->
+        <!-- Phần 2 (đổi 2026-11-10 theo yêu cầu chủ dự án): KHÔNG dùng ảnh từng người hay ảnh tập thể.
+             Thay bằng 4 khung giá trị (icon + tiêu đề + mô tả). Nội dung chỉ dùng thông tin đã có trong brief.
+             [CẦN XÁC NHẬN] khung 2: phòng khám có chụp CBCT + scan miệng tại chỗ; khung 3: dụng cụ được tiệt trùng. -->
         <div class="team">
           <div class="team__head">
-            <h3>Đội ngũ bác sĩ và trợ thủ</h3>
-            <p>Cùng ThS.BS Lê Quỳnh Thư chăm sóc bệnh nhân tại 2 cơ sở. Thông tin từng bác sĩ đang được cập nhật.</p>
+            <h3>Đội ngũ bác sĩ &amp; nhân viên tận tâm</h3>
+            <p>Bác sĩ Quỳnh Thư cùng đội ngũ bác sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.</p>
           </div>
-        <ul class="doctors">
-          <!-- [CẦN XÁC NHẬN] bác sĩ 2: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
-          <li class="doctor doctor--placeholder">
-            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
-            <div class="doctor__body">
-              <h4>Họ tên bác sĩ</h4>
-              <p>Đang cập nhật</p>
-            </div>
-          </li>
-          <!-- [CẦN XÁC NHẬN] bác sĩ 3: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
-          <li class="doctor doctor--placeholder">
-            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
-            <div class="doctor__body">
-              <h4>Họ tên bác sĩ</h4>
-              <p>Đang cập nhật</p>
-            </div>
-          </li>
-          <!-- [CẦN XÁC NHẬN] bác sĩ 4: họ tên, chức danh, ảnh (4:5, nền sáng giống ảnh BS Quỳnh Thư). Khi có thì thay khung này bằng thẻ như bên trên. -->
-          <li class="doctor doctor--placeholder">
-            <div class="doctor__photo" role="img" aria-label="Chỗ để ảnh bác sĩ, đang cập nhật"><svg class="doctor__silhouette" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="23" r="10"/><path d="M12 56c1-11 9-18 20-18s19 7 20 18"/></svg></div>
-            <div class="doctor__body">
-              <h4>Họ tên bác sĩ</h4>
-              <p>Đang cập nhật</p>
-            </div>
-          </li>
-        </ul>
+          <ul class="values">
+            <li class="value">
+              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-stetho"/></svg></span>
+              <h4>Bác sĩ trực tiếp khám</h4>
+              <p>Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị.</p>
+            </li>
+            <li class="value">
+              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg></span>
+              <h4>Chụp phim CBCT tại chỗ</h4>
+              <p>Chụp phim CT Cone Beam 3D và scan miệng ngay tại phòng khám, giúp bác sĩ lên kế hoạch điều trị rõ ràng.</p>
+            </li>
+            <li class="value">
+              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+              <h4>Dụng cụ được tiệt trùng</h4>
+              <p>Dụng cụ được tiệt trùng trước mỗi lần điều trị, để bạn và gia đình yên tâm khi đến khám.</p>
+            </li>
+            <li class="value">
+              <span class="value__icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+              <h4>Chăm sóc chu đáo</h4>
+              <p>Nhân viên hỗ trợ bạn từ lúc đặt lịch, trong suốt quá trình điều trị đến khi tái khám.</p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -597,12 +597,12 @@
             <p>Ba mẹ nên cho bé khám răng định kỳ 6 tháng/lần. Chăm sóc răng miệng từ sớm chính là đầu tư cho nụ cười khỏe mạnh của con sau này.</p>
           </details>
           <details>
-            <summary>Trả góp 0% áp dụng thế nào?</summary>
-            <p>Phòng khám có hỗ trợ trả góp 0%. Điều kiện cụ thể: [CẦN XÁC NHẬN]</p>
+            <summary>Niềng răng có trả góp 0% không?</summary>
+            <p>Có. Phòng khám hỗ trợ niềng răng trả góp lãi suất 0%. Gọi hoặc nhắn Zalo để được tư vấn chi tiết.</p>
           </details>
           <details>
-            <summary>Có hỗ trợ hồ sơ bảo hiểm không?</summary>
-            <p>Có. Phòng khám hỗ trợ hồ sơ bệnh án để thanh toán bảo hiểm. Chi tiết: [CẦN XÁC NHẬN]</p>
+            <summary>Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?</summary>
+            <p>Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.</p>
           </details>
         </div>
       </div>
