@@ -26,6 +26,8 @@ if ($oldUrl -eq $NewUrl) { Write-Host 'Địa chỉ không đổi.'; exit 0 }
 $targets = @('index.html', '404.html', 'sitemap.xml', 'robots.txt', 'llms.txt') | ForEach-Object { Join-Path $public $_ }
 $svcDir = Join-Path $public 'dich-vu'
 if (Test-Path $svcDir) { $targets += Get-ChildItem $svcDir -Filter '*.html' -File | ForEach-Object { $_.FullName } }
+$enDir = Join-Path $public 'en'
+if (Test-Path $enDir) { $targets += Get-ChildItem $enDir -Recurse -Filter '*.html' -File | ForEach-Object { $_.FullName } }
 foreach ($t in $targets) {
   if (-not (Test-Path $t)) { continue }
   $text = [System.IO.File]::ReadAllText($t, $utf8NoBom)

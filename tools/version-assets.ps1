@@ -1,7 +1,7 @@
 ﻿<#
   version-assets.ps1
   Gắn ?v=<mã MD5 8 ký tự> cho style.css, script.js và mọi file trong public/assets/
-  ở các link trong public/index.html, public/404.html và public/dich-vu/*.html
+  ở các link trong public/index.html, public/404.html, public/dich-vu/*.html và public/en/**/*.html
   (src, srcset, href, poster, og:image, JSON-LD...).
 
   Thêm 2026-11-10: gắn mã cả cho ảnh gọi trong style.css (url("assets/...")),
@@ -26,6 +26,9 @@ $pages  = @('index.html', '404.html') | ForEach-Object { Join-Path $public $_ }
 # Các trang dịch vụ (dùng đường dẫn ../assets/..., script vẫn khớp vì tìm theo phần "assets/...")
 $svcDir = Join-Path $public 'dich-vu'
 if (Test-Path $svcDir) { $pages += Get-ChildItem $svcDir -Filter '*.html' -File | ForEach-Object { $_.FullName } }
+# Bản tiếng Anh (public/en/, tạo bởi tools/build-en.ps1; thêm 2026-11-10)
+$enDir = Join-Path $public 'en'
+if (Test-Path $enDir) { $pages += Get-ChildItem $enDir -Recurse -Filter '*.html' -File | ForEach-Object { $_.FullName } }
 $utf8NoBom = New-Object System.Text.UTF8Encoding($false)
 
 function Get-Rel($full) { $full.Substring($public.Length).TrimStart('\', '/').Replace('\', '/') }
@@ -46,7 +49,7 @@ function Update-Links($path, $map) {
       $text = [regex]::Replace($text, $pattern, [System.Text.RegularExpressions.MatchEvaluator] { param($m) $replacement })
     }
   }
-  $name = Split-Path $path -Leaf
+  $name = Get-Rel $path
   if ($text -ne $orig) {
     if ($Check) {
       $script:stale += $name

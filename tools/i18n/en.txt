@@ -1,0 +1,980 @@
+# Bảng dịch tiếng Anh (Anh Mỹ, giọng tự nhiên, gần gũi) cho tools/build-en.ps1.
+# Mỗi mục gồm 2 dòng: "VI: <chữ tiếng Việt đúng như trong HTML>" và "EN: <bản dịch>".
+# - Chữ VI phải khớp TỪNG KÝ TỰ với HTML tiếng Việt (kể cả thẻ như <strong>, <br>, &amp;).
+# - Mục dài được thay trước mục ngắn, nên có thể vừa có câu dài vừa có cụm từ ngắn.
+# - Chỉ thay ở nội dung trang, không thay trong chú thích <!-- --> và <script>.
+# - Sửa chữ tiếng Việt trên trang thì sửa dòng VI tương ứng ở đây, rồi chạy lại build-en.ps1.
+# - Không dùng dấu "–" "—"; không viết "painless", "best", "free", "100%", "absolutely safe" (brief mục 8),
+#   trừ khi là bản dịch đánh giá thật của khách.
+# - Tên riêng giữ nguyên: Nha Khoa Quỳnh Thư (chữ trên logo), Lê Quỳnh Thư, tên khách, tên công ty.
+#   Địa danh viết không dấu cho người nước ngoài: Hoa Xuan, Da Nang, Van Tien Dung St....
+
+# ===== Giữ nguyên (tên pháp lý), để cụm ngắn bên trong không bị dịch =====
+VI: Công ty TNHH MTV Nha khoa Quỳnh Thư
+EN: Công ty TNHH MTV Nha khoa Quỳnh Thư
+
+# ===== Chung: đầu trang, menu, chân trang =====
+VI: Bỏ qua, đến nội dung chính
+EN: Skip to main content
+VI: Nha Khoa Quỳnh Thư, về đầu trang
+EN: Quynh Thu Dental, back to top
+VI: Nha Khoa Quỳnh Thư, về trang chủ
+EN: Quynh Thu Dental, home page
+VI: Menu chính
+EN: Main menu
+VI: Trang chủ
+EN: Home
+VI: Mở danh sách dịch vụ
+EN: Open the services list
+VI: Các dịch vụ
+EN: Services
+VI: Dịch vụ nổi bật
+EN: Our services
+VI: Dịch vụ khác
+EN: Other services
+VI: <th scope="col">Dịch vụ</th>
+EN: <th scope="col">Service</th>
+VI: Dịch vụ
+EN: Services
+VI: Bảng giá
+EN: Prices
+VI: Đánh giá
+EN: Reviews
+VI: Liên hệ nhanh
+EN: Quick contact
+VI: Liên hệ
+EN: Contact
+VI: Mở menu
+EN: Open menu
+VI: Bạn đang ở
+EN: You are here
+VI: Nha khoa Quỳnh Thư
+EN: Quynh Thu Dental
+VI: Bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân
+EN: A Quynh Thu Dental dentist treating a patient
+VI: 0944 479 405
+EN: +84 944 479 405
+VI: Gọi</a>
+EN: Call</a>
+VI: Gọi ngay: 0944 479 405
+EN: Call +84 944 479 405
+VI: Gọi: 0944 479 405
+EN: Call: +84 944 479 405
+VI: Gọi ngay
+EN: Call now
+VI: Hoặc gọi:
+EN: Or call:
+VI: Tìm đường
+EN: Get directions
+VI: Chỉ đường
+EN: Directions
+VI: Nhắn Zalo đặt lịch
+EN: Book on Zalo
+VI: Nhắn Zalo
+EN: Message us on Zalo
+VI: Cơ sở 1
+EN: Location 1
+VI: Cơ sở 2
+EN: Location 2
+VI: Facebook cơ sở 1
+EN: Facebook (Location 1)
+VI: Facebook cơ sở 2
+EN: Facebook (Location 2)
+VI: Giờ làm việc
+EN: Opening hours
+VI: (Đóng cửa lúc 19:00)
+EN: (Closes at 7 PM)
+VI: <p class="site-footer__script" lang="vi">Nụ cười khỏe đẹp<br>Cho cuộc sống thêm vui!</p>
+EN: <p class="site-footer__script" lang="en">Healthy, beautiful smiles<br>for a happier life!</p>
+VI: <span aria-hidden="true">|</span> 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng
+EN: <span aria-hidden="true">|</span> 217 Van Tien Dung St., 303 Le Quang Chi St., Hoa Xuan, Da Nang
+VI: Chat qua Zalo
+EN: Chat on Zalo
+VI: Đóng khung chat Zalo
+EN: Close Zalo chat
+VI: Nhắn Zalo để hỏi giá, đặt lịch khám.
+EN: Message us on Zalo to ask about prices or book a visit.
+VI: Mở Zalo để chat
+EN: Open Zalo to chat
+VI: Bạn muốn đến cơ sở nào?
+EN: Which location would you like to visit?
+VI: aria-label="Đóng"
+EN: aria-label="Close"
+VI: aria-label="5 sao"
+EN: aria-label="5 stars"
+VI: 217 Văn Tiến Dũng, Hòa Xuân, Đà Nẵng
+EN: 217 Van Tien Dung St., Hoa Xuan, Da Nang
+VI: 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng
+EN: 303 Le Quang Chi St., Hoa Xuan, Da Nang
+VI: 217 Văn Tiến Dũng,<br>Hòa Xuân, Đà Nẵng
+EN: 217 Van Tien Dung St.,<br>Hoa Xuan, Da Nang
+VI: 303 Lê Quảng Chí,<br>Hòa Xuân, Đà Nẵng
+EN: 303 Le Quang Chi St.,<br>Hoa Xuan, Da Nang
+VI: tại Hòa Xuân, Đà Nẵng
+EN: in Hoa Xuan, Da Nang
+VI: Hòa Xuân, Đà Nẵng
+EN: Hoa Xuan, Da Nang
+
+# ===== Giờ làm việc =====
+VI: <span>Thứ 2 - Thứ 7:</span> <strong>08:00 - 19:00</strong>
+EN: <span>Mon - Sat:</span> <strong>8 AM - 7 PM</strong>
+VI: <span>Chủ nhật:</span> <strong>08:00 - 18:00</strong>
+EN: <span>Sun:</span> <strong>8 AM - 6 PM</strong>
+VI: Thứ 2 - Thứ 7: 08:00 - 19:00, Chủ nhật: 08:00 - 18:00
+EN: Mon - Sat: 8 AM - 7 PM, Sun: 8 AM - 6 PM
+VI: Thứ 2 - Thứ 7: 08:00 - 19:00
+EN: Mon - Sat: 8 AM - 7 PM
+VI: Đánh giá trên Google Maps. Giờ làm việc: Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00.
+EN: Ratings from Google Maps. Hours: Mon - Sat: 8 AM - 7 PM · Sun: 8 AM - 6 PM.
+
+# ===== Tên dịch vụ =====
+VI: Khám răng trẻ em
+EN: Kids' dentistry
+VI: Khám răng<br>trẻ em
+EN: Kids'<br>dentistry
+VI: Răng sứ thẩm mỹ
+EN: Porcelain crowns
+VI: Răng sứ<br>thẩm mỹ
+EN: Porcelain<br>crowns
+VI: Điều trị tủy
+EN: Root canal treatment
+VI: Niềng răng
+EN: Braces
+VI: Tẩy trắng răng
+EN: Teeth whitening
+VI: Nhổ răng
+EN: Tooth extraction
+
+# ===== Bảng giá (trang chủ + trang dịch vụ) =====
+VI: Giá tham khảo, báo trước khi điều trị
+EN: Price guide, quoted before treatment
+VI: Giá tham khảo (VNĐ)
+EN: Starting price (VND)
+VI: Giá tham khảo
+EN: Pricing
+VI: Cạo vôi, đánh bóng răng
+EN: Cleaning and polishing
+VI: Trám răng sâu
+EN: Cavity fillings
+VI: Răng tháo lắp
+EN: Removable dentures
+VI: từ 150.000
+EN: from 150,000
+VI: từ 199.000
+EN: from 199,000
+VI: từ 300.000
+EN: from 300,000
+VI: từ 900.000
+EN: from 900,000
+VI: từ 1.200.000
+EN: from 1,200,000
+VI: Khám răng trẻ em, điều trị tủy, niềng răng, nhổ răng
+EN: Kids' dentistry, root canals, braces, extractions
+VI: Bác sĩ khám và báo giá
+EN: Quoted after your exam
+VI: Lưu ý về giá
+EN: About our prices
+VI: <strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.
+EN: <strong>These are starting prices.</strong> Your dentist will examine you in person and walk you through the treatment plan and cost before anything is done.
+VI: <strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.
+EN: <strong>Prices may vary</strong> depending on each person's teeth.
+VI: Niềng răng trả góp 0%
+EN: 0% financing for braces
+VI: Thẻ ATM/Visa/Master
+EN: ATM cards, Visa, Mastercard
+VI: Hóa đơn đỏ thanh toán bảo hiểm
+EN: VAT invoices for insurance claims
+VI: Báo giá trước khi điều trị
+EN: Quoted before treatment
+VI: Xem bảng giá đầy đủ
+EN: See the full price list
+VI: Kết quả khác nhau tùy tình trạng của từng người.
+EN: Results vary from person to person.
+
+# ===== Trang chủ: đầu trang =====
+VI: Nha khoa Quỳnh Thư - Nha khoa Hòa Xuân, Hòa Quý, Đà Nẵng | 2 cơ sở
+EN: Quynh Thu Dental - Family Dentist in Hoa Xuan, Da Nang | 2 Locations
+VI: Nha khoa gia đình với 2 cơ sở tại Hòa Xuân, gần Hòa Quý, Cẩm Lệ, Đà Nẵng. Niềng răng, nhổ răng khôn, răng sứ, điều trị tủy, nha khoa trẻ em. Mở cửa đến 19:00. Gọi 0944 479 405.
+EN: Family dentist with 2 locations in Hoa Xuan, near Hoa Quy and Cam Le, Da Nang. Braces, wisdom teeth, porcelain crowns, root canals and kids' dentistry. Open until 7 PM. Call +84 944 479 405.
+VI: Nha khoa Quỳnh Thư - Nha khoa Hòa Xuân, Hòa Quý, Đà Nẵng
+EN: Quynh Thu Dental - Family Dentist in Hoa Xuan, Da Nang
+VI: Nha khoa gia đình với 2 cơ sở tại Hòa Xuân, Đà Nẵng. Mở cửa đến 19:00, báo giá rõ ràng trước khi điều trị. Gọi 0944 479 405.
+EN: Family dentist with 2 locations in Hoa Xuan, Da Nang. Open until 7 PM, with clear pricing before any treatment. Call +84 944 479 405.
+
+# ===== Trang chủ: hero =====
+VI: Hai bác sĩ Nha khoa Quỳnh Thư đang điều trị cho bệnh nhân tại phòng khám
+EN: Two Quynh Thu Dental dentists treating a patient at the clinic
+VI: Nha khoa uy tín
+EN: Trusted local dentist
+VI: Nha khoa Quỳnh Thư · Nha khoa gia đình tại Hòa Xuân, Đà Nẵng
+EN: Quynh Thu Dental · Family Dentist in Hoa Xuan, Da Nang
+VI: Cả nhà an tâm
+EN: Peace of mind
+VI: Nha khoa gần nhà, mở cửa đến 19:00,<br class="br-lg"> chăm sóc nụ cười gia đình bạn
+EN: Your neighborhood dentist, open until 7 PM,<br class="br-lg"> caring for your family's smiles
+VI: Thiết bị<br>hiện đại
+EN: Modern<br>equipment
+VI: Báo giá<br>rõ ràng
+EN: Clear<br>pricing
+VI: Trả góp<br>0%
+EN: 0%<br>financing
+
+# ===== Trang chủ: dịch vụ, giới thiệu =====
+VI: Chăm sóc toàn diện cho cả gia đình
+EN: Complete dental care for the whole family
+VI: Về Nha khoa Quỳnh Thư
+EN: About Quynh Thu Dental
+VI: Uy tín từ chất lượng<br>đến sự tận tâm
+EN: Trusted for quality<br>and genuine care
+VI: Hai cơ sở tại Hòa Xuân, phòng điều trị sạch sẽ, có chụp phim CBCT và scan miệng. Bác sĩ khám, giải thích và báo giá rõ ràng trước khi điều trị.
+EN: Two locations in Hoa Xuan with clean treatment rooms, CBCT imaging and intraoral scanning. Your dentist examines you, explains what's going on and gives you a clear quote before any treatment.
+VI: Tìm hiểu thêm
+EN: Learn more
+VI: Logo Nha Khoa Quỳnh Thư trên tường phòng điều trị cơ sở 2
+EN: Quynh Thu Dental logo on the treatment room wall at Location 2
+VI: Phòng điều trị với ghế nha khoa màu xanh tại cơ sở 2
+EN: Treatment room with a blue dental chair at Location 2
+
+# ===== Trang chủ: nha khoa trẻ em =====
+VI: Bác sĩ Nha khoa Quỳnh Thư khám răng cho một bé trai
+EN: A Quynh Thu Dental dentist checking a young boy's teeth
+VI: Nha khoa trẻ em
+EN: Kids' dentistry
+VI: Bé đi khám răng không còn là chuyện khó
+EN: Dental visits your kids won't dread
+VI: Phòng khám có dịch vụ dự phòng và điều trị bệnh răng miệng cho trẻ em. Bố mẹ có thể đưa bé đến sau giờ làm.
+EN: We offer preventive care and treatment for children's teeth. Parents can bring their kids in after work.
+VI: Nhắn Zalo hẹn giờ phù hợp sau giờ làm của bố mẹ
+EN: Message us on Zalo to book a time after your workday
+VI: Bé làm quen với ghế và dụng cụ trước khi khám
+EN: Your child gets comfortable with the chair and tools first
+VI: Bác sĩ khám, giải thích và báo giá cho bố mẹ trước khi làm
+EN: The dentist examines, explains and gives parents a quote before any treatment
+VI: Hẹn lịch khám định kỳ
+EN: Schedule regular checkups
+VI: Đặt lịch khám cho bé
+EN: Book a visit for your child
+
+# ===== Trang chủ: trước và sau =====
+VI: Trước &amp; sau
+EN: Before &amp; after
+VI: Một số ca điều trị tại phòng khám
+EN: Some of our real cases
+VI: Ảnh trước và sau làm răng sứ thẩm mỹ hàm trên
+EN: Before and after porcelain crowns on the upper teeth
+VI: Ảnh trước và sau làm răng sứ thẩm mỹ, nhìn từ mặt nhai
+EN: Before and after porcelain crowns, chewing surface view
+VI: Ảnh trước và trong khi niềng răng mắc cài
+EN: Before and during treatment with braces
+VI: Niềng răng mắc cài hàm trên
+EN: Braces on the upper teeth
+VI: Niềng răng mắc cài hàm dưới
+EN: Braces on the lower teeth
+VI: Niềng răng mắc cài
+EN: Traditional braces
+
+# ===== Trang chủ: đội ngũ =====
+VI: Đội ngũ bác sĩ &amp; nhân viên tận tâm
+EN: A caring team of dentists &amp; staff
+VI: Đội ngũ
+EN: Our team
+VI: Bác sĩ của Nha khoa Quỳnh Thư
+EN: The dentists at Quynh Thu Dental
+VI: Bác sĩ Lê Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám
+EN: Dr. Lê Quỳnh Thư, owner of Quynh Thu Dental, smiling in a white coat at the clinic
+VI: năm kinh nghiệm
+EN: years of experience
+VI: Bác sĩ phụ trách chuyên môn
+EN: Lead dentist
+VI: <span class="lead-doc__title">Bác sĩ</span> Lê Quỳnh Thư
+EN: <span class="lead-doc__title">Dr.</span> Lê Quỳnh Thư
+VI: Chủ phòng khám · Bác sĩ chuyên môn
+EN: Clinic owner · Lead dentist
+VI: Bác sĩ Lê Quỳnh Thư là chủ Nha khoa Quỳnh Thư tại Hòa Xuân, Đà Nẵng. Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị, để bệnh nhân và gia đình hiểu rõ từng bước.
+EN: Dr. Lê Quỳnh Thư is the owner of Quynh Thu Dental in Hoa Xuan, Da Nang. Dr. Thư personally examines each patient, explains what's going on with your teeth and gives you a clear quote before treatment, so you and your family understand every step.
+VI: Học vị</dt><dd>Bác sĩ</dd>
+EN: Qualification</dt><dd>Dentist</dd>
+VI: Kinh nghiệm
+EN: Experience
+VI: Hơn 15 năm trong nghề nha khoa
+EN: Over 15 years in dentistry
+VI: Địa chỉ</dt>
+EN: Locations</dt>
+VI: <span class="lead-doc__label">Cơ sở 1:</span> 217 Văn Tiến Dũng<br><span class="lead-doc__label">Cơ sở 2:</span> 303 Lê Quảng Chí
+EN: <span class="lead-doc__label">Location 1:</span> 217 Van Tien Dung St.<br><span class="lead-doc__label">Location 2:</span> 303 Le Quang Chi St.
+VI: Thế mạnh chuyên môn
+EN: Areas of focus
+VI: Niềng răng, chỉnh răng hô, móm, lệch lạc
+EN: Braces for overbites, underbites and crooked teeth
+VI: Trồng răng Implant
+EN: Dental implants
+VI: Đặt lịch khám với bác sĩ
+EN: Book with Dr. Thư
+VI: Bác sĩ Quỳnh Thư cùng đội ngũ bác sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.
+EN: Dr. Thư and the whole team of dentists and staff always put quality care and your comfort first.
+VI: Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị.
+EN: A dentist examines you in person, explains your dental condition and gives you a clear quote before treatment.
+VI: Bác sĩ trực tiếp khám
+EN: Seen by a dentist
+VI: Chụp phim CBCT tại chỗ
+EN: On-site CBCT scans
+VI: Chụp phim CT Cone Beam 3D và scan miệng ngay tại phòng khám, giúp bác sĩ lên kế hoạch điều trị rõ ràng.
+EN: 3D cone beam CT and intraoral scans right here at the clinic, so your dentist can plan treatment clearly.
+VI: Dụng cụ được tiệt trùng trước mỗi lần điều trị, để bạn và gia đình yên tâm khi đến khám.
+EN: Instruments are sterilized before every treatment, so you and your family can feel at ease.
+VI: Dụng cụ được tiệt trùng
+EN: Sterilized instruments
+VI: Chăm sóc chu đáo
+EN: Attentive care
+VI: Nhân viên hỗ trợ bạn từ lúc đặt lịch, trong suốt quá trình điều trị đến khi tái khám.
+EN: Our staff are with you from booking, through treatment, to your follow-up visits.
+
+# ===== Trang chủ: hình ảnh hoạt động =====
+VI: Hình ảnh hoạt động
+EN: Inside our clinic
+VI: Nha khoa Quỳnh Thư - Luôn đồng hành cùng bạn
+EN: Quynh Thu Dental - Here for you every step of the way
+VI: Bác sĩ khám răng cho bệnh nhân
+EN: Dentist examining a patient
+VI: Bác sĩ điều trị răng cho bệnh nhân nữ
+EN: Dentist treating a female patient
+VI: Bác sĩ khám răng cho bé, phụ huynh đứng cạnh
+EN: Dentist checking a child's teeth with a parent nearby
+VI: Phụ huynh xem bác sĩ khám răng cho con
+EN: Parent watching the dentist check their child's teeth
+VI: Hàm răng sau khi làm răng sứ
+EN: Teeth after porcelain crowns
+VI: Mẫu răng sứ trên mẫu hàm
+EN: Porcelain crowns on a dental model
+VI: Bác sĩ điều trị cho bệnh nhân trên ghế nha khoa
+EN: Dentist treating a patient in the dental chair
+VI: Bác sĩ khám răng cho bé
+EN: Dentist checking a child's teeth
+VI: Hai bác sĩ cùng điều trị cho bệnh nhân
+EN: Two dentists treating a patient together
+VI: Ê kíp bác sĩ đang điều trị
+EN: Dental team at work
+VI: Khách hàng cười sau khi điều trị tại phòng khám
+EN: Patient smiling after treatment at the clinic
+VI: Hàm răng tháo lắp do phòng khám thực hiện
+EN: Removable denture made by the clinic
+VI: Phương Anh N. - Cơ sở 2
+EN: Phương Anh N. - Location 2
+
+# ===== Trang chủ: đánh giá (dịch từ đánh giá thật trên Google, ghi rõ là bản dịch) =====
+VI: Khách hàng nói gì trên Google
+EN: What patients say on Google
+VI: Cơ sở 1: 4,9 trên 5 sao, 42 đánh giá trên Google Maps. Mở Google Maps
+EN: Location 1: 4.9 out of 5 stars, 42 reviews on Google Maps. Open Google Maps
+VI: Cơ sở 2: 4,7 trên 5 sao, 61 đánh giá trên Google Maps. Mở Google Maps
+EN: Location 2: 4.7 out of 5 stars, 61 reviews on Google Maps. Open Google Maps
+VI: data-count="4.9">4,9<
+EN: data-count="4.9">4.9<
+VI: data-count="4.7">4,7<
+EN: data-count="4.7">4.7<
+VI: <span class="rating__num">4,9</span>
+EN: <span class="rating__num">4.9</span>
+VI: <span class="rating__num">4,7</span>
+EN: <span class="rating__num">4.7</span>
+VI: Cơ sở 1 · Văn Tiến Dũng
+EN: Location 1 · Van Tien Dung St.
+VI: Cơ sở 2 · Lê Quảng Chí
+EN: Location 2 · Le Quang Chi St.
+VI:  đánh giá trên Google</span>
+EN:  Google reviews</span>
+VI: Điểm đánh giá trên Google Maps của từng cơ sở.
+EN: Google Maps rating for each location. Reviews translated from Vietnamese.
+VI: Đánh giá trên Google Maps
+EN: Google Maps review
+VI: (42 đánh giá)
+EN: (42 reviews)
+VI: (61 đánh giá)
+EN: (61 reviews)
+VI: “Phòng khám sạch sẽ, dỗ con nít rất kiên trì, rất nhanh.”
+EN: “Clean clinic, so patient with little kids, and quick.”
+VI: “Bác sĩ và các bạn ở nha khoa rất chuyên nghiệp, tận tâm, làm răng rất nhẹ nhàng, giá cả phải chăng.”
+EN: “The dentist and the whole team are very professional and caring, super gentle, and the prices are reasonable.”
+VI: “Các chị dễ thương lắm, tư vấn tận tình, báo giá rõ ràng và giá cũng mềm nha.”
+EN: “The staff are so sweet. They explained everything carefully, gave a clear quote, and the prices are pretty affordable too.”
+VI: “Trám răng thẩm mỹ đẹp, lấy vôi sạch, giá cả vừa phải, phòng khám đông khách, bác sĩ cẩn thận, nhẹ nhàng.”
+EN: “Beautiful tooth-colored fillings and a thorough cleaning at fair prices. The clinic is busy, and the dentist is careful and gentle.”
+VI: “Đã trám và lấy vôi răng ở đây, rất hài lòng vì dịch vụ tốt, không đau, tư vấn rõ ràng trước khám, phòng sạch sẽ thoáng mát.”
+EN: “Got a filling and a cleaning here. Very happy: great service, no pain, clear advice before the exam, and a clean, airy clinic.”
+VI: “Tư vấn nhiệt tình, rõ ràng, răng mình hơi yếu nhưng bác sĩ làm rất nhẹ nhàng, không đau, mình rất hài lòng và sẽ quay lại.”
+EN: “Friendly, clear advice. My teeth are a bit weak, but the dentist was very gentle and it didn't hurt. Really happy and I'll be back.”
+
+# ===== Trang chủ: 2 cơ sở =====
+VI: 2 cơ sở tại Hòa Xuân, Đà Nẵng
+EN: 2 locations in Hoa Xuan, Da Nang
+VI: Thuận tiện cho mọi nhà
+EN: Convenient for every family
+VI: Nha khoa Quỳnh Thư có 2 cơ sở tại Hòa Xuân, Đà Nẵng, thuận tiện cho các gia đình ở Hòa Xuân, Hòa Quý và các khu vực lân cận thuộc Cẩm Lệ, Ngũ Hành Sơn. Cả 2 cơ sở đều có <a href="dich-vu/nieng-rang.html">niềng răng</a>, <a href="dich-vu/nho-rang.html">nhổ răng khôn</a>, <a href="dich-vu/rang-su.html">răng sứ thẩm mỹ</a>, <a href="dich-vu/dieu-tri-tuy.html">điều trị tủy</a>, <a href="dich-vu/tay-trang.html">tẩy trắng răng</a> và <a href="dich-vu/kham-tre-em.html">khám răng trẻ em</a>.
+EN: Quynh Thu Dental has 2 locations in Hoa Xuan, Da Nang, convenient for families in Hoa Xuan, Hoa Quy and nearby areas of Cam Le and Ngu Hanh Son. Both locations offer <a href="dich-vu/nieng-rang.html">braces</a>, <a href="dich-vu/nho-rang.html">wisdom tooth removal</a>, <a href="dich-vu/rang-su.html">porcelain crowns</a>, <a href="dich-vu/dieu-tri-tuy.html">root canal treatment</a>, <a href="dich-vu/tay-trang.html">teeth whitening</a> and <a href="dich-vu/kham-tre-em.html">kids' dentistry</a>.
+VI: Phòng điều trị Nha khoa Quỳnh Thư cơ sở 1
+EN: Treatment room at Quynh Thu Dental Location 1
+VI: Phòng điều trị Nha khoa Quỳnh Thư cơ sở 2
+EN: Treatment room at Quynh Thu Dental Location 2
+VI: Xem trên bản đồ
+EN: Show on map
+VI: Xem bản đồ
+EN: View map
+VI: Chọn cơ sở trên bản đồ
+EN: Choose a location on the map
+
+# ===== Trang chủ: hỏi đáp =====
+VI: Hỏi đáp
+EN: FAQ
+VI: Câu hỏi thường gặp
+EN: Frequently asked questions
+VI: Phòng khám làm việc giờ nào?
+EN: What are your hours?
+VI: Cả 2 cơ sở: Thứ 2 - Thứ 7 từ 08:00 đến 19:00, Chủ nhật từ 08:00 đến 18:00.
+EN: Both locations: Monday to Saturday 8 AM to 7 PM, Sunday 8 AM to 6 PM.
+VI: Có cần đặt lịch trước không?
+EN: Do I need an appointment?
+VI: Nên đặt lịch trước để khỏi phải chờ. Tuy nhiên đặt lịch là không bắt buộc, bạn cũng có thể tới thẳng phòng khám để được tư vấn.
+EN: Booking ahead is a good idea so you don't have to wait. But it's not required: you're always welcome to walk in for a consultation.
+VI: Bé mấy tuổi nên khám răng lần đầu?
+EN: When should my child have their first dental visit?
+VI: <strong>Thời điểm vàng:</strong> trong vòng 6 tháng sau khi chiếc răng đầu tiên mọc, hoặc chậm nhất là 12 tháng.
+EN: <strong>Ideal timing:</strong> within 6 months after the first tooth comes in, or by 12 months at the latest.
+VI: <strong>Không thể bỏ qua:</strong> giai đoạn 6 - 12 tuổi, đây là thời điểm răng sữa nhường chỗ cho răng vĩnh viễn.
+EN: <strong>Don't skip:</strong> ages 6 - 12, when baby teeth make way for permanent teeth.
+VI: Ba mẹ nên cho bé khám răng định kỳ 6 tháng/lần. Chăm sóc răng miệng từ sớm chính là đầu tư cho nụ cười khỏe mạnh của con sau này.
+EN: Bring your child in for a checkup every 6 months. Caring for teeth early is an investment in your child's healthy smile for years to come.
+VI: Niềng răng có trả góp 0% không?
+EN: Do you offer 0% financing for braces?
+VI: Có. Phòng khám hỗ trợ niềng răng trả góp lãi suất 0%. Gọi hoặc nhắn Zalo để được tư vấn chi tiết.
+EN: Yes. We offer 0% interest installment plans for braces. Call or message us on Zalo for details.
+VI: Có xuất hóa đơn đỏ để thanh toán bảo hiểm không?
+EN: Can I get a VAT invoice for an insurance claim?
+VI: Có. Phòng khám hỗ trợ xuất hóa đơn đỏ (hóa đơn VAT) để bạn làm hồ sơ thanh toán bảo hiểm.
+EN: Yes. We can issue an official VAT invoice for your insurance claim.
+
+# ===== Trang dịch vụ: phần chung =====
+VI: Dấu hiệu thường gặp
+EN: Common signs
+VI: Khi nào nên đến khám?
+EN: When should you come in?
+VI: Đây là các dấu hiệu thường gặp. Bác sĩ cần khám để kết luận và tư vấn cách điều trị.
+EN: These are common signs only. A dentist needs to examine you to diagnose the problem and recommend treatment.
+VI: Tại phòng khám
+EN: At our clinic
+VI: Quy trình
+EN: How it works
+VI: Khi đến phòng khám
+EN: Your visit, step by step
+VI: Hình ảnh thực tế
+EN: Real photos
+VI: Tại Nha khoa Quỳnh Thư
+EN: At Quynh Thu Dental
+VI: 2 cơ sở tại Hòa Xuân: 217 Văn Tiến Dũng và 303 Lê Quảng Chí
+EN: 2 locations in Hoa Xuan: 217 Van Tien Dung St. and 303 Le Quang Chi St.
+VI: Gọi hoặc nhắn Zalo để hẹn giờ
+EN: Call or message us on Zalo to book a time
+VI: Bác sĩ điều trị tại ghế
+EN: Dentist at work in the chair
+VI: Lấy dấu bằng máy scan
+EN: Digital scans, no molds
+VI: Chụp phim CBCT
+EN: CBCT imaging
+
+# ===== Trang Niềng răng =====
+VI: Niềng răng tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Braces in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Niềng răng mắc cài, niềng răng bằng khay trong suốt và chỉnh nha sớm cho trẻ em tại 2 cơ sở Hòa Xuân. Niềng răng trả góp lãi suất 0%. Gọi 0944 479 405.
+EN: Metal and ceramic braces, clear aligners and early orthodontics for kids at 2 locations in Hoa Xuan, Da Nang. 0% interest financing for braces. Call +84 944 479 405.
+VI: Chỉnh nha bằng mắc cài hoặc khay trong suốt cho răng hô, móm, chen chúc, lệch lạc. Có chỉnh nha sớm cho trẻ trong giai đoạn thay răng. Bác sĩ khám, lên kế hoạch và báo giá trước khi niềng, có trả góp lãi suất 0%.
+EN: Braces or clear aligners for overbites, underbites, crowded or crooked teeth. Early orthodontic treatment is available for kids while their teeth are changing. Your dentist examines you, makes a plan and gives you a quote before you start, with 0% interest financing available.
+VI: Mắc cài kim loại, sứ
+EN: Metal and ceramic braces
+VI: Khay trong suốt
+EN: Clear aligners
+VI: Chỉnh nha trẻ em
+EN: Kids' orthodontics
+VI: Trả góp 0%
+EN: 0% financing
+VI: Răng hô, móm, răng mọc chen chúc
+EN: Overbite, underbite or crowded teeth
+VI: Răng cửa hàm trên cắn ngược vào trong so với hàm dưới
+EN: Upper front teeth that bite behind the lower teeth
+VI: Bé đang thay răng, có răng mọc lộn xộn, xoay hoặc lệch chỗ
+EN: Your child is losing baby teeth and new teeth are coming in crooked, rotated or out of place
+VI: Răng cửa thưa, khe hở rộng
+EN: Gaps between the front teeth
+VI: Khớp cắn lệch, ăn nhai không thoải mái
+EN: A misaligned bite or uncomfortable chewing
+VI: Niềng răng tại Nha khoa Quỳnh Thư
+EN: Braces at Quynh Thu Dental
+VI: Có mắc cài kim loại và mắc cài sứ. Bác sĩ tư vấn loại phù hợp với bạn.
+EN: Choose metal or ceramic brackets. Your dentist will help you pick the right fit.
+VI: Đeo khay và tự thay khay tại nhà, phù hợp người ở xa hoặc du học sinh, quay lại tái khám theo lịch.
+EN: Wear your aligners and switch trays at home. A great fit if you live far away or study abroad, with checkups on schedule.
+VI: Chỉnh nha sớm cho trẻ
+EN: Early orthodontics for kids
+VI: Can thiệp sớm khi bé đang thay răng: càng sớm thì việc điều trị càng dễ và chi phí càng thấp.
+EN: Start while your child's teeth are still changing: the earlier, the easier and more affordable treatment tends to be.
+VI: Niềng răng được trả góp lãi suất 0%, chia theo từng tháng.
+EN: Pay for braces in monthly installments at 0% interest.
+VI: Mục tiêu của niềng răng
+EN: The goal of braces
+VI: Sau chỉnh nha phải đạt được cả <strong>thẩm mỹ</strong> và <strong>chức năng</strong>: răng đều đặn, khớp cắn đúng để ăn nhai tốt. Thời gian niềng răng thường khoảng 2 năm, tùy từng ca.
+EN: Orthodontic treatment should deliver both <strong>looks</strong> and <strong>function</strong>: straight teeth and a proper bite for comfortable chewing. Treatment usually takes about 2 years, depending on the case.
+VI: Với ca răng chen chúc hoặc hô cả răng lẫn xương, bác sĩ có thể chỉ định nhổ răng cối nhỏ và cắm vis. Mùa hè là thời điểm thuận lợi để các bạn học sinh bắt đầu niềng răng.
+EN: For crowded teeth, or overbites involving both the teeth and the jaw, the dentist may recommend removing premolars and placing mini-screws. Summer break is a convenient time for students to start braces.
+VI: Bác sĩ khám, chụp phim, đánh giá răng và khớp cắn
+EN: The dentist examines you, takes X-rays and checks your teeth and bite
+VI: Bác sĩ giải thích kế hoạch điều trị, thời gian và chi phí trước khi niềng
+EN: The dentist explains the treatment plan, timeline and cost before you start
+VI: Gắn mắc cài hoặc nhận khay, tái khám định kỳ theo lịch
+EN: Get your braces or aligners, then come back for regular checkups
+VI: Câu hỏi về niềng răng
+EN: Questions about braces
+VI: Khi nào nên chỉnh nha cho trẻ?
+EN: When should kids get orthodontic treatment?
+VI: Khi thấy răng cửa hàm trên cắn ngược vào trong so với hàm dưới, hoặc răng mọc lộn xộn trong lúc thay răng, ba mẹ nên đưa bé đi khám sớm. Chỉnh nha sớm thường đơn giản và ít tốn kém hơn, có ca chỉ cần vài tuần đến vài tháng.
+EN: If your child's upper front teeth bite behind the lower ones, or new teeth come in crooked while baby teeth are falling out, bring them in early. Early treatment is usually simpler and less expensive, and some cases take just a few weeks to a few months.
+VI: Niềng răng mất bao lâu?
+EN: How long do braces take?
+VI: Tùy tình trạng răng. Niềng răng thường khoảng 2 năm. Chỉnh nha sớm cho trẻ có ca chỉ vài tuần đến khoảng 1 năm.
+EN: It depends on your teeth. Braces usually take about 2 years. Early treatment for kids can take anywhere from a few weeks to about a year.
+VI: Niềng răng có trả góp không?
+EN: Can I pay for braces in installments?
+VI: Có. Niềng răng được trả góp lãi suất 0%, chia theo từng tháng.
+EN: Yes. You can pay for braces in monthly installments at 0% interest.
+VI: Hàm trên trước và trong khi niềng răng mắc cài
+EN: Upper teeth before and during braces
+VI: Hàm dưới trước và trong khi niềng răng mắc cài
+EN: Lower teeth before and during braces
+VI: Bác sĩ Nha khoa Quỳnh Thư chụp ảnh cùng khách hàng niềng răng
+EN: A Quynh Thu Dental dentist with a braces patient
+VI: Bác sĩ cùng khách hàng niềng răng
+EN: Dentist with a braces patient
+VI: Đặt lịch khám niềng răng
+EN: Book a braces consultation
+
+# ===== Trang Điều trị tủy =====
+VI: Điều trị tủy, sâu răng tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Root Canals and Cavity Treatment in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Điều trị tủy, chữa sâu răng, trám răng thẩm mỹ tại 2 cơ sở Hòa Xuân. Máy nội nha tích hợp, vật liệu MTA, có chụp phim CBCT. Nhiều ca xong trong 1-2 lần hẹn. Gọi 0944 479 405.
+EN: Root canals, cavity treatment and tooth-colored fillings at 2 locations in Hoa Xuan, Da Nang. Integrated endo motor, MTA material and CBCT imaging. Many cases are done in 1-2 visits. Call +84 944 479 405.
+VI: Điều trị tủy, chữa sâu răng và trám răng thẩm mỹ cho người lớn và trẻ em. Phòng khám ưu tiên giữ lại răng thật: chữa được là chữa, giữ được là cố gắng giữ. Nhiều ca điều trị tủy kết thúc trong 1-2 lần hẹn.
+EN: Root canals, cavity treatment and tooth-colored fillings for adults and kids. We focus on saving your natural teeth: if it can be treated, we treat it, and if it can be saved, we do our best to save it. Many root canals are finished in 1-2 visits.
+VI: Bảo tồn tủy
+EN: Pulp preservation
+VI: Trám răng thẩm mỹ
+EN: Tooth-colored fillings
+VI: Nhức răng, đau nhiều về đêm, ăn ngủ không được
+EN: A toothache that gets worse at night and keeps you from eating or sleeping
+VI: Lỗ sâu to, răng vỡ lớn và đen
+EN: A large cavity, or a badly broken, dark tooth
+VI: Răng cửa sẫm màu do tủy viêm lâu ngày
+EN: A front tooth that has darkened from long-term pulp inflammation
+VI: Sưng mủ ở nướu hoặc má quanh chân răng
+EN: Swelling or pus in the gums or cheek around the root
+VI: Răng gãy ngang do va chạm, té ngã
+EN: A tooth broken in an accident or fall
+VI: Răng đã chữa tủy nhưng đau lại
+EN: A tooth that had a root canal but hurts again
+VI: Điều trị tủy tại Nha khoa Quỳnh Thư
+EN: Root canal treatment at Quynh Thu Dental
+VI: Máy nội nha tích hợp giúp làm nhanh, vì bé khó nằm yên trên ghế quá 20 phút.
+EN: An integrated endo motor keeps things quick, since it's hard for kids to stay still in the chair for more than 20 minutes.
+VI: Máy nội nha tích hợp
+EN: Integrated endo motor
+VI: Vừa làm sạch ống tủy vừa xác định chiều dài làm việc, rút ngắn thời gian bạn nằm trên ghế.
+EN: Cleans the canals and measures working length at the same time, so you spend less time in the chair.
+VI: Vật liệu MTA
+EN: MTA material
+VI: Vật liệu tương thích sinh học cao, dùng trong điều trị tủy, chữa tủy lại và bảo tồn tủy.
+EN: A highly biocompatible material used for root canals, retreatments and pulp preservation.
+VI: Chụp phim trước điều trị
+EN: X-rays before treatment
+VI: Phim cận chóp và phim CBCT giúp bác sĩ xác định đúng răng gây đau và ống tủy phức tạp.
+EN: Periapical X-rays and CBCT scans help the dentist find the exact tooth causing pain and spot complex canals.
+VI: Nhiều ca điều trị tủy kết thúc trong 1-2 lần hẹn, đỡ mất thời gian đi lại.
+EN: Many root canals are finished in 1-2 visits, saving you extra trips.
+VI: 1-2 lần hẹn
+EN: 1-2 visits
+VI: Ưu tiên giữ lại răng thật
+EN: Saving your natural teeth comes first
+VI: Nha khoa hiện đại hướng đến bảo tồn mô răng tối đa. Tại Nha khoa Quỳnh Thư, bác sĩ cố gắng giữ lại răng khi còn có thể: điều trị tủy rồi phục hồi thân răng bằng mão sứ, chốt thạch anh hoặc dán sứ, thay vì nhổ bỏ.
+EN: Modern dentistry aims to preserve as much of the natural tooth as possible. At Quynh Thu Dental, the dentist tries to save your tooth whenever possible: treating the root canal, then restoring the tooth with a porcelain crown, a fiber post or bonded porcelain instead of pulling it.
+VI: Với răng gãy lộ tủy, bác sĩ có thể bảo tồn tủy: chỉ lấy phần tủy đã lộ, giữ lại tủy chân răng, băng thuốc và hẹn tái khám sau khoảng 2 tuần.
+EN: For a broken tooth with exposed pulp, the dentist may be able to preserve the pulp: removing only the exposed part, keeping the pulp in the root, placing medication and checking again in about 2 weeks.
+VI: Gọi hoặc nhắn Zalo để hẹn giờ, đang đau nhức thì gọi trước để được sắp xếp
+EN: Call or message us on Zalo to book. If you're in pain, call ahead so we can fit you in
+VI: Bác sĩ khám kỹ (hỏi, nhìn, sờ, gõ, nghe) và chụp phim
+EN: A thorough exam (questions, visual check, touch and tap tests) plus X-rays
+VI: Bác sĩ giải thích hướng điều trị và báo giá trước khi làm
+EN: The dentist explains your treatment options and gives you a quote first
+VI: Điều trị tủy hoặc trám, phục hồi thân răng và hẹn tái khám
+EN: Root canal or filling, tooth restoration and a follow-up visit
+VI: Câu hỏi về điều trị tủy
+EN: Questions about root canals
+VI: Điều trị tủy mất mấy lần hẹn?
+EN: How many visits does a root canal take?
+VI: Nhiều ca kết thúc trong 1-2 lần hẹn. Ca có ổ viêm, sưng mủ cần băng thuốc và hẹn tái khám sau khoảng 1-2 tuần.
+EN: Many cases are done in 1-2 visits. If there's infection or swelling, the dentist places medication and sees you again in about 1-2 weeks.
+VI: Răng đã chữa tủy có cần bọc sứ không?
+EN: Do I need a crown after a root canal?
+VI: Răng mất nhiều thân răng sau chữa tủy thường được phục hồi bằng mão sứ, chốt thạch anh hoặc dán sứ để ăn nhai được và giữ lại chân răng thật. Bác sĩ sẽ tư vấn theo từng răng.
+EN: If a lot of the tooth is gone after a root canal, it's usually restored with a porcelain crown, a fiber post or bonded porcelain, so you can chew normally and keep your natural root. The dentist will advise you tooth by tooth.
+VI: Trám răng bằng vật liệu gì?
+EN: What do you use for fillings?
+VI: Răng sâu được làm sạch và trám bằng Composite: trơn láng, màu giống răng thật. Phòng khám cũng trám thẩm mỹ khe thưa và mòn cổ răng.
+EN: We clean out the decay and fill the tooth with composite: smooth and matched to your natural tooth color. We also do cosmetic bonding for small gaps and worn spots near the gumline.
+VI: Phim X-quang răng trước và sau điều trị
+EN: Dental X-rays before and after treatment
+VI: Phim X-quang trước và sau điều trị
+EN: X-rays before and after treatment
+VI: Răng hàm bị sâu, chụp cận cảnh trước khi trám
+EN: Close-up of a decayed molar before filling
+VI: Răng sâu trước khi trám
+EN: Cavity before filling
+VI: Răng hàm sau khi trám phục hồi
+EN: Molar after restoration
+VI: Sau khi trám phục hồi
+EN: After restoration
+VI: Bác sĩ điều trị răng cho bệnh nhân, có trợ thủ hỗ trợ
+EN: Dentist treating a patient with an assistant
+VI: Đặt lịch khám điều trị tủy
+EN: Book a root canal consultation
+
+# ===== Trang Khám răng trẻ em =====
+VI: Khám răng trẻ em tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Kids' Dentistry in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Khám, trám, chữa tủy, nhổ răng sữa và chỉnh nha sớm cho trẻ em tại 2 cơ sở Hòa Xuân. Bác sĩ khám và báo giá cho bố mẹ trước khi làm, mở cửa đến 19:00. Gọi 0944 479 405.
+EN: Checkups, fillings, root canals, baby tooth extractions and early orthodontics for kids at 2 locations in Hoa Xuan, Da Nang. Parents get a quote before treatment. Open until 7 PM. Call +84 944 479 405.
+VI: Phòng khám răng hàm mặt cho người lớn và trẻ em. Khám định kỳ, trám răng sữa, chữa tủy, nhổ răng sữa và chỉnh nha sớm cho bé. Các cô nha sĩ giải thích, động viên bé trước khi làm, ba mẹ có thể vào phòng khám cùng bé.
+EN: Dental care for adults and kids. Regular checkups, baby tooth fillings, root canals, baby tooth extractions and early orthodontics for your child. Our dentists explain each step and cheer your child on before treatment, and parents are welcome in the room.
+VI: Trám răng sữa
+EN: Baby tooth fillings
+VI: Chữa tủy răng sữa nhanh gọn
+EN: Quick baby tooth root canals
+VI: Chữa tủy răng sữa
+EN: Baby tooth root canals
+VI: Nhổ răng sữa có cần gây tê không?
+EN: Does pulling a baby tooth need numbing?
+VI: Nhổ răng sữa có gây tê
+EN: Numbing for baby tooth extractions
+VI: Nhổ răng sữa
+EN: Baby tooth extractions
+VI: Chỉnh nha sớm
+EN: Early orthodontics
+VI: Răng bé có lỗ sâu nhỏ, vết đen hoặc ố đen trên thân răng
+EN: Small cavities, dark spots or stains on your child's teeth
+VI: Bé nhức răng, sưng mủ ở nướu hoặc má
+EN: A toothache, or swelling and pus in the gums or cheek
+VI: Bé khoảng 6 tuổi răng mọc 2 hàng: răng vĩnh viễn đã mọc nhưng răng sữa chưa rụng
+EN: Around age 6, a double row of teeth: the permanent tooth is in but the baby tooth hasn't fallen out
+VI: Răng cửa cắn ngược, răng mọc lộn xộn khi thay răng
+EN: Front teeth biting backward, or new teeth coming in crooked
+VI: Đã lâu bé chưa khám răng, răng có nhiều mảng bám trắng
+EN: It's been a while since the last checkup, and there's a lot of white plaque
+VI: Chăm sóc răng cho bé tại Nha khoa Quỳnh Thư
+EN: Kids' dental care at Quynh Thu Dental
+VI: Trám phù hợp từng bé
+EN: Fillings that fit each child
+VI: Bé hợp tác tốt: trám Composite màu như răng thật. Bé nhỏ, nhiều răng sâu, khó hợp tác: bôi SDF và trám Fuji, nhanh và đơn giản.
+EN: Kids who sit still well get tooth-colored composite fillings. For little ones with lots of cavities who find it hard to cooperate: SDF and Fuji fillings, quick and simple.
+VI: Bác sĩ bôi tê bề mặt trước rồi mới chích tê để bé đỡ đau. Răng mọc kẹ, chân răng sữa còn dài thì cần chích tê đầy đủ.
+EN: The dentist applies numbing gel first, then gives the injection so it hurts less. If the baby tooth still has long roots, it needs full numbing.
+VI: Lấy dấu bằng máy scan thay cho chất lấy dấu cao su, để bé không bị buồn nôn.
+EN: We use digital scans instead of rubbery impression material, so your child won't gag.
+VI: Vì sao nên cho bé khám răng sớm?
+EN: Why bring your child in early?
+VI: Răng sữa cũng cần được chăm sóc và kiểm tra định kỳ để phát hiện sớm sâu răng, viêm nướu hay những vấn đề về răng, hàm, mặt trong quá trình bé lớn lên. Ba mẹ đừng đợi đến khi bé đau răng mới đưa đi khám.
+EN: Baby teeth need care and regular checkups too, so cavities, gum inflammation and jaw or facial development issues are caught early as your child grows. Don't wait for a toothache to bring your child in.
+VI: Lỗ sâu nhỏ nếu để lâu, nhất là dịp Tết, nghỉ hè bé ăn nhiều bánh kẹo, sẽ tiến triển thành viêm tủy, đau nhức và tốn kém hơn. Mất răng hàm lớn sớm có thể làm các răng xung quanh nghiêng vào chỗ trống, lệch khớp cắn. Nhắc bé chải răng sau khi ăn và trước khi đi ngủ.
+EN: A small cavity left too long, especially over Tet or summer break when kids eat more sweets, can turn into pulp inflammation, pain and bigger bills. Losing a baby molar early can make nearby teeth tilt into the gap and throw off the bite. Remind your child to brush after meals and before bed.
+VI: Gọi hoặc nhắn Zalo để hẹn giờ cho bé
+EN: Call or message us on Zalo to book a time for your child
+VI: Bác sĩ khám, chụp phim khi cần, giải thích và báo giá cho ba mẹ
+EN: The dentist examines your child, takes X-rays if needed, explains everything and gives you a quote
+VI: Cô nha sĩ trò chuyện, động viên để bé an tâm hợp tác
+EN: Our dentists chat with your child and cheer them on so they feel at ease
+VI: Điều trị và hẹn khám răng định kỳ cho bé
+EN: Treatment, then regular checkups for your child
+VI: Câu hỏi về răng của bé
+EN: Questions about your child's teeth
+VI: Có. Dù răng dễ nhổ đến đâu cũng cần gây tê đầy đủ, để bé không phải chịu đau và không sợ nha khoa về sau. Bác sĩ bôi tê bề mặt trước rồi mới chích tê.
+EN: Yes. No matter how easy the tooth is to pull, it should be fully numbed so your child isn't in pain and doesn't grow up afraid of the dentist. The dentist applies numbing gel first, then gives the injection.
+VI: Bé 6 tuổi răng mọc 2 hàng có cần nhổ răng sữa không?
+EN: My 6-year-old has a double row of teeth. Does the baby tooth need to come out?
+VI: Nếu răng vĩnh viễn đã mọc mà răng sữa chưa rụng, bé có thể bị răng mọc lệch, chen chúc. Ba mẹ nên cho bé khám để bác sĩ đánh giá có cần nhổ răng sữa hay không. Khi đủ khoảng, răng vĩnh viễn bên trong thường tự di chuyển về đúng chỗ.
+EN: If the permanent tooth is in but the baby tooth hasn't fallen out, the new tooth may come in crooked or crowded. Bring your child in so the dentist can check whether the baby tooth should come out. Once there's enough room, the permanent tooth usually moves into place on its own.
+VI: Bé nhỏ, khó hợp tác thì trám răng thế nào?
+EN: How do you fill cavities for young kids who won't sit still?
+VI: Với bé nhỏ có nhiều răng sâu, bác sĩ có thể bôi SDF và trám Fuji: nhanh, đơn giản, giúp ngăn sâu răng tiến triển nặng hơn. Bôi SDF chỉ mất khoảng 3-5 phút.
+EN: For young kids with several cavities, the dentist may apply SDF and place Fuji fillings: quick and simple, and they help keep the decay from getting worse. Applying SDF takes only about 3-5 minutes.
+VI: Khám răng cho bé tại phòng khám
+EN: A checkup at the clinic
+VI: Bé cầm gương soi răng trong lúc bác sĩ khám
+EN: A child holding a mirror during a checkup
+VI: Bé soi gương trong lúc khám
+EN: Checking in the mirror
+VI: Bác sĩ và trợ thủ cùng chăm sóc răng cho bé
+EN: Dentist and assistant caring for a child's teeth
+VI: Bác sĩ và trợ thủ chăm sóc bé
+EN: Dentist and assistant with a young patient
+VI: Bác sĩ khám răng cho bé trên ghế điều trị
+EN: Dentist examining a child in the dental chair
+VI: Khám và điều trị răng cho bé
+EN: Kids' checkups and treatment
+VI: Đặt lịch khám răng cho bé
+EN: Book a visit for your child
+
+# ===== Trang Nhổ răng =====
+VI: Nhổ răng, nhổ răng khôn tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Tooth Extraction and Wisdom Teeth in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Nhổ răng, tiểu phẫu răng khôn mọc lệch, mọc ngầm, mọc ngang tại 2 cơ sở Hòa Xuân. Chụp phim CBCT trước khi nhổ, có phim trước và sau nhổ. Gọi 0944 479 405.
+EN: Tooth extractions and surgical removal of angled, impacted or sideways wisdom teeth at 2 locations in Hoa Xuan, Da Nang. CBCT scan before extraction, with X-rays before and after. Call +84 944 479 405.
+VI: Nhổ răng, tiểu phẫu răng khôn mọc lệch, mọc ngầm, mọc ngang 90 độ và nhổ chân răng hư. Bác sĩ chụp phim CBCT trước khi nhổ để đánh giá độ khó và vị trí ống thần kinh, có phim trước và sau nhổ để bạn xem kết quả.
+EN: Tooth extractions, surgical removal of angled, impacted or fully sideways wisdom teeth, and removal of damaged roots. The dentist takes a CBCT scan first to gauge the difficulty and locate the nerve canal, with X-rays before and after so you can see the result.
+VI: Nhổ răng khôn
+EN: Wisdom tooth removal
+VI: Tiểu phẫu răng mọc ngầm
+EN: Impacted tooth surgery
+VI: Lấy vôi răng
+EN: Teeth cleaning
+VI: Đau nhức vùng răng khôn, có khi chưa thấy răng trên nướu
+EN: Pain around the wisdom tooth area, sometimes before the tooth even shows
+VI: Răng khôn mọc ngang, mọc ngầm, đâm vào răng bên cạnh
+EN: A sideways or impacted wisdom tooth pushing into the tooth next to it
+VI: Răng khôn hàm trên mọc lệch ra má, hay cắn má khi ăn
+EN: An upper wisdom tooth angled toward the cheek, so you keep biting your cheek
+VI: Dắt thức ăn, viêm nướu, sâu răng quanh răng khôn
+EN: Food getting stuck, gum inflammation or cavities around the wisdom tooth
+VI: Chân răng hư, viêm nhiễm không giữ lại được
+EN: A damaged, infected root that can't be saved
+VI: Nhổ răng khôn tại Nha khoa Quỳnh Thư
+EN: Wisdom tooth removal at Quynh Thu Dental
+VI: Đo khoảng cách chân răng với ống thần kinh hàm dưới, tiên lượng độ khó trước khi nhổ.
+EN: Measures the distance between the roots and the lower jaw nerve to gauge the difficulty before extraction.
+VI: Phim trước và sau nhổ
+EN: X-rays before and after
+VI: Bạn xem được chẩn đoán trước khi nhổ và kết quả sau nhổ: không sót chân răng, không vỡ xương.
+EN: You see the diagnosis before and the result after: no root fragments left behind, no broken bone.
+VI: Chia nhỏ răng khi cần
+EN: Sectioning when needed
+VI: Răng mọc ngầm, mọc ngang được chia nhỏ để lấy ra, hạn chế vỡ xương và chảy máu lâu.
+EN: Impacted or sideways teeth are removed in smaller pieces to limit bone damage and prolonged bleeding.
+VI: Khoảng 30 phút
+EN: About 30 minutes
+VI: Một cặp răng khôn trên và dưới thường xong trong khoảng 30 phút, theo dõi tại chỗ thêm 30 phút rồi về.
+EN: An upper and lower pair of wisdom teeth usually takes about 30 minutes, then we keep an eye on you for 30 more minutes before you head home.
+VI: Vì sao không nên trì hoãn nhổ răng khôn?
+EN: Why not put off wisdom tooth removal?
+VI: Răng khôn mọc ngang đâm vào răng số 7 có thể làm hư chân răng bên cạnh và gây viêm tủy. Khi đó phải vừa nhổ răng khôn vừa chữa tủy răng số 7, tốn thêm thời gian và chi phí.
+EN: A sideways wisdom tooth pushing into the second molar can damage that tooth's root and inflame its pulp. Then you need both the extraction and a root canal on the second molar, which costs more time and money.
+VI: Răng khôn hàm trên mọc lệch dễ gây cắn má, khó chải sạch nên dễ sâu và viêm nướu. Chân răng viêm nhiễm nên nhổ sớm để tránh nhiễm trùng lan rộng và hôi miệng; sau nhổ có thể chờ 4-6 tháng để cắm Implant.
+EN: An angled upper wisdom tooth often makes you bite your cheek and is hard to clean, so it's prone to cavities and gum inflammation. Infected roots should come out early to keep the infection from spreading and causing bad breath; after extraction, you can wait 4-6 months and get an implant.
+VI: Bác sĩ khám, chụp phim CBCT khi cần để tiên lượng độ khó
+EN: The dentist examines you and takes a CBCT scan if needed to gauge the difficulty
+VI: Bác sĩ giải thích cách nhổ và báo giá trước khi làm
+EN: The dentist explains the procedure and gives you a quote first
+VI: Nhổ răng, khâu và cầm máu, theo dõi tại chỗ khoảng 30 phút rồi về
+EN: Extraction, stitches and bleeding control, then about 30 minutes of monitoring before you go home
+VI: Nhổ răng, nhổ răng khôn
+EN: Extractions, wisdom teeth
+VI: Câu hỏi về nhổ răng khôn
+EN: Questions about wisdom teeth
+VI: Nhổ răng khôn mất bao lâu?
+EN: How long does wisdom tooth removal take?
+VI: Một cặp răng khôn hàm trên và hàm dưới thường xong trong khoảng 30 phút. Sau đó bạn nghỉ, theo dõi tại chỗ thêm khoảng 30 phút rồi về.
+EN: An upper and lower pair usually takes about 30 minutes. Then you rest here for about 30 more minutes while we keep an eye on you before heading home.
+VI: Có nhổ cùng lúc 2 răng khôn được không?
+EN: Can I have 2 wisdom teeth removed at once?
+VI: Được. Phòng khám thường nhổ 1 cặp răng khôn trên và dưới trong cùng một lần hẹn, khi bác sĩ đánh giá phù hợp.
+EN: Yes. We often remove an upper and lower pair in the same visit, when the dentist decides it's appropriate.
+VI: Răng khôn hàm trên có khó nhổ không?
+EN: Are upper wisdom teeth hard to remove?
+VI: Nhổ răng khôn hàm trên thường nhanh và thuận lợi hơn răng khôn hàm dưới.
+EN: Upper wisdom teeth are usually quicker and easier to remove than lower ones.
+VI: Phim X-quang toàn cảnh hai hàm răng xem trên máy tính
+EN: Panoramic X-ray of both jaws on a computer screen
+VI: Chụp phim trước khi nhổ răng
+EN: X-rays before extraction
+VI: Bác sĩ và trợ thủ phối hợp điều trị cho bệnh nhân
+EN: Dentist and assistant treating a patient together
+VI: Bác sĩ và trợ thủ phối hợp
+EN: Teamwork in the chair
+VI: Bác sĩ thực hiện thủ thuật răng miệng cho bệnh nhân
+EN: Dentist performing a dental procedure
+VI: Phòng điều trị tại Nha khoa Quỳnh Thư
+EN: Treatment room at Quynh Thu Dental
+VI: Phòng điều trị
+EN: Treatment room
+VI: Đặt lịch khám nhổ răng
+EN: Book an extraction consultation
+
+# ===== Trang Răng sứ =====
+VI: Răng sứ thẩm mỹ tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Porcelain Crowns in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Răng sứ thẩm mỹ, cầu răng sứ, veneer, dán sứ và răng nhựa tháo lắp tại 2 cơ sở Hòa Xuân. Phôi sứ có thẻ xuất xứ chính hãng, răng sứ cao cấp bảo hành 10 năm. Gọi 0944 479 405.
+EN: Porcelain crowns, bridges, veneers, bonded porcelain and removable dentures at 2 locations in Hoa Xuan, Da Nang. Genuine porcelain with an origin card; premium crowns come with a 10-year warranty. Call +84 944 479 405.
+VI: Phục hình răng sứ thẩm mỹ, cầu răng sứ, veneer, dán sứ và răng nhựa tháo lắp. Phôi sứ có thẻ xuất xứ chính hãng và hóa đơn đỏ. Phòng khám ưu tiên giữ lại răng thật, bác sĩ khám và báo giá trước khi làm.
+EN: Porcelain crowns, bridges, veneers, bonded porcelain and removable dentures. Genuine porcelain with an origin card and VAT invoice. We focus on saving your natural teeth, and the dentist examines you and gives you a quote before starting.
+VI: Toàn sứ, Zirconia
+EN: All-ceramic, zirconia
+VI: Cầu răng sứ
+EN: Porcelain bridges
+VI: Veneer, dán sứ
+EN: Veneers, bonded porcelain
+VI: Răng nhựa tháo lắp
+EN: Removable dentures
+VI: Khi nào nên hỏi bác sĩ về răng sứ?
+EN: When should you ask about crowns?
+VI: Răng vỡ lớn, mất nhiều thân răng sau sâu răng hoặc chữa tủy
+EN: A badly broken tooth, or a lot of tooth lost after decay or a root canal
+VI: Răng sứ cũ bị hở, đen viền nướu, dắt thức ăn hoặc hay chảy máu nướu
+EN: An old crown with gaps, a dark gumline, food getting stuck or bleeding gums
+VI: Răng thưa, khe hở rộng, trám đi trám lại nhiều lần
+EN: Gaps between teeth that have been filled over and over
+VI: Mất răng, cần trồng lại bằng cầu răng sứ hoặc hàm tháo lắp
+EN: Missing teeth that need a bridge or a removable denture
+VI: Răng sứ tại Nha khoa Quỳnh Thư
+EN: Porcelain crowns at Quynh Thu Dental
+VI: Phôi sứ chính hãng
+EN: Genuine porcelain
+VI: Phôi sứ có thẻ xuất xứ chính hãng của công ty, có hóa đơn đỏ và thẻ bảo hành.
+EN: The porcelain comes with the manufacturer's origin card, a VAT invoice and a warranty card.
+VI: Bảo hành 10 năm
+EN: 10-year warranty
+VI: Răng sứ cao cấp được bảo hành 10 năm, có loại bảo hành 12 năm, theo thẻ bảo hành.
+EN: Premium crowns carry a 10-year warranty, and some types 12 years, as stated on the warranty card.
+VI: Lấy dấu bằng máy scan trong miệng gửi lab: chính xác, đơn giản, không phải ngậm chất lấy dấu cao su.
+EN: An intraoral scan goes straight to the lab: accurate and simple, with no rubbery impression material in your mouth.
+VI: Ưu tiên giữ răng thật
+EN: Saving natural teeth first
+VI: Cố gắng giữ lại răng khi còn có thể, chọn kỹ thuật dán sứ để giữ mô men, mô ngà tự nhiên thay vì mài nhỏ răng.
+EN: We save your teeth whenever possible, choosing bonded porcelain to keep your natural enamel and dentin instead of grinding teeth down.
+VI: Các loại phục hình tại phòng khám
+EN: Restorations we offer
+VI: <strong>Mão răng sứ (toàn sứ, Zirconia):</strong> bọc răng vỡ lớn hoặc răng đã chữa tủy, phục hồi sức ăn nhai và điểm tiếp xúc với răng bên cạnh.
+EN: <strong>Porcelain crowns (all-ceramic, zirconia):</strong> cover badly broken or root-canal-treated teeth, restoring chewing strength and contact with the neighboring teeth.
+VI: <strong>Cầu răng sứ:</strong> trồng lại răng đã mất. Cầu răng sứ thông thường mất khoảng 2-3 ngày. Kỹ thuật Oval Pontic tạo lại đường viền nướu để răng giả trông như mọc lên từ nướu, hạn chế dắt thức ăn, mất khoảng 2 tuần.
+EN: <strong>Porcelain bridges:</strong> replace missing teeth. A standard bridge takes about 2-3 days. The Oval Pontic technique reshapes the gumline so the new tooth looks like it grows right out of the gum and traps less food; it takes about 2 weeks.
+VI: <strong>Veneer, dán sứ Onlay, Overlay:</strong> cải thiện răng thưa, răng không đều hoặc phục hồi một phần thân răng mà không cần mài bỏ phần men răng còn khỏe.
+EN: <strong>Veneers, onlays and overlays:</strong> fix gaps or uneven teeth, or restore part of a tooth without grinding away healthy enamel.
+VI: <strong>Răng nhựa tháo lắp:</strong> cho người lớn tuổi mất nhiều răng. Hàm nhựa được thiết kế theo các mốc giải phẫu trong miệng để giữ chặt khi ăn nhai.
+EN: <strong>Removable dentures:</strong> for older adults missing many teeth. The denture is shaped around the anatomy of your mouth so it stays put while you eat.
+VI: Bác sĩ khám, chụp phim, điều trị bệnh lý trước khi cần (lấy vôi, chữa tủy)
+EN: The dentist examines you, takes X-rays and treats any issues first if needed (cleaning, root canal)
+VI: Lấy dấu bằng máy scan, chọn màu sứ, báo giá trước khi làm
+EN: Digital scan, shade matching and a quote before starting
+VI: Gắn răng sứ, nhận thẻ bảo hành và hẹn tái khám
+EN: Crown placement, your warranty card and a follow-up visit
+VI: Câu hỏi về răng sứ
+EN: Questions about crowns
+VI: Làm răng sứ mất bao lâu?
+EN: How long do crowns take?
+VI: Tùy từng ca. Một răng sứ đơn giản có thể xong sau khoảng 1-2 ngày, cầu răng sứ thông thường khoảng 2-3 ngày, kỹ thuật Oval Pontic khoảng 2 tuần. Ca có chân răng viêm nhiễm cần điều trị trước có thể kéo dài vài tháng.
+EN: It depends on the case. A simple crown can be done in about 1-2 days, a standard bridge in about 2-3 days, and the Oval Pontic technique in about 2 weeks. If an infected root needs treatment first, it can take a few months.
+VI: Răng sứ có bảo hành không?
+EN: Do crowns come with a warranty?
+VI: Có. Phôi sứ có thẻ xuất xứ chính hãng và thẻ bảo hành. Răng sứ cao cấp được bảo hành 10 năm, có loại bảo hành 12 năm.
+EN: Yes. The porcelain comes with an origin card and a warranty card. Premium crowns carry a 10-year warranty, and some types 12 years.
+VI: Răng sứ cũ bị hở, hay chảy máu nướu thì làm sao?
+EN: What if my old crown has gaps or my gums bleed?
+VI: Bác sĩ khám, lấy vôi, có thể cắt bỏ sứ cũ và điều trị cho nướu hết viêm, sau đó mới làm răng sứ mới khít sát với viền nướu.
+EN: The dentist examines you, cleans your teeth, may remove the old crown and treats the gum inflammation first, then makes a new crown that fits snugly at the gumline.
+VI: Ảnh trước và sau phục hình răng sứ vùng răng cửa hàm dưới
+EN: Before and after porcelain restoration of the lower front teeth
+VI: Phục hình răng sứ vùng răng cửa
+EN: Front teeth restoration
+VI: Khách hàng lớn tuổi cười tươi sau khi phục hình răng tại Nha khoa Quỳnh Thư
+EN: An older patient smiling after a dental restoration at Quynh Thu Dental
+VI: Khách hàng sau phục hình răng
+EN: Patient after restoration
+VI: Đặt lịch khám răng sứ thẩm mỹ
+EN: Book a crown consultation
+
+# ===== Trang Tẩy trắng răng =====
+VI: Tẩy trắng răng tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
+EN: Teeth Whitening in Hoa Xuan, Da Nang - Quynh Thu Dental
+VI: Tẩy trắng răng bằng đèn ánh sáng xanh (LED, Plasma) và máy Beyond II tại 2 cơ sở Hòa Xuân, khoảng 60 phút tại phòng khám. Giá tham khảo từ 900.000đ. Gọi 0944 479 405.
+EN: In-office teeth whitening with blue light (LED, Plasma) and the Beyond II system at 2 locations in Hoa Xuan, Da Nang. About 60 minutes. Starting at 900,000 VND. Call +84 944 479 405.
+VI: Tẩy trắng răng tại phòng khám bằng đèn ánh sáng xanh và máy Beyond II, thuốc tẩy trắng nhập khẩu từ châu Âu. Răng sáng màu hơn sau khoảng 60 phút. Bác sĩ khám trước để xem răng của bạn có phù hợp hay không.
+EN: In-office whitening with blue light and the Beyond II system, using whitening gel imported from Europe. Your teeth look brighter in about 60 minutes. The dentist checks first to make sure whitening is right for you.
+VI: Đèn LED và Plasma
+EN: LED and Plasma lights
+VI: Khoảng 60 phút
+EN: About 60 minutes
+VI: Đính đá răng
+EN: Tooth gems
+VI: Khi nào nên hỏi bác sĩ về tẩy trắng?
+EN: When should you ask about whitening?
+VI: Răng ố vàng do ăn uống, cà phê, trà
+EN: Yellowing from food, coffee or tea
+VI: Vệt bám màu đậm do thức ăn nhiều nghệ, ớt bột, nước lá, chè đậm
+EN: Dark stains from turmeric, chili powder, herbal drinks or strong tea
+VI: Răng sậm màu dần theo tuổi tác hoặc do thuốc uống
+EN: Teeth darkening with age or from medication
+VI: Muốn răng sáng màu hơn trước dịp quan trọng
+EN: Wanting a brighter smile before a big event
+VI: Muốn đính đá trang trí lên răng
+EN: Wanting a decorative tooth gem
+VI: Tẩy trắng không làm đổi màu răng sứ hay miếng trám. Răng có nhiều vôi, vết bám thì có thể lấy vôi, đánh bóng trước khi tẩy trắng. Bác sĩ sẽ khám và tư vấn trước khi làm.
+EN: Whitening doesn't change the color of crowns or fillings. If there's a lot of tartar or staining, we can clean and polish first. The dentist will examine you and talk you through it before starting.
+VI: Công nghệ tẩy trắng
+EN: Whitening technology
+VI: Tẩy trắng bằng ánh sáng xanh tại phòng khám
+EN: In-office blue light whitening
+VI: Phòng khám có cả 2 công nghệ tẩy trắng bằng đèn ánh sáng xanh: đèn LED và đèn Plasma.
+EN: We offer both blue light whitening technologies: LED and Plasma.
+VI: Máy Beyond II
+EN: Beyond II system
+VI: Máy tẩy trắng Beyond II Whitening Accelerator của thương hiệu Beyond (Mỹ).
+EN: The Beyond II Whitening Accelerator from Beyond (USA).
+VI: Thuốc nhập khẩu châu Âu
+EN: Gel imported from Europe
+VI: Thuốc tẩy trắng nhập khẩu trực tiếp từ châu Âu, dùng tại phòng khám.
+EN: Whitening gel imported directly from Europe, used in our office.
+VI: Tẩy trắng ngay tại ghế, răng sáng màu hơn sau khoảng 60 phút. Mức độ trắng tùy tình trạng răng.
+EN: Whitening right in the chair, with brighter teeth in about 60 minutes. Results depend on your teeth.
+VI: Tẩy trắng răng hoạt động thế nào?
+EN: How does teeth whitening work?
+VI: Tẩy trắng răng là loại bỏ những vết đậm màu tích tụ trên răng theo thời gian, do thực phẩm, thuốc uống và tuổi tác. Răng được làm trắng bằng phản ứng hóa học của thuốc tẩy trắng, <strong>không mài mỏng men răng</strong> và <strong>không phủ thêm lớp nào lên bề mặt răng</strong>.
+EN: Whitening removes dark stains that build up on teeth over time from food, medication and age. Teeth are whitened by a chemical reaction from the whitening gel, <strong>without thinning the enamel</strong> and <strong>without adding any coating to the tooth surface</strong>.
+VI: Quá trình tẩy trắng cần được nha sĩ có kinh nghiệm kiểm soát, để tránh bỏng nướu và bỏng niêm mạc miệng. Tại Nha khoa Quỳnh Thư, bác sĩ khám trước và theo dõi trong suốt quá trình tẩy trắng.
+EN: Whitening should be supervised by an experienced dentist to avoid burns to the gums and the lining of the mouth. At Quynh Thu Dental, the dentist examines you first and keeps an eye on you throughout the session.
+VI: Bác sĩ khám, xem răng có phù hợp để tẩy trắng
+EN: The dentist checks whether your teeth are a good fit for whitening
+VI: Lấy vôi, đánh bóng răng khi cần, báo giá trước khi làm
+EN: Cleaning and polishing if needed, with a quote before starting
+VI: Tẩy trắng bằng đèn khoảng 60 phút, bác sĩ theo dõi suốt quá trình
+EN: About 60 minutes of light-activated whitening, with the dentist watching throughout
+VI: Câu hỏi về tẩy trắng răng
+EN: Questions about teeth whitening
+VI: Tẩy trắng răng mất bao lâu?
+EN: How long does whitening take?
+VI: Tẩy trắng tại phòng khám bằng đèn ánh sáng xanh mất khoảng 60 phút. Nếu răng có nhiều vôi, vết bám, bác sĩ có thể lấy vôi và đánh bóng trước.
+EN: In-office blue light whitening takes about 60 minutes. If there's a lot of tartar or staining, the dentist may clean and polish your teeth first.
+VI: Tẩy trắng có mài mỏng răng không?
+EN: Does whitening thin my teeth?
+VI: Không. Răng được làm trắng bằng phản ứng hóa học của thuốc tẩy trắng, không mài mỏng men răng và không phủ thêm lớp nào lên bề mặt răng.
+EN: No. Teeth are whitened by a chemical reaction from the gel, without thinning the enamel or adding any coating to the surface.
+VI: Răng sứ, miếng trám có trắng lên khi tẩy không?
+EN: Will my crowns or fillings get whiter too?
+VI: Không. Tẩy trắng chỉ làm sáng màu răng thật, không làm đổi màu răng sứ hay miếng trám. Bác sĩ sẽ khám và tư vấn trước khi làm.
+EN: No. Whitening only brightens natural teeth and doesn't change the color of crowns or fillings. The dentist will examine you and talk you through it before starting.
+VI: Màu răng trước và sau tẩy trắng, so với bảng so màu răng
+EN: Tooth shade before and after whitening, compared with a shade guide
+VI: Trước và sau tẩy trắng
+EN: Before and after whitening
+VI: Khách hàng đeo kính bảo vệ trong lúc tẩy trắng răng bằng đèn
+EN: Patient wearing protective glasses during light whitening
+VI: Tẩy trắng răng bằng đèn tại phòng điều trị Nha khoa Quỳnh Thư
+EN: Light whitening in a Quynh Thu Dental treatment room
+VI: Tẩy trắng răng bằng đèn
+EN: Light-activated whitening
+VI: Tẩy trắng tại phòng điều trị
+EN: Whitening in the treatment room
+VI: Máy tẩy trắng răng đặt cạnh ghế điều trị
+EN: Whitening machine next to the dental chair
+VI: Máy tẩy trắng răng
+EN: Whitening machine
+VI: Đặt lịch khám tẩy trắng răng
+EN: Book a whitening consultation

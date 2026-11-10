@@ -4,8 +4,8 @@
 # Bật hook (chạy 1 lần sau khi clone repo):  git config core.hooksPath .githooks
 # Bỏ qua tạm thời (không khuyến khích):      git commit --no-verify
 
-# Chỉ chạy khi commit có đụng tới thư mục public/
-if ! git diff --cached --name-only | grep -q '^public/'; then
+# Chỉ chạy khi commit có đụng tới thư mục public/ hoặc bảng dịch
+if ! git diff --cached --name-only | grep -qE '^(public|tools/i18n)/'; then
   exit 0
 fi
 
@@ -16,8 +16,16 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# Đưa các file vừa được gắn lại mã vào commit
-git add -- "$ROOT/public/style.css" "$ROOT/public/index.html" "$ROOT/public/404.html" "$ROOT/public/dich-vu"
+# Tạo lại bản tiếng Anh (public/en/) từ bản tiếng Việt + tools/i18n/en.txt (thêm 2026-11-10).
+# Còn chữ tiếng Việt chưa có trong bảng dịch thì dừng commit và in ra những chỗ đó.
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ROOT/tools/build-en.ps1" >&2
+if [ $? -ne 0 ]; then
+  echo "pre-commit: bản tiếng Anh còn chữ chưa dịch, thêm vào tools/i18n/en.txt rồi commit lại." >&2
+  exit 1
+fi
+
+# Đưa các file vừa được gắn lại mã / tạo lại vào commit
+git add -- "$ROOT/public/style.css" "$ROOT/public/index.html" "$ROOT/public/404.html" "$ROOT/public/dich-vu" "$ROOT/public/en"
 
 # Kiểm tra lại cho chắc
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ROOT/tools/version-assets.ps1" -Check > /dev/null

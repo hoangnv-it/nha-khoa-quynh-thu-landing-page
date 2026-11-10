@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-alt="../en/services/tooth-extraction.html">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- Ngôn ngữ (thêm 2026-11-10): lần đầu vào trang, trình duyệt có ngôn ngữ chính là tiếng Việt thì xem bản tiếng Việt,
+       ngôn ngữ khác thì chuyển sang bản tiếng Anh (data-alt trên thẻ html). Khách đã bấm nút VI/EN thì nhớ lựa chọn
+       (localStorage "lang"). Không chuyển với bot tìm kiếm. Bản tiếng Anh tạo bởi tools/build-en.ps1. -->
+  <script>
+    (function (d, n) {
+      var el = d.documentElement, alt = el.getAttribute("data-alt"), here = el.lang === "en" ? "en" : "vi", want = null;
+      if (!alt || /bot|crawl|spider|slurp|lighthouse|headless/i.test(n.userAgent)) return;
+      try { want = localStorage.getItem("lang"); } catch (e) {}
+      if (want !== "vi" && want !== "en") want = /^vi\b/i.test((n.languages && n.languages[0]) || n.language || "") ? "vi" : "en";
+      if (want !== here) location.replace(alt + location.hash);
+    })(document, navigator);
+  </script>
   <title>Nhổ răng, nhổ răng khôn tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư</title>
   <meta name="description" content="Nhổ răng, tiểu phẫu răng khôn mọc lệch, mọc ngầm, mọc ngang tại 2 cơ sở Hòa Xuân. Chụp phim CBCT trước khi nhổ, có phim trước và sau nhổ. Gọi 0944 479 405.">
   <meta name="theme-color" content="#0B5C94">
 
   <!-- ĐỊA CHỈ WEBSITE: đổi bằng tools/doi-ten-mien.ps1, không sửa tay từng chỗ -->
   <link rel="canonical" href="https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang">
+  <link rel="alternate" hreflang="vi" href="https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang">
+  <link rel="alternate" hreflang="en" href="https://quynh-thu-landing-page.tai-khoan.workers.dev/en/services/tooth-extraction">
+  <link rel="alternate" hreflang="x-default" href="https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang">
 
   <meta property="og:type" content="website">
   <meta property="og:locale" content="vi_VN">
@@ -26,7 +41,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="../assets/logo/favicon-192.png?v=c433b880">
   <link rel="apple-touch-icon" href="../assets/logo/logo-180.png?v=400a44be">
 
-  <link rel="stylesheet" href="../style.css?v=d8900824">
+  <link rel="stylesheet" href="../style.css?v=e3d18abc">
   <script>document.documentElement.classList.add("js");</script>
 
   <script type="application/ld+json">
@@ -148,6 +163,8 @@
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.6.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="flag-vn" viewBox="0 0 30 20" preserveAspectRatio="xMidYMid slice"><rect width="30" height="20" fill="#DA251D"/><path fill="#FFFF00" d="M15 4l1.41 4.06 4.3.09-3.43 2.59 1.25 4.11L15 12.4l-3.53 2.45 1.25-4.11-3.43-2.59 4.3-.09z"/></symbol>
+    <symbol id="flag-gb" viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#FFFFFF" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2"/><path d="M30 0v30M0 15h60" stroke="#FFFFFF" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 6l9 7 9-7"/></symbol>
@@ -188,6 +205,7 @@
           <li><a href="../index.html#dia-chi">Liên hệ</a></li>
         </ul>
       </nav>
+      <a class="lang-switch" href="../en/services/tooth-extraction.html" hreflang="en" lang="en" data-lang="en" aria-label="English"><span class="lang-switch__flag" aria-hidden="true"><svg><use href="#flag-gb"/></svg></span><span class="lang-switch__code">EN</span></a>
       <a class="btn btn--cta header-call" href="tel:+84944479405" data-track="call">
         <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
         <span>0944 479 405</span>
@@ -507,6 +525,6 @@
     </ul>
   </dialog>
 
-  <script src="../script.js?v=b34deb30" defer></script>
+  <script src="../script.js?v=913d8321" defer></script>
 </body>
 </html>

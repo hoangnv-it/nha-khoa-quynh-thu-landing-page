@@ -17,6 +17,32 @@
   var $ = function (sel, root) { return (root || doc).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || doc).querySelectorAll(sel)); };
 
+  /* Chữ do script tạo ra, theo ngôn ngữ của trang (<html lang>). Bản tiếng Anh: public/en/ (tools/build-en.ps1). */
+  var EN = doc.documentElement.lang === "en";
+  var T = EN ? {
+    cs1: "Location 1", cs2: "Location 2",
+    days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    open: "Open now", closed: "Closed", closesAt: "Closes at ", reopen: "opens at ",
+    today: " today", tomorrow: " tomorrow", on: " on ", isOpen: " is open", isClosed: " is closed",
+    subOpen: "Close the services list", subClosed: "Open the services list",
+    menuOpen: "Close menu", menuClosed: "Open menu", map: "Google Maps: ",
+    zaloOpen: "Zalo chat, close the chat panel", zaloClosed: "Zalo chat, open the chat panel", mapLang: "en"
+  } : {
+    cs1: "Cơ sở 1", cs2: "Cơ sở 2",
+    days: ["Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"],
+    open: "Đang mở cửa", closed: "Đã đóng cửa", closesAt: "Đóng cửa lúc ", reopen: "mở lại ",
+    today: " hôm nay", tomorrow: " ngày mai", on: " ", isOpen: " đang mở", isClosed: " đã đóng",
+    subOpen: "Đóng danh sách dịch vụ", subClosed: "Mở danh sách dịch vụ",
+    menuOpen: "Đóng menu", menuClosed: "Mở menu", map: "Bản đồ Google Maps ",
+    zaloOpen: "Chat Zalo, đóng khung chat", zaloClosed: "Chat Zalo, mở khung chat", mapLang: "vi"
+  };
+  /* Giờ hiển thị: tiếng Việt giữ "19:00", tiếng Anh đổi thành "7 PM" */
+  function fmtTime(hhmm) {
+    if (!EN) return hhmm;
+    var p = String(hhmm).split(":"), h = parseInt(p[0], 10);
+    return (h % 12 || 12) + (p[1] && p[1] !== "00" ? ":" + p[1] : "") + (h < 12 ? " AM" : " PM");
+  }
+
   /* ------------------------------------------------------------------------
      0. GIỜ LÀM VIỆC + TRẠNG THÁI MỞ CỬA
      - Múi giờ: Asia/Ho_Chi_Minh.
@@ -31,10 +57,9 @@
     4: ["08:00", "19:00"], 5: ["08:00", "19:00"], 6: ["08:00", "19:00"]
   };
   var HOURS = {
-    cs1: { name: "Cơ sở 1", days: WEEK },
-    cs2: { name: "Cơ sở 2", days: WEEK }
+    cs1: { name: T.cs1, days: WEEK },
+    cs2: { name: T.cs2, days: WEEK }
   };
-  var DAY_NAMES = ["Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
 
   function toMinutes(hhmm) {
     var p = String(hhmm).split(":");
@@ -66,12 +91,12 @@
       return { open: true, closes: today[1] };
     }
     if (today && now.minutes < toMinutes(today[0])) {
-      return { open: false, next: "mở lại " + today[0] + " hôm nay" };
+      return { open: false, next: T.reopen + fmtTime(today[0]) + T.today };
     }
     for (var i = 1; i <= 7; i++) {
       var d = (now.day + i) % 7;
       var h = branch.days[d];
-      if (h) return { open: false, next: "mở lại " + h[0] + " " + (i === 1 ? "ngày mai" : DAY_NAMES[d]) };
+      if (h) return { open: false, next: T.reopen + fmtTime(h[0]) + (i === 1 ? T.tomorrow : T.on + T.days[d]) };
     }
     return { open: false, next: "" };
   }
@@ -81,16 +106,16 @@
     if (key === "all") {
       var a = branchStatus(HOURS.cs1, now);
       var b = branchStatus(HOURS.cs2, now);
-      if (a.open && b.open) return { open: true, main: "Đang mở cửa", sub: "Đóng cửa lúc " + a.closes };
-      if (!a.open && !b.open) return { open: false, main: "Đã đóng cửa", sub: a.next ? a.next.charAt(0).toUpperCase() + a.next.slice(1) : "" };
-      return { open: true, main: a.open ? "Cơ sở 1 đang mở" : "Cơ sở 2 đang mở", sub: (a.open ? "Cơ sở 2" : "Cơ sở 1") + " đã đóng" };
+      if (a.open && b.open) return { open: true, main: T.open, sub: T.closesAt + fmtTime(a.closes) };
+      if (!a.open && !b.open) return { open: false, main: T.closed, sub: a.next ? a.next.charAt(0).toUpperCase() + a.next.slice(1) : "" };
+      return { open: true, main: (a.open ? T.cs1 : T.cs2) + T.isOpen, sub: (a.open ? T.cs2 : T.cs1) + T.isClosed };
     }
     var br = HOURS[key];
     if (!br) return null;
     var s = branchStatus(br, now);
     return s.open
-      ? { open: true, main: "Đang mở cửa", sub: "Đóng cửa lúc " + s.closes }
-      : { open: false, main: "Đã đóng cửa", sub: s.next ? s.next.charAt(0).toUpperCase() + s.next.slice(1) : "" };
+      ? { open: true, main: T.open, sub: T.closesAt + fmtTime(s.closes) }
+      : { open: false, main: T.closed, sub: s.next ? s.next.charAt(0).toUpperCase() + s.next.slice(1) : "" };
   }
 
   function renderStatus() {
@@ -168,7 +193,7 @@
     if (!sub || !subBtn) return;
     sub.classList.toggle("is-open", open);
     subBtn.setAttribute("aria-expanded", String(open));
-    subBtn.setAttribute("aria-label", open ? "Đóng danh sách dịch vụ" : "Mở danh sách dịch vụ");
+    subBtn.setAttribute("aria-label", open ? T.subOpen : T.subClosed);
   }
   if (sub && subBtn) {
     subBtn.addEventListener("click", function () { setSub(!sub.classList.contains("is-open")); });
@@ -195,7 +220,7 @@
   if (toggle && nav) {
     var setMenu = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", open ? "Đóng menu" : "Mở menu");
+      toggle.setAttribute("aria-label", open ? T.menuOpen : T.menuClosed);
       nav.classList.toggle("is-open", open);
       if (!open) setSub(false); /* đóng hamburger thì thu luôn danh sách dịch vụ */
     };
@@ -255,8 +280,8 @@
   /* query: tên địa điểm trên Google Maps, để bản đồ hiện thẻ phòng khám (tên, địa chỉ, rating, "Mở trong Maps")
      thay vì chỉ ghim theo tọa độ. lat/lng giữ vị trí bản đồ đúng cơ sở. */
   var BRANCH_GEO = {
-    cs1: { name: "Cơ sở 1", query: "NHA KHOA QUỲNH THƯ, 217 Văn Tiến Dũng", lat: 15.9955452, lng: 108.2134546 },
-    cs2: { name: "Cơ sở 2", query: "NHA KHOA QUỲNH THƯ _ cơ sở 2", lat: 16.0125987, lng: 108.2196122 }
+    cs1: { name: T.cs1, query: "NHA KHOA QUỲNH THƯ, 217 Văn Tiến Dũng", lat: 15.9955452, lng: 108.2134546 },
+    cs2: { name: T.cs2, query: "NHA KHOA QUỲNH THƯ _ cơ sở 2", lat: 16.0125987, lng: 108.2196122 }
   };
   var mapBox = $("[data-map]");
   if (mapBox) {
@@ -266,7 +291,7 @@
     var mapSrc = function (key) {
       var b = BRANCH_GEO[key];
       return "https://maps.google.com/maps?q=" + encodeURIComponent(b.query) +
-        "&ll=" + b.lat + "," + b.lng + "&z=17&hl=vi&output=embed";
+        "&ll=" + b.lat + "," + b.lng + "&z=17&hl=" + T.mapLang + "&output=embed";
     };
     var loadMap = function () {
       var iframe = $("iframe", frame);
@@ -279,7 +304,7 @@
         frame.appendChild(iframe);
         if (tabs) tabs.hidden = false;
       }
-      iframe.title = "Bản đồ Google Maps " + BRANCH_GEO[current].name;
+      iframe.title = T.map + BRANCH_GEO[current].name;
       var url = mapSrc(current);
       if (iframe.getAttribute("src") !== url) iframe.src = url; /* cùng địa chỉ thì không tải lại */
     };
@@ -344,6 +369,16 @@
     if (!el) return;
     var name = TRACK_EVENTS[el.getAttribute("data-track")];
     if (name) track(name);
+  });
+
+  /* Nút đổi ngôn ngữ VI/EN (thêm 2026-11-10): nhớ lựa chọn để lần sau không tự chuyển theo ngôn ngữ trình duyệt
+     (đoạn script đầu <head> đọc localStorage "lang"); giữ mục đang xem (#...). Clarity: doi_ngon_ngu. */
+  $$("a[data-lang]").forEach(function (a) {
+    a.addEventListener("click", function () {
+      try { localStorage.setItem("lang", a.getAttribute("data-lang")); } catch (err) { /* chế độ riêng tư: bỏ qua */ }
+      if (location.hash) a.setAttribute("href", a.getAttribute("href").split("#")[0] + location.hash);
+      track("doi_ngon_ngu");
+    });
   });
   var priceSection = doc.getElementById("bang-gia");
   if (priceSection && "IntersectionObserver" in window) {
@@ -432,7 +467,7 @@
     var setZalo = function (open, returnFocus) {
       zPanel.hidden = !open;
       zToggle.setAttribute("aria-expanded", String(open));
-      zToggle.setAttribute("aria-label", open ? "Chat Zalo, đóng khung chat" : "Chat Zalo, mở khung chat");
+      zToggle.setAttribute("aria-label", open ? T.zaloOpen : T.zaloClosed);
       if (open) {
         renderStatus();
         zPanel.focus();
@@ -441,7 +476,7 @@
         zToggle.focus();
       }
     };
-    zToggle.setAttribute("aria-label", "Chat Zalo, mở khung chat");
+    zToggle.setAttribute("aria-label", T.zaloClosed);
     zToggle.addEventListener("click", function () { setZalo(zPanel.hidden, false); });
     $$("[data-zalo-close]", zalo).forEach(function (b) {
       b.addEventListener("click", function () { setZalo(false, true); });
