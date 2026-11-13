@@ -213,6 +213,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Lưới 6 cột × 2 hàng ảnh bo 10px; bên phải 1 thẻ trắng: dấu ngoặc kép xanh, câu đánh giá in nghiêng, 5 sao vàng, tên khách.
 - Câu đánh giá phải là **đánh giá thật**, giữ nguyên văn: "Phòng khám sạch sẽ, dỗ con nít rất kiên trì, rất nhanh." · Phương Anh N. - Cơ sở 2 *(ảnh gốc dùng câu và tên giả "Chị Mai Anh")*.
 - Mobile: lưới 3 cột, thẻ đánh giá xuống dưới.
+- Dưới lưới ảnh (thêm 2026-11-13): khung `.fb-cta` "Theo dõi Nha khoa Quỳnh Thư trên Facebook" + 1 câu giới thiệu + 2 nút `.btn--blue` ngang nhau "Facebook cơ sở 1" / "Facebook cơ sở 2" (màu web, không dùng màu Facebook). Điện thoại: 2 nút chồng nhau; từ 600px: cạnh nhau; máy tính: icon, chữ, nút trên 1 hàng. Không nhúng khung Facebook.
 
 ### 5.9 Khách hàng nói gì (thêm)
 - Mỗi thẻ: 5 sao vàng ở trên, câu đánh giá, tên khách. Không ghi nhãn cơ sở (đã bỏ 2026-11-03). Số sao đã đối chiếu trên Google Maps: cả 6 đều 5 sao.
@@ -227,7 +228,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 ### 5.10 2 cơ sở (theo ảnh)
 - Eyebrow "2 CƠ SỞ TẠI HÒA XUÂN, ĐÀ NẴNG"; h2 "Thuận tiện cho mọi nhà".
 - 2 thẻ trắng: ảnh bên trái, bên phải: icon ghim teal + "Cơ sở 1/2", địa chỉ 2 dòng, rating "4,9 ★ (42 đánh giá)" (số và sao màu vàng). Thêm dòng giờ + trạng thái và nút Gọi · Chỉ đường.
-- Bố cục (đổi 2026-11-04 để bản đồ to, dễ theo dõi vị trí): máy tính = cột trái 2 thẻ cơ sở xếp dọc (rộng 340-400px), cột phải bản đồ cao bằng cả 2 thẻ (tối thiểu 580px). Máy tính bảng và điện thoại = 2 thẻ xếp dọc, bản đồ nằm dưới (cao tối thiểu 440px / 340px). Mỗi thẻ có thêm nút chữ "Xem trên bản đồ": đổi bản đồ sang cơ sở đó (điện thoại và máy tính bảng tự cuộn tới bản đồ). Thẻ cơ sở đang hiện trên bản đồ có viền teal (`.is-active`, mặc định Cơ sở 2).
+- Bố cục (đổi 2026-11-04 để bản đồ to, dễ theo dõi vị trí): máy tính = cột trái 2 thẻ cơ sở xếp dọc (rộng 340-400px), cột phải bản đồ cao bằng cả 2 thẻ (tối thiểu 580px). Máy tính bảng và điện thoại = 2 thẻ xếp dọc, bản đồ nằm dưới (cao tối thiểu 440px / 340px). Mỗi thẻ có thêm nút chữ "Xem trên bản đồ": đổi bản đồ sang cơ sở đó (điện thoại và máy tính bảng tự cuộn tới bản đồ). Thẻ cơ sở đang hiện trên bản đồ có viền teal (`.is-active`, mặc định Cơ sở 2). Hàng nút mỗi thẻ có thêm link "Facebook" (icon f) dẫn tới trang Facebook của đúng cơ sở đó (thêm 2026-11-13).
 - Bản đồ tự hiện Cơ sở 2 (không cần bấm), zoom 17. Nút chọn Cơ sở 1 / Cơ sở 2 nằm giữa mép dưới bản đồ (đổi 2026-11-04, trước đây ở góc trên bên trái và đè lên tên phòng khám trong thẻ thông tin của Google). Nền bản đồ trang trí + ghim đỏ + nút "Xem bản đồ" chỉ là hình chờ trong lúc bản đồ đang tải.
 - (Mô tả cũ) Thẻ thứ 3: nền bản đồ trang trí + ghim đỏ + nút teal bo tròn "Xem bản đồ →". Bấm: tải Google Maps, mở **Cơ sở 2** trước (đổi 2026-11-03), có nút chọn Cơ sở 1 / Cơ sở 2. Bản đồ tìm theo tên địa điểm trên Google Maps (kèm tọa độ) để hiện thẻ phòng khám: tên, địa chỉ, rating, nút "Mở trong Maps".
 - Dưới thẻ: "Đánh giá trên Google Maps." (bỏ ngày cập nhật 2026-11-07 theo yêu cầu chủ dự án)

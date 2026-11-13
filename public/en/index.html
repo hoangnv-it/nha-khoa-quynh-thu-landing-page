@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" href="../assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="../assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="../style.css?v=3a80189e">
+  <link rel="stylesheet" href="../style.css?v=21170837">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -641,6 +641,17 @@
             <figcaption>Phương Anh N. - Location 2</figcaption>
           </figure>
         </div>
+
+        <!-- Giới thiệu Facebook (thêm 2026-11-13, chủ dự án yêu cầu): 2 nút ngang nhau cho 2 trang Facebook. Không nhúng khung Facebook (nặng, cookie theo dõi).
+             Câu giới thiệu chỉ mô tả nội dung đang có trên 2 trang; không ghi số người theo dõi (số đổi theo thời gian). Clarity: bam_facebook. -->
+        <div class="fb-cta">
+          <span class="fb-cta__icon" aria-hidden="true"><svg class="icon"><use href="#i-facebook"/></svg></span>
+          <p class="fb-cta__text"><strong>Follow Quynh Thu Dental on Facebook</strong><span>See more treatment photos, everyday moments at the clinic and our latest news.</span></p>
+          <div class="fb-cta__actions">
+            <a class="btn btn--blue" href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 1)</a>
+            <a class="btn btn--blue" href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 2)</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -736,6 +747,7 @@
                 <a href="tel:+84944479405" data-track="call">Call</a>
                 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=15.9955452,108.2134546" target="_blank" rel="noopener" data-track="directions">Directions</a>
                 <button type="button" data-show-map="cs1">Show on map</button>
+                <a class="branch__fb" href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a>
               </p>
             </div>
           </article>
@@ -750,6 +762,7 @@
                 <a href="tel:+84944479405" data-track="call">Call</a>
                 <a href="https://www.google.com/maps/dir/?api=1&amp;destination=16.0125987,108.2196122" target="_blank" rel="noopener" data-track="directions">Directions</a>
                 <button type="button" data-show-map="cs2">Show on map</button>
+                <a class="branch__fb" href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a>
               </p>
             </div>
           </article>
@@ -818,8 +831,8 @@
           <li><a href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>+84 944 479 405</a></li>
           <li><a href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Zalo</a></li>
           <li><a href="mailto:lequynhthu@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>lequynhthu@gmail.com</a></li>
-          <li><a href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 1)</a></li>
-          <li><a href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 2)</a></li>
+          <li><a href="https://www.facebook.com/nhakhoaquynhthu" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 1)</a></li>
+          <li><a href="https://www.facebook.com/nhakhoaquynhthu2" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook (Location 2)</a></li>
         </ul>
         <div class="site-footer__hours">
           <svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>
@@ -891,6 +904,6 @@
     </ul>
   </dialog>
 
-  <script src="../script.js?v=be1fb895" defer></script>
+  <script src="../script.js?v=31823fa2" defer></script>
 </body>
 </html>

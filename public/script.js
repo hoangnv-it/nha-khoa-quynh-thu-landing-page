@@ -351,11 +351,11 @@
 
   /* ------------------------------------------------------------------------
      5. ĐẾM SỰ KIỆN CLARITY
-     Gắn data-track="call | zalo | directions | price | service" vào nút/link
+     Gắn data-track="call | zalo | directions | price | service | facebook" vào nút/link
      (service = bấm thẻ dịch vụ để mở trang riêng trong dich-vu/).
      window.clarity được tạo sẵn trong <head> (hàng đợi), nên gọi lúc nào cũng an toàn.
      ------------------------------------------------------------------------ */
-  var TRACK_EVENTS = { call: "bam_goi", zalo: "bam_zalo", directions: "bam_chi_duong", price: "xem_bang_gia", service: "bam_dich_vu" };
+  var TRACK_EVENTS = { call: "bam_goi", zalo: "bam_zalo", directions: "bam_chi_duong", price: "xem_bang_gia", service: "bam_dich_vu", facebook: "bam_facebook" };
   var priceViewed = false;
   function track(name) {
     if (name === "xem_bang_gia") {

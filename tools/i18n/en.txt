@@ -414,6 +414,10 @@ VI: Hàm răng tháo lắp do phòng khám thực hiện
 EN: Removable denture made by the clinic
 VI: Phương Anh N. - Cơ sở 2
 EN: Phương Anh N. - Location 2
+VI: Theo dõi Nha khoa Quỳnh Thư trên Facebook
+EN: Follow Quynh Thu Dental on Facebook
+VI: Xem thêm hình ảnh ca điều trị, hoạt động hằng ngày và thông báo mới của phòng khám.
+EN: See more treatment photos, everyday moments at the clinic and our latest news.
 
 # ===== Trang chủ: đánh giá (dịch từ đánh giá thật trên Google, ghi rõ là bản dịch) =====
 VI: Khách hàng nói gì trên Google

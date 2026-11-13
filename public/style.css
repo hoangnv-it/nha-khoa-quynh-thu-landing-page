@@ -666,6 +666,27 @@ ul.values { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .stars { display: flex; gap: 4px; margin: 14px 0 12px; color: var(--gold); }
 .stars svg { width: 22px; height: 22px; }
 .quote-card figcaption { color: var(--ink); font-size: 14px; }
+/* Giới thiệu Facebook dưới lưới ảnh (thêm 2026-11-13): icon + chữ + 2 nút ngang nhau. Màu theo bảng màu web, không dùng màu Facebook. */
+.fb-cta { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 14px; margin-top: 20px; padding: 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+.fb-cta__icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 14px; background: var(--blue-100); color: var(--blue-600); }
+.fb-cta__icon .icon { width: 26px; height: 26px; }
+.fb-cta__text { display: grid; gap: 4px; color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+.fb-cta__text strong { color: var(--ink); font-size: 16px; line-height: 1.35; }
+.fb-cta__actions { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr; gap: 10px; } /* điện thoại: 2 nút chồng nhau cho khỏi tràn */
+.fb-cta__actions .btn { padding-inline: 12px; font-size: 14px; }
+.fb-cta__actions .icon { width: 18px; height: 18px; }
+@media (min-width: 600px) {
+  .fb-cta { padding: 20px 24px; }
+  .fb-cta__text { font-size: 15px; }
+  .fb-cta__text strong { font-size: 17px; }
+  .fb-cta__actions { grid-template-columns: 1fr 1fr; max-width: 460px; }
+}
+@media (min-width: 1024px) {
+  .fb-cta { grid-template-columns: 52px 1fr auto; gap: 18px; padding: 20px 28px; }
+  .fb-cta__icon { width: 52px; height: 52px; }
+  .fb-cta__actions { grid-column: auto; display: flex; max-width: none; }
+  .fb-cta__actions .btn { padding-inline: 20px; font-size: 15px; }
+}
 @media (min-width: 600px) { .gallery__grid { grid-template-columns: repeat(4, 1fr); } }
 @media (min-width: 1024px) {
   .gallery { grid-template-columns: 1fr 236px; gap: 20px; align-items: stretch; }
@@ -762,6 +783,8 @@ ul.values { display: grid; grid-template-columns: 1fr; gap: 14px; }
 .branch__actions { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; font-size: 14px; font-weight: 700; }
 .branch__actions button { padding: 0; border: 0; background: none; color: var(--blue-600); font: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .branch__actions button:hover { color: var(--blue-900); }
+.branch__actions .branch__fb { display: inline-flex; align-items: center; gap: 4px; } /* link Facebook từng cơ sở (thêm 2026-11-13) */
+.branch__fb .icon { width: 16px; height: 16px; }
 .map-card { position: relative; min-height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); background: #F3EBDD url("assets/images/ban-do-nen.svg?v=ea6e0659") center / cover no-repeat; }
 .map-card__frame { position: absolute; inset: 0; display: grid; place-items: center; }
 .map-card__frame iframe { width: 100%; height: 100%; border: 0; }
