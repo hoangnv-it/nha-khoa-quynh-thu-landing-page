@@ -164,6 +164,8 @@ VI: Thẻ ATM/Visa/Master
 EN: ATM cards, Visa, Mastercard
 VI: Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm
 EN: Medical records and VAT invoices for insurance claims
+VI: Báo giá sau khi khám
+EN: Quoted after your exam
 VI: Báo giá trước khi điều trị
 EN: Quoted before treatment
 VI: Xem bảng giá đầy đủ
@@ -200,8 +202,8 @@ VI: Trả góp<br>0%
 EN: 0%<br>financing
 
 # ===== Trang chủ: dịch vụ, giới thiệu =====
-VI: Chăm sóc toàn diện cho cả gia đình
-EN: Complete dental care for the whole family
+VI: CHĂM SÓC TOÀN DIỆN CHO GIA ĐÌNH BẠN
+EN: COMPLETE DENTAL CARE FOR YOUR WHOLE FAMILY
 VI: Về Nha khoa Quỳnh Thư
 EN: About Quynh Thu Dental
 VI: Uy tín từ chất lượng<br>đến sự tận tâm
@@ -308,6 +310,78 @@ VI: Chăm sóc chu đáo
 EN: Attentive care
 VI: Nhân viên hỗ trợ bạn từ lúc đặt lịch, trong suốt quá trình điều trị đến khi tái khám.
 EN: Our staff are with you from booking, through treatment, to your follow-up visits.
+
+# ===== Trang chủ: trang thiết bị (thêm 2026-11-13) =====
+VI: Trang thiết bị
+EN: Equipment
+VI: Trang thiết bị hiện đại
+EN: Modern equipment
+VI: Dùng cho:
+EN: Used for:
+VI: Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần lên trung tâm thành phố.
+EN: 3D CBCT scans and 3D face scans right here in Hoa Xuan, no need to travel into the city center.
+VI: Các thiết bị khác
+EN: More equipment
+VI: Vuốt ngang để xem thêm thiết bị
+EN: Swipe to see more equipment
+VI: Khám, chụp phim và báo giá rõ ràng ngay tại phòng khám, trước khi điều trị.
+EN: Exam, X-rays and a clear quote right here at the clinic, before any treatment.
+VI: Đặt lịch khám qua Zalo
+EN: Book a visit on Zalo
+VI: Chụp phim 3D ngay tại phòng khám
+EN: 3D scans on site
+VI: Làm răng hài hòa với gương mặt
+EN: Smiles planned around your face
+VI: Không cần lấy dấu cao su
+EN: No rubber impressions
+VI: Giảm hẳn ê buốt
+EN: Much less sensitivity
+VI: Chữa tủy 1 lần hẹn
+EN: Root canal in 1 visit
+VI: Tiệt khuẩn dụng cụ phẫu thuật
+EN: Sterilized surgical instruments
+VI: Kỹ thuật số
+EN: Digital
+VI: Beyond · Mỹ
+EN: Beyond · USA
+VI: Định vị chóp
+EN: Apex locator
+VI: Chuẩn Class B
+EN: Class B standard
+VI: Răng sứ
+EN: Porcelain crowns
+VI: Máy chụp phim CBCT Rayscan trong phòng chụp phim của Nha khoa Quỳnh Thư
+EN: Rayscan CBCT machine in the X-ray room at Quynh Thu Dental
+VI: Máy chụp phim CBCT 3D hiện đại
+EN: Modern 3D CBCT scanner
+VI: Chụp phim CT Cone Beam 3D ngay tại phòng khám, giúp bác sĩ xem rõ xương hàm, chân răng và ống thần kinh trước khi điều trị.
+EN: 3D cone beam CT scans right here at the clinic, so your dentist can clearly see the jawbone, tooth roots and nerve canal before treatment.
+VI: Máy quét gương mặt RayFace màu trắng có hai cánh gắn camera
+EN: White RayFace face scanner with two camera arms
+VI: Máy quét gương mặt RayFace
+EN: RayFace face scanner
+VI: Quét gương mặt 3D, kết hợp với phim CBCT để bác sĩ lên kế hoạch làm răng hài hòa với khuôn mặt.
+EN: A 3D scan of your face, combined with your CBCT scan, helps your dentist plan treatment that suits your face.
+VI: Bác sĩ dùng máy scan trong miệng lấy dấu răng cho một bé gái
+EN: Dentist taking a digital impression of a young girl's teeth with an intraoral scanner
+VI: Máy scan trong miệng
+EN: Intraoral scanner
+VI: Lấy dấu răng bằng máy quét thay cho vật liệu cao su: chính xác, đơn giản, trẻ không bị buồn nôn như cách lấy dấu truyền thống.
+EN: Digital impressions instead of rubber impression material: accurate, simple, and kids don't gag like they can with traditional impressions.
+VI: Máy chữa tủy, định vị chóp
+EN: Root canal and apex locator unit
+VI: Máy nội nha tích hợp định vị chóp, giúp bác sĩ đo chính xác chiều dài ống tủy. Chữa tủy 1 lần hẹn.
+EN: An endo motor with a built-in apex locator helps your dentist measure root canal length precisely. Root canal treatment in 1 visit.
+VI: Máy tẩy trắng Beyond đặt cạnh ghế, khách hàng đang tẩy trắng răng
+EN: Beyond whitening machine next to the dental chair during a whitening session
+VI: Máy tẩy trắng Beyond (Mỹ)
+EN: Beyond whitening system (USA)
+VI: Tẩy trắng bằng công nghệ làm lạnh, giúp giảm hẳn ê buốt và kéo dài được thời gian tẩy. Hiệu quả làm trắng cao.
+EN: Cooling technology greatly reduces sensitivity and allows a longer whitening session. Highly effective whitening.
+VI: Lò hấp tiệt khuẩn Class B
+EN: Class B sterilizer
+VI: Lò hấp chuẩn Class B có hút chân không, dùng để tiệt khuẩn dụng cụ phẫu thuật, kể cả dụng cụ rỗng và dụng cụ đã đóng gói.
+EN: A Class B vacuum autoclave for sterilizing surgical instruments, including hollow and wrapped instruments.
 
 # ===== Trang chủ: hình ảnh hoạt động =====
 VI: Hình ảnh hoạt động
@@ -626,8 +700,16 @@ VI: Khám răng trẻ em tại Hòa Xuân, Đà Nẵng - Nha khoa Quỳnh Thư
 EN: Kids' Dentistry in Hoa Xuan, Da Nang - Quynh Thu Dental
 VI: Khám, trám, chữa tủy, nhổ răng sữa và chỉnh nha sớm cho trẻ em tại 2 cơ sở Hòa Xuân. Bác sĩ khám và báo giá cho bố mẹ trước khi làm, mở cửa đến 19:00. Gọi 0944 479 405.
 EN: Checkups, fillings, root canals, baby tooth extractions and early orthodontics for kids at 2 locations in Hoa Xuan, Da Nang. Parents get a quote before treatment. Open until 7 PM. Call +84 944 479 405.
-VI: Phòng khám răng hàm mặt cho người lớn và trẻ em. Khám định kỳ, trám răng sữa, chữa tủy, nhổ răng sữa và chỉnh nha sớm cho bé. Các cô nha sĩ giải thích, động viên bé trước khi làm, ba mẹ có thể vào phòng khám cùng bé.
-EN: Dental care for adults and kids. Regular checkups, baby tooth fillings, root canals, baby tooth extractions and early orthodontics for your child. Our dentists explain each step and cheer your child on before treatment, and parents are welcome in the room.
+VI: Nha khoa Quỳnh Thư chuyên điều trị và dự phòng sớm các bệnh lý Răng - Hàm - Mặt cho trẻ em như:
+EN: Quynh Thu Dental specializes in treating and preventing dental and oral conditions in children early, such as:
+VI: Trám răng sâu
+EN: Fillings for cavities
+VI: Điều trị tủy răng sữa
+EN: Baby tooth root canal treatment
+VI: Bôi Fluoride giúp men răng cứng chắc hơn
+EN: Fluoride applications to strengthen tooth enamel
+VI: Các cô Nha sĩ sẽ giải thích và động viên bé để bé không còn sợ hãi trước khi lên ghế Nha khoa. Ba mẹ có thể đứng bên cạnh nắm tay để con an tâm trong suốt buổi điều trị.
+EN: Our dentists will explain each step and encourage your child so they feel less afraid before sitting in the dental chair. Parents can stay right beside them and hold their hand for reassurance throughout the visit.
 VI: Trám răng sữa
 EN: Baby tooth fillings
 VI: Chữa tủy răng sữa nhanh gọn

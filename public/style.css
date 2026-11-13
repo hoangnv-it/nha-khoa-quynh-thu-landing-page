@@ -13,6 +13,7 @@
    9. Bảng giá
    10. Trước & sau
    10b. Đội ngũ bác sĩ
+   10c. Trang thiết bị
    11. Hình ảnh hoạt động + thẻ đánh giá
    12. Khách hàng nói gì
    13. 2 cơ sở + bản đồ
@@ -415,6 +416,9 @@ body { padding-top: var(--header-h); }
 .price-table th:last-child, .price-table td:last-child { text-align: right; padding-left: 16px; white-space: nowrap; }
 .price-table td:last-child { color: var(--blue-600); font-weight: 700; }
 .price-table td.price-table__ask { white-space: normal; color: var(--ink-3); font-weight: 500; font-size: 14px; }
+/* Nhãn "Báo giá sau khi khám" thay cho số tiền */
+.price-ask { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: var(--brand-50); color: var(--blue-800); font-size: 13px; font-weight: 700; white-space: nowrap; }
+.price-ask svg { flex: none; width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 /* Ghi chú đơn vị dưới giá (/lần, /răng, có MTA...) */
 .price-table td:last-child small { display: block; margin-top: 2px; color: var(--ink-3); font-size: 12px; font-weight: 500; white-space: normal; }
 @media (max-width: 599px) {
@@ -514,6 +518,143 @@ ul.values { display: grid; grid-template-columns: 1fr; gap: 14px; }
   ul.values { grid-template-columns: repeat(4, 1fr); gap: 20px; }
   .value { padding: 26px 24px 28px; }
 }
+
+/* ---------- 10c. Trang thiết bị #thiet-bi (thêm 2026-11-13, làm nổi bật 2026-11-13) ----------
+   Dải nền xanh nhạt riêng (--brand-50 → --blue-100, KHÔNG dùng --blue-900), mép trên/dưới lượn sóng, họa tiết vòng quét + lưới chấm.
+   Thẻ lớn CBCT (ảnh + khối chữ trắng nền --ink) + 5 thẻ nhỏ. Mỗi thẻ: nhãn trên ảnh, 1 lợi ích có dấu tích, mô tả, "Dùng cho".
+   Hiệu ứng (chỉ chạy khi mục đang trong màn hình, class .is-playing do script gắn): vệt quét trên ảnh CBCT, sóng lan trên RayFace,
+   trâm nội nha + chấm chóp, hơi lò hấp. Điện thoại: thẻ CBCT trên, 5 thẻ còn lại vuốt ngang. Máy tính bảng: CBCT ngang + lưới 2 cột. Máy tính: CBCT ngang trên cùng, dưới 3 thẻ ảnh + 2 thẻ ngang. */
+.section-head--center .section-lead { margin-inline: auto; }
+.tech { position: relative; margin-top: var(--section-pad); padding-block: 64px 72px; overflow: hidden; background: linear-gradient(180deg, var(--brand-50) 0%, var(--blue-100) 100%); }
+.tech__inner { position: relative; z-index: 1; }
+.tech::before, .tech::after { content: ""; position: absolute; pointer-events: none; }
+.tech::before { /* vòng quét đồng tâm góc trên phải */
+  top: -160px; right: -160px; width: 520px; height: 520px; border-radius: 50%;
+  background: repeating-radial-gradient(circle, rgba(15, 104, 160, .10) 0 1.5px, transparent 1.5px 34px);
+  -webkit-mask: radial-gradient(circle, #000 30%, transparent 70%); mask: radial-gradient(circle, #000 30%, transparent 70%);
+}
+.tech::after { /* lưới chấm góc dưới trái */
+  left: -40px; bottom: 30px; width: 420px; height: 320px;
+  background: radial-gradient(rgba(15, 104, 160, .22) 1.2px, transparent 1.6px) 0 0 / 20px 20px;
+  -webkit-mask: radial-gradient(ellipse at 30% 60%, #000 20%, transparent 70%); mask: radial-gradient(ellipse at 30% 60%, #000 20%, transparent 70%);
+}
+.tech__wave { position: absolute; left: 0; width: 100%; height: 28px; fill: var(--bg); z-index: 1; }
+.tech__wave--top { top: -1px; transform: rotate(180deg); }
+.tech__wave--bottom { bottom: -1px; }
+
+.equips { display: grid; gap: 16px; }
+.equip { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 1px solid rgba(255, 255, 255, .8); border-radius: var(--radius); background: var(--card); box-shadow: 0 10px 30px rgba(10, 50, 100, .10); transition: transform .3s, box-shadow .3s; }
+.equip:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(10, 50, 100, .16); }
+.equip__media { position: relative; flex: none; aspect-ratio: 4 / 3; overflow: hidden; background: var(--brand-50); }
+.equip__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.equip:hover .equip__media img { transform: scale(1.05); }
+.equip__tag { position: absolute; top: 12px; left: 12px; z-index: 2; padding: 4px 11px; border-radius: 999px; background: rgba(255, 255, 255, .94); color: var(--blue-800); font-size: 12px; font-weight: 700; letter-spacing: .02em; box-shadow: 0 4px 12px rgba(10, 50, 100, .15); }
+.equip__media--icon { display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, #fff 0 28%, transparent 29%), linear-gradient(140deg, var(--brand-50), var(--blue-100)); color: var(--blue-600); }
+.equip__art { width: 64px; height: 64px; stroke-width: 1.4; overflow: visible; }
+.equip__body { display: flex; flex: 1; flex-direction: column; gap: 8px; padding: 16px 18px 18px; }
+.equip h3 { margin: 0; font-size: 17px; line-height: 1.35; }
+.equip__body > p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
+.equip__body > .equip__perk { display: inline-flex; align-self: flex-start; align-items: center; gap: 6px; padding: 4px 12px 4px 8px; border-radius: 999px; background: var(--blue-100); color: var(--blue-800); font-size: 13px; font-weight: 700; line-height: 1.4; }
+.equip__perk .icon { width: 16px; height: 16px; stroke-width: 2.6; }
+.equip__body > .equip__for { margin-top: auto; padding-top: 4px; color: var(--ink-3); font-size: 13px; }
+.equip__for span { font-weight: 600; }
+.equip__for a { color: var(--blue-600); font-weight: 600; text-decoration: none; }
+.equip__for a:hover { text-decoration: underline; }
+
+/* Thẻ lớn CBCT: ảnh + khối chữ trắng trên nền --ink (có vòng quét mờ trang trí). Điện thoại: ảnh trên, chữ dưới. Từ 600px: ảnh trái, chữ phải */
+.equip--feature { border: 0; background: var(--ink); }
+.equip--feature .equip__body { position: relative; justify-content: center; gap: 10px; padding: 20px 20px 22px; overflow: hidden;
+  background: radial-gradient(circle at 100% 0%, rgba(26, 120, 186, .55), transparent 55%), var(--ink); }
+.equip--feature .equip__body::before { content: ""; position: absolute; top: -120px; right: -120px; width: 300px; height: 300px; border-radius: 50%; pointer-events: none;
+  background: repeating-radial-gradient(circle, rgba(255, 255, 255, .09) 0 1px, transparent 1px 26px); }
+.equip--feature .equip__body > * { position: relative; }
+.equip--feature h3 { color: #fff; font-size: 22px; }
+.equip--feature .equip__body > p { color: rgba(255, 255, 255, .9); font-size: 15px; }
+.equip--feature .equip__body > .equip__perk { border: 1px solid rgba(255, 255, 255, .35); background: rgba(255, 255, 255, .16); color: #fff; }
+.equip--feature .equip__body > .equip__for { margin-top: 4px; color: rgba(255, 255, 255, .78); }
+.equip--feature .equip__for a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Hiệu ứng: vệt quét CBCT */
+.equip__media--scan::after { content: ""; position: absolute; left: 0; right: 0; top: 0; z-index: 1; height: 22%; opacity: 0; pointer-events: none; transform: translateY(-100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(150, 205, 250, .28) 80%, rgba(255, 255, 255, .95) 99%, rgba(3, 90, 195, .5) 100%); }
+.tech.is-playing .equip__media--scan::after { animation: tech-scan 5s cubic-bezier(.45, 0, .55, 1) infinite; }
+@keyframes tech-scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  8% { opacity: 1; }
+  62% { transform: translateY(360%); opacity: 1; }
+  72%, 100% { transform: translateY(360%); opacity: 0; }
+}
+/* Hiệu ứng: sóng lan từ đầu camera RayFace */
+.equip__media--ripple::before, .equip__media--ripple::after { content: ""; position: absolute; left: 37%; top: 18%; z-index: 1; width: 44px; height: 44px; margin: -22px 0 0 -22px; border: 2px solid rgba(3, 90, 195, .55); border-radius: 50%; opacity: 0; pointer-events: none; }
+.tech.is-playing .equip__media--ripple::before { animation: tech-ripple 2.6s ease-out infinite; }
+.tech.is-playing .equip__media--ripple::after { animation: tech-ripple 2.6s ease-out 1.3s infinite; }
+@keyframes tech-ripple { 0% { transform: scale(.4); opacity: .9; } 100% { transform: scale(3.4); opacity: 0; } }
+/* Hiệu ứng: trâm nội nha đi xuống, chấm chóp sáng lên */
+.endo-file { stroke-dasharray: 12; stroke-dashoffset: 0; }
+.endo-dot { fill: currentColor; stroke: none; transform-box: fill-box; transform-origin: center; }
+.tech.is-playing .endo-file { animation: tech-file 2.8s ease-in-out infinite; }
+.tech.is-playing .endo-dot { animation: tech-dot 2.8s ease-in-out infinite; }
+@keyframes tech-file { 0%, 10% { stroke-dashoffset: 12; } 55%, 100% { stroke-dashoffset: 0; } }
+@keyframes tech-dot { 0%, 50% { opacity: .25; transform: scale(.7); } 60% { opacity: 1; transform: scale(1.6); fill: var(--accent); } 80%, 100% { opacity: 1; transform: scale(1); } }
+/* Hiệu ứng: hơi lò hấp bay lên */
+.steam { transform-box: fill-box; }
+.tech.is-playing .steam { animation: tech-steam 2.2s ease-in-out infinite; }
+.tech.is-playing .steam:nth-of-type(2) { animation-delay: .35s; }
+.tech.is-playing .steam:nth-of-type(3) { animation-delay: .7s; }
+@keyframes tech-steam { 0% { transform: translateY(3px); opacity: 0; } 40% { opacity: 1; } 100% { transform: translateY(-4px); opacity: 0; } }
+
+.equips__hint { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--ink-3); font-size: 13px; }
+.tech__cta { margin-top: 32px; text-align: center; }
+.tech__cta > p { color: var(--ink); font-weight: 600; text-wrap: balance; }
+.tech__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 14px; }
+
+/* Điện thoại: 5 thẻ nhỏ vuốt ngang, thẻ sau lộ một phần để báo còn nữa */
+@media (max-width: 599px) {
+  ul.equips__list { display: flex; gap: 12px; margin-inline: calc(-1 * var(--gutter)); padding: 4px var(--gutter) 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter); scrollbar-width: none; }
+  .equips__list::-webkit-scrollbar { display: none; }
+  .equips__list > .equip { flex: 0 0 80%; scroll-snap-align: start; }
+  .equips__list:focus-visible { outline: 2px solid var(--brand); outline-offset: -2px; }
+  .equips__hint { margin-top: -6px; }
+  .tech__actions .btn { flex: 1 1 100%; }
+}
+@media (min-width: 600px) {
+  .tech { padding-block: 80px 88px; }
+  .tech__wave { height: 44px; }
+  .equips { gap: 20px; }
+  .equips__hint { display: none; }
+  ul.equips__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0; margin: 0; }
+  .equip--wide { grid-column: 1 / -1; flex-direction: row; }
+  .equip--wide .equip__media { width: 34%; aspect-ratio: auto; }
+  .equip--feature { flex-direction: row; }
+  .equip--feature .equip__media { width: 50%; aspect-ratio: auto; min-height: 340px; }
+  .equip--feature .equip__body { padding: 28px 28px 30px; }
+  .equip--feature h3 { font-size: 24px; }
+}
+@media (min-width: 1024px) {
+  .tech { padding-block: 104px 112px; }
+  .tech__wave { height: 64px; }
+  .tech::before { width: 760px; height: 760px; top: -260px; right: -220px; }
+  /* Thẻ CBCT ngang trên cùng; dưới: 3 thẻ ảnh (mỗi thẻ 2/6 cột) + 2 thẻ ngang (mỗi thẻ 3/6 cột) */
+  .equip--feature .equip__media { width: 56%; min-height: 420px; }
+  .equip--feature .equip__body { padding: 40px 44px; gap: 12px; }
+  .equip--feature h3 { font-size: 30px; line-height: 1.25; }
+  .equip--feature .equip__body > p { font-size: 16px; line-height: 1.65; }
+  ul.equips__list { grid-template-columns: repeat(6, 1fr); }
+  .equips__list > .equip { grid-column: span 2; }
+  .equips__list > .equip:nth-child(n+4) { grid-column: span 3; flex-direction: row; }
+  .equips__list > .equip:nth-child(n+4) .equip__media { width: 36%; aspect-ratio: auto; }
+  .equip__body { padding: 18px 22px 20px; }
+  .equip__body > p { font-size: 14.5px; }
+  .tech__cta { margin-top: 44px; }
+  .tech__cta > p { font-size: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .equip__media--scan::after, .equip__media--ripple::before, .equip__media--ripple::after, .endo-file, .endo-dot, .steam { animation: none !important; }
+}
+
+/* Ô "Thiết bị hiện đại" ở hero: bấm để cuộn tới mục #thiet-bi */
+.hero__fact-link { display: flex; flex-direction: column; align-items: center; gap: 8px; color: inherit; text-decoration: none; }
+.hero__fact-link:hover span { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------- 11. Hình ảnh hoạt động + thẻ đánh giá ---------- */
 .gallery { display: grid; gap: 16px; }
@@ -780,6 +921,10 @@ body { padding-bottom: calc(var(--action-bar-h) + env(safe-area-inset-bottom)); 
 .svc-hero .status { margin-top: 14px; color: var(--ink-3); }
 .svc-hero__media { order: -1; display: grid; place-items: center; }
 .svc-hero__icon { width: 128px; height: 128px; border-radius: 22%; background: #fff; box-shadow: 0 12px 32px rgba(10, 50, 100, .14); }
+.svc-hero__list { display: grid; gap: 8px 20px; margin-top: 14px; max-width: 36em; }
+.svc-hero__list li { display: flex; align-items: flex-start; gap: 10px; color: var(--ink); font-weight: 500; line-height: 1.5; }
+.svc-hero__list .icon { flex: none; width: 22px; height: 22px; margin-top: 1px; color: var(--blue-600); }
+.svc-hero__note { margin-top: 16px; }
 .svc-signs { display: grid; gap: 12px; }
 .svc-signs li { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); color: var(--ink); font-weight: 500; }
 .svc-signs .icon { width: 24px; height: 24px; color: var(--blue-600); }
@@ -819,6 +964,7 @@ ul.svc-cta__info li { display: flex; align-items: flex-start; gap: 12px; color: 
 .svc-cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
 @media (min-width: 600px) {
   .svc-signs { grid-template-columns: repeat(2, 1fr); }
+  .svc-hero__list { grid-template-columns: repeat(2, auto); justify-content: start; }
   .services--others { grid-template-columns: repeat(3, 1fr); }
 }
 @media (min-width: 1024px) {

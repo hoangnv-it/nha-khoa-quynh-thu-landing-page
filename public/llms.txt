@@ -53,6 +53,15 @@ Email: lequynhthu@gmail.com
 - Thanh toán thẻ ATM, Visa, Master
 - Hỗ trợ hồ sơ bệnh án và xuất hóa đơn đỏ (hóa đơn VAT) để thanh toán bảo hiểm
 
+## Trang thiết bị
+
+- Máy chụp phim CBCT 3D hiện đại (Rayscan): xem xương hàm, chân răng, ống thần kinh trước khi điều trị
+- Máy quét gương mặt RayFace: quét gương mặt 3D, kết hợp phim CBCT để lên kế hoạch làm răng
+- Máy scan trong miệng: lấy dấu răng kỹ thuật số thay vật liệu cao su
+- Máy chữa tủy, định vị chóp (máy nội nha tích hợp): chữa tủy 1 lần hẹn
+- Máy tẩy trắng Beyond (Mỹ): công nghệ làm lạnh, giúp giảm hẳn ê buốt, kéo dài thời gian tẩy, hiệu quả làm trắng cao
+- Lò hấp tiệt khuẩn Class B: tiệt khuẩn dụng cụ phẫu thuật
+
 ## Bảng giá
 
 Giá tham khảo (VNĐ), theo bảng giá của phòng khám:
@@ -64,10 +73,10 @@ Giá tham khảo (VNĐ), theo bảng giá của phòng khám:
 - Chữa tủy lại: 1.200.000 - 1.650.000 (có MTA)
 - Nhổ răng thường: 300.000 - 500.000
 - Nhổ răng khôn, răng khó: 800.000 - 2.000.000
-- Bọc mão sứ kim loại: 1.800.000
+- Bọc mão sứ kim loại: 1.200.000 - 1.800.000
 - Bọc mão toàn sứ: 3.000.000 - 6.000.000/răng
 - Inlay, Onlay, Veneer: 3.000.000 - 7.000.000/răng
-- Răng nhựa tháo lắp (răng nhựa Mỹ): 500.000/răng
+- Răng nhựa tháo lắp (răng nhựa Mỹ): 300.000 - 500.000/răng
 - Hàm Biosoft: 500.000 - 1.500.000/nền hàm
 - Tẩy trắng răng: 1.500.000 - 2.000.000
 - Đính kim cương: 500.000/viên
@@ -86,15 +95,12 @@ Giá tham khảo (VNĐ), theo bảng giá của phòng khám:
 - Bôi Fluoride: 200.000/lần
 
 ### Nha khoa kỹ thuật cao
-- Chỉnh nha phân đoạn: 3.000.000 - 12.000.000
-- Chỉnh nha toàn diện: 35.000.000 - 50.000.000
-- Chỉnh nha bằng khay trong suốt: 40.000.000 - 80.000.000
+- Chỉnh nha phân đoạn: báo giá sau khi khám
+- Chỉnh nha toàn diện: báo giá sau khi khám
+- Chỉnh nha bằng khay trong suốt: báo giá sau khi khám
 - Cắm trụ Implant Hàn Quốc: 10.000.000/trụ
 - Cắm trụ Implant Mỹ: 12.000.000 - 15.000.000/trụ
 - Cắm trụ Implant Thụy Sĩ: 20.000.000/trụ
 - Răng toàn sứ trên Implant: 5.000.000 - 8.000.000/đơn vị
-- Chụp phim Panorama: 250.000/lần
-- Chụp phim Cephalometric: 250.000/lần
-- Chụp phim CBCT: 400.000/lần
 
 - Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị.

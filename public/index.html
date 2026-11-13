@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=d1bbc8e0">
+  <link rel="stylesheet" href="style.css?v=3a80189e">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -477,7 +477,7 @@
           <p class="hero__title">Cả nhà an tâm</p>
           <p class="hero__sub">Nha khoa gần nhà, mở cửa đến 19:00,<br class="br-lg"> chăm sóc nụ cười gia đình bạn</p>
           <ul class="hero__facts">
-            <li><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Thiết bị<br>hiện đại</span></li>
+            <li><a class="hero__fact-link" href="#thiet-bi"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg><span>Thiết bị<br>hiện đại</span></a></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><span>Báo giá<br>rõ ràng</span></li>
             <li><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg><span>Trả góp<br>0%</span></li>
           </ul>
@@ -504,7 +504,7 @@
       <div class="container">
         <div class="section-head section-head--center">
           <p class="eyebrow eyebrow--lines">Dịch vụ nổi bật</p>
-          <h2 id="dich-vu-title">Chăm sóc toàn diện cho cả gia đình</h2>
+          <h2 id="dich-vu-title">CHĂM SÓC TOÀN DIỆN CHO GIA ĐÌNH BẠN</h2>
         </div>
         <ul class="services">
           <li><a class="service service--wiggle" href="dich-vu/kham-tre-em.html" data-track="service"><span class="service__icon"><img src="assets/icons/kham-tre-em.webp?v=e3b17992" width="256" height="256" alt="" loading="lazy"></span><span class="service__label">Khám răng<br>trẻ em</span></a></li>
@@ -588,10 +588,10 @@
                   <tr><td>Chữa tủy lại</td><td><span class="price-table__num">1.200.000 - 1.650.000</span><small>có MTA</small></td></tr>
                   <tr><td>Nhổ răng thường</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
                   <tr><td>Nhổ răng khôn, răng khó</td><td><span class="price-table__num">800.000 - 2.000.000</span></td></tr>
-                  <tr><td>Bọc mão sứ kim loại</td><td><span class="price-table__num">1.800.000</span></td></tr>
+                  <tr><td>Bọc mão sứ kim loại</td><td><span class="price-table__num">1.200.000 - 1.800.000</span></td></tr>
                   <tr><td>Bọc mão toàn sứ</td><td><span class="price-table__num">3.000.000 - 6.000.000</span><small>/răng</small></td></tr>
                   <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3.000.000 - 7.000.000</span><small>/răng</small></td></tr>
-                  <tr><td>Răng nhựa tháo lắp (răng nhựa Mỹ)</td><td><span class="price-table__num">500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Răng nhựa tháo lắp (răng nhựa Mỹ)</td><td><span class="price-table__num">300.000 - 500.000</span><small>/răng</small></td></tr>
                   <tr><td>Hàm Biosoft</td><td><span class="price-table__num">500.000 - 1.500.000</span><small>/nền hàm</small></td></tr>
                   <tr><td>Tẩy trắng răng</td><td><span class="price-table__num">1.500.000 - 2.000.000</span></td></tr>
                   <tr><td>Đính kim cương</td><td><span class="price-table__num">500.000</span><small>/viên</small></td></tr>
@@ -626,16 +626,13 @@
                   <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Chỉnh nha phân đoạn</td><td><span class="price-table__num">3.000.000 - 12.000.000</span></td></tr>
-                  <tr><td>Chỉnh nha toàn diện</td><td><span class="price-table__num">35.000.000 - 50.000.000</span></td></tr>
-                  <tr><td>Chỉnh nha bằng khay trong suốt</td><td><span class="price-table__num">40.000.000 - 80.000.000</span></td></tr>
+                  <tr><td>Chỉnh nha phân đoạn</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
+                  <tr><td>Chỉnh nha toàn diện</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
+                  <tr><td>Chỉnh nha bằng khay trong suốt</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
                   <tr><td>Cắm trụ Implant Hàn Quốc</td><td><span class="price-table__num">10.000.000</span><small>/trụ</small></td></tr>
                   <tr><td>Cắm trụ Implant Mỹ</td><td><span class="price-table__num">12.000.000 - 15.000.000</span><small>/trụ</small></td></tr>
                   <tr><td>Cắm trụ Implant Thụy Sĩ</td><td><span class="price-table__num">20.000.000</span><small>/trụ</small></td></tr>
                   <tr><td>Răng toàn sứ trên Implant</td><td><span class="price-table__num">5.000.000 - 8.000.000</span><small>/đơn vị</small></td></tr>
-                  <tr><td>Chụp phim Panorama</td><td><span class="price-table__num">250.000</span><small>/lần</small></td></tr>
-                  <tr><td>Chụp phim Cephalometric</td><td><span class="price-table__num">250.000</span><small>/lần</small></td></tr>
-                  <tr><td>Chụp phim CBCT</td><td><span class="price-table__num">400.000</span><small>/lần</small></td></tr>
                 </tbody>
               </table>
             </div>
@@ -753,6 +750,118 @@
           </ul>
         </div>
       </div>
+    </section>
+
+    <!-- ===== TRANG THIẾT BỊ (thêm 2026-11-13) =====
+         Danh sách 6 máy do chủ dự án gửi 2026-11-13. Câu chữ đã được chủ dự án chốt:
+         "Máy chụp phim CBCT 3D hiện đại", "Công nghệ làm lạnh, giúp giảm hẳn ê buốt", "Hiệu quả làm trắng cao", "Chữa tủy 1 lần hẹn", tên "RayFace".
+         Ảnh thật từ Facebook CS1 (ảnh gốc ở anh-goc/thiet-bi/):
+         - CBCT + RayFace: bài khai trương lại cơ sở 217 Văn Tiến Dũng (06/05/2026), ảnh máy Rayscan có logo; máy RayFace đứng góc dưới trái cùng ảnh.
+         - Scan trong miệng: khung hình video "Scan lấy dấu làm overlay" (11/2026). Video gốc chỉ 360x640 nên ảnh hơi mờ: có ảnh rõ hơn thì thay.
+         - Beyond: bài "Tẩy trắng răng bằng ánh sáng xanh" (20/10/2026), ảnh fb1-29.
+         Máy chữa tủy/định vị chóp và lò hấp Class B: chưa có ảnh trên Facebook, tạm dùng icon. [CẦN XÁC NHẬN] xin ảnh thật 2 máy này.
+         [CẦN XÁC NHẬN] bác sĩ duyệt phần mô tả RayFace và lò hấp Class B (mô tả theo chức năng chung của loại máy). -->
+    <section class="section tech reveal" id="thiet-bi" aria-labelledby="thiet-bi-title" data-inview>
+      <svg class="tech__wave tech__wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34C240 60 460 64 720 42S1200 4 1440 22V60H0z"/></svg>
+      <div class="container tech__inner">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--lines">Trang thiết bị</p>
+          <h2 id="thiet-bi-title">Trang thiết bị hiện đại</h2>
+          <!-- Câu dẫn theo bài Facebook CS2 "Chất lượng điều trị chuẩn phố trong lòng Hòa Xuân": "...mà không cần đi về trung tâm thành phố Đà Nẵng, ngay tại Hòa Xuân...".
+               KHÔNG viết "hàng đầu", "tốt nhất", "số 1" (brief mục 8). -->
+          <p class="section-lead">Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần lên trung tâm thành phố.</p>
+        </div>
+
+        <div class="equips">
+          <article class="equip equip--feature" aria-labelledby="eq-cbct">
+            <div class="equip__media equip__media--scan">
+              <img src="assets/images/thiet-bi-cbct.webp?v=e0de909c" width="760" height="570" loading="lazy" alt="Máy chụp phim CBCT Rayscan trong phòng chụp phim của Nha khoa Quỳnh Thư">
+              <span class="equip__tag">Rayscan · 3D</span>
+            </div>
+            <div class="equip__body">
+              <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Chụp phim 3D ngay tại phòng khám</p>
+              <h3 id="eq-cbct">Máy chụp phim CBCT 3D hiện đại</h3>
+              <p>Chụp phim CT Cone Beam 3D ngay tại phòng khám, giúp bác sĩ xem rõ xương hàm, chân răng và ống thần kinh trước khi điều trị.</p>
+              <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/implant.html">Implant</a>, <a href="dich-vu/nieng-rang.html">Niềng răng</a>, <a href="dich-vu/nho-rang.html">Nhổ răng khôn</a></p>
+            </div>
+          </article>
+
+          <ul class="equips__list" aria-label="Các thiết bị khác" tabindex="0">
+            <li class="equip">
+              <div class="equip__media equip__media--ripple">
+                <img src="assets/images/thiet-bi-rayface.webp?v=03f68cc4" width="540" height="405" loading="lazy" alt="Máy quét gương mặt RayFace màu trắng có hai cánh gắn camera">
+                <span class="equip__tag">RayFace · 3D</span>
+              </div>
+              <div class="equip__body">
+                <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Làm răng hài hòa với gương mặt</p>
+                <h3>Máy quét gương mặt RayFace</h3>
+                <p>Quét gương mặt 3D, kết hợp với phim CBCT để bác sĩ lên kế hoạch làm răng hài hòa với khuôn mặt.</p>
+                <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/rang-su.html">Răng sứ</a>, <a href="dich-vu/nieng-rang.html">Niềng răng</a></p>
+              </div>
+            </li>
+            <li class="equip">
+              <div class="equip__media">
+                <img src="assets/images/thiet-bi-scan.webp?v=f44d1bbd" width="360" height="270" loading="lazy" alt="Bác sĩ dùng máy scan trong miệng lấy dấu răng cho một bé gái">
+                <span class="equip__tag">Kỹ thuật số</span>
+              </div>
+              <div class="equip__body">
+                <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Không cần lấy dấu cao su</p>
+                <h3>Máy scan trong miệng</h3>
+                <p>Lấy dấu răng bằng máy quét thay cho vật liệu cao su: chính xác, đơn giản, trẻ không bị buồn nôn như cách lấy dấu truyền thống.</p>
+                <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/rang-su.html">Răng sứ</a>, <a href="dich-vu/nieng-rang.html">Niềng răng</a></p>
+              </div>
+            </li>
+            <li class="equip">
+              <div class="equip__media">
+                <img src="assets/images/thiet-bi-beyond.webp?v=ab4c74fb" width="760" height="570" loading="lazy" alt="Máy tẩy trắng Beyond đặt cạnh ghế, khách hàng đang tẩy trắng răng">
+                <span class="equip__tag">Beyond · Mỹ</span>
+              </div>
+              <div class="equip__body">
+                <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Giảm hẳn ê buốt</p>
+                <h3>Máy tẩy trắng Beyond (Mỹ)</h3>
+                <p>Tẩy trắng bằng công nghệ làm lạnh, giúp giảm hẳn ê buốt và kéo dài được thời gian tẩy. Hiệu quả làm trắng cao.</p>
+                <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/tay-trang.html">Tẩy trắng răng</a></p>
+              </div>
+            </li>
+            <li class="equip">
+              <div class="equip__media equip__media--icon">
+                <!-- Icon vẽ tay: răng + trâm nội nha đi xuống + chấm sáng ở chóp (hiệu ứng khi mục đang trong màn hình) -->
+                <svg class="icon equip__art" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3C4.8 3 3.5 4.8 3.5 7.2c0 2.3 1 3.8 1.6 6.3.6 2.6.9 7.5 2.7 7.5 1.5 0 1.6-4.8 2.4-6.2.4-.6 1.2-.6 1.6 0 .8 1.4.9 6.2 2.4 6.2 1.8 0 2.1-4.9 2.7-7.5.6-2.5 1.6-4 1.6-6.3C20.5 4.8 19.2 3 17 3c-2 0-3 1-5 1S9 3 7 3z"/><path class="endo-file" d="M12 1v12"/><circle class="endo-dot" cx="12" cy="14.6" r="1.3"/></svg>
+                <span class="equip__tag">Định vị chóp</span>
+              </div>
+              <div class="equip__body">
+                <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Chữa tủy 1 lần hẹn</p>
+                <h3>Máy chữa tủy, định vị chóp</h3>
+                <p>Máy nội nha tích hợp định vị chóp, giúp bác sĩ đo chính xác chiều dài ống tủy. Chữa tủy 1 lần hẹn.</p>
+                <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/dieu-tri-tuy.html">Điều trị tủy</a></p>
+              </div>
+            </li>
+            <li class="equip equip--wide">
+              <div class="equip__media equip__media--icon">
+                <!-- Icon vẽ tay: lò hấp + 3 làn hơi bay lên (hiệu ứng khi mục đang trong màn hình) -->
+                <svg class="icon equip__art" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="8" width="19" height="13" rx="2.5"/><circle cx="10" cy="14.5" r="3.5"/><path d="M17 12v5"/><path class="steam" d="M7.5 2.5c-.8.8-.8 1.7 0 2.5"/><path class="steam" d="M12 2.5c-.8.8-.8 1.7 0 2.5"/><path class="steam" d="M16.5 2.5c-.8.8-.8 1.7 0 2.5"/></svg>
+                <span class="equip__tag">Chuẩn Class B</span>
+              </div>
+              <div class="equip__body">
+                <p class="equip__perk"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tiệt khuẩn dụng cụ phẫu thuật</p>
+                <h3>Lò hấp tiệt khuẩn Class B</h3>
+                <p>Lò hấp chuẩn Class B có hút chân không, dùng để tiệt khuẩn dụng cụ phẫu thuật, kể cả dụng cụ rỗng và dụng cụ đã đóng gói.</p>
+                <p class="equip__for"><span>Dùng cho:</span> <a href="dich-vu/nho-rang.html">Nhổ răng</a>, <a href="dich-vu/implant.html">Implant</a></p>
+              </div>
+            </li>
+          </ul>
+          <p class="equips__hint" aria-hidden="true">Vuốt ngang để xem thêm thiết bị<svg class="icon icon--sm"><use href="#i-arrow"/></svg></p>
+        </div>
+
+        <div class="tech__cta">
+          <p>Khám, chụp phim và báo giá rõ ràng ngay tại phòng khám, trước khi điều trị.</p>
+          <div class="tech__actions">
+            <a class="btn btn--blue" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Đặt lịch khám qua Zalo</a>
+            <a class="btn btn--outline" href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0944 479 405</a>
+          </div>
+        </div>
+      </div>
+      <svg class="tech__wave tech__wave--bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 4 470 0 730 22S1200 58 1440 36V60H0z"/></svg>
     </section>
 
     <!-- ===== HÌNH ẢNH HOẠT ĐỘNG + ĐÁNH GIÁ ===== -->
@@ -1037,6 +1146,6 @@
     </ul>
   </dialog>
 
-  <script src="script.js?v=a3fed86d" defer></script>
+  <script src="script.js?v=be1fb895" defer></script>
 </body>
 </html>

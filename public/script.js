@@ -451,6 +451,15 @@
     reveals.forEach(function (el) { revealObs.observe(el); });
   }
 
+  /* 6a. Hiệu ứng lặp chỉ chạy khi mục đang trong màn hình ([data-inview], vd #thiet-bi): gắn/bỏ class .is-playing */
+  var playEls = $$("[data-inview]");
+  if (playEls.length && "IntersectionObserver" in window) {
+    var playObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { entry.target.classList.toggle("is-playing", entry.isIntersecting); });
+    }, { threshold: 0.1 });
+    playEls.forEach(function (el) { playObs.observe(el); });
+  }
+
   /* ------------------------------------------------------------------------
      6b. MỤC ĐÁNH GIÁ (#danh-gia)
      - Thẻ đánh giá chạy ngang: nhân đôi danh sách (bản sao aria-hidden) để chạy vòng liền mạch.

@@ -196,6 +196,18 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Thẻ 2 đến 4: chỗ giữ chỗ (viền nét đứt, hình người mờ, "Họ tên bác sĩ" / "Chức danh, đang cập nhật"). **[CẦN XÁC NHẬN]** họ tên, chức danh, ảnh (tên đã thấy trong bài đăng: cô Linh, nha sĩ Tuấn). Có ảnh thì thay khung bằng thẻ như thẻ 1.
 - Bỏ biến `SHOW_TEAM` (trước đây ẩn mục này).
 
+### 5.7c Trang thiết bị `#thiet-bi` (thêm 2026-11-13, không có trong ảnh thiết kế)
+- Nằm ngay dưới "Đội ngũ", trên "Hình ảnh hoạt động". Là điểm mạnh của phòng khám nên làm nổi bật (đổi 2026-11-13).
+- Dải nền riêng `.tech`: gradient `--brand-50` → `--blue-100` (KHÔNG dùng `--blue-900`, màu đó chỉ cho hero + footer), mép trên/dưới lượn sóng (`.tech__wave`, màu `--bg`), họa tiết vòng quét đồng tâm góc trên phải + lưới chấm góc dưới trái.
+- Đầu mục: eyebrow "TRANG THIẾT BỊ", h2 "Trang thiết bị hiện đại", dòng dẫn "Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần lên trung tâm thành phố." (theo bài Facebook CS2; KHÔNG viết "hàng đầu").
+- Thẻ lớn CBCT `.equip--feature`: ảnh 4:3 + khối chữ trắng trên nền `--ink` (có vòng quét mờ). Điện thoại: ảnh trên, chữ dưới; từ 600px: ảnh trái, chữ phải.
+- 5 thẻ còn lại `ul.equips__list`: nhãn trên ảnh (`.equip__tag`: Rayscan · 3D, RayFace · 3D, Kỹ thuật số, Beyond · Mỹ, Định vị chóp, Chuẩn Class B), 1 lợi ích có dấu tích (`.equip__perk`), tên máy, mô tả, "Dùng cho:" có link trang dịch vụ.
+  Điện thoại: vuốt ngang (scroll-snap, thẻ rộng 80%, có dòng "Vuốt ngang để xem thêm thiết bị"). Máy tính bảng: 2 cột, lò hấp nằm ngang hết hàng. Máy tính: 3 thẻ ảnh + 2 thẻ ngang (định vị chóp, lò hấp).
+- Hiệu ứng (chỉ chạy khi mục trong màn hình: `data-inview` → class `.is-playing`, script mục 6a): vệt quét chạy dọc ảnh CBCT, sóng lan từ đầu camera RayFace, trâm nội nha đi xuống + chấm chóp sáng, hơi lò hấp bay lên. Hover: thẻ nâng 4px, ảnh phóng 1,05. Giảm chuyển động: tắt hết.
+- Cuối mục: "Khám, chụp phim và báo giá rõ ràng ngay tại phòng khám, trước khi điều trị." + nút Zalo (`.btn--blue`) + nút gọi (`.btn--outline`).
+- Ô "Thiết bị hiện đại" ở hero là link tới `#thiet-bi`.
+- Ảnh: `thiet-bi-cbct.webp` (760x570), `thiet-bi-rayface.webp`, `thiet-bi-scan.webp`, `thiet-bi-beyond.webp` (ảnh gốc `anh-goc/thiet-bi/`). Máy định vị chóp và lò hấp Class B dùng icon SVG viết thẳng trong thẻ (để làm hiệu ứng) cho tới khi có ảnh thật.
+
 ### 5.8 Hình ảnh hoạt động + đánh giá (theo ảnh)
 - Eyebrow trái "HÌNH ẢNH HOẠT ĐỘNG"; h2 "Nha khoa Quỳnh Thư - Luôn đồng hành cùng bạn".
 - Lưới 6 cột × 2 hàng ảnh bo 10px; bên phải 1 thẻ trắng: dấu ngoặc kép xanh, câu đánh giá in nghiêng, 5 sao vàng, tên khách.
