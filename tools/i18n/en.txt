@@ -318,8 +318,8 @@ VI: Trang thiết bị hiện đại
 EN: Modern equipment
 VI: Dùng cho:
 EN: Used for:
-VI: Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần lên trung tâm thành phố.
-EN: 3D CBCT scans and 3D face scans right here in Hoa Xuan, no need to travel into the city center.
+VI: Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần đi xa.
+EN: 3D CBCT scans and 3D face scans right here in Hoa Xuan, no need to go far.
 VI: Các thiết bị khác
 EN: More equipment
 VI: Vuốt ngang để xem thêm thiết bị

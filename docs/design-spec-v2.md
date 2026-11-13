@@ -199,7 +199,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 ### 5.7c Trang thiết bị `#thiet-bi` (thêm 2026-11-13, không có trong ảnh thiết kế)
 - Nằm ngay dưới "Đội ngũ", trên "Hình ảnh hoạt động". Là điểm mạnh của phòng khám nên làm nổi bật (đổi 2026-11-13).
 - Dải nền riêng `.tech`: gradient `--brand-50` → `--blue-100` (KHÔNG dùng `--blue-900`, màu đó chỉ cho hero + footer), mép trên/dưới lượn sóng (`.tech__wave`, màu `--bg`), họa tiết vòng quét đồng tâm góc trên phải + lưới chấm góc dưới trái.
-- Đầu mục: eyebrow "TRANG THIẾT BỊ", h2 "Trang thiết bị hiện đại", dòng dẫn "Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần lên trung tâm thành phố." (theo bài Facebook CS2; KHÔNG viết "hàng đầu").
+- Đầu mục: eyebrow "TRANG THIẾT BỊ", h2 "Trang thiết bị hiện đại", dòng dẫn "Chụp phim CBCT 3D, quét gương mặt 3D ngay tại Hòa Xuân, không cần đi xa." (theo bài Facebook CS2; KHÔNG viết "hàng đầu").
 - Thẻ lớn CBCT `.equip--feature`: ảnh 4:3 + khối chữ trắng trên nền `--ink` (có vòng quét mờ). Điện thoại: ảnh trên, chữ dưới; từ 600px: ảnh trái, chữ phải.
 - 5 thẻ còn lại `ul.equips__list`: nhãn trên ảnh (`.equip__tag`: Rayscan · 3D, RayFace · 3D, Kỹ thuật số, Beyond · Mỹ, Định vị chóp, Chuẩn Class B), 1 lợi ích có dấu tích (`.equip__perk`), tên máy, mô tả, "Dùng cho:" có link trang dịch vụ.
   Điện thoại: vuốt ngang (scroll-snap, thẻ rộng 80%, có dòng "Vuốt ngang để xem thêm thiết bị"). Máy tính bảng: 2 cột, lò hấp nằm ngang hết hàng. Máy tính: 3 thẻ ảnh + 2 thẻ ngang (định vị chóp, lò hấp).
