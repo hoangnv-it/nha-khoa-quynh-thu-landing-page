@@ -203,10 +203,19 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Thẻ lớn CBCT `.equip--feature`: ảnh 4:3 + khối chữ trắng trên nền `--ink` (có vòng quét mờ). Điện thoại: ảnh trên, chữ dưới; từ 600px: ảnh trái, chữ phải.
 - 5 thẻ còn lại `ul.equips__list`: nhãn trên ảnh (`.equip__tag`: Rayscan · 3D, RayFace · 3D, Kỹ thuật số, Beyond · Mỹ, Định vị chóp, Chuẩn Class B), 1 lợi ích có dấu tích (`.equip__perk`), tên máy, mô tả, "Dùng cho:" có link trang dịch vụ.
   Điện thoại: vuốt ngang (scroll-snap, thẻ rộng 80%, có dòng "Vuốt ngang để xem thêm thiết bị"). Máy tính bảng: 2 cột, lò hấp nằm ngang hết hàng. Máy tính: 3 thẻ ảnh + 2 thẻ ngang (định vị chóp, lò hấp).
-- Hiệu ứng (chỉ chạy khi mục trong màn hình: `data-inview` → class `.is-playing`, script mục 6a): vệt quét chạy dọc ảnh CBCT, sóng lan từ đầu camera RayFace, trâm nội nha đi xuống + chấm chóp sáng, hơi lò hấp bay lên. Hover: thẻ nâng 4px, ảnh phóng 1,05. Giảm chuyển động: tắt hết.
+- Hiệu ứng (chỉ chạy khi mục trong màn hình: `data-inview` → class `.is-playing`, script mục 6a): vệt quét chạy dọc ảnh CBCT, sóng lan từ gương tròn (đầu quét) máy RayFace, trâm nội nha đi xuống + chấm chóp sáng, hơi lò hấp bay lên. Hover: thẻ nâng 4px, ảnh phóng 1,05. Giảm chuyển động: tắt hết.
 - Cuối mục: "Khám, chụp phim và báo giá rõ ràng ngay tại phòng khám, trước khi điều trị." + nút Zalo (`.btn--blue`) + nút gọi (`.btn--outline`).
 - Ô "Thiết bị hiện đại" ở hero là link tới `#thiet-bi`.
-- Ảnh: `thiet-bi-cbct.webp` (760x570), `thiet-bi-rayface.webp`, `thiet-bi-scan.webp`, `thiet-bi-beyond.webp` (ảnh gốc `anh-goc/thiet-bi/`). Máy định vị chóp và lò hấp Class B dùng icon SVG viết thẳng trong thẻ (để làm hiệu ứng) cho tới khi có ảnh thật.
+- Ảnh: `thiet-bi-cbct.webp` (760x570), `thiet-bi-rayface.webp` (500x375, ảnh chủ dự án gửi 2026-11-18), `thiet-bi-scan.webp`, `thiet-bi-beyond.webp` (ảnh gốc `anh-goc/thiet-bi/`). Máy định vị chóp và lò hấp Class B dùng icon SVG viết thẳng trong thẻ (để làm hiệu ứng) cho tới khi có ảnh thật.
+
+### 5.7d Ca khó `#ca-kho` (thêm 2026-11-18, không có trong ảnh thiết kế)
+- Ngay dưới mục Trang thiết bị. Dải nền `--ink` (đậm, KHÔNG dùng `--blue-900`) có 2 vệt sáng mờ, vòng đồng tâm góc trên trái, mép trên/dưới lượn sóng như `#thiet-bi`. Chữ tiêu đề trắng, eyebrow #9FD0F5.
+- Eyebrow "Ca khó", h2 "Những ca khó, Quỳnh Thư vẫn nhận điều trị", câu dẫn nói rõ đây là ca thật phòng khám đã chia sẻ trên Facebook.
+- Thẻ lớn `.case--feature`: ca mẹ bầu 38 tuần (bài chủ dự án gửi). Ảnh dọc 540x720 (điện thoại cắt 4:3), nhãn vàng `.case__tag`, 3 bước có số `.case__steps` (Tình trạng, Cách xử lý, Kết quả; hiện lần lượt khi mục hiện ra), ô ghi chú về điều trị răng khi mang thai, link "Xem video ca này" (Facebook, `data-track="facebook"`) + link trang Điều trị tủy.
+- 3 thẻ `ul.cases__list`: răng khôn mọc ngang + viêm tủy cấp (có câu trích lời bệnh nhân), chữa tủy bé 7 tuổi, cắn ngược bé 11 tuổi (ảnh ghép trước/sau). Mỗi thẻ: ảnh 4:3 + nhãn, tiêu đề, mô tả, câu trích hoặc kết quả (`.case__result`), link video + link trang dịch vụ.
+- Hàng "Các ca khác phòng khám đã chia sẻ" (`.cases__chips`), câu "Kết quả khác nhau tùy tình trạng của từng người.", câu kêu gọi + nút Zalo (`.btn--cta`) + nút gọi (`.btn--outline-light`).
+- Điện thoại: thẻ lớn trên, 3 thẻ vuốt ngang (có dòng "Vuốt ngang để xem thêm ca"). Máy tính bảng: thẻ lớn ngang, 2 cột, thẻ thứ 3 nằm ngang. Máy tính: thẻ lớn ngang (ảnh 38%) + 3 cột. Giảm chuyển động: tắt hiệu ứng.
+- Ảnh: khung hình video reels Facebook CS1 (ảnh gốc `anh-goc/ca-kho/`): `ca-kho-me-bau.webp` (540x720), `ca-kho-rang-khon.webp`, `ca-kho-tuy-tre-em.webp`, `ca-kho-can-nguoc.webp` (540x405). Nguồn từng ca ghi trong chú thích HTML đầu mục.
 
 ### 5.8 Hình ảnh hoạt động + đánh giá (theo ảnh)
 - Eyebrow trái "HÌNH ẢNH HOẠT ĐỘNG"; h2 "Nha khoa Quỳnh Thư - Luôn đồng hành cùng bạn".

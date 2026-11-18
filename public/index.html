@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=21170837">
+  <link rel="stylesheet" href="style.css?v=89737b38">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -62,11 +62,18 @@
                        "name":  "Nha khoa Quỳnh Thư",
                        "legalName":  "Công ty TNHH MTV Nha khoa Quỳnh Thư",
                        "taxID":  "0402209530",
-                       "identifier":  {
-                                          "@type":  "PropertyValue",
-                                          "name":  "Giấy phép hoạt động khám bệnh, chữa bệnh",
-                                          "value":  "01252/ĐNA-GPHĐ"
-                                      },
+                       "identifier":  [
+                                          {
+                                              "@type":  "PropertyValue",
+                                              "name":  "Giấy phép hoạt động khám bệnh, chữa bệnh",
+                                              "value":  "01252/ĐNA-GPHĐ"
+                                          },
+                                          {
+                                              "@type":  "PropertyValue",
+                                              "name":  "Giấy phép hoạt động khám bệnh, chữa bệnh",
+                                              "value":  "01850/ĐNA-GPHĐ"
+                                          }
+                                      ],
                        "url":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/",
                        "logo":  "https://quynh-thu-landing-page.tai-khoan.workers.dev/assets/logo/favicon-192.png?v=c433b880",
                        "email":  "lequynhthu@gmail.com",
@@ -756,7 +763,8 @@
          Danh sách 6 máy do chủ dự án gửi 2026-11-13. Câu chữ đã được chủ dự án chốt:
          "Máy chụp phim CBCT 3D hiện đại", "Công nghệ làm lạnh, giúp giảm hẳn ê buốt", "Hiệu quả làm trắng cao", "Chữa tủy 1 lần hẹn", tên "RayFace".
          Ảnh thật từ Facebook CS1 (ảnh gốc ở anh-goc/thiet-bi/):
-         - CBCT + RayFace: bài khai trương lại cơ sở 217 Văn Tiến Dũng (06/05/2026), ảnh máy Rayscan có logo; máy RayFace đứng góc dưới trái cùng ảnh.
+         - CBCT: bài khai trương lại cơ sở 217 Văn Tiến Dũng (06/05/2026), ảnh máy Rayscan có logo.
+         - RayFace: ảnh giới thiệu máy do chủ dự án gửi 2026-11-18 (ảnh gốc anh-goc/thiet-bi/tb-rayface.png, 500x500, cắt 4:3).
          - Scan trong miệng: khung hình video "Scan lấy dấu làm overlay" (11/2026). Video gốc chỉ 360x640 nên ảnh hơi mờ: có ảnh rõ hơn thì thay.
          - Beyond: bài "Tẩy trắng răng bằng ánh sáng xanh" (20/10/2026), ảnh fb1-29.
          Máy chữa tủy/định vị chóp và lò hấp Class B: chưa có ảnh trên Facebook, tạm dùng icon. [CẦN XÁC NHẬN] xin ảnh thật 2 máy này.
@@ -789,7 +797,7 @@
           <ul class="equips__list" aria-label="Các thiết bị khác" tabindex="0">
             <li class="equip">
               <div class="equip__media equip__media--ripple">
-                <img src="assets/images/thiet-bi-rayface.webp?v=03f68cc4" width="540" height="405" loading="lazy" alt="Máy quét gương mặt RayFace màu trắng có hai cánh gắn camera">
+                <img src="assets/images/thiet-bi-rayface.webp?v=c10213f5" width="500" height="375" loading="lazy" alt="Máy quét gương mặt RayFace màu trắng có gương tròn ở giữa và hai cánh gắn camera, người đang ngồi trước máy">
                 <span class="equip__tag">RayFace · 3D</span>
               </div>
               <div class="equip__body">
@@ -862,6 +870,108 @@
         </div>
       </div>
       <svg class="tech__wave tech__wave--bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 4 470 0 730 22S1200 58 1440 36V60H0z"/></svg>
+    </section>
+
+    <!-- ===== CA KHÓ (thêm 2026-11-18, chủ dự án yêu cầu) =====
+         Dải nền --ink riêng, mép trên/dưới lượn sóng. Thẻ lớn: ca mẹ bầu 38 tuần (Tình trạng → Cách xử lý → Kết quả). 3 thẻ ca khác + hàng "ca khác".
+         Nguồn: reels Facebook CS1 (https://www.facebook.com/nhakhoaquynhthu/reels/, đọc 18/11/2026). Câu chữ tóm tắt từ chú thích bài đăng, KHÔNG thêm thông tin:
+         - Mẹ bầu: reel 1396010475778557 (bài chủ dự án gửi). Ảnh: khung hình video.
+         - Răng khôn 48 mọc ngang 90 độ, viêm tủy cấp: reel 1902707130681199 (câu trích là lời bệnh nhân trong bài). Ảnh: khung hình video (bác sĩ đeo kính lúp, phim trên màn hình).
+         - Chữa tủy bé 7 tuổi (R85, gây tê cận chóp): reel 26001574796204231; ý "bé không nằm lâu quá 20 phút", "máy nội nha tích hợp vừa làm sạch vừa đo chiều dài", "nói chuyện để bé phân tán nỗi sợ" từ reel 2232116840680674 và 1545267230331709.
+         - Cắn ngược răng cửa bé 11 tuổi, 5 tháng: reel 2048021239328766. Ảnh: ghép khung "Before"/"After" của video.
+         - Hàng "ca khác": reel 962151236496288 (nhổ răng khôn R48 + chữa tủy R47), 1326700199470078 (răng mọc kẹ), 1486122056656508 (bé sợ, khóc 30 phút), 2854349448272069 (All-on-6).
+         Ảnh gốc ở anh-goc/ca-kho/. Phòng khám đã đồng ý dùng ảnh có mặt bệnh nhân trên Facebook (brief mục 1).
+         KHÔNG viết "không đau", "an toàn tuyệt đối", "tốt nhất", "cam kết" (brief mục 8; hashtag #nhorangkhonkhongdau trong bài KHÔNG dùng).
+         [CẦN XÁC NHẬN] bác sĩ duyệt câu chữ mục này, nhất là phần thuốc dùng cho phụ nữ có thai. -->
+    <section class="section cases reveal" id="ca-kho" aria-labelledby="ca-kho-title">
+      <svg class="cases__wave cases__wave--top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 34C240 60 460 64 720 42S1200 4 1440 22V60H0z"/></svg>
+      <div class="container cases__inner">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--lines">Ca khó</p>
+          <h2 id="ca-kho-title">Những ca khó, Quỳnh Thư vẫn nhận điều trị</h2>
+          <p class="section-lead">Mẹ bầu sắp sinh, răng khôn mọc ngang, bé nhỏ cần chữa tủy... Bác sĩ khám kỹ, cân nhắc thể trạng từng người rồi mới chọn cách điều trị. Dưới đây là một số ca thật phòng khám đã chia sẻ trên Facebook.</p>
+        </div>
+
+        <article class="case case--feature" aria-labelledby="case-me-bau">
+          <div class="case__media">
+            <img src="assets/images/ca-kho-me-bau.webp?v=1ea45349" width="540" height="720" loading="lazy" alt="Bác sĩ chữa tủy cho một mẹ bầu đang nằm trên ghế nha khoa">
+            <span class="case__tag">Mẹ bầu 38 tuần</span>
+          </div>
+          <div class="case__body">
+            <p class="case__kicker">Điều trị tủy</p>
+            <h3 id="case-me-bau">Chữa tủy cho mẹ bầu ở tuần thai thứ 38</h3>
+            <p class="case__intro">Bạn Ng. mang thai lần đầu, đau nhức răng do viêm tủy. Bạn đã đến nhiều phòng khám nhưng chưa nơi nào nhận điều trị vì đang mang thai.</p>
+            <ol class="case__steps">
+              <li><span class="case__step">Tình trạng</span><p>Thai 38 tuần, viêm tủy gây đau nhức, sắp đến ngày sinh.</p></li>
+              <li><span class="case__step">Cách xử lý</span><p>Chọn thuốc tê, kháng sinh, thuốc giảm đau và dung dịch bơm rửa dùng được cho phụ nữ có thai. Dùng máy định vị chóp đo chiều dài ống tủy trong suốt quá trình, không cần chụp phim X-quang.</p></li>
+              <li><span class="case__step">Kết quả</span><p>Hết đau răng, ăn nhai và ngủ nghỉ tốt trở lại để chuẩn bị cho ngày sinh.</p></li>
+            </ol>
+            <p class="case__note"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg><span>Phụ nữ có thai không có chống chỉ định tuyệt đối với chữa tủy, nhổ răng, trám răng hay lấy vôi răng. Thời điểm điều trị thuận lợi là 3 tháng giữa và 3 tháng cuối thai kỳ, bác sĩ cân nhắc thể trạng từng người để quyết định.</span></p>
+            <p class="case__links"><a href="https://www.facebook.com/reel/1396010475778557" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Xem video ca này</a><a href="dich-vu/dieu-tri-tuy.html">Điều trị tủy<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+          </div>
+        </article>
+
+        <ul class="cases__list" aria-label="Các ca khó khác" tabindex="0">
+          <li class="case">
+            <div class="case__media">
+              <img src="assets/images/ca-kho-rang-khon.webp?v=79ee1e5a" width="540" height="405" loading="lazy" alt="Bác sĩ đeo kính phóng đại tiểu phẫu nhổ răng khôn, phim X-quang hiện trên màn hình phía sau">
+              <span class="case__tag">Tiểu phẫu</span>
+            </div>
+            <div class="case__body">
+              <h3>Răng khôn mọc ngang 90 độ, viêm tủy cấp</h3>
+              <p>Bệnh nhân đau nhức cả đêm không ngủ được, sáng sớm đến phòng khám. Bác sĩ tiểu phẫu nhổ răng khôn ngay trong buổi sáng.</p>
+              <blockquote class="case__quote">“Chưa kịp chuẩn bị tinh thần thì chị đã nhổ xong rồi.”</blockquote>
+              <p class="case__links"><a href="https://www.facebook.com/reel/1902707130681199" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Xem video</a><a href="dich-vu/nho-rang.html">Nhổ răng khôn<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+            </div>
+          </li>
+          <li class="case">
+            <div class="case__media">
+              <img src="assets/images/ca-kho-tuy-tre-em.webp?v=4f88d259" width="540" height="405" loading="lazy" alt="Bác sĩ và trợ thủ chữa tủy răng sữa cho một bé gái đang nằm ngoan trên ghế">
+              <span class="case__tag">Bé 7 tuổi</span>
+            </div>
+            <div class="case__body">
+              <h3>Chữa tủy răng sữa cho bé 7 tuổi</h3>
+              <p>Trẻ nhỏ khó nằm yên trên ghế quá 20 phút. Bác sĩ gây tê, dùng máy nội nha tích hợp vừa làm sạch ống tủy vừa đo chiều dài, thao tác gọn trong một lần nằm ghế và trò chuyện liên tục để bé bớt sợ.</p>
+              <p class="case__result"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Bé hợp tác giỏi suốt buổi điều trị</p>
+              <p class="case__links"><a href="https://www.facebook.com/reel/26001574796204231" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Xem video</a><a href="dich-vu/kham-tre-em.html">Nha khoa trẻ em<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+            </div>
+          </li>
+          <li class="case">
+            <div class="case__media">
+              <img src="assets/images/ca-kho-can-nguoc.webp?v=efe7af94" width="540" height="405" loading="lazy" alt="Ảnh trước và sau: răng cửa cắn ngược, sau 5 tháng niềng răng khớp cắn đã đúng">
+              <span class="case__tag">Bé 11 tuổi</span>
+            </div>
+            <div class="case__body">
+              <h3>Cắn ngược răng cửa, về khớp cắn chuẩn sau 5 tháng</h3>
+              <p>Bé T. 11 tuổi bị cắn ngược nhóm răng cửa giữa hàm trên. Sau 5 tháng niềng răng tại phòng khám, khớp cắn của bé đã về đúng vị trí.</p>
+              <p class="case__result"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Khớp cắn đúng sau 5 tháng</p>
+              <p class="case__links"><a href="https://www.facebook.com/reel/2048021239328766" target="_blank" rel="noopener" data-track="facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg>Xem video</a><a href="dich-vu/nieng-rang.html">Niềng răng<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+            </div>
+          </li>
+        </ul>
+        <p class="cases__hint" aria-hidden="true">Vuốt ngang để xem thêm ca<svg class="icon icon--sm"><use href="#i-arrow"/></svg></p>
+
+        <div class="cases__more">
+          <p class="cases__more-title">Các ca khác phòng khám đã chia sẻ:</p>
+          <ul class="cases__chips">
+            <li>Nhổ răng khôn và chữa tủy răng kế bên trong 1 lần hẹn</li>
+            <li>Răng mọc kẹ ở trẻ, răng sữa chân còn dài</li>
+            <li>Bé sợ, khóc, không chịu vào phòng khám</li>
+            <li>Mất răng toàn hàm: All-on-6</li>
+          </ul>
+        </div>
+
+        <p class="cases__disclaimer">Kết quả khác nhau tùy tình trạng của từng người.</p>
+
+        <div class="cases__cta">
+          <p>Bạn đang gặp ca khó, hoặc từng được khuyên “chịu vậy”? Đặt lịch để bác sĩ khám và tư vấn cách điều trị phù hợp.</p>
+          <div class="cases__actions">
+            <a class="btn btn--cta" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Đặt lịch khám qua Zalo</a>
+            <a class="btn btn--outline-light" href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0944 479 405</a>
+          </div>
+        </div>
+      </div>
+      <svg class="cases__wave cases__wave--bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30C240 4 470 0 730 22S1200 58 1440 36V60H0z"/></svg>
     </section>
 
     <!-- ===== HÌNH ẢNH HOẠT ĐỘNG + ĐÁNH GIÁ ===== -->
@@ -1097,7 +1207,7 @@
       </div>
       <div class="container site-footer__bottom">
         <p>© 2026 · Công ty TNHH MTV Nha khoa Quỳnh Thư <span aria-hidden="true">|</span> 217 Văn Tiến Dũng, 303 Lê Quảng Chí, Hòa Xuân, Đà Nẵng</p>
-        <p class="site-footer__license">MST: 0402209530 <span aria-hidden="true">·</span> Giấy phép hoạt động số 01252/ĐNA-GPHĐ</p>
+        <p class="site-footer__license">MST: 0402209530 <span aria-hidden="true">·</span> Giấy phép hoạt động số 01252/ĐNA-GPHĐ và 01850/ĐNA-GPHĐ</p>
       </div>
     </div>
   </footer>
