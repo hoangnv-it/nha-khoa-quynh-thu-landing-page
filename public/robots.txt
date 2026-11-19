@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://quynh-thu-landing-page.tai-khoan.workers.dev/sitemap.xml
+Sitemap: https://nhakhoaquynhthu.com/sitemap.xml

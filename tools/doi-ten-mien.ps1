@@ -1,10 +1,11 @@
 ﻿<#
   doi-ten-mien.ps1
-  Đổi địa chỉ website (canonical, og:url, og:image, JSON-LD, sitemap, robots, llms.txt) ở MỘT lần chạy.
+  Đổi địa chỉ website (canonical, hreflang, og:url, og:image, JSON-LD, sitemap, robots, llms.txt,
+  HOST trong src/index.js) ở MỘT lần chạy.
   Địa chỉ hiện tại lưu trong tools/site-url.txt (đây là "một chỗ" duy nhất cần nhớ).
 
   Cách chạy (từ thư mục dự án):
-    powershell -ExecutionPolicy Bypass -File tools\doi-ten-mien.ps1 -NewUrl "https://nhakhoaquynhthu.vn/"
+    powershell -ExecutionPolicy Bypass -File tools\doi-ten-mien.ps1 -NewUrl "https://nhakhoaquynhthu.com/"
 #>
 param(
   [Parameter(Mandatory = $true)][string]$NewUrl
@@ -35,6 +36,18 @@ foreach ($t in $targets) {
   if ($new -ne $text) {
     [System.IO.File]::WriteAllText($t, $new, $utf8NoBom)
     Write-Host ("Đã đổi: {0}" -f (Split-Path $t -Leaf))
+  }
+}
+
+# Worker chuyển hướng 301 (src/index.js): đổi HOST sang tên miền mới (bỏ https:// và www.)
+$worker = Join-Path $root 'src\index.js'
+if (Test-Path $worker) {
+  $host2 = ([Uri]$NewUrl).Host -replace '^www\.', ''
+  $text = [System.IO.File]::ReadAllText($worker, $utf8NoBom)
+  $new  = [regex]::Replace($text, "const HOST = '[^']*';", "const HOST = '$host2';")
+  if ($new -ne $text) {
+    [System.IO.File]::WriteAllText($worker, $new, $utf8NoBom)
+    Write-Host 'Đã đổi: src/index.js (HOST)'
   }
 }
 

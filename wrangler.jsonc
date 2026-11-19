@@ -1,15 +1,18 @@
 // Cấu hình Cloudflare Workers cho landing page Nha khoa Quỳnh Thư.
-// - Chỉ phục vụ file tĩnh trong thư mục ./public (không có code Worker).
-// - Đường dẫn không tồn tại sẽ trả về public/404.html.
-// - Khi có tên miền riêng: thêm src/index.js (chuyển hướng 301 *.workers.dev -> tên miền)
-//   giống dự án Diệu Hiền, rồi thêm "main" và "routes" vào file này.
+// - Phục vụ file tĩnh trong thư mục ./public. Đường dẫn không tồn tại sẽ trả về public/404.html.
+// - src/index.js chạy trước file tĩnh (run_worker_first) để chuyển hướng 301 www.nhakhoaquynhthu.com
+//   và địa chỉ cũ *.workers.dev về https://nhakhoaquynhthu.com (giống dự án Diệu Hiền).
+// - Tên miền nhakhoaquynhthu.com (và www) gắn trong Cloudflare: Workers & Pages > tên Worker > Settings > Domains & Routes.
 // - "name" PHẢI giống hệt tên Worker trên Cloudflare (Workers & Pages > tên Worker).
 //   Lệch tên thì Cloudflare không deploy vào Worker đang nối với GitHub và báo cảnh báo.
 {
   "name": "nha-khoa-quynh-thu-landing-page",
   "compatibility_date": "2025-09-01",
+  "main": "src/index.js",
   "assets": {
     "directory": "./public",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": true
   }
 }

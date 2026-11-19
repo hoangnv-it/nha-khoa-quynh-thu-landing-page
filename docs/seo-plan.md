@@ -11,7 +11,7 @@ Lập ngày 2026-11-10. Chủ dự án đã duyệt: mua tên miền riêng, th�
 
 ## Giai đoạn A: Nền móng (làm trước)
 
-- [ ] A1. Mua tên miền riêng, gắn vào Worker trên Cloudflare, chạy `tools/doi-ten-mien.ps1 -NewUrl "..."`, thêm Worker chuyển hướng 301 từ `*.workers.dev`.
+- [x] A1. (Xong 2026-11-19: https://nhakhoaquynhthu.com) Mua tên miền riêng, gắn vào Worker trên Cloudflare, chạy `tools/doi-ten-mien.ps1 -NewUrl "..."`, thêm Worker chuyển hướng 301 từ `*.workers.dev`.
 - [ ] A2. Đăng ký Google Search Console + Bing Webmaster, nộp `sitemap.xml`.
 - [ ] A3. Thống nhất tên, địa chỉ, số điện thoại ở mọi nơi: chốt số nhà CS1 (217 hay 114); sửa NhaKhoaHub (đang ghi SĐT 0869 554 535 và giờ 8:00-19:00 cả tuần).
 - [ ] A4. Xác nhận tên phường mới sau sắp xếp hành chính 2025 của 2 cơ sở, ghi cả tên cũ và mới trên web.

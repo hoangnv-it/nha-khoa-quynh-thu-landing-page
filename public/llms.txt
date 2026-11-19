@@ -2,8 +2,8 @@
 
 > Nha khoa gia đình với 2 cơ sở tại Hòa Xuân, Đà Nẵng, Việt Nam. Mở cửa đến 19:00. Bác sĩ khám và báo giá trước khi điều trị.
 
-Website: https://quynh-thu-landing-page.tai-khoan.workers.dev/
-English version: https://quynh-thu-landing-page.tai-khoan.workers.dev/en/
+Website: https://nhakhoaquynhthu.com/
+English version: https://nhakhoaquynhthu.com/en/
 Công ty: Công ty TNHH MTV Nha khoa Quỳnh Thư (MST 0402209530; Giấy phép hoạt động số 01252/ĐNA-GPHĐ và 01850/ĐNA-GPHĐ, mỗi cơ sở 1 giấy phép)
 Điện thoại (cả 2 cơ sở): 0944 479 405 (+84944479405)
 Zalo: https://zalo.me/0944479405
@@ -37,13 +37,13 @@ Email: lequynhthu@gmail.com
 
 ## Trang dịch vụ
 
-- Khám răng trẻ em: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/kham-tre-em
-- Răng sứ thẩm mỹ: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/rang-su
-- Điều trị tủy, sâu răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/dieu-tri-tuy
-- Niềng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nieng-rang
-- Tẩy trắng răng: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/tay-trang
-- Nhổ răng, nhổ răng khôn: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/nho-rang
-- Trồng răng Implant: https://quynh-thu-landing-page.tai-khoan.workers.dev/dich-vu/implant
+- Khám răng trẻ em: https://nhakhoaquynhthu.com/dich-vu/kham-tre-em
+- Răng sứ thẩm mỹ: https://nhakhoaquynhthu.com/dich-vu/rang-su
+- Điều trị tủy, sâu răng: https://nhakhoaquynhthu.com/dich-vu/dieu-tri-tuy
+- Niềng răng: https://nhakhoaquynhthu.com/dich-vu/nieng-rang
+- Tẩy trắng răng: https://nhakhoaquynhthu.com/dich-vu/tay-trang
+- Nhổ răng, nhổ răng khôn: https://nhakhoaquynhthu.com/dich-vu/nho-rang
+- Trồng răng Implant: https://nhakhoaquynhthu.com/dich-vu/implant
 
 ## Tiện ích
 
