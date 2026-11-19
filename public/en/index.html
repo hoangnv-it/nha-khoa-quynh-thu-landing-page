@@ -43,7 +43,7 @@
   <link rel="apple-touch-icon" href="../assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="../assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="../style.css?v=89737b38">
+  <link rel="stylesheet" href="../style.css?v=2c81edba">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -188,8 +188,8 @@
               <li><a href="services/dental-implants.html"><img src="../assets/icons/implant.webp?v=b8b8ec5a" width="256" height="256" alt="" loading="lazy"><span>Dental implants</span></a></li>
             </ul>
           </li>
-          <li><a href="#bang-gia" data-nav="bang-gia">Prices</a></li>
           <li><a href="#danh-gia" data-nav="danh-gia">Reviews</a></li>
+          <li><a href="#bang-gia" data-nav="bang-gia">Prices</a></li>
           <li><a href="#dia-chi" data-nav="dia-chi">Contact</a></li>
         </ul>
       </nav>
@@ -299,121 +299,6 @@
           </ol>
           <a class="btn btn--outline" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo">Book a visit for your child</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== BẢNG GIÁ ===== -->
-    <section class="section reveal" id="bang-gia" aria-labelledby="bang-gia-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--lines">Prices</p>
-          <h2 id="bang-gia-title">Price guide, quoted before treatment</h2>
-        </div>
-        <!-- Bảng giá (thay 2026-11-10): theo 3 bảng giá của phòng khám (ảnh chủ dự án gửi), chia 3 tab giống 3 bảng.
-             Chữ viết tắt trên bảng gốc đã viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án: VSRM -> Vệ sinh răng miệng,
-             BHR -> bít hố rãnh, KT -> kết thúc, SIC -> SSC (mão thép không gỉ), Flouride -> Fluoride, Thụy Sỹ -> Thụy Sĩ.
-             Không có JS: 3 bảng hiện lần lượt (thanh tab ẩn). Có JS: script mục "tab bảng giá" bật tab. Sửa giá thì sửa cả trang dịch vụ tương ứng. -->
-        <div class="price-card">
-          <div class="price-tabs" data-price-tabs>
-            <div class="price-tabs__list" aria-label="Price categories" hidden>
-              <button type="button" class="price-tabs__tab" id="tab-tong-quat" aria-controls="gia-tong-quat">General</button>
-              <button type="button" class="price-tabs__tab" id="tab-tre-em" aria-controls="gia-tre-em">Kids</button>
-              <button type="button" class="price-tabs__tab" id="tab-ky-thuat-cao" aria-controls="gia-ky-thuat-cao">Advanced</button>
-            </div>
-            <div class="price-panel" id="gia-tong-quat">
-              <h3 class="price-panel__title">General dentistry</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Teeth cleaning</td><td><span class="price-table__num">200,000 - 400,000</span><small>per session (1-2 visits)</small></td></tr>
-                  <tr><td>Composite fillings</td><td><span class="price-table__num">300,000 - 500,000</span></td></tr>
-                  <tr><td>Root canal</td><td><span class="price-table__num">800,000 - 1,100,000</span><small>with MTA</small></td></tr>
-                  <tr><td>Root canal retreatment</td><td><span class="price-table__num">1,200,000 - 1,650,000</span><small>with MTA</small></td></tr>
-                  <tr><td>Simple extraction</td><td><span class="price-table__num">300,000 - 500,000</span></td></tr>
-                  <tr><td>Wisdom tooth or difficult extraction</td><td><span class="price-table__num">800,000 - 2,000,000</span></td></tr>
-                  <tr><td>Porcelain-fused-to-metal crown</td><td><span class="price-table__num">1,200,000 - 1,800,000</span></td></tr>
-                  <tr><td>All-ceramic crown</td><td><span class="price-table__num">3,000,000 - 6,000,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3,000,000 - 7,000,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Removable denture (American acrylic teeth)</td><td><span class="price-table__num">300,000 - 500,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Biosoft denture</td><td><span class="price-table__num">500,000 - 1,500,000</span><small>per denture base</small></td></tr>
-                  <tr><td>Teeth whitening</td><td><span class="price-table__num">1,500,000 - 2,000,000</span></td></tr>
-                  <tr><td>Diamond tooth gem</td><td><span class="price-table__num">500,000</span><small>per gem</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="price-panel" id="gia-tre-em">
-              <h3 class="price-panel__title">Kids' dentistry</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Basic cleaning (baby teeth)</td><td><span class="price-table__num">100,000 - 200,000</span><small>per session</small></td></tr>
-                  <tr><td>Cleaning and polishing (mixed and permanent teeth)</td><td><span class="price-table__num">200,000 - 300,000</span><small>per session</small></td></tr>
-                  <tr><td>Composite fillings</td><td><span class="price-table__num">200,000 - 400,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Temporary glass ionomer filling (GIC)</td><td><span class="price-table__num">200,000 - 300,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Pit and fissure sealant</td><td><span class="price-table__num">200,000 - 300,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Baby tooth root canal + final filling</td><td><span class="price-table__num">600,000 - 800,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Stainless steel crown (SSC)</td><td><span class="price-table__num">500,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Extraction with numbing gel</td><td><span class="price-table__num">50,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Extraction with a numbing injection</td><td><span class="price-table__num">100,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Difficult or surgical extraction</td><td><span class="price-table__num">200,000 - 500,000</span><small>per tooth</small></td></tr>
-                  <tr><td>Fluoride treatment</td><td><span class="price-table__num">200,000</span><small>per session</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="price-panel" id="gia-ky-thuat-cao">
-              <h3 class="price-panel__title">Advanced dentistry</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Partial orthodontics</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
-                  <tr><td>Comprehensive orthodontics</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
-                  <tr><td>Clear aligner treatment</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
-                  <tr><td>Korean implant</td><td><span class="price-table__num">10,000,000</span><small>per implant</small></td></tr>
-                  <tr><td>American implant</td><td><span class="price-table__num">12,000,000 - 15,000,000</span><small>per implant</small></td></tr>
-                  <tr><td>Swiss implant</td><td><span class="price-table__num">20,000,000</span><small>per implant</small></td></tr>
-                  <tr><td>All-ceramic crown on an implant</td><td><span class="price-table__num">5,000,000 - 8,000,000</span><small>per unit</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="price-note" role="note" aria-label="About our prices">
-            <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
-            <div class="price-note__body">
-              <p class="price-note__title">About our prices</p>
-              <ul class="price-note__list">
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>These are guide prices.</strong> Your dentist will examine you in person and walk you through the treatment plan and cost before anything is done.</span></li>
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Prices may vary</strong> depending on each person's teeth.</span></li>
-              </ul>
-            </div>
-          </div>
-          <ul class="chips">
-            <li>0% financing for braces</li>
-            <li>ATM cards, Visa, Mastercard</li>
-            <li>Medical records and VAT invoices for insurance claims</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TRƯỚC & SAU ===== -->
-    <section class="section reveal" id="truoc-sau" aria-labelledby="truoc-sau-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Before &amp; after</p>
-          <h2 id="truoc-sau-title" class="h2-sm">Some of our real cases</h2>
-        </div>
-        <ul class="ba-grid">
-          <li><figure><img src="../assets/images/truoc-sau-01.webp?v=c67d6551" width="640" height="800" loading="lazy" alt="Before and after porcelain crowns on the upper teeth"><figcaption>Porcelain crowns</figcaption></figure></li>
-          <li><figure><img src="../assets/images/truoc-sau-02.webp?v=2f6a9991" width="640" height="800" loading="lazy" alt="Before and after porcelain crowns, chewing surface view"><figcaption>Porcelain crowns</figcaption></figure></li>
-          <li><figure><img src="../assets/images/truoc-sau-03.webp?v=268f24d8" width="640" height="800" loading="lazy" alt="Before and during treatment with braces"><figcaption>Traditional braces</figcaption></figure></li>
-        </ul>
-        <p class="small-note">Results vary from person to person.</p>
       </div>
     </section>
 
@@ -758,6 +643,22 @@
       </div>
     </section>
 
+    <!-- ===== TRƯỚC & SAU (dời xuống sau mục Hình ảnh hoạt động 2026-11-19, chủ dự án yêu cầu) ===== -->
+    <section class="section reveal" id="truoc-sau" aria-labelledby="truoc-sau-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Before &amp; after</p>
+          <h2 id="truoc-sau-title" class="h2-sm">Some of our real cases</h2>
+        </div>
+        <ul class="ba-grid">
+          <li><figure><img src="../assets/images/truoc-sau-01.webp?v=c67d6551" width="640" height="800" loading="lazy" alt="Before and after porcelain crowns on the upper teeth"><figcaption>Porcelain crowns</figcaption></figure></li>
+          <li><figure><img src="../assets/images/truoc-sau-02.webp?v=2f6a9991" width="640" height="800" loading="lazy" alt="Before and after porcelain crowns, chewing surface view"><figcaption>Porcelain crowns</figcaption></figure></li>
+          <li><figure><img src="../assets/images/truoc-sau-03.webp?v=268f24d8" width="640" height="800" loading="lazy" alt="Before and during treatment with braces"><figcaption>Traditional braces</figcaption></figure></li>
+        </ul>
+        <p class="small-note">Results vary from person to person.</p>
+      </div>
+    </section>
+
     <!-- ===== ĐÁNH GIÁ (đánh giá thật trên Google Maps, giữ nguyên văn). Làm lại 2026-11-07:
          - Trên: điểm Google RIÊNG từng cơ sở (không gộp), số đếm lên + sao tô dần khi cuộn tới.
          - Dưới: thẻ đánh giá chạy ngang liên tục (script nhân đôi danh sách, bản sao aria-hidden), dừng khi rê chuột / chạm.
@@ -825,6 +726,111 @@
             <blockquote>“Friendly, clear advice. My teeth are a bit weak, but the dentist was very gentle and it didn't hurt. Really happy and I'll be back.”</blockquote>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===== BẢNG GIÁ (dời xuống sau mục Đánh giá 2026-11-19, chủ dự án yêu cầu) ===== -->
+    <section class="section reveal" id="bang-gia" aria-labelledby="bang-gia-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--lines">Prices</p>
+          <h2 id="bang-gia-title">Price guide, quoted before treatment</h2>
+        </div>
+        <!-- Bảng giá (thay 2026-11-10): theo 3 bảng giá của phòng khám (ảnh chủ dự án gửi), chia 3 tab giống 3 bảng.
+             Chữ viết tắt trên bảng gốc đã viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án: VSRM -> Vệ sinh răng miệng,
+             BHR -> bít hố rãnh, KT -> kết thúc, SIC -> SSC (mão thép không gỉ), Flouride -> Fluoride, Thụy Sỹ -> Thụy Sĩ.
+             Không có JS: 3 bảng hiện lần lượt (thanh tab ẩn). Có JS: script mục "tab bảng giá" bật tab. Sửa giá thì sửa cả trang dịch vụ tương ứng. -->
+        <div class="price-card">
+          <div class="price-tabs" data-price-tabs>
+            <div class="price-tabs__list" aria-label="Price categories" hidden>
+              <button type="button" class="price-tabs__tab" id="tab-tong-quat" aria-controls="gia-tong-quat">General</button>
+              <button type="button" class="price-tabs__tab" id="tab-tre-em" aria-controls="gia-tre-em">Kids</button>
+              <button type="button" class="price-tabs__tab" id="tab-ky-thuat-cao" aria-controls="gia-ky-thuat-cao">Advanced</button>
+            </div>
+            <div class="price-panel" id="gia-tong-quat">
+              <h3 class="price-panel__title">General dentistry</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Teeth cleaning</td><td><span class="price-table__num">200,000 - 400,000</span><small>per session (1-2 visits)</small></td></tr>
+                  <tr><td>Composite fillings</td><td><span class="price-table__num">300,000 - 500,000</span></td></tr>
+                  <tr><td>Root canal</td><td><span class="price-table__num">800,000 - 1,100,000</span><small>with MTA</small></td></tr>
+                  <tr><td>Root canal retreatment</td><td><span class="price-table__num">1,200,000 - 1,650,000</span><small>with MTA</small></td></tr>
+                  <tr><td>Simple extraction</td><td><span class="price-table__num">300,000 - 500,000</span></td></tr>
+                  <tr><td>Wisdom tooth or difficult extraction</td><td><span class="price-table__num">800,000 - 2,000,000</span></td></tr>
+                  <tr><td>Porcelain-fused-to-metal crown</td><td><span class="price-table__num">1,200,000 - 1,800,000</span></td></tr>
+                  <tr><td>All-ceramic crown</td><td><span class="price-table__num">3,000,000 - 6,000,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3,000,000 - 7,000,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Removable denture (American acrylic teeth)</td><td><span class="price-table__num">300,000 - 500,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Biosoft denture</td><td><span class="price-table__num">500,000 - 1,500,000</span><small>per denture base</small></td></tr>
+                  <tr><td>Teeth whitening</td><td><span class="price-table__num">1,500,000 - 2,000,000</span></td></tr>
+                  <tr><td>Diamond tooth gem</td><td><span class="price-table__num">500,000</span><small>per gem</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-tre-em">
+              <h3 class="price-panel__title">Kids' dentistry</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Basic cleaning (baby teeth)</td><td><span class="price-table__num">100,000 - 200,000</span><small>per session</small></td></tr>
+                  <tr><td>Cleaning and polishing (mixed and permanent teeth)</td><td><span class="price-table__num">200,000 - 300,000</span><small>per session</small></td></tr>
+                  <tr><td>Composite fillings</td><td><span class="price-table__num">200,000 - 400,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Temporary glass ionomer filling (GIC)</td><td><span class="price-table__num">200,000 - 300,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Pit and fissure sealant</td><td><span class="price-table__num">200,000 - 300,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Baby tooth root canal + final filling</td><td><span class="price-table__num">600,000 - 800,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Stainless steel crown (SSC)</td><td><span class="price-table__num">500,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Extraction with numbing gel</td><td><span class="price-table__num">50,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Extraction with a numbing injection</td><td><span class="price-table__num">100,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Difficult or surgical extraction</td><td><span class="price-table__num">200,000 - 500,000</span><small>per tooth</small></td></tr>
+                  <tr><td>Fluoride treatment</td><td><span class="price-table__num">200,000</span><small>per session</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-ky-thuat-cao">
+              <h3 class="price-panel__title">Advanced dentistry</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Service</th><th scope="col">Price guide (VND)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Partial orthodontics</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
+                  <tr><td>Comprehensive orthodontics</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
+                  <tr><td>Clear aligner treatment</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Quoted after your exam</span></td></tr>
+                  <tr><td>Korean implant</td><td><span class="price-table__num">10,000,000</span><small>per implant</small></td></tr>
+                  <tr><td>American implant</td><td><span class="price-table__num">12,000,000 - 15,000,000</span><small>per implant</small></td></tr>
+                  <tr><td>Swiss implant</td><td><span class="price-table__num">20,000,000</span><small>per implant</small></td></tr>
+                  <tr><td>All-ceramic crown on an implant</td><td><span class="price-table__num">5,000,000 - 8,000,000</span><small>per unit</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Thu gọn bảng giá (thêm 2026-11-19): có JS thì mỗi tab chỉ hiện 6 dịch vụ đầu, nút dưới đây mở/thu toàn bộ (dùng chung 3 tab).
+               Không có JS: nút ẩn, bảng hiện đầy đủ. Mở trang kèm #gia-... (từ trang dịch vụ "Xem bảng giá đầy đủ") thì mở sẵn toàn bộ. Clarity: xem_bang_gia. -->
+          <button type="button" class="price-more" aria-expanded="true" aria-controls="gia-tong-quat gia-tre-em gia-ky-thuat-cao" data-price-more hidden>
+            <span class="price-more__open">See all prices</span><span class="price-more__close">Show fewer prices</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="price-note" role="note" aria-label="About our prices">
+            <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
+            <div class="price-note__body">
+              <p class="price-note__title">About our prices</p>
+              <ul class="price-note__list">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>These are guide prices.</strong> Your dentist will examine you in person and walk you through the treatment plan and cost before anything is done.</span></li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Prices may vary</strong> depending on each person's teeth.</span></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="chips">
+            <li>0% financing for braces</li>
+            <li>ATM cards, Visa, Mastercard</li>
+            <li>Medical records and VAT invoices for insurance claims</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -1007,6 +1013,6 @@
     </ul>
   </dialog>
 
-  <script src="../script.js?v=31823fa2" defer></script>
+  <script src="../script.js?v=383b9ca9" defer></script>
 </body>
 </html>

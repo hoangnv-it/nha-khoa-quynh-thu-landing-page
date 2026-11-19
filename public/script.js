@@ -148,8 +148,9 @@
   /* Mục nào thuộc menu nào (các mục không có trong menu gắn vào mục gần nhất) */
   var NAV_OF = {
     "dich-vu": "dich-vu", "gioi-thieu": "dich-vu", "tre-em": "dich-vu",
-    "bang-gia": "bang-gia", "truoc-sau": "bang-gia", "doi-ngu": "bang-gia",
-    "phong-kham": "danh-gia", "danh-gia": "danh-gia",
+    "doi-ngu": "dich-vu", "thiet-bi": "dich-vu", "ca-kho": "dich-vu",
+    "phong-kham": "danh-gia", "truoc-sau": "danh-gia", "danh-gia": "danh-gia", /* Trước & sau dời xuống sau Hình ảnh hoạt động 2026-11-19 */
+    "bang-gia": "bang-gia", /* dời xuống sau Đánh giá 2026-11-19; menu đổi thành Đánh giá rồi mới tới Bảng giá */
     "dia-chi": "dia-chi", "hoi-dap": "dia-chi"
   };
   var sections = Object.keys(NAV_OF).map(function (id) { return doc.getElementById(id); }).filter(Boolean);
@@ -411,6 +412,38 @@
     });
     select(start, false);
     if (start > 0) { var sec = box.closest("section"); if (sec) sec.scrollIntoView(); }
+  });
+
+  /* Thu gọn bảng giá (#bang-gia, thêm 2026-11-19): mỗi tab chỉ hiện PRICE_ROWS dịch vụ đầu (CSS .price-card.is-collapsed),
+     nút [data-price-more] mở/thu toàn bộ, dùng chung 3 tab. Không có JS: bảng hiện đầy đủ, nút ẩn.
+     Tab đang mở có ≤ PRICE_ROWS dòng thì ẩn nút. Mở trang kèm #gia-... (link "Xem bảng giá đầy đủ" ở trang dịch vụ) thì mở sẵn toàn bộ.
+     Thu gọn khi đang ở dưới bảng: cuộn về đầu mục để không bị lạc chỗ. Clarity: xem_bang_gia khi bấm xem toàn bộ.
+     Đổi số dòng: sửa PRICE_ROWS ở đây và nth-child(n+7) trong style.css (mục bảng giá). */
+  var PRICE_ROWS = 6;
+  $$("[data-price-more]").forEach(function (btn) {
+    var card = btn.closest(".price-card");
+    if (!card) return;
+    var setOpen = function (open) {
+      card.classList.toggle("is-collapsed", !open);
+      btn.setAttribute("aria-expanded", String(open));
+    };
+    var refresh = function () {
+      var panel = $$(".price-panel", card).filter(function (p) { return !p.hidden; })[0];
+      var rows = panel ? $$("tbody tr", panel).length : 0;
+      btn.hidden = rows <= PRICE_ROWS;
+    };
+    setOpen(/^#gia-/.test(location.hash));
+    refresh();
+    btn.addEventListener("click", function () {
+      var open = card.classList.contains("is-collapsed");
+      setOpen(open);
+      if (open) { track("xem_bang_gia"); return; }
+      /* Đợi trình duyệt vẽ lại bảng ngắn rồi mới cuộn (cuộn ngay thì bị "scroll anchoring" giữ chỗ cũ) */
+      requestAnimationFrame(function () {
+        if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: "start" });
+      });
+    });
+    $$(".price-tabs__tab", card).forEach(function (t) { t.addEventListener("click", refresh); t.addEventListener("keydown", function () { setTimeout(refresh, 0); }); });
   });
 
   /* Nút đổi ngôn ngữ VI/EN (thêm 2026-11-10): nhớ lựa chọn để lần sau không tự chuyển theo ngôn ngữ trình duyệt

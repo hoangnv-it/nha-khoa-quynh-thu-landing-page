@@ -1300,3 +1300,9 @@ VI: Mất răng toàn hàm: All-on-6
 EN: A full arch of missing teeth: All-on-6
 VI: Bạn đang gặp ca khó, hoặc từng được khuyên “chịu vậy”? Đặt lịch để bác sĩ khám và tư vấn cách điều trị phù hợp.
 EN: Dealing with a complex case, or been told to “just live with it”? Book a visit so our dentist can examine you and recommend the right treatment.
+
+# ===== Nút thu gọn bảng giá (thêm 2026-11-19) =====
+VI: Xem toàn bộ bảng giá
+EN: See all prices
+VI: Thu gọn bảng giá
+EN: Show fewer prices

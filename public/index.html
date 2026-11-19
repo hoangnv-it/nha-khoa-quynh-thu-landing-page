@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=89737b38">
+  <link rel="stylesheet" href="style.css?v=2c81edba">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -450,8 +450,8 @@
               <li><a href="dich-vu/implant.html"><img src="assets/icons/implant.webp?v=b8b8ec5a" width="256" height="256" alt="" loading="lazy"><span>Trồng răng Implant</span></a></li>
             </ul>
           </li>
-          <li><a href="#bang-gia" data-nav="bang-gia">Bảng giá</a></li>
           <li><a href="#danh-gia" data-nav="danh-gia">Đánh giá</a></li>
+          <li><a href="#bang-gia" data-nav="bang-gia">Bảng giá</a></li>
           <li><a href="#dia-chi" data-nav="dia-chi">Liên hệ</a></li>
         </ul>
       </nav>
@@ -561,121 +561,6 @@
           </ol>
           <a class="btn btn--outline" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo">Đặt lịch khám cho bé</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ===== BẢNG GIÁ ===== -->
-    <section class="section reveal" id="bang-gia" aria-labelledby="bang-gia-title">
-      <div class="container">
-        <div class="section-head section-head--center">
-          <p class="eyebrow eyebrow--lines">Bảng giá</p>
-          <h2 id="bang-gia-title">Giá tham khảo, báo trước khi điều trị</h2>
-        </div>
-        <!-- Bảng giá (thay 2026-11-10): theo 3 bảng giá của phòng khám (ảnh chủ dự án gửi), chia 3 tab giống 3 bảng.
-             Chữ viết tắt trên bảng gốc đã viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án: VSRM -> Vệ sinh răng miệng,
-             BHR -> bít hố rãnh, KT -> kết thúc, SIC -> SSC (mão thép không gỉ), Flouride -> Fluoride, Thụy Sỹ -> Thụy Sĩ.
-             Không có JS: 3 bảng hiện lần lượt (thanh tab ẩn). Có JS: script mục "tab bảng giá" bật tab. Sửa giá thì sửa cả trang dịch vụ tương ứng. -->
-        <div class="price-card">
-          <div class="price-tabs" data-price-tabs>
-            <div class="price-tabs__list" aria-label="Nhóm bảng giá" hidden>
-              <button type="button" class="price-tabs__tab" id="tab-tong-quat" aria-controls="gia-tong-quat">Tổng quát</button>
-              <button type="button" class="price-tabs__tab" id="tab-tre-em" aria-controls="gia-tre-em">Trẻ em</button>
-              <button type="button" class="price-tabs__tab" id="tab-ky-thuat-cao" aria-controls="gia-ky-thuat-cao">Kỹ thuật cao</button>
-            </div>
-            <div class="price-panel" id="gia-tong-quat">
-              <h3 class="price-panel__title">Nha khoa tổng quát</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Lấy vôi răng</td><td><span class="price-table__num">200.000 - 400.000</span><small>/lần (1-2 lần hẹn)</small></td></tr>
-                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
-                  <tr><td>Chữa tủy răng</td><td><span class="price-table__num">800.000 - 1.100.000</span><small>có MTA</small></td></tr>
-                  <tr><td>Chữa tủy lại</td><td><span class="price-table__num">1.200.000 - 1.650.000</span><small>có MTA</small></td></tr>
-                  <tr><td>Nhổ răng thường</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
-                  <tr><td>Nhổ răng khôn, răng khó</td><td><span class="price-table__num">800.000 - 2.000.000</span></td></tr>
-                  <tr><td>Bọc mão sứ kim loại</td><td><span class="price-table__num">1.200.000 - 1.800.000</span></td></tr>
-                  <tr><td>Bọc mão toàn sứ</td><td><span class="price-table__num">3.000.000 - 6.000.000</span><small>/răng</small></td></tr>
-                  <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3.000.000 - 7.000.000</span><small>/răng</small></td></tr>
-                  <tr><td>Răng nhựa tháo lắp (răng nhựa Mỹ)</td><td><span class="price-table__num">300.000 - 500.000</span><small>/răng</small></td></tr>
-                  <tr><td>Hàm Biosoft</td><td><span class="price-table__num">500.000 - 1.500.000</span><small>/nền hàm</small></td></tr>
-                  <tr><td>Tẩy trắng răng</td><td><span class="price-table__num">1.500.000 - 2.000.000</span></td></tr>
-                  <tr><td>Đính kim cương</td><td><span class="price-table__num">500.000</span><small>/viên</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="price-panel" id="gia-tre-em">
-              <h3 class="price-panel__title">Nha khoa trẻ em</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Vệ sinh răng miệng đơn giản (răng sữa)</td><td><span class="price-table__num">100.000 - 200.000</span><small>/lần</small></td></tr>
-                  <tr><td>Lấy vôi và đánh bóng (răng hỗn hợp, răng vĩnh viễn)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/lần</small></td></tr>
-                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">200.000 - 400.000</span><small>/răng</small></td></tr>
-                  <tr><td>Trám răng theo dõi (GIC)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
-                  <tr><td>Trám bít hố rãnh</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
-                  <tr><td>Chữa tủy răng sữa + trám kết thúc</td><td><span class="price-table__num">600.000 - 800.000</span><small>/răng</small></td></tr>
-                  <tr><td>Bọc mão thép không gỉ (SSC)</td><td><span class="price-table__num">500.000</span><small>/răng</small></td></tr>
-                  <tr><td>Nhổ răng bôi tê</td><td><span class="price-table__num">50.000</span><small>/răng</small></td></tr>
-                  <tr><td>Nhổ răng chích tê</td><td><span class="price-table__num">100.000</span><small>/răng</small></td></tr>
-                  <tr><td>Nhổ răng khó, nhổ răng can thiệp</td><td><span class="price-table__num">200.000 - 500.000</span><small>/răng</small></td></tr>
-                  <tr><td>Bôi Fluoride</td><td><span class="price-table__num">200.000</span><small>/lần</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="price-panel" id="gia-ky-thuat-cao">
-              <h3 class="price-panel__title">Nha khoa kỹ thuật cao</h3>
-              <table class="price-table">
-                <thead>
-                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Chỉnh nha phân đoạn</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
-                  <tr><td>Chỉnh nha toàn diện</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
-                  <tr><td>Chỉnh nha bằng khay trong suốt</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
-                  <tr><td>Cắm trụ Implant Hàn Quốc</td><td><span class="price-table__num">10.000.000</span><small>/trụ</small></td></tr>
-                  <tr><td>Cắm trụ Implant Mỹ</td><td><span class="price-table__num">12.000.000 - 15.000.000</span><small>/trụ</small></td></tr>
-                  <tr><td>Cắm trụ Implant Thụy Sĩ</td><td><span class="price-table__num">20.000.000</span><small>/trụ</small></td></tr>
-                  <tr><td>Răng toàn sứ trên Implant</td><td><span class="price-table__num">5.000.000 - 8.000.000</span><small>/đơn vị</small></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="price-note" role="note" aria-label="Lưu ý về giá">
-            <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
-            <div class="price-note__body">
-              <p class="price-note__title">Lưu ý về giá</p>
-              <ul class="price-note__list">
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.</span></li>
-                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.</span></li>
-              </ul>
-            </div>
-          </div>
-          <ul class="chips">
-            <li>Niềng răng trả góp 0%</li>
-            <li>Thẻ ATM/Visa/Master</li>
-            <li>Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== TRƯỚC & SAU ===== -->
-    <section class="section reveal" id="truoc-sau" aria-labelledby="truoc-sau-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Trước &amp; sau</p>
-          <h2 id="truoc-sau-title" class="h2-sm">Một số ca điều trị tại phòng khám</h2>
-        </div>
-        <ul class="ba-grid">
-          <li><figure><img src="assets/images/truoc-sau-01.webp?v=c67d6551" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ hàm trên"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>
-          <li><figure><img src="assets/images/truoc-sau-02.webp?v=2f6a9991" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ, nhìn từ mặt nhai"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>
-          <li><figure><img src="assets/images/truoc-sau-03.webp?v=268f24d8" width="640" height="800" loading="lazy" alt="Ảnh trước và trong khi niềng răng mắc cài"><figcaption>Niềng răng mắc cài</figcaption></figure></li>
-        </ul>
-        <p class="small-note">Kết quả khác nhau tùy tình trạng của từng người.</p>
       </div>
     </section>
 
@@ -1020,6 +905,22 @@
       </div>
     </section>
 
+    <!-- ===== TRƯỚC & SAU (dời xuống sau mục Hình ảnh hoạt động 2026-11-19, chủ dự án yêu cầu) ===== -->
+    <section class="section reveal" id="truoc-sau" aria-labelledby="truoc-sau-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Trước &amp; sau</p>
+          <h2 id="truoc-sau-title" class="h2-sm">Một số ca điều trị tại phòng khám</h2>
+        </div>
+        <ul class="ba-grid">
+          <li><figure><img src="assets/images/truoc-sau-01.webp?v=c67d6551" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ hàm trên"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>
+          <li><figure><img src="assets/images/truoc-sau-02.webp?v=2f6a9991" width="640" height="800" loading="lazy" alt="Ảnh trước và sau làm răng sứ thẩm mỹ, nhìn từ mặt nhai"><figcaption>Răng sứ thẩm mỹ</figcaption></figure></li>
+          <li><figure><img src="assets/images/truoc-sau-03.webp?v=268f24d8" width="640" height="800" loading="lazy" alt="Ảnh trước và trong khi niềng răng mắc cài"><figcaption>Niềng răng mắc cài</figcaption></figure></li>
+        </ul>
+        <p class="small-note">Kết quả khác nhau tùy tình trạng của từng người.</p>
+      </div>
+    </section>
+
     <!-- ===== ĐÁNH GIÁ (đánh giá thật trên Google Maps, giữ nguyên văn). Làm lại 2026-11-07:
          - Trên: điểm Google RIÊNG từng cơ sở (không gộp), số đếm lên + sao tô dần khi cuộn tới.
          - Dưới: thẻ đánh giá chạy ngang liên tục (script nhân đôi danh sách, bản sao aria-hidden), dừng khi rê chuột / chạm.
@@ -1087,6 +988,111 @@
             <blockquote>“Tư vấn nhiệt tình, rõ ràng, răng mình hơi yếu nhưng bác sĩ làm rất nhẹ nhàng, không đau, mình rất hài lòng và sẽ quay lại.”</blockquote>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ===== BẢNG GIÁ (dời xuống sau mục Đánh giá 2026-11-19, chủ dự án yêu cầu) ===== -->
+    <section class="section reveal" id="bang-gia" aria-labelledby="bang-gia-title">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow eyebrow--lines">Bảng giá</p>
+          <h2 id="bang-gia-title">Giá tham khảo, báo trước khi điều trị</h2>
+        </div>
+        <!-- Bảng giá (thay 2026-11-10): theo 3 bảng giá của phòng khám (ảnh chủ dự án gửi), chia 3 tab giống 3 bảng.
+             Chữ viết tắt trên bảng gốc đã viết đầy đủ, sửa chính tả theo yêu cầu chủ dự án: VSRM -> Vệ sinh răng miệng,
+             BHR -> bít hố rãnh, KT -> kết thúc, SIC -> SSC (mão thép không gỉ), Flouride -> Fluoride, Thụy Sỹ -> Thụy Sĩ.
+             Không có JS: 3 bảng hiện lần lượt (thanh tab ẩn). Có JS: script mục "tab bảng giá" bật tab. Sửa giá thì sửa cả trang dịch vụ tương ứng. -->
+        <div class="price-card">
+          <div class="price-tabs" data-price-tabs>
+            <div class="price-tabs__list" aria-label="Nhóm bảng giá" hidden>
+              <button type="button" class="price-tabs__tab" id="tab-tong-quat" aria-controls="gia-tong-quat">Tổng quát</button>
+              <button type="button" class="price-tabs__tab" id="tab-tre-em" aria-controls="gia-tre-em">Trẻ em</button>
+              <button type="button" class="price-tabs__tab" id="tab-ky-thuat-cao" aria-controls="gia-ky-thuat-cao">Kỹ thuật cao</button>
+            </div>
+            <div class="price-panel" id="gia-tong-quat">
+              <h3 class="price-panel__title">Nha khoa tổng quát</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Lấy vôi răng</td><td><span class="price-table__num">200.000 - 400.000</span><small>/lần (1-2 lần hẹn)</small></td></tr>
+                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
+                  <tr><td>Chữa tủy răng</td><td><span class="price-table__num">800.000 - 1.100.000</span><small>có MTA</small></td></tr>
+                  <tr><td>Chữa tủy lại</td><td><span class="price-table__num">1.200.000 - 1.650.000</span><small>có MTA</small></td></tr>
+                  <tr><td>Nhổ răng thường</td><td><span class="price-table__num">300.000 - 500.000</span></td></tr>
+                  <tr><td>Nhổ răng khôn, răng khó</td><td><span class="price-table__num">800.000 - 2.000.000</span></td></tr>
+                  <tr><td>Bọc mão sứ kim loại</td><td><span class="price-table__num">1.200.000 - 1.800.000</span></td></tr>
+                  <tr><td>Bọc mão toàn sứ</td><td><span class="price-table__num">3.000.000 - 6.000.000</span><small>/răng</small></td></tr>
+                  <tr><td>Inlay, Onlay, Veneer</td><td><span class="price-table__num">3.000.000 - 7.000.000</span><small>/răng</small></td></tr>
+                  <tr><td>Răng nhựa tháo lắp (răng nhựa Mỹ)</td><td><span class="price-table__num">300.000 - 500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Hàm Biosoft</td><td><span class="price-table__num">500.000 - 1.500.000</span><small>/nền hàm</small></td></tr>
+                  <tr><td>Tẩy trắng răng</td><td><span class="price-table__num">1.500.000 - 2.000.000</span></td></tr>
+                  <tr><td>Đính kim cương</td><td><span class="price-table__num">500.000</span><small>/viên</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-tre-em">
+              <h3 class="price-panel__title">Nha khoa trẻ em</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Vệ sinh răng miệng đơn giản (răng sữa)</td><td><span class="price-table__num">100.000 - 200.000</span><small>/lần</small></td></tr>
+                  <tr><td>Lấy vôi và đánh bóng (răng hỗn hợp, răng vĩnh viễn)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/lần</small></td></tr>
+                  <tr><td>Trám răng Composite</td><td><span class="price-table__num">200.000 - 400.000</span><small>/răng</small></td></tr>
+                  <tr><td>Trám răng theo dõi (GIC)</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
+                  <tr><td>Trám bít hố rãnh</td><td><span class="price-table__num">200.000 - 300.000</span><small>/răng</small></td></tr>
+                  <tr><td>Chữa tủy răng sữa + trám kết thúc</td><td><span class="price-table__num">600.000 - 800.000</span><small>/răng</small></td></tr>
+                  <tr><td>Bọc mão thép không gỉ (SSC)</td><td><span class="price-table__num">500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng bôi tê</td><td><span class="price-table__num">50.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng chích tê</td><td><span class="price-table__num">100.000</span><small>/răng</small></td></tr>
+                  <tr><td>Nhổ răng khó, nhổ răng can thiệp</td><td><span class="price-table__num">200.000 - 500.000</span><small>/răng</small></td></tr>
+                  <tr><td>Bôi Fluoride</td><td><span class="price-table__num">200.000</span><small>/lần</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="price-panel" id="gia-ky-thuat-cao">
+              <h3 class="price-panel__title">Nha khoa kỹ thuật cao</h3>
+              <table class="price-table">
+                <thead>
+                  <tr><th scope="col">Dịch vụ</th><th scope="col">Giá tham khảo (VNĐ)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Chỉnh nha phân đoạn</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
+                  <tr><td>Chỉnh nha toàn diện</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
+                  <tr><td>Chỉnh nha bằng khay trong suốt</td><td><span class="price-ask"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v2H9zM9 13l2 2 4-4"/></svg>Báo giá sau khi khám</span></td></tr>
+                  <tr><td>Cắm trụ Implant Hàn Quốc</td><td><span class="price-table__num">10.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Cắm trụ Implant Mỹ</td><td><span class="price-table__num">12.000.000 - 15.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Cắm trụ Implant Thụy Sĩ</td><td><span class="price-table__num">20.000.000</span><small>/trụ</small></td></tr>
+                  <tr><td>Răng toàn sứ trên Implant</td><td><span class="price-table__num">5.000.000 - 8.000.000</span><small>/đơn vị</small></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Thu gọn bảng giá (thêm 2026-11-19): có JS thì mỗi tab chỉ hiện 6 dịch vụ đầu, nút dưới đây mở/thu toàn bộ (dùng chung 3 tab).
+               Không có JS: nút ẩn, bảng hiện đầy đủ. Mở trang kèm #gia-... (từ trang dịch vụ "Xem bảng giá đầy đủ") thì mở sẵn toàn bộ. Clarity: xem_bang_gia. -->
+          <button type="button" class="price-more" aria-expanded="true" aria-controls="gia-tong-quat gia-tre-em gia-ky-thuat-cao" data-price-more hidden>
+            <span class="price-more__open">Xem toàn bộ bảng giá</span><span class="price-more__close">Thu gọn bảng giá</span>
+            <svg class="icon icon--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="price-note" role="note" aria-label="Lưu ý về giá">
+            <span class="price-note__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg></span>
+            <div class="price-note__body">
+              <p class="price-note__title">Lưu ý về giá</p>
+              <ul class="price-note__list">
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H5a1 1 0 0 0-1 1v5a5 5 0 0 0 10 0V4a1 1 0 0 0-1-1h-1"/><path d="M9 14v1a6 6 0 0 0 12 0v-2"/><circle cx="21" cy="11" r="2"/></svg><span><strong>Đây là giá tham khảo.</strong> Bác sĩ sẽ khám trực tiếp, thông báo lộ trình điều trị và giá trước khi làm.</span></li>
+                <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><span><strong>Giá có thể thay đổi</strong> theo tình trạng răng của từng người.</span></li>
+              </ul>
+            </div>
+          </div>
+          <ul class="chips">
+            <li>Niềng răng trả góp 0%</li>
+            <li>Thẻ ATM/Visa/Master</li>
+            <li>Hồ sơ bệnh án, hóa đơn đỏ thanh toán bảo hiểm</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -1269,6 +1275,6 @@
     </ul>
   </dialog>
 
-  <script src="script.js?v=31823fa2" defer></script>
+  <script src="script.js?v=383b9ca9" defer></script>
 </body>
 </html>

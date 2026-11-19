@@ -435,6 +435,18 @@ body { padding-top: var(--header-h); }
 .price-panel__title { margin-top: 20px; color: var(--ink); font-size: 17px; }
 .price-tabs.is-tabs .price-panel__title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 @media (min-width: 1024px) { .price-tabs__tab { min-height: 48px; font-size: 16px; } }
+/* Thu gọn bảng giá (thêm 2026-11-19): JS gắn .is-collapsed lên .price-card, mỗi tab chỉ hiện 6 dòng đầu.
+   Dòng thứ 6 mờ dần ở đáy để báo còn nữa. Đổi số dòng: sửa n+7 / nth-child(6) ở đây và PRICE_ROWS trong script.js. */
+.price-card.is-collapsed .price-table tbody tr:nth-child(n+7) { display: none; }
+.price-card.is-collapsed .price-panel:has(tbody tr:nth-child(7)) .price-table { -webkit-mask-image: linear-gradient(#000 calc(100% - 44px), rgba(0, 0, 0, .15)); mask-image: linear-gradient(#000 calc(100% - 44px), rgba(0, 0, 0, .15)); }
+.price-more { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; margin: 14px auto 0; padding: 10px 22px; border: 1.5px solid var(--blue-600); border-radius: 999px; background: #fff; color: var(--blue-600); font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; transition: background-color .2s; }
+.price-more[hidden] { display: none; }
+.price-more:hover { background: var(--blue-100); }
+.price-more:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+.price-more .icon { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transform: rotate(180deg); transition: transform .25s; }
+.price-more[aria-expanded="false"] .icon { transform: none; }
+.price-more[aria-expanded="true"] .price-more__open, .price-more[aria-expanded="false"] .price-more__close { display: none; }
+@media (prefers-reduced-motion: reduce) { .price-more .icon { transition: none; } }
 /* Lưu ý về giá: khung vàng nhạt + icon để khách chú ý (đổi 2026-11-10) */
 .price-note { display: flex; gap: 12px; margin-top: 18px; padding: 14px 16px; border: 1px solid #F6DFA0; border-left: 4px solid var(--gold); border-radius: var(--radius-sm); background: #FFF8E6; color: var(--ink-2); font-size: 14px; line-height: 1.55; }
 .price-note__icon { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--gold); color: #fff; }

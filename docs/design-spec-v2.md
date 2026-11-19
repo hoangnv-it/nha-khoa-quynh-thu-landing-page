@@ -147,7 +147,7 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 
 ### 5.1 Header (nền trắng, dính trên cùng)
 - Trái: logo xanh (hình răng có trái tim + "Nha Khoa" / "QUỲNH THƯ"), cao 56px desktop, 44px mobile.
-- Giữa: menu **Trang chủ · Dịch vụ · Bảng giá · Đánh giá · Liên hệ**. Mục đang xem: chữ teal đậm, gạch chân teal 2px.
+- Giữa: menu **Trang chủ · Dịch vụ · Đánh giá · Bảng giá · Liên hệ** (đổi thứ tự 2026-11-19 cho khớp trang). Mục đang xem: chữ teal đậm, gạch chân teal 2px.
 - Phải: nút vàng bo tròn có icon điện thoại "0944 479 405".
 - Mobile: logo + nút menu (bảng trắng toàn chiều ngang).
 - Menu con "Dịch vụ" (thêm 2026-11-04): có mũi tên nhỏ cạnh chữ. Máy tính: rê chuột hoặc Tab vào thì hộp trắng bo 16px (rộng 290px, có mũi nhọn lên) trượt xuống + mờ dần, 6 dịch vụ hiện lần lượt, mỗi dòng có icon 40px + tên; trang đang xem được tô `--teal-100`; hover icon nghiêng nhẹ. Bấm tên dịch vụ để sang trang riêng. Esc hoặc bấm ra ngoài để đóng. Điện thoại: bấm mũi tên (bên phải chữ "Dịch vụ") để xổ danh sách ngay trong hamburger (accordion trượt xuống); bấm chữ "Dịch vụ" vẫn cuộn tới mục Dịch vụ nổi bật. Có đủ ở trang chủ, 404 và 6 trang dịch vụ. Tắt chuyển động khi bật giảm chuyển động.
@@ -185,9 +185,12 @@ Thứ tự: Header → Hero → Dịch vụ nổi bật → Về Nha khoa Quỳn
 - Thẻ trắng dạng bảng: Dịch vụ | Giá tham khảo. 5 dòng giá "từ ..." ở mục 2 **[CẦN XÁC NHẬN]**. Dịch vụ khác: "Bác sĩ khám và báo giá".
 - Ghi chú: "Giá có thể thay đổi theo tình trạng răng. Bác sĩ khám và báo giá trước khi điều trị."
 - Chip: Trả góp 0% · Thẻ ATM/Visa/Master · Hỗ trợ hồ sơ bảo hiểm.
+- Vị trí (đổi 2026-11-19): ngay sau mục Khách hàng nói gì `#danh-gia`, trước mục 2 cơ sở.
+- Thu gọn (thêm 2026-11-19): có JS thì mỗi tab chỉ hiện 6 dòng đầu, dòng thứ 6 mờ dần (`mask-image`). Nút viền xanh `.price-more` ở giữa, dưới bảng: "Xem toàn bộ bảng giá" (mũi tên xuống) / "Thu gọn bảng giá" (mũi tên lên), `aria-expanded`. Dùng chung 3 tab; tab có ≤ 6 dòng thì ẩn nút. Mở trang kèm #gia-... thì mở sẵn toàn bộ. Không có JS: bảng đầy đủ, nút ẩn.
 
 ### 5.7 Trước & sau (thêm)
 - 3 thẻ ảnh trước/sau của phòng khám, chú thích tên điều trị. Ghi chú: "Kết quả khác nhau tùy tình trạng của từng người."
+- Vị trí (đổi 2026-11-19): ngay sau mục Hình ảnh hoạt động `#phong-kham`, trước mục Đánh giá.
 
 ### 5.7b Đội ngũ (thêm 2026-11-04, không có trong ảnh thiết kế)
 - Nằm ngay dưới "Trước & sau". Eyebrow giữa có 2 đường kẻ: "ĐỘI NGŨ"; h2 giữa: "Bác sĩ của Nha khoa Quỳnh Thư".
