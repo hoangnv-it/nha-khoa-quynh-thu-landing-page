@@ -4,6 +4,7 @@
   ở các link trong public/index.html, public/404.html, public/dich-vu/*.html và public/en/**/*.html
   (src, srcset, href, poster, og:image, JSON-LD...).
 
+  Thêm 2026-11-20: gắn mã cả cho font public/fonts/*.woff2 (gọi trong style.css).
   Thêm 2026-11-10: gắn mã cả cho ảnh gọi trong style.css (url("assets/...")),
   làm TRƯỚC khi tính mã của style.css, để đổi ảnh thì style.css cũng đổi mã.
 
@@ -68,6 +69,12 @@ $map = @{}
 $assetsDir = Join-Path $public 'assets'
 if (Test-Path $assetsDir) {
   Get-ChildItem $assetsDir -Recurse -File | Where-Object { $_.Name -ne '.gitkeep' } | ForEach-Object { $map[(Get-Rel $_.FullName)] = Get-Hash8 $_.FullName }
+}
+# 1b. Mã cho font trong public/fonts/ (thêm 2026-11-20): font cache 1 năm (immutable) nên
+#     thay file font mà giữ tên thì khách cũ vẫn thấy font cũ, gắn ?v= để tránh.
+$fontsDir = Join-Path $public 'fonts'
+if (Test-Path $fontsDir) {
+  Get-ChildItem $fontsDir -Recurse -File -Filter '*.woff2' | ForEach-Object { $map[(Get-Rel $_.FullName)] = Get-Hash8 $_.FullName }
 }
 
 # 2. Gắn mã cho ảnh gọi trong style.css (TRƯỚC khi tính mã style.css)
