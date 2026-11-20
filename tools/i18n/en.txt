@@ -6,7 +6,7 @@
 # - Sửa chữ tiếng Việt trên trang thì sửa dòng VI tương ứng ở đây, rồi chạy lại build-en.ps1.
 # - Không dùng dấu "–" "—"; không viết "painless", "best", "free", "100%", "absolutely safe" (brief mục 8),
 #   trừ khi là bản dịch đánh giá thật của khách.
-# - Tên riêng giữ nguyên: Nha Khoa Quỳnh Thư (chữ trên logo), Lê Quỳnh Thư, tên khách, tên công ty.
+# - Tên riêng giữ nguyên: Nha Khoa Quỳnh Thư (chữ trên logo), Lê Xuân Quỳnh Thư, tên khách, tên công ty.
 #   Địa danh viết không dấu cho người nước ngoài: Hoa Xuan, Da Nang, Van Tien Dung St....
 
 # ===== Giữ nguyên (tên pháp lý), để cụm ngắn bên trong không bị dịch =====
@@ -255,31 +255,35 @@ EN: Braces on the lower teeth
 VI: Niềng răng mắc cài
 EN: Traditional braces
 
-# ===== Trang chủ: đội ngũ =====
-VI: Đội ngũ bác sĩ &amp; nhân viên tận tâm
-EN: A caring team of dentists &amp; staff
+# ===== Trang chủ: đội ngũ (đổi 2026-11-20: không nêu tên bác sĩ, ghép 4 ảnh ê kíp) =====
 VI: Đội ngũ
 EN: Our team
-VI: Bác sĩ của Nha khoa Quỳnh Thư
-EN: The dentists at Quynh Thu Dental
-VI: Bác sĩ Lê Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám
-EN: Dr. Lê Quỳnh Thư, owner of Quynh Thu Dental, smiling in a white coat at the clinic
+VI: Đội ngũ nha sĩ tận tâm, nhiều kinh nghiệm
+EN: A caring, experienced team of dentists
+VI: Ê kíp nha sĩ đeo khẩu trang cùng điều trị răng cho bé tại Nha khoa Quỳnh Thư
+EN: A team of masked dentists treating a child together at Quynh Thu Dental
+VI: Hai nha sĩ đội mũ trùm đầu điều trị răng cho bé gái
+EN: Two dentists in surgical caps treating a young girl's teeth
+VI: Nha sĩ và trợ thủ điều trị răng cho bé trai trên ghế nha
+EN: A dentist and an assistant treating a young boy in the dental chair
+VI: Nha sĩ khám răng cho bệnh nhân người lớn, có trợ thủ hỗ trợ
+EN: A dentist examining an adult patient, with an assistant helping
 VI: năm kinh nghiệm
 EN: years of experience
-VI: Bác sĩ phụ trách chuyên môn
-EN: Lead dentist
-VI: <span class="lead-doc__title">Bác sĩ</span> Lê Quỳnh Thư
-EN: <span class="lead-doc__title">Dr.</span> Lê Quỳnh Thư
-VI: Chủ phòng khám · Bác sĩ chuyên môn
-EN: Clinic owner · Lead dentist
-VI: Bác sĩ Lê Quỳnh Thư là chủ Nha khoa Quỳnh Thư tại Hòa Xuân, Đà Nẵng. Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị, để bệnh nhân và gia đình hiểu rõ từng bước.
-EN: Dr. Lê Quỳnh Thư is the owner of Quynh Thu Dental in Hoa Xuan, Da Nang. Dr. Thư personally examines each patient, explains what's going on with your teeth and gives you a clear quote before treatment, so you and your family understand every step.
-VI: Học vị</dt><dd>Bác sĩ</dd>
-EN: Qualification</dt><dd>Dentist</dd>
+VI: Ê kíp điều trị
+EN: Our care team
+VI: <span class="lead-doc__title">Giải thích rõ,</span> báo giá trước khi điều trị
+EN: <span class="lead-doc__title">Clear answers,</span> a clear quote before treatment
+VI: Đội ngũ nha sĩ của Nha khoa Quỳnh Thư làm việc tại 2 cơ sở ở Hòa Xuân, Đà Nẵng. Nha sĩ trực tiếp khám, chụp phim khi cần và giải thích tình trạng răng, để bệnh nhân và gia đình hiểu rõ từng bước trước khi quyết định điều trị.
+EN: Our dentists work at both of our locations in Hoa Xuan, Da Nang. A dentist examines you in person, takes X-rays when needed and explains what's going on with your teeth, so you and your family understand every step before deciding on treatment.
 VI: Kinh nghiệm
 EN: Experience
-VI: Hơn 15 năm trong nghề nha khoa
-EN: Over 15 years in dentistry
+VI: Bác sĩ phụ trách chuyên môn hơn 15 năm trong nghề nha khoa
+EN: Our lead dentist has over 15 years in dentistry
+VI: Khám cho</dt>
+EN: We treat</dt>
+VI: <dd>Trẻ em và người lớn</dd>
+EN: <dd>Kids and adults</dd>
 VI: Địa chỉ</dt>
 EN: Locations</dt>
 VI: <span class="lead-doc__label">Cơ sở 1:</span> 217 Văn Tiến Dũng<br><span class="lead-doc__label">Cơ sở 2:</span> 303 Lê Quảng Chí
@@ -290,10 +294,10 @@ VI: Niềng răng, chỉnh răng hô, móm, lệch lạc
 EN: Braces for overbites, underbites and crooked teeth
 VI: Trồng răng Implant
 EN: Dental implants
-VI: Đặt lịch khám với bác sĩ
-EN: Book with Dr. Thư
-VI: Bác sĩ Quỳnh Thư cùng đội ngũ bác sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.
-EN: Dr. Thư and the whole team of dentists and staff always put quality care and your comfort first.
+VI: Cách chúng tôi chăm sóc bạn
+EN: How we take care of you
+VI: Đội ngũ nha sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.
+EN: Our dentists and staff always put quality care and your comfort first.
 VI: Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị.
 EN: A dentist examines you in person, explains your dental condition and gives you a clear quote before treatment.
 VI: Bác sĩ trực tiếp khám

@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=2c81edba">
+  <link rel="stylesheet" href="style.css?v=74e1b785">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -90,12 +90,6 @@
                                                    "@id":  "https://nhakhoaquynhthu.com/#co-so-2"
                                                }
                                            ],
-                       "founder":  {
-                                       "@type":  "Person",
-                                       "name":  "Lê Quỳnh Thư",
-                                       "jobTitle":  "Bác sĩ",
-                                       "description":  "Chủ phòng khám, bác sĩ chuyên môn, hơn 15 năm kinh nghiệm."
-                                   },
                        "areaServed":  [
                                           {
                                               "@type":  "Place",
@@ -564,34 +558,39 @@
       </div>
     </section>
 
-    <!-- ===== ĐỘI NGŨ (thêm 2026-11-04, chia 2 phần 2026-11-07): (1) hồ sơ Bác sĩ Lê Quỳnh Thư, (2) các bác sĩ khác ===== -->
+    <!-- ===== ĐỘI NGŨ (thêm 2026-11-04, chia 2 phần 2026-11-07): (1) giới thiệu đội ngũ nha sĩ + ghép ảnh ê kíp, (2) 4 khung giá trị =====
+         Đổi 2026-11-20 (chủ dự án yêu cầu): KHÔNG nêu tên, KHÔNG dùng ảnh chân dung bác sĩ chủ phòng khám (khách sẽ đòi đích thân bác sĩ khám).
+         Thay bằng "đội ngũ nha sĩ tận tâm, nhiều kinh nghiệm" + 4 ảnh ê kíp đeo khẩu trang đang điều trị (Facebook nhakhoaquynhthu, tải 2026-11-20).
+         Bỏ cả tên trong llms.txt và founder trong JSON-LD. Ảnh chân dung cũ đã xóa khỏi public (vẫn còn trong lịch sử git). -->
     <section class="section reveal" id="doi-ngu" aria-labelledby="doi-ngu-title">
       <div class="container">
         <div class="section-head section-head--center">
           <p class="eyebrow eyebrow--lines">Đội ngũ</p>
-          <h2 id="doi-ngu-title">Bác sĩ của Nha khoa Quỳnh Thư</h2>
+          <h2 id="doi-ngu-title">Đội ngũ nha sĩ tận tâm, nhiều kinh nghiệm</h2>
         </div>
 
-        <!-- Phần 1: Bác sĩ phụ trách chuyên môn.
-             Nguồn: hồ sơ phòng khám trên NhaKhoaHub (https://nhakhoahub.com/phong-kham/nha-khoa-quynh-thu-da-nang, xem 2026-11-07):
-             "ThS.BS Lê Quỳnh Thư" (NhaKhoaHub), "Bác sĩ chuyên môn", chuyên môn niềng răng, implant, răng sứ, "trên 15 năm kinh nghiệm".
-             Đã xác nhận 2026-11-08: tên "Lê Quỳnh Thư", hơn 15 năm kinh nghiệm.
-             Đã xác nhận 2026-11-08: bác sĩ ĐANG THEO HỌC Thạc sĩ, chưa tốt nghiệp: chỉ ghi "Bác sĩ", KHÔNG ghi ThS/Thạc sĩ cho tới khi tốt nghiệp.. Implant: phòng khám có làm (bảng giá phòng khám, chủ dự án gửi 2026-11-10), có trang dịch vụ dich-vu/implant.html.
-             [CẦN XÁC NHẬN] nơi đào tạo, chứng chỉ, quá trình công tác: khi có thì thêm dòng vào .lead-doc__facts. KHÔNG tự viết. -->
+        <!-- Phần 1: giới thiệu đội ngũ.
+             "15+ năm": kinh nghiệm của bác sĩ phụ trách chuyên môn (đã xác nhận 2026-11-08), ghi rõ ở dòng Kinh nghiệm, không ghi là của cả đội ngũ.
+             Thế mạnh chuyên môn: theo NhaKhoaHub (xem 2026-11-07) + bảng giá phòng khám (2026-11-10).
+             [CẦN XÁC NHẬN] số nha sĩ, bằng cấp, chứng chỉ của đội ngũ: khi có thì thêm dòng vào .lead-doc__facts. KHÔNG tự viết. -->
         <article class="lead-doc" aria-labelledby="lead-doc-name">
-          <div class="lead-doc__photo">
-            <img src="assets/images/bs-quynh-thu.webp?v=7aea0f31" width="640" height="800" loading="lazy" alt="Bác sĩ Lê Quỳnh Thư, chủ Nha khoa Quỳnh Thư, mặc áo blouse trắng và mỉm cười trong phòng khám">
-            <p class="lead-doc__badge"><strong>15+</strong><span>năm kinh nghiệm</span></p>
+          <div class="team-photos">
+            <figure class="team-photos__main">
+              <img src="assets/images/doi-ngu-1.webp?v=4d648000" width="1280" height="960" loading="lazy" alt="Ê kíp nha sĩ đeo khẩu trang cùng điều trị răng cho bé tại Nha khoa Quỳnh Thư">
+              <p class="lead-doc__badge"><strong>15+</strong><span>năm kinh nghiệm</span></p>
+            </figure>
+            <img src="assets/images/doi-ngu-2.webp?v=49ff38e5" width="800" height="1067" loading="lazy" alt="Hai nha sĩ đội mũ trùm đầu điều trị răng cho bé gái">
+            <img src="assets/images/doi-ngu-3.webp?v=313eac7c" width="800" height="1067" loading="lazy" alt="Nha sĩ và trợ thủ điều trị răng cho bé trai trên ghế nha">
+            <img src="assets/images/doi-ngu-4.webp?v=d4b144e7" width="800" height="1067" loading="lazy" alt="Nha sĩ khám răng cho bệnh nhân người lớn, có trợ thủ hỗ trợ">
           </div>
           <div class="lead-doc__body">
-            <p class="eyebrow">Bác sĩ phụ trách chuyên môn</p>
-            <h3 id="lead-doc-name" class="lead-doc__name"><span class="lead-doc__title">Bác sĩ</span> Lê Quỳnh Thư</h3>
-            <p class="lead-doc__role">Chủ phòng khám · Bác sĩ chuyên môn</p>
-            <p class="lead-doc__intro">Bác sĩ Lê Quỳnh Thư là chủ Nha khoa Quỳnh Thư tại Hòa Xuân, Đà Nẵng. Bác sĩ trực tiếp khám, giải thích tình trạng răng và báo giá rõ ràng trước khi điều trị, để bệnh nhân và gia đình hiểu rõ từng bước.</p>
+            <p class="eyebrow">Ê kíp điều trị</p>
+            <h3 id="lead-doc-name" class="lead-doc__name"><span class="lead-doc__title">Giải thích rõ,</span> báo giá trước khi điều trị</h3>
+            <p class="lead-doc__intro">Đội ngũ nha sĩ của Nha khoa Quỳnh Thư làm việc tại 2 cơ sở ở Hòa Xuân, Đà Nẵng. Nha sĩ trực tiếp khám, chụp phim khi cần và giải thích tình trạng răng, để bệnh nhân và gia đình hiểu rõ từng bước trước khi quyết định điều trị.</p>
 
             <dl class="lead-doc__facts">
-              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Học vị</dt><dd>Bác sĩ</dd></div>
-              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Kinh nghiệm</dt><dd>Hơn 15 năm trong nghề nha khoa</dd></div>
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Kinh nghiệm</dt><dd>Bác sĩ phụ trách chuyên môn hơn 15 năm trong nghề nha khoa</dd></div>
+              <div><dt><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>Khám cho</dt><dd>Trẻ em và người lớn</dd></div>
               <div><dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Địa chỉ</dt><dd><span class="lead-doc__label">Cơ sở 1:</span> 217 Văn Tiến Dũng<br><span class="lead-doc__label">Cơ sở 2:</span> 303 Lê Quảng Chí</dd></div>
             </dl>
 
@@ -603,7 +602,7 @@
             </ul>
 
             <div class="lead-doc__actions">
-              <a class="btn btn--blue" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Đặt lịch khám với bác sĩ</a>
+              <a class="btn btn--blue" href="https://zalo.me/0944479405" target="_blank" rel="noopener" data-track="zalo"><svg class="icon icon--zalo" aria-hidden="true"><use href="#i-zalo"/></svg>Đặt lịch khám qua Zalo</a>
               <a class="btn btn--outline" href="tel:+84944479405" data-track="call"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>0944 479 405</a>
             </div>
           </div>
@@ -615,8 +614,8 @@
              Khung 3 trước đây là "Dụng cụ được tiệt trùng" (chưa có nguồn xác nhận), đã thay. -->
         <div class="team">
           <div class="team__head">
-            <h3>Đội ngũ bác sĩ &amp; nhân viên tận tâm</h3>
-            <p>Bác sĩ Quỳnh Thư cùng đội ngũ bác sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.</p>
+            <h3>Cách chúng tôi chăm sóc bạn</h3>
+            <p>Đội ngũ nha sĩ và nhân viên phòng khám luôn đặt chất lượng điều trị và sự thoải mái của bạn lên hàng đầu.</p>
           </div>
           <ul class="values">
             <li class="value">

@@ -42,7 +42,7 @@ $SVC_EN = @{
   'tooth-extraction' = @('Tooth extraction and wisdom teeth', 'Tooth extractions and surgical removal of angled, impacted or sideways wisdom teeth, with a CBCT scan first.')
 }
 # Tên riêng được phép còn dấu tiếng Việt trong bản tiếng Anh
-$KEEP = @('Công ty TNHH MTV Nha khoa Quỳnh Thư', 'Nha Khoa Quỳnh Thư', 'Lê Quỳnh Thư', 'Dr. Thư', 'Tiếng Việt',
+$KEEP = @('Công ty TNHH MTV Nha khoa Quỳnh Thư', 'Nha Khoa Quỳnh Thư', 'Lê Xuân Quỳnh Thư', 'Dr. Thư', 'Tiếng Việt',
           '01252/ĐNA-GPHĐ', '01850/ĐNA-GPHĐ', 'Láng H.', 'Hương T.', 'Kim Thoa Q.', 'Phương Anh N.', 'Thủy Tiên T.')
 
 # ---------- Bảng dịch ----------
