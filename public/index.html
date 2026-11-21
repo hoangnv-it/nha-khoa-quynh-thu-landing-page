@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="assets/logo/logo-180.png?v=400a44be">
 
   <link rel="preload" as="image" href="assets/images/hero.webp?v=2e1fb349" fetchpriority="high">
-  <link rel="stylesheet" href="style.css?v=ac962350">
+  <link rel="stylesheet" href="style.css?v=04716286">
   <!-- Báo cho CSS biết JS đang chạy (dùng cho hiệu ứng hiện dần khi cuộn) -->
   <script>document.documentElement.classList.add("js");</script>
 
@@ -930,28 +930,20 @@
           <p class="eyebrow eyebrow--lines">Đánh giá</p>
           <h2 id="danh-gia-title">Khách hàng nói gì trên Google</h2>
         </div>
-        <!-- Điểm và số đánh giá: Google Maps 03/11/2026. Đổi số thì sửa cả data-count, chữ hiển thị, --fill (= điểm / 5 x 100%) và aria-label. -->
-        <div class="rv-summary">
-          <a class="rv-score" href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt" target="_blank" rel="noopener" aria-label="Cơ sở 1: 4,9 trên 5 sao, 42 đánh giá trên Google Maps. Mở Google Maps">
-            <span class="rv-score__num" data-count="4.9">4,9</span>
-            <span class="rv-score__info">
-              <span class="rv-score__branch">Cơ sở 1 · Văn Tiến Dũng</span>
-              <span class="rv-score__stars" style="--fill: 98%"><span class="rv-stars" aria-hidden="true"><span class="rv-stars__base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-stars__fill"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></span>
-              <span class="rv-score__count"><span data-count="42">42</span> đánh giá trên Google</span>
-            </span>
-            <svg class="icon rv-score__go" aria-hidden="true"><use href="#i-arrow"/></svg>
-          </a>
-          <a class="rv-score" href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF+_+c%C6%A1+s%E1%BB%9F+2/@16.0126038,108.2170373,17z/data=!3m1!4b1!4m6!3m5!1s0x31421bd244253a81:0x9f17698b08b4b538!8m2!3d16.0125987!4d108.2196122!16s%2Fg%2F11q4k5nl4q" target="_blank" rel="noopener" aria-label="Cơ sở 2: 4,7 trên 5 sao, 61 đánh giá trên Google Maps. Mở Google Maps">
-            <span class="rv-score__num" data-count="4.7">4,7</span>
-            <span class="rv-score__info">
-              <span class="rv-score__branch">Cơ sở 2 · Lê Quảng Chí</span>
-              <span class="rv-score__stars" style="--fill: 94%"><span class="rv-stars" aria-hidden="true"><span class="rv-stars__base"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><span class="rv-stars__fill"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></span></span>
-              <span class="rv-score__count"><span data-count="61">61</span> đánh giá trên Google</span>
-            </span>
-            <svg class="icon rv-score__go" aria-hidden="true"><use href="#i-arrow"/></svg>
-          </a>
+        <!-- Đổi 2026-11-21 (chủ dự án yêu cầu): KHÔNG hiển thị điểm và số đánh giá của từng cơ sở (số thay đổi theo thời gian, tránh khách so sánh 2 cơ sở).
+             Chỉ giữ 1 khung chung + 2 nút giống hệt nhau mở trang Google Maps của từng cơ sở. Không dùng hình sao trong khung này
+             (sao không kèm điểm thật sẽ ngầm khẳng định 5 sao). Mục Liên hệ và llms.txt cũng đã bỏ điểm. -->
+        <div class="rv-intro">
+          <span class="rv-intro__icon" aria-hidden="true"><svg class="icon"><use href="#i-pin-solid"/></svg></span>
+          <div class="rv-intro__text">
+            <h3>Đánh giá thật từ khách hàng trên Google Maps</h3>
+            <p>Những chia sẻ bên dưới được lấy từ trang Google Maps của phòng khám. Bạn có thể xem toàn bộ đánh giá của từng cơ sở ngay trên Google Maps.</p>
+          </div>
+          <p class="rv-intro__actions">
+            <a class="btn btn--outline" href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt" target="_blank" rel="noopener">Xem đánh giá Cơ sở 1<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--outline" href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF+_+c%C6%A1+s%E1%BB%9F+2/@16.0126038,108.2170373,17z/data=!3m1!4b1!4m6!3m5!1s0x31421bd244253a81:0x9f17698b08b4b538!8m2!3d16.0125987!4d108.2196122!16s%2Fg%2F11q4k5nl4q" target="_blank" rel="noopener">Xem đánh giá Cơ sở 2<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </p>
         </div>
-        <p class="rv-summary__note">Điểm đánh giá trên Google Maps của từng cơ sở.</p>
       </div>
       <!-- Số sao: đã đối chiếu từng đánh giá trên Google Maps ngày 2026-11-03, cả 6 đều 5 sao. Đổi sao thì sửa aria-label và số icon. -->
       <div class="rv-marquee" data-marquee>
@@ -1111,7 +1103,7 @@
               <h3><svg class="icon" aria-hidden="true"><use href="#i-pin-solid"/></svg>Cơ sở 1</h3>
               <!-- Số nhà 217: phòng khám xác nhận 2026-11-10 (biển hiệu cũ ghi 114) -->
               <p class="branch__addr">217 Văn Tiến Dũng,<br>Hòa Xuân, Đà Nẵng</p>
-              <p class="rating"><span class="rating__num">4,9</span><svg aria-hidden="true"><use href="#i-star"/></svg><a href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt" target="_blank" rel="noopener">(42 đánh giá)</a></p>
+              <p class="rating"><a href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF/@15.9955452,108.2125616,585m/data=!3m1!1e3!4m6!3m5!1s0x31421b8686da2e75:0xb8c67c6000a3e5ad!8m2!3d15.9955452!4d108.2134546!16s%2Fg%2F11rgfqh3qt" target="_blank" rel="noopener">Xem đánh giá trên <span class="rating__nw">Google Maps<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
               <p class="status branch__status" data-status="cs1"></p>
               <p class="branch__actions">
                 <a href="tel:+84944479405" data-track="call">Gọi</a>
@@ -1126,7 +1118,7 @@
             <div class="branch__body">
               <h3><svg class="icon" aria-hidden="true"><use href="#i-pin-solid"/></svg>Cơ sở 2</h3>
               <p class="branch__addr">303 Lê Quảng Chí,<br>Hòa Xuân, Đà Nẵng</p>
-              <p class="rating"><span class="rating__num">4,7</span><svg aria-hidden="true"><use href="#i-star"/></svg><a href="https://www.google.com/maps/search/?api=1&amp;query=16.0125987,108.2196122" target="_blank" rel="noopener">(61 đánh giá)</a></p>
+              <p class="rating"><a href="https://www.google.com/maps/place/NHA+KHOA+QU%E1%BB%B2NH+TH%C6%AF+_+c%C6%A1+s%E1%BB%9F+2/@16.0126038,108.2170373,17z/data=!3m1!4b1!4m6!3m5!1s0x31421bd244253a81:0x9f17698b08b4b538!8m2!3d16.0125987!4d108.2196122!16s%2Fg%2F11q4k5nl4q" target="_blank" rel="noopener">Xem đánh giá trên <span class="rating__nw">Google Maps<svg class="icon icon--sm" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></p>
               <p class="status branch__status" data-status="cs2"></p>
               <p class="branch__actions">
                 <a href="tel:+84944479405" data-track="call">Gọi</a>
@@ -1149,7 +1141,7 @@
             </div>
           </div>
         </div>
-        <p class="small-note">Đánh giá trên Google Maps. Giờ làm việc: Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00.</p>
+        <p class="small-note">Giờ làm việc cả 2 cơ sở: Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00.</p>
       </div>
     </section>
 
@@ -1274,6 +1266,6 @@
     </ul>
   </dialog>
 
-  <script src="script.js?v=383b9ca9" defer></script>
+  <script src="script.js?v=a526be93" defer></script>
 </body>
 </html>

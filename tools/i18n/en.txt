@@ -124,8 +124,8 @@ VI: Thứ 2 - Thứ 7: 08:00 - 19:00, Chủ nhật: 08:00 - 18:00
 EN: Mon - Sat: 8 AM - 7 PM, Sun: 8 AM - 6 PM
 VI: Thứ 2 - Thứ 7: 08:00 - 19:00
 EN: Mon - Sat: 8 AM - 7 PM
-VI: Đánh giá trên Google Maps. Giờ làm việc: Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00.
-EN: Ratings from Google Maps. Hours: Mon - Sat: 8 AM - 7 PM · Sun: 8 AM - 6 PM.
+VI: Giờ làm việc cả 2 cơ sở: Thứ 2 - Thứ 7: 08:00 - 19:00 · Chủ nhật: 08:00 - 18:00.
+EN: Hours at both locations: Mon - Sat: 8 AM - 7 PM · Sun: 8 AM - 6 PM.
 
 # ===== Tên dịch vụ =====
 VI: Khám răng trẻ em
@@ -426,32 +426,18 @@ EN: See more treatment photos, everyday moments at the clinic and our latest new
 # ===== Trang chủ: đánh giá (dịch từ đánh giá thật trên Google, ghi rõ là bản dịch) =====
 VI: Khách hàng nói gì trên Google
 EN: What patients say on Google
-VI: Cơ sở 1: 4,9 trên 5 sao, 42 đánh giá trên Google Maps. Mở Google Maps
-EN: Location 1: 4.9 out of 5 stars, 42 reviews on Google Maps. Open Google Maps
-VI: Cơ sở 2: 4,7 trên 5 sao, 61 đánh giá trên Google Maps. Mở Google Maps
-EN: Location 2: 4.7 out of 5 stars, 61 reviews on Google Maps. Open Google Maps
-VI: data-count="4.9">4,9<
-EN: data-count="4.9">4.9<
-VI: data-count="4.7">4,7<
-EN: data-count="4.7">4.7<
-VI: <span class="rating__num">4,9</span>
-EN: <span class="rating__num">4.9</span>
-VI: <span class="rating__num">4,7</span>
-EN: <span class="rating__num">4.7</span>
-VI: Cơ sở 1 · Văn Tiến Dũng
-EN: Location 1 · Van Tien Dung St.
-VI: Cơ sở 2 · Lê Quảng Chí
-EN: Location 2 · Le Quang Chi St.
-VI:  đánh giá trên Google</span>
-EN:  Google reviews</span>
-VI: Điểm đánh giá trên Google Maps của từng cơ sở.
-EN: Google Maps rating for each location. Reviews translated from Vietnamese.
+VI: Đánh giá thật từ khách hàng trên Google Maps
+EN: Real reviews from our patients on Google Maps
+VI: Những chia sẻ bên dưới được lấy từ trang Google Maps của phòng khám. Bạn có thể xem toàn bộ đánh giá của từng cơ sở ngay trên Google Maps.
+EN: The reviews below come from our Google Maps pages, translated from Vietnamese. You can read every review for each location right on Google Maps.
+VI: Xem đánh giá Cơ sở 1
+EN: Reviews for Location 1
+VI: Xem đánh giá Cơ sở 2
+EN: Reviews for Location 2
+VI: Xem đánh giá trên <span class="rating__nw">Google Maps
+EN: See reviews on <span class="rating__nw">Google Maps
 VI: Đánh giá trên Google Maps
 EN: Google Maps review
-VI: (42 đánh giá)
-EN: (42 reviews)
-VI: (61 đánh giá)
-EN: (61 reviews)
 VI: “Phòng khám sạch sẽ, dỗ con nít rất kiên trì, rất nhanh.”
 EN: “Clean clinic, so patient with little kids, and quick.”
 VI: “Bác sĩ và các bạn ở nha khoa rất chuyên nghiệp, tận tâm, làm răng rất nhẹ nhàng, giá cả phải chăng.”
